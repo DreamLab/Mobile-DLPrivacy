@@ -27,3 +27,5 @@ xcuserdata
 ## CocoaPods
 Pods/*
 
+report.xml
+.env.default

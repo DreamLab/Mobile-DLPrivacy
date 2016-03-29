@@ -18,9 +18,3 @@ pod 'DLRealmHelpers'
 pod 'DLAssetDownloadService'
 pod 'Fabric', '~> 1.6.0'
 pod 'Crashlytics', '~> 3.5.0'
-
-target 'BackboneUI', :exclusive => true do
-    platform :ios, '9.0'
-    pod 'DLRemoteControl'
-    pod 'DLTestHelpers'
-end
