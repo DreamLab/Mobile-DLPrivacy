@@ -26,6 +26,11 @@ Run UI tests
 fastlane unit_tests
 ```
 Run Unit tests
+### strict_lint
+```
+fastlane strict_lint
+```
+Run code validation, fails on warnings
 ### publish_to_staging
 ```
 fastlane publish_to_staging
