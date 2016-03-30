@@ -9,7 +9,6 @@
 import Foundation
 import CocoaLumberjack
 import DLCocoaLumberjackHelper
-import DLConfigReader
 
 /**
 Class to initialize CocoaLumberjack

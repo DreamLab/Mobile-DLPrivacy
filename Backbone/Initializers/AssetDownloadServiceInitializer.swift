@@ -7,7 +7,6 @@
 //
 
 import DLAssetDownloadService
-import DLConfigReader
 
 /*
 AssetDownloadService initializer class

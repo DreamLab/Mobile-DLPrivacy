@@ -9,7 +9,9 @@
 import UIKit
 import DLCocoaLumberjackHelper
 import DLAppHelper
+
 @UIApplicationMain
+
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
@@ -60,8 +62,6 @@ extension AppDelegate {
 
         CocoaLumberjackInitializer.initialize()
         DatabaseInitializer.initialize()
-        AssetDownloadServiceInitializer.initialize()
-        ASNotificationServiceInitializer.initialize()
 
         DDLogInfo("Application did finish early initializing")
     }
@@ -74,6 +74,8 @@ extension AppDelegate {
         DDLogInfo("Application did start initializing")
 
         FabricInitializer.initialize()
+        AssetDownloadServiceInitializer.initialize()
+        ASNotificationServiceInitializer.initialize()
 
         DDLogInfo("Application did finish initializing")
     }

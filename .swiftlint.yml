@@ -3,16 +3,15 @@ excluded: # paths to ignore during linting. Takes precedence over `included`.
   
 # configurable rules can be customized from this configuration file
 # binary rules can set their severity level
-force_cast: warning # implicitly
-force_try:
-  severity: warning # explicitly
+force_cast: warning
+force_try: warning 
 # rules that have both warning and error levels, can set just the warning level
 # implicitly
 line_length: 140
 # they can set both implicitly with an array
 type_body_length:
-  - 300 # warning
-  - 400 # error
+  warning: 300
+  error: 400
 # or they can set both explicitly
 file_length:
   warning: 500
