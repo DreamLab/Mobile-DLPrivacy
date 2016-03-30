@@ -8,7 +8,7 @@
 
 import UIKit
 
-// MARK: - Custom UIColors
+// MARK: - Custom UIColors for NotificationCenter
 extension UIColor {
 
     /// Notification Center normal background color

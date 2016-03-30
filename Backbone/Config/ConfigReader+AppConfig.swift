@@ -19,6 +19,11 @@ enum ConfigItem: String, ConfigName {
 // Usage of the Config reader.
 // Extend it and add customized methods that use getConfig and use them in code as fasade.
 extension ConfigReader {
+    /**
+     A config value. To be changed when necessary.
+
+     - returns: value assign to the key in config
+     */
     func someConfigValue() -> String {
         return getConfig(ConfigItem.Item1, "Key1", String.self)
     }
