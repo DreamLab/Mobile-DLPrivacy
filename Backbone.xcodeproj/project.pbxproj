@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2F281FC483422DD4FFD6F469 /* Pods_Backbone_BackboneTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0894D42CB79F9FD51AECC0EC /* Pods_Backbone_BackboneTests.framework */; };
-		61E97006A536747E57AEAFB3 /* Pods_BackboneUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1548F936D70B33E4493DE982 /* Pods_BackboneUITests.framework */; };
+		20C015C58FD91F99CE91768E /* Pods_BackboneUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5CDF8BBB2E3A2B794C5E158 /* Pods_BackboneUI.framework */; };
 		7E01CD761CAACCAC006780DD /* FabricInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E47277A1C9BF77B00AE4A67 /* FabricInitializer.swift */; };
 		7E09639D1CABD8B900731846 /* UIColor+NotificationCenterColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09639C1CABD8B900731846 /* UIColor+NotificationCenterColors.swift */; };
 		7E09639F1CABD93000731846 /* ConfigReader+AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09639E1CABD93000731846 /* ConfigReader+AppConfig.swift */; };
@@ -48,8 +47,7 @@
 		7EFDBD421CA2C4BD008DD4C2 /* CocoaLumberjackInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EFDBD401CA2C4BA008DD4C2 /* CocoaLumberjackInitializer.swift */; };
 		7EFDBD441CA2D828008DD4C2 /* ASNotificationServiceInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EFDBD431CA2D828008DD4C2 /* ASNotificationServiceInitializer.swift */; };
 		7EFDBD451CA2D91F008DD4C2 /* ASNotificationServiceInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EFDBD431CA2D828008DD4C2 /* ASNotificationServiceInitializer.swift */; };
-		8B6CC47B48C138F78AC2BF8F /* Pods_Backbone_BackboneUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58C9EA8260811255F59A11A0 /* Pods_Backbone_BackboneUI.framework */; };
-		DECAE20D828799B66FC43A22 /* Pods_Backbone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4684BAA2410A5AE097E74BC6 /* Pods_Backbone.framework */; };
+		9FB1D10B24CC864A6D994796 /* Pods_Backbone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE380E21F8B5F44C2742FA5C /* Pods_Backbone.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,19 +68,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0894D42CB79F9FD51AECC0EC /* Pods_Backbone_BackboneTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Backbone_BackboneTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		12CF942A173338E00C7177E9 /* Pods-BackboneUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BackboneUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BackboneUITests/Pods-BackboneUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		1548F936D70B33E4493DE982 /* Pods_BackboneUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BackboneUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		192FA522433009EDE5E61E73 /* Pods-BackboneUITests.alpha.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BackboneUITests.alpha.xcconfig"; path = "Pods/Target Support Files/Pods-BackboneUITests/Pods-BackboneUITests.alpha.xcconfig"; sourceTree = "<group>"; };
-		1CC8A19D5E8FED459B9E381E /* Pods-Backbone-BackboneUI.alpha.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Backbone-BackboneUI.alpha.xcconfig"; path = "Pods/Target Support Files/Pods-Backbone-BackboneUI/Pods-Backbone-BackboneUI.alpha.xcconfig"; sourceTree = "<group>"; };
-		2066F2F894C3C9E9316A4803 /* Pods-Backbone.alpha.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Backbone.alpha.xcconfig"; path = "Pods/Target Support Files/Pods-Backbone/Pods-Backbone.alpha.xcconfig"; sourceTree = "<group>"; };
+		1A71DDE0467FC7C2706D102F /* Pods-BackboneUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BackboneUI.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BackboneUI/Pods-BackboneUI.debug.xcconfig"; sourceTree = "<group>"; };
 		26B051994B2F083281F6C9CB /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4684BAA2410A5AE097E74BC6 /* Pods_Backbone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Backbone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4E4EEEF058B0D1914798A38A /* Pods-Backbone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Backbone.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Backbone/Pods-Backbone.debug.xcconfig"; sourceTree = "<group>"; };
-		5436BF875535A8027456FAED /* Pods-Backbone-BackboneTests.alpha.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Backbone-BackboneTests.alpha.xcconfig"; path = "Pods/Target Support Files/Pods-Backbone-BackboneTests/Pods-Backbone-BackboneTests.alpha.xcconfig"; sourceTree = "<group>"; };
-		58C9EA8260811255F59A11A0 /* Pods_Backbone_BackboneUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Backbone_BackboneUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		705F5FB26E209EDEC7F759A0 /* Pods-Backbone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Backbone.release.xcconfig"; path = "Pods/Target Support Files/Pods-Backbone/Pods-Backbone.release.xcconfig"; sourceTree = "<group>"; };
-		743EF96FE486910F05817EA4 /* Pods-Backbone-BackboneTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Backbone-BackboneTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Backbone-BackboneTests/Pods-Backbone-BackboneTests.debug.xcconfig"; sourceTree = "<group>"; };
+		39F89CA3DB8057A808FA24E8 /* Pods-BackboneUI.alpha.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BackboneUI.alpha.xcconfig"; path = "Pods/Target Support Files/Pods-BackboneUI/Pods-BackboneUI.alpha.xcconfig"; sourceTree = "<group>"; };
+		3C7E52ADA77D5126826A3381 /* Pods-BackboneUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BackboneUI.release.xcconfig"; path = "Pods/Target Support Files/Pods-BackboneUI/Pods-BackboneUI.release.xcconfig"; sourceTree = "<group>"; };
+		66B9EB71BBE9F8DB55C7033A /* Pods-Backbone.alpha.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Backbone.alpha.xcconfig"; path = "Pods/Target Support Files/Pods-Backbone/Pods-Backbone.alpha.xcconfig"; sourceTree = "<group>"; };
 		7E09639C1CABD8B900731846 /* UIColor+NotificationCenterColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+NotificationCenterColors.swift"; path = "Extensions/UI/UIColor+NotificationCenterColors.swift"; sourceTree = "<group>"; };
 		7E09639E1CABD93000731846 /* ConfigReader+AppConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "ConfigReader+AppConfig.swift"; path = "Config/ConfigReader+AppConfig.swift"; sourceTree = "<group>"; };
 		7E4726E11C9AC12C00AE4A67 /* Backbone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Backbone.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -112,10 +102,10 @@
 		7EFDBD3D1CA2C3EA008DD4C2 /* AssetDownloadServiceInitializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AssetDownloadServiceInitializer.swift; path = Initializers/AssetDownloadServiceInitializer.swift; sourceTree = "<group>"; };
 		7EFDBD401CA2C4BA008DD4C2 /* CocoaLumberjackInitializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CocoaLumberjackInitializer.swift; path = Initializers/CocoaLumberjackInitializer.swift; sourceTree = "<group>"; };
 		7EFDBD431CA2D828008DD4C2 /* ASNotificationServiceInitializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ASNotificationServiceInitializer.swift; path = Initializers/ASNotificationServiceInitializer.swift; sourceTree = "<group>"; };
-		9328EE5795AEC1426D311A11 /* Pods-Backbone-BackboneUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Backbone-BackboneUI.release.xcconfig"; path = "Pods/Target Support Files/Pods-Backbone-BackboneUI/Pods-Backbone-BackboneUI.release.xcconfig"; sourceTree = "<group>"; };
-		B6D7969896AF56515966CCA3 /* Pods-Backbone-BackboneUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Backbone-BackboneUI.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Backbone-BackboneUI/Pods-Backbone-BackboneUI.debug.xcconfig"; sourceTree = "<group>"; };
-		CDA1BB9EDFDBA8AA8AC00F87 /* Pods-BackboneUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BackboneUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BackboneUITests/Pods-BackboneUITests.release.xcconfig"; sourceTree = "<group>"; };
-		CF35DC62173E5AB8A3F6D955 /* Pods-Backbone-BackboneTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Backbone-BackboneTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Backbone-BackboneTests/Pods-Backbone-BackboneTests.release.xcconfig"; sourceTree = "<group>"; };
+		8AA531F85083C60CFCA5371C /* Pods-Backbone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Backbone.release.xcconfig"; path = "Pods/Target Support Files/Pods-Backbone/Pods-Backbone.release.xcconfig"; sourceTree = "<group>"; };
+		A5CDF8BBB2E3A2B794C5E158 /* Pods_BackboneUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BackboneUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE380E21F8B5F44C2742FA5C /* Pods_Backbone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Backbone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5F48B847BCC301E3A6A91F7 /* Pods-Backbone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Backbone.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Backbone/Pods-Backbone.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,7 +113,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DECAE20D828799B66FC43A22 /* Pods_Backbone.framework in Frameworks */,
+				9FB1D10B24CC864A6D994796 /* Pods_Backbone.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,7 +121,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F281FC483422DD4FFD6F469 /* Pods_Backbone_BackboneTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,7 +128,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8B6CC47B48C138F78AC2BF8F /* Pods_Backbone_BackboneUI.framework in Frameworks */,
+				20C015C58FD91F99CE91768E /* Pods_BackboneUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,32 +136,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				61E97006A536747E57AEAFB3 /* Pods_BackboneUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		30B3BCF6FC119EB87BB6E4AD /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				4E4EEEF058B0D1914798A38A /* Pods-Backbone.debug.xcconfig */,
-				2066F2F894C3C9E9316A4803 /* Pods-Backbone.alpha.xcconfig */,
-				705F5FB26E209EDEC7F759A0 /* Pods-Backbone.release.xcconfig */,
-				743EF96FE486910F05817EA4 /* Pods-Backbone-BackboneTests.debug.xcconfig */,
-				5436BF875535A8027456FAED /* Pods-Backbone-BackboneTests.alpha.xcconfig */,
-				CF35DC62173E5AB8A3F6D955 /* Pods-Backbone-BackboneTests.release.xcconfig */,
-				B6D7969896AF56515966CCA3 /* Pods-Backbone-BackboneUI.debug.xcconfig */,
-				1CC8A19D5E8FED459B9E381E /* Pods-Backbone-BackboneUI.alpha.xcconfig */,
-				9328EE5795AEC1426D311A11 /* Pods-Backbone-BackboneUI.release.xcconfig */,
-				12CF942A173338E00C7177E9 /* Pods-BackboneUITests.debug.xcconfig */,
-				192FA522433009EDE5E61E73 /* Pods-BackboneUITests.alpha.xcconfig */,
-				CDA1BB9EDFDBA8AA8AC00F87 /* Pods-BackboneUITests.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		7E09639B1CABD8AB00731846 /* UI */ = {
 			isa = PBXGroup;
 			children = (
@@ -189,7 +158,7 @@
 				7E4727591C9ACE2A00AE4A67 /* BackboneUITests */,
 				7E4726E21C9AC12C00AE4A67 /* Products */,
 				8B4C86B7D51B9C54CDC88398 /* Frameworks */,
-				30B3BCF6FC119EB87BB6E4AD /* Pods */,
+				F0EB48E8CC53AC6C03862ED0 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -310,12 +279,23 @@
 			isa = PBXGroup;
 			children = (
 				26B051994B2F083281F6C9CB /* Pods.framework */,
-				4684BAA2410A5AE097E74BC6 /* Pods_Backbone.framework */,
-				0894D42CB79F9FD51AECC0EC /* Pods_Backbone_BackboneTests.framework */,
-				58C9EA8260811255F59A11A0 /* Pods_Backbone_BackboneUI.framework */,
-				1548F936D70B33E4493DE982 /* Pods_BackboneUITests.framework */,
+				CE380E21F8B5F44C2742FA5C /* Pods_Backbone.framework */,
+				A5CDF8BBB2E3A2B794C5E158 /* Pods_BackboneUI.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F0EB48E8CC53AC6C03862ED0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F5F48B847BCC301E3A6A91F7 /* Pods-Backbone.debug.xcconfig */,
+				66B9EB71BBE9F8DB55C7033A /* Pods-Backbone.alpha.xcconfig */,
+				8AA531F85083C60CFCA5371C /* Pods-Backbone.release.xcconfig */,
+				1A71DDE0467FC7C2706D102F /* Pods-BackboneUI.debug.xcconfig */,
+				39F89CA3DB8057A808FA24E8 /* Pods-BackboneUI.alpha.xcconfig */,
+				3C7E52ADA77D5126826A3381 /* Pods-BackboneUI.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -325,14 +305,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7E4727091C9AC12C00AE4A67 /* Build configuration list for PBXNativeTarget "Backbone" */;
 			buildPhases = (
-				B3EA337FF4EF6100F02634EE /* 📦 Check Pods Manifest.lock */,
+				FE3C28179974FCCBCF5F417A /* 📦 Check Pods Manifest.lock */,
 				7E4726DD1C9AC12C00AE4A67 /* Sources */,
 				7E4726DE1C9AC12C00AE4A67 /* Frameworks */,
 				7E4726DF1C9AC12C00AE4A67 /* Resources */,
 				7E47277C1C9BFCD600AE4A67 /* Fabric */,
 				7EFDBD461CA2DE65008DD4C2 /* SwiftLint */,
-				85D37345E38F9C4871395B51 /* 📦 Embed Pods Frameworks */,
-				5EDB405C89C8FC4A624EB981 /* 📦 Copy Pods Resources */,
+				1D99E8E724F87EA0568E4275 /* 📦 Embed Pods Frameworks */,
+				15FEC05BF7AC4D3E922D0529 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -347,12 +327,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7E47270C1C9AC12C00AE4A67 /* Build configuration list for PBXNativeTarget "BackboneTests" */;
 			buildPhases = (
-				7EA7A4D0CA6CE7FA45D0677C /* 📦 Check Pods Manifest.lock */,
 				7E4726F11C9AC12C00AE4A67 /* Sources */,
 				7E4726F21C9AC12C00AE4A67 /* Frameworks */,
 				7E4726F31C9AC12C00AE4A67 /* Resources */,
-				42E71A6BE9DE0F35B63A8056 /* 📦 Embed Pods Frameworks */,
-				BFDF81140EFB64A52A9D1B86 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -368,12 +345,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7E4727411C9ACD3800AE4A67 /* Build configuration list for PBXNativeTarget "BackboneUI" */;
 			buildPhases = (
-				263177AA7DD9C4508C445946 /* 📦 Check Pods Manifest.lock */,
+				418B5ECA2B6F3006B14419CC /* 📦 Check Pods Manifest.lock */,
 				7E4727391C9ACD3800AE4A67 /* Sources */,
 				7E47273C1C9ACD3800AE4A67 /* Frameworks */,
 				7E47273D1C9ACD3800AE4A67 /* Resources */,
-				046A273BE9A3D3BFCD489DF7 /* 📦 Embed Pods Frameworks */,
-				3FF63120F4E1794023CF0BD7 /* 📦 Copy Pods Resources */,
+				10D0F0ECB0F16A8BCD13C886 /* 📦 Embed Pods Frameworks */,
+				4C28993DBD6710B2280A6683 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -388,11 +365,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7E47275F1C9ACE2A00AE4A67 /* Build configuration list for PBXNativeTarget "BackboneUITests" */;
 			buildPhases = (
-				C0AACC98C16BD7C1C02A8F6F /* 📦 Check Pods Manifest.lock */,
 				7E4727541C9ACE2A00AE4A67 /* Sources */,
 				7E4727551C9ACE2A00AE4A67 /* Frameworks */,
 				7E4727561C9ACE2A00AE4A67 /* Resources */,
-				B7B4A6437EBB58404196574B /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -492,7 +467,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		046A273BE9A3D3BFCD489DF7 /* 📦 Embed Pods Frameworks */ = {
+		10D0F0ECB0F16A8BCD13C886 /* 📦 Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -504,10 +479,40 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Backbone-BackboneUI/Pods-Backbone-BackboneUI-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BackboneUI/Pods-BackboneUI-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		263177AA7DD9C4508C445946 /* 📦 Check Pods Manifest.lock */ = {
+		15FEC05BF7AC4D3E922D0529 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Backbone/Pods-Backbone-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1D99E8E724F87EA0568E4275 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Backbone/Pods-Backbone-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		418B5ECA2B6F3006B14419CC /* 📦 Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -522,7 +527,7 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		3FF63120F4E1794023CF0BD7 /* 📦 Copy Pods Resources */ = {
+		4C28993DBD6710B2280A6683 /* 📦 Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -534,37 +539,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Backbone-BackboneUI/Pods-Backbone-BackboneUI-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		42E71A6BE9DE0F35B63A8056 /* 📦 Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Backbone-BackboneTests/Pods-Backbone-BackboneTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		5EDB405C89C8FC4A624EB981 /* 📦 Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Backbone/Pods-Backbone-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BackboneUI/Pods-BackboneUI-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		7E47277C1C9BFCD600AE4A67 /* Fabric */ = {
@@ -581,21 +556,6 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Fabric/run\" b7868f1a601bac93a7353bd5ec2dae71e4b540e5 aa3a94a2e2c9066a232955f7b9a401765e63bdc75a0989f5b8b1709fbee9b580";
 		};
-		7EA7A4D0CA6CE7FA45D0677C /* 📦 Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
 		7EFDBD461CA2DE65008DD4C2 /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -610,67 +570,7 @@
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
 		};
-		85D37345E38F9C4871395B51 /* 📦 Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Backbone/Pods-Backbone-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B3EA337FF4EF6100F02634EE /* 📦 Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		B7B4A6437EBB58404196574B /* 📦 Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BackboneUITests/Pods-BackboneUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		BFDF81140EFB64A52A9D1B86 /* 📦 Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Backbone-BackboneTests/Pods-Backbone-BackboneTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C0AACC98C16BD7C1C02A8F6F /* 📦 Check Pods Manifest.lock */ = {
+		FE3C28179974FCCBCF5F417A /* 📦 Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -871,7 +771,7 @@
 		};
 		7E47270A1C9AC12C00AE4A67 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4E4EEEF058B0D1914798A38A /* Pods-Backbone.debug.xcconfig */;
+			baseConfigurationReference = F5F48B847BCC301E3A6A91F7 /* Pods-Backbone.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -882,7 +782,7 @@
 		};
 		7E47270B1C9AC12C00AE4A67 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 705F5FB26E209EDEC7F759A0 /* Pods-Backbone.release.xcconfig */;
+			baseConfigurationReference = 8AA531F85083C60CFCA5371C /* Pods-Backbone.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -893,7 +793,6 @@
 		};
 		7E47270D1C9AC12C00AE4A67 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 743EF96FE486910F05817EA4 /* Pods-Backbone-BackboneTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = BackboneTests/Info.plist;
@@ -905,7 +804,6 @@
 		};
 		7E47270E1C9AC12C00AE4A67 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CF35DC62173E5AB8A3F6D955 /* Pods-Backbone-BackboneTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = BackboneTests/Info.plist;
@@ -917,7 +815,7 @@
 		};
 		7E4727421C9ACD3800AE4A67 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B6D7969896AF56515966CCA3 /* Pods-Backbone-BackboneUI.debug.xcconfig */;
+			baseConfigurationReference = 1A71DDE0467FC7C2706D102F /* Pods-BackboneUI.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -928,7 +826,7 @@
 		};
 		7E4727431C9ACD3800AE4A67 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9328EE5795AEC1426D311A11 /* Pods-Backbone-BackboneUI.release.xcconfig */;
+			baseConfigurationReference = 3C7E52ADA77D5126826A3381 /* Pods-BackboneUI.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -939,7 +837,6 @@
 		};
 		7E4727601C9ACE2A00AE4A67 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 12CF942A173338E00C7177E9 /* Pods-BackboneUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = BackboneUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -951,7 +848,6 @@
 		};
 		7E4727611C9ACE2A00AE4A67 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CDA1BB9EDFDBA8AA8AC00F87 /* Pods-BackboneUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = BackboneUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -1009,7 +905,7 @@
 		};
 		7E47277E1C9C047800AE4A67 /* Alpha */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2066F2F894C3C9E9316A4803 /* Pods-Backbone.alpha.xcconfig */;
+			baseConfigurationReference = 66B9EB71BBE9F8DB55C7033A /* Pods-Backbone.alpha.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -1020,7 +916,6 @@
 		};
 		7E47277F1C9C047800AE4A67 /* Alpha */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5436BF875535A8027456FAED /* Pods-Backbone-BackboneTests.alpha.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = BackboneTests/Info.plist;
@@ -1032,7 +927,7 @@
 		};
 		7E4727801C9C047800AE4A67 /* Alpha */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1CC8A19D5E8FED459B9E381E /* Pods-Backbone-BackboneUI.alpha.xcconfig */;
+			baseConfigurationReference = 39F89CA3DB8057A808FA24E8 /* Pods-BackboneUI.alpha.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -1043,7 +938,6 @@
 		};
 		7E4727811C9C047800AE4A67 /* Alpha */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 192FA522433009EDE5E61E73 /* Pods-BackboneUITests.alpha.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = BackboneUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

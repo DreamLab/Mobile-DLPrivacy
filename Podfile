@@ -3,9 +3,8 @@ source 'ssh://git@stash.grupa.onet:7999/pod/dlinternalcocoapods.git'
 
 use_frameworks!
 inhibit_all_warnings!
-platform :ios, '8.0'
 
-target 'Backbone' do
+def common_pods
     pod 'ASNotificationCenter'
     pod 'DLReachabilityService'
     pod 'DLNetworkingService'
@@ -19,12 +18,17 @@ target 'Backbone' do
     pod 'DLAssetDownloadService'
     pod 'Fabric', '~> 1.6.0'
     pod 'Crashlytics', '~> 3.5.0'
+end
 
-    target 'BackboneUI'
-    target 'BackboneTests'
-    target 'BackboneUITests' do
-        platform :ios, '9.0'
-        pod 'DLRemoteControl'
-        pod 'DLTestHelpers'
-    end
+
+target 'Backbone' do
+	platform :ios, '8.0'
+	common_pods
+end
+
+target 'BackboneUI' do
+    platform :ios, '9.0'
+    common_pods
+	pod 'DLRemoteControl'
+	pod 'DLTestHelpers'
 end
