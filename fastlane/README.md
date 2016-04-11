@@ -16,6 +16,11 @@ Parameters:
 * **`build_number`**: Build number
 
 * **`skip_cocoapods`**: Should Cocoa Pods install be skipped?. (`DL_SKIP_COCOAPODS`)
+### sonarqube
+```
+fastlane sonarqube
+```
+Runs SonarQube analysys.
 ### ui_tests
 ```
 fastlane ui_tests
@@ -83,6 +88,11 @@ Parameters:
 * **`project_name`**: Name of the project. (`DL_PROJECT_NAME`)
 
 * **`specs_repository`**: DreamLab podspecs repository identifier. Values: public|private. (`DL_OUTPUT_SPEC_REPOSITORY`)
+### publish_changelog
+```
+fastlane publish_changelog
+```
+Build changelog and push it ot git repository.
 ### build_documentation
 ```
 fastlane build_documentation
