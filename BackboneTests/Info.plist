@@ -11,7 +11,7 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>backbone ${BUNDLE_DISPLAY_NAME_SUFFIX}</string>
+	<string>Backbone ${BUNDLE_DISPLAY_NAME_SUFFIX}</string>
 	<key>CFBundlePackageType</key>
 	<string>BNDL</string>
 	<key>CFBundleShortVersionString</key>
