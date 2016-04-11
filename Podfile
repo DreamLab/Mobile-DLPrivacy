@@ -20,15 +20,24 @@ def common_pods
     pod 'Crashlytics', '~> 3.5.0'
 end
 
-
 target 'Backbone' do
 	platform :ios, '8.0'
-	common_pods
+    common_pods
+end
+
+target 'BackboneTests' do
+    pod 'DLRealmHelpers'
 end
 
 target 'BackboneUI' do
     platform :ios, '9.0'
     common_pods
-	pod 'DLRemoteControl'
-	pod 'DLTestHelpers'
+    pod 'DLRealmHelpers'
+    pod 'DLRemoteControl'
 end
+
+target 'BackboneUITests' do
+    platform :ios, '9.0'
+    pod 'DLTestHelpers'
+end
+

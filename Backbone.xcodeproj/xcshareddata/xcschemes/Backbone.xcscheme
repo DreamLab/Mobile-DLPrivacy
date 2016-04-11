@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0720"
+   LastUpgradeVersion = "0730"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,23 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7E4726E01C9AC12C00AE4A67"
+               BlueprintIdentifier = "7E09B24C1CBB8C6F00122878"
                BuildableName = "Backbone.app"
                BlueprintName = "Backbone"
-               ReferencedContainer = "container:Backbone.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "NO"
-            buildForRunning = "NO"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7E4727571C9ACE2A00AE4A67"
-               BuildableName = "BackboneUITests.xctest"
-               BlueprintName = "BackboneUITests"
                ReferencedContainer = "container:Backbone.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -46,7 +32,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7E4726F41C9AC12C00AE4A67"
+               BlueprintIdentifier = "7E09B2601CBB8C7000122878"
                BuildableName = "BackboneTests.xctest"
                BlueprintName = "BackboneTests"
                ReferencedContainer = "container:Backbone.xcodeproj">
@@ -56,7 +42,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7E4726E01C9AC12C00AE4A67"
+            BlueprintIdentifier = "7E09B24C1CBB8C6F00122878"
             BuildableName = "Backbone.app"
             BlueprintName = "Backbone"
             ReferencedContainer = "container:Backbone.xcodeproj">
@@ -79,7 +65,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7E4726E01C9AC12C00AE4A67"
+            BlueprintIdentifier = "7E09B24C1CBB8C6F00122878"
             BuildableName = "Backbone.app"
             BlueprintName = "Backbone"
             ReferencedContainer = "container:Backbone.xcodeproj">
@@ -98,7 +84,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7E4726E01C9AC12C00AE4A67"
+            BlueprintIdentifier = "7E09B24C1CBB8C6F00122878"
             BuildableName = "Backbone.app"
             BlueprintName = "Backbone"
             ReferencedContainer = "container:Backbone.xcodeproj">
