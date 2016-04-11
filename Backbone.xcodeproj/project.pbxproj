@@ -1,2546 +1,1215 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>archiveVersion</key>
-	<string>1</string>
-	<key>classes</key>
-	<dict/>
-	<key>objectVersion</key>
-	<string>46</string>
-	<key>objects</key>
-	<dict>
-		<key>0002158E421FE9E0B6ED9734</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.framework</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>Pods_BackboneUITests.framework</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>02BA91E5AC49FD23E0166510</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.framework</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>Pods_Backbone.framework</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>18BDEFCDB31D6B5400FC39E1</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-BackboneUITests.release.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-BackboneUITests/Pods-BackboneUITests.release.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>19C1C19187ACCC3FE4582109</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-BackboneAppTests.release.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-BackboneAppTests/Pods-BackboneAppTests.release.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>21CC284835BF3294C1065609</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Copy Pods Resources</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods-BackboneUITests/Pods-BackboneUITests-resources.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>22531E84E21A08F7E200D239</key>
-		<dict>
-			<key>fileRef</key>
-			<string>DED2A738BBAEF5480A1F14E3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>322F0225E7595753AFD2B229</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.framework</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>Pods_BackboneAppTests.framework</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>37DF5E73314B91FA920CD7B5</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-BackboneUI.debug.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-BackboneUI/Pods-BackboneUI.debug.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3D7BA7740E0547D0DF8F311C</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-Backbone.release.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-Backbone/Pods-Backbone.release.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>417568BE800A9DE1C01C0BCE</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-BackboneAppTests.debug.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-BackboneAppTests/Pods-BackboneAppTests.debug.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>665303D4CADC9AE9AF66BDCB</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Embed Pods Frameworks</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods-BackboneTests/Pods-BackboneTests-frameworks.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>688BE23D936BD2408A4AA2C7</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>7230211BAA0A5B9F75DDA81D</string>
-				<string>3D7BA7740E0547D0DF8F311C</string>
-				<string>6ECA6B68FDCA5308689CC3EF</string>
-				<string>99C0FD120513BC7397356DAD</string>
-				<string>37DF5E73314B91FA920CD7B5</string>
-				<string>DD96C6259CEB19AF0E811423</string>
-				<string>91F2F4B3AA5874FB31B5FE41</string>
-				<string>18BDEFCDB31D6B5400FC39E1</string>
-				<string>928A43908C78B13CB0E6ED6A</string>
-				<string>6F48D479EA376AD23E174446</string>
-				<string>C92FF7FEE58646153131330B</string>
-				<string>9E0F99140E15782B184692DC</string>
-				<string>417568BE800A9DE1C01C0BCE</string>
-				<string>19C1C19187ACCC3FE4582109</string>
-				<string>F05798926CFF9F7FCD15F3C6</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>6A89C94D1B13E2E84CB2F776</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Copy Pods Resources</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods-Backbone/Pods-Backbone-resources.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>6B024B87C12658682579B1DB</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Check Pods Manifest.lock</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
-if [[ $? != 0 ]] ; then
-    cat &lt;&lt; EOM
-error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
-EOM
-    exit 1
-fi
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>6ECA6B68FDCA5308689CC3EF</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-BackboneTests.debug.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-BackboneTests/Pods-BackboneTests.debug.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>6F48D479EA376AD23E174446</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-BackboneTests.alpha.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-BackboneTests/Pods-BackboneTests.alpha.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7230211BAA0A5B9F75DDA81D</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-Backbone.debug.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-Backbone/Pods-Backbone.debug.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7E09B2441CBB8C6F00122878</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>7E09B24F1CBB8C7000122878</string>
-				<string>7E09B2641CBB8C7000122878</string>
-				<string>7E09B2831CBB8CAD00122878</string>
-				<string>7E09B24E1CBB8C6F00122878</string>
-				<string>688BE23D936BD2408A4AA2C7</string>
-				<string>D233BDB952F9AEBA8C32FCBC</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7E09B2451CBB8C6F00122878</key>
-		<dict>
-			<key>attributes</key>
-			<dict>
-				<key>LastSwiftUpdateCheck</key>
-				<string>0730</string>
-				<key>LastUpgradeCheck</key>
-				<string>0730</string>
-				<key>ORGANIZATIONNAME</key>
-				<string>DreamLab</string>
-				<key>TargetAttributes</key>
-				<dict>
-					<key>7E09B24C1CBB8C6F00122878</key>
-					<dict>
-						<key>CreatedOnToolsVersion</key>
-						<string>7.3</string>
-					</dict>
-					<key>7E09B2601CBB8C7000122878</key>
-					<dict>
-						<key>CreatedOnToolsVersion</key>
-						<string>7.3</string>
-					</dict>
-					<key>7E09B2811CBB8CAD00122878</key>
-					<dict>
-						<key>CreatedOnToolsVersion</key>
-						<string>7.3</string>
-						<key>TestTargetID</key>
-						<string>7E09B2701CBB8C7F00122878</string>
-					</dict>
-				</dict>
-			</dict>
-			<key>buildConfigurationList</key>
-			<string>7E09B2481CBB8C6F00122878</string>
-			<key>compatibilityVersion</key>
-			<string>Xcode 3.2</string>
-			<key>developmentRegion</key>
-			<string>English</string>
-			<key>hasScannedForEncodings</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXProject</string>
-			<key>knownRegions</key>
-			<array>
-				<string>en</string>
-				<string>Base</string>
-			</array>
-			<key>mainGroup</key>
-			<string>7E09B2441CBB8C6F00122878</string>
-			<key>productRefGroup</key>
-			<string>7E09B24E1CBB8C6F00122878</string>
-			<key>projectDirPath</key>
-			<string></string>
-			<key>projectReferences</key>
-			<array/>
-			<key>projectRoot</key>
-			<string></string>
-			<key>targets</key>
-			<array>
-				<string>7E09B24C1CBB8C6F00122878</string>
-				<string>7E09B2601CBB8C7000122878</string>
-				<string>7E09B2701CBB8C7F00122878</string>
-				<string>7E09B2811CBB8CAD00122878</string>
-			</array>
-		</dict>
-		<key>7E09B2481CBB8C6F00122878</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>7E09B2681CBB8C7000122878</string>
-				<string>7E09B2691CBB8C7000122878</string>
-				<string>7E09B2BE1CBB99DE00122878</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Debug</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>7E09B2491CBB8C6F00122878</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>7E09B2A21CBB966600122878</string>
-				<string>7E09B2A01CBB966600122878</string>
-				<string>7E09B2A51CBB967900122878</string>
-				<string>7E09B2AF1CBB969700122878</string>
-				<string>7E09B2531CBB8C7000122878</string>
-				<string>7E09B29E1CBB966600122878</string>
-				<string>7E09B2961CBB964F00122878</string>
-				<string>7E09B2971CBB964F00122878</string>
-				<string>7E09B2A11CBB966600122878</string>
-				<string>7E09B2511CBB8C7000122878</string>
-				<string>7E09B29F1CBB966600122878</string>
-				<string>7E09B2921CBB963E00122878</string>
-				<string>7E09B28F1CBB962200122878</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>7E09B24A1CBB8C6F00122878</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>CA2634AB7061B8E6A27E120F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>7E09B24B1CBB8C6F00122878</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>7E09B2B11CBB96A000122878</string>
-				<string>7E09B2AD1CBB969700122878</string>
-				<string>7E09B2AC1CBB969700122878</string>
-				<string>7E09B25B1CBB8C7000122878</string>
-				<string>7E09B2581CBB8C7000122878</string>
-				<string>7E09B2561CBB8C7000122878</string>
-				<string>7E09B2AE1CBB969700122878</string>
-			</array>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>7E09B24C1CBB8C6F00122878</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>7E09B26A1CBB8C7000122878</string>
-			<key>buildPhases</key>
-			<array>
-				<string>C2D92BF3663590D8A1D9FD67</string>
-				<string>7E09B2491CBB8C6F00122878</string>
-				<string>7E09B24A1CBB8C6F00122878</string>
-				<string>7E09B24B1CBB8C6F00122878</string>
-				<string>8A9E9C504B9886D085CED89E</string>
-				<string>6A89C94D1B13E2E84CB2F776</string>
-				<string>7E09B2B21CBB970F00122878</string>
-				<string>7E09B2B31CBB971900122878</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>Backbone</string>
-			<key>productName</key>
-			<string>Backbone</string>
-			<key>productReference</key>
-			<string>7E09B24D1CBB8C6F00122878</string>
-			<key>productType</key>
-			<string>com.apple.product-type.application</string>
-		</dict>
-		<key>7E09B24D1CBB8C6F00122878</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.application</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>Backbone.app</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>7E09B24E1CBB8C6F00122878</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>7E09B24D1CBB8C6F00122878</string>
-				<string>7E09B2611CBB8C7000122878</string>
-				<string>7E09B27C1CBB8C7F00122878</string>
-				<string>7E09B2821CBB8CAD00122878</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7E09B24F1CBB8C7000122878</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>7E09B2A61CBB967E00122878</string>
-				<string>7E09B2A31CBB967000122878</string>
-				<string>7E09B2981CBB965400122878</string>
-				<string>7E09B2931CBB964400122878</string>
-				<string>7E09B2901CBB962D00122878</string>
-				<string>7E09B28C1CBB960200122878</string>
-				<string>7E09B2501CBB8C7000122878</string>
-				<string>7E09B2521CBB8C7000122878</string>
-				<string>7E09B2541CBB8C7000122878</string>
-				<string>7E09B2571CBB8C7000122878</string>
-				<string>7E09B2591CBB8C7000122878</string>
-				<string>7E09B25C1CBB8C7000122878</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>Backbone</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7E09B2501CBB8C7000122878</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>AppDelegate.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7E09B2511CBB8C7000122878</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7E09B2501CBB8C7000122878</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7E09B2521CBB8C7000122878</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>ViewController.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7E09B2531CBB8C7000122878</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7E09B2521CBB8C7000122878</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7E09B2541CBB8C7000122878</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>7E09B2551CBB8C7000122878</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>Main.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7E09B2551CBB8C7000122878</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file.storyboard</string>
-			<key>name</key>
-			<string>Base</string>
-			<key>path</key>
-			<string>Base.lproj/Main.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7E09B2561CBB8C7000122878</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7E09B2541CBB8C7000122878</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7E09B2571CBB8C7000122878</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>folder.assetcatalog</string>
-			<key>path</key>
-			<string>Assets.xcassets</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7E09B2581CBB8C7000122878</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7E09B2571CBB8C7000122878</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7E09B2591CBB8C7000122878</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>7E09B25A1CBB8C7000122878</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>LaunchScreen.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7E09B25A1CBB8C7000122878</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file.storyboard</string>
-			<key>name</key>
-			<string>Base</string>
-			<key>path</key>
-			<string>Base.lproj/LaunchScreen.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7E09B25B1CBB8C7000122878</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7E09B2591CBB8C7000122878</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7E09B25C1CBB8C7000122878</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7E09B25D1CBB8C7000122878</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>7E09B2661CBB8C7000122878</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>7E09B25E1CBB8C7000122878</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>D08E3B758E3CDB0A6794AC54</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>7E09B25F1CBB8C7000122878</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>7E09B2601CBB8C7000122878</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>7E09B26D1CBB8C7000122878</string>
-			<key>buildPhases</key>
-			<array>
-				<string>7E09B25D1CBB8C7000122878</string>
-				<string>7E09B25E1CBB8C7000122878</string>
-				<string>7E09B25F1CBB8C7000122878</string>
-				<string>665303D4CADC9AE9AF66BDCB</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>7E09B2631CBB8C7000122878</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>BackboneTests</string>
-			<key>productName</key>
-			<string>BackboneTests</string>
-			<key>productReference</key>
-			<string>7E09B2611CBB8C7000122878</string>
-			<key>productType</key>
-			<string>com.apple.product-type.bundle.unit-test</string>
-		</dict>
-		<key>7E09B2611CBB8C7000122878</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.cfbundle</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>BackboneTests.xctest</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>7E09B2621CBB8C7000122878</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>7E09B2451CBB8C6F00122878</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>7E09B24C1CBB8C6F00122878</string>
-			<key>remoteInfo</key>
-			<string>Backbone</string>
-		</dict>
-		<key>7E09B2631CBB8C7000122878</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>target</key>
-			<string>7E09B24C1CBB8C6F00122878</string>
-			<key>targetProxy</key>
-			<string>7E09B2621CBB8C7000122878</string>
-		</dict>
-		<key>7E09B2641CBB8C7000122878</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>7E09B2651CBB8C7000122878</string>
-				<string>7E09B2671CBB8C7000122878</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>BackboneTests</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7E09B2651CBB8C7000122878</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>BackboneTests.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7E09B2661CBB8C7000122878</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7E09B2651CBB8C7000122878</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7E09B2671CBB8C7000122878</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7E09B2681CBB8C7000122878</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>BUNDLE_DISPLAY_NAME_SUFFIX</key>
-				<string>&#916;</string>
-				<key>BUNDLE_ID_SUFFIX</key>
-				<string>.dev</string>
-				<key>CLANG_ANALYZER_NONNULL</key>
-				<string>YES</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_UNREACHABLE_CODE</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>DEBUG_INFORMATION_FORMAT</key>
-				<string>dwarf-with-dsym</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>ENABLE_TESTABILITY</key>
-				<string>YES</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_NO_COMMON_BLOCKS</key>
-				<string>YES</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES_AGGRESSIVE</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.0</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>YES</string>
-				<key>ONLY_ACTIVE_ARCH</key>
-				<string>YES</string>
-				<key>OTHER_SWIFT_FLAGS</key>
-				<string>-DDEBUG</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>pl.dreamlab.backbone${BUNDLE_ID_SUFFIX}</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SWIFT_OPTIMIZATION_LEVEL</key>
-				<string>-Onone</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>7E09B2691CBB8C7000122878</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>BUNDLE_DISPLAY_NAME_SUFFIX</key>
-				<string></string>
-				<key>BUNDLE_ID_SUFFIX</key>
-				<string></string>
-				<key>CLANG_ANALYZER_NONNULL</key>
-				<string>YES</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_UNREACHABLE_CODE</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>DEBUG_INFORMATION_FORMAT</key>
-				<string>dwarf-with-dsym</string>
-				<key>ENABLE_NS_ASSERTIONS</key>
-				<string>NO</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_NO_COMMON_BLOCKS</key>
-				<string>YES</string>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES_AGGRESSIVE</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.0</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>NO</string>
-				<key>ONLY_ACTIVE_ARCH</key>
-				<string>NO</string>
-				<key>OTHER_SWIFT_FLAGS</key>
-				<string></string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>pl.dreamlab.backbone${BUNDLE_ID_SUFFIX}</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>7E09B26A1CBB8C7000122878</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>7E09B26B1CBB8C7000122878</string>
-				<string>7E09B26C1CBB8C7000122878</string>
-				<string>7E09B2BF1CBB99DE00122878</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Debug</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>7E09B26B1CBB8C7000122878</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>7230211BAA0A5B9F75DDA81D</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
-				<string>AppIcon</string>
-				<key>INFOPLIST_FILE</key>
-				<string>Backbone/Info.plist</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.0</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>pl.dreamlab.backbone.dev</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>7E09B26C1CBB8C7000122878</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>3D7BA7740E0547D0DF8F311C</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
-				<string>AppIcon</string>
-				<key>INFOPLIST_FILE</key>
-				<string>Backbone/Info.plist</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.0</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>pl.dreamlab.backbone.dev</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>7E09B26D1CBB8C7000122878</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>7E09B26E1CBB8C7000122878</string>
-				<string>7E09B26F1CBB8C7000122878</string>
-				<string>7E09B2C01CBB99DE00122878</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Debug</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>7E09B26E1CBB8C7000122878</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>6ECA6B68FDCA5308689CC3EF</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>INFOPLIST_FILE</key>
-				<string>BackboneTests/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>DL.BackboneTests</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>7E09B26F1CBB8C7000122878</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>99C0FD120513BC7397356DAD</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>INFOPLIST_FILE</key>
-				<string>BackboneTests/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>DL.BackboneTests</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>7E09B2701CBB8C7F00122878</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>7E09B2791CBB8C7F00122878</string>
-			<key>buildPhases</key>
-			<array>
-				<string>BB2046DD4647BB2567B312A9</string>
-				<string>7E09B2711CBB8C7F00122878</string>
-				<string>7E09B2741CBB8C7F00122878</string>
-				<string>7E09B2751CBB8C7F00122878</string>
-				<string>9EA7A469EC70D5FAA4157DD6</string>
-				<string>F2E14C615B4EC3AC68A340A9</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>BackboneUI</string>
-			<key>productName</key>
-			<string>Backbone</string>
-			<key>productReference</key>
-			<string>7E09B27C1CBB8C7F00122878</string>
-			<key>productType</key>
-			<string>com.apple.product-type.application</string>
-		</dict>
-		<key>7E09B2711CBB8C7F00122878</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>7E09B2B71CBB993A00122878</string>
-				<string>7E09B2721CBB8C7F00122878</string>
-				<string>7E09B2B51CBB993500122878</string>
-				<string>7E09B2B61CBB993800122878</string>
-				<string>7E09B2BC1CBB994800122878</string>
-				<string>7E09B2731CBB8C7F00122878</string>
-				<string>7E09B2B91CBB993F00122878</string>
-				<string>7E09B2BB1CBB994500122878</string>
-				<string>7E09B2B81CBB993D00122878</string>
-				<string>7E09B2B41CBB993100122878</string>
-				<string>7E09B2BA1CBB994300122878</string>
-				<string>7E09B2BD1CBB994E00122878</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>7E09B2721CBB8C7F00122878</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7E09B2521CBB8C7000122878</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7E09B2731CBB8C7F00122878</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7E09B2501CBB8C7000122878</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7E09B2741CBB8C7F00122878</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>22531E84E21A08F7E200D239</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>7E09B2751CBB8C7F00122878</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>7E09B2761CBB8C7F00122878</string>
-				<string>7E09B2771CBB8C7F00122878</string>
-				<string>7E09B2781CBB8C7F00122878</string>
-			</array>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>7E09B2761CBB8C7F00122878</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7E09B2591CBB8C7000122878</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7E09B2771CBB8C7F00122878</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7E09B2571CBB8C7000122878</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7E09B2781CBB8C7F00122878</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7E09B2541CBB8C7000122878</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7E09B2791CBB8C7F00122878</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>7E09B27A1CBB8C7F00122878</string>
-				<string>7E09B27B1CBB8C7F00122878</string>
-				<string>7E09B2C11CBB99DE00122878</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Debug</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>7E09B27A1CBB8C7F00122878</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>37DF5E73314B91FA920CD7B5</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
-				<string>AppIcon</string>
-				<key>INFOPLIST_FILE</key>
-				<string>$(SRCROOT)/Backbone/Info.plist</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>9.0</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>pl.dreamlab.backbone.dev</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>7E09B27B1CBB8C7F00122878</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>DD96C6259CEB19AF0E811423</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
-				<string>AppIcon</string>
-				<key>INFOPLIST_FILE</key>
-				<string>$(SRCROOT)/Backbone/Info.plist</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>9.0</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>pl.dreamlab.backbone.dev</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>7E09B27C1CBB8C7F00122878</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.application</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>BackboneUI.app</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>7E09B27E1CBB8CAD00122878</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>7E09B2851CBB8CAD00122878</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>7E09B2801CBB8CAD00122878</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>7E09B2811CBB8CAD00122878</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>7E09B2891CBB8CAD00122878</string>
-			<key>buildPhases</key>
-			<array>
-				<string>6B024B87C12658682579B1DB</string>
-				<string>7E09B27E1CBB8CAD00122878</string>
-				<string>7E09B2801CBB8CAD00122878</string>
-				<string>CABC0048B7062EDC4A65C3C4</string>
-				<string>21CC284835BF3294C1065609</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>7E09B2881CBB8CAD00122878</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>BackboneUITests</string>
-			<key>productName</key>
-			<string>BackboneUITests</string>
-			<key>productReference</key>
-			<string>7E09B2821CBB8CAD00122878</string>
-			<key>productType</key>
-			<string>com.apple.product-type.bundle.ui-testing</string>
-		</dict>
-		<key>7E09B2821CBB8CAD00122878</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.cfbundle</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>BackboneUITests.xctest</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>7E09B2831CBB8CAD00122878</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>7E09B2841CBB8CAD00122878</string>
-				<string>7E09B2861CBB8CAD00122878</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>BackboneUITests</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7E09B2841CBB8CAD00122878</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>BackboneUITests.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7E09B2851CBB8CAD00122878</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7E09B2841CBB8CAD00122878</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7E09B2861CBB8CAD00122878</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7E09B2871CBB8CAD00122878</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>7E09B2451CBB8C6F00122878</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>7E09B2701CBB8C7F00122878</string>
-			<key>remoteInfo</key>
-			<string>BackboneUI</string>
-		</dict>
-		<key>7E09B2881CBB8CAD00122878</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>target</key>
-			<string>7E09B2701CBB8C7F00122878</string>
-			<key>targetProxy</key>
-			<string>7E09B2871CBB8CAD00122878</string>
-		</dict>
-		<key>7E09B2891CBB8CAD00122878</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>7E09B28A1CBB8CAD00122878</string>
-				<string>7E09B28B1CBB8CAD00122878</string>
-				<string>7E09B2C21CBB99DE00122878</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Debug</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>7E09B28A1CBB8CAD00122878</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>91F2F4B3AA5874FB31B5FE41</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>INFOPLIST_FILE</key>
-				<string>BackboneUITests/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>DL.BackboneUITests</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>TEST_TARGET_NAME</key>
-				<string>BackboneUI</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>7E09B28B1CBB8CAD00122878</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>18BDEFCDB31D6B5400FC39E1</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>INFOPLIST_FILE</key>
-				<string>BackboneUITests/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>DL.BackboneUITests</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>TEST_TARGET_NAME</key>
-				<string>BackboneUI</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>7E09B28C1CBB960200122878</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>7E09B28D1CBB961A00122878</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Extensions</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7E09B28D1CBB961A00122878</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>7E09B28E1CBB962200122878</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>UI</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7E09B28E1CBB962200122878</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>name</key>
-			<string>UIColor+NotificationCenterColors.swift</string>
-			<key>path</key>
-			<string>Extensions/UI/UIColor+NotificationCenterColors.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7E09B28F1CBB962200122878</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7E09B28E1CBB962200122878</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7E09B2901CBB962D00122878</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>7E09B2911CBB963E00122878</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Protocols</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7E09B2911CBB963E00122878</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>name</key>
-			<string>DBFactoryProtocol.swift</string>
-			<key>path</key>
-			<string>Protocols/DBFactoryProtocol.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7E09B2921CBB963E00122878</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7E09B2911CBB963E00122878</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7E09B2931CBB964400122878</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>7E09B2941CBB964F00122878</string>
-				<string>7E09B2951CBB964F00122878</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>DB</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7E09B2941CBB964F00122878</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>name</key>
-			<string>DBAccess.swift</string>
-			<key>path</key>
-			<string>DB/DBAccess.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7E09B2951CBB964F00122878</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>name</key>
-			<string>RealmFactory.swift</string>
-			<key>path</key>
-			<string>DB/RealmFactory.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7E09B2961CBB964F00122878</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7E09B2941CBB964F00122878</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7E09B2971CBB964F00122878</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7E09B2951CBB964F00122878</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7E09B2981CBB965400122878</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>7E09B2991CBB966600122878</string>
-				<string>7E09B29A1CBB966600122878</string>
-				<string>7E09B29B1CBB966600122878</string>
-				<string>7E09B29C1CBB966600122878</string>
-				<string>7E09B29D1CBB966600122878</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Initializers</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7E09B2991CBB966600122878</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>name</key>
-			<string>ASNotificationServiceInitializer.swift</string>
-			<key>path</key>
-			<string>Initializers/ASNotificationServiceInitializer.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7E09B29A1CBB966600122878</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>name</key>
-			<string>AssetDownloadServiceInitializer.swift</string>
-			<key>path</key>
-			<string>Initializers/AssetDownloadServiceInitializer.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7E09B29B1CBB966600122878</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>name</key>
-			<string>CocoaLumberjackInitializer.swift</string>
-			<key>path</key>
-			<string>Initializers/CocoaLumberjackInitializer.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7E09B29C1CBB966600122878</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>name</key>
-			<string>DatabaseInitializer.swift</string>
-			<key>path</key>
-			<string>Initializers/DatabaseInitializer.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7E09B29D1CBB966600122878</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>name</key>
-			<string>FabricInitializer.swift</string>
-			<key>path</key>
-			<string>Initializers/FabricInitializer.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7E09B29E1CBB966600122878</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7E09B2991CBB966600122878</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7E09B29F1CBB966600122878</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7E09B29A1CBB966600122878</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7E09B2A01CBB966600122878</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7E09B29B1CBB966600122878</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7E09B2A11CBB966600122878</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7E09B29C1CBB966600122878</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7E09B2A21CBB966600122878</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7E09B29D1CBB966600122878</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7E09B2A31CBB967000122878</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>7E09B2A41CBB967900122878</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Helpers</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7E09B2A41CBB967900122878</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>name</key>
-			<string>EnvironmentSettings.swift</string>
-			<key>path</key>
-			<string>Helpers/EnvironmentSettings.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7E09B2A51CBB967900122878</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7E09B2A41CBB967900122878</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7E09B2A61CBB967E00122878</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>7E09B2A81CBB969700122878</string>
-				<string>7E09B2A91CBB969700122878</string>
-				<string>7E09B2AA1CBB969700122878</string>
-				<string>7E09B2AB1CBB969700122878</string>
-				<string>7E09B2A71CBB968700122878</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Config</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7E09B2A71CBB968700122878</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>7E09B2B01CBB96A000122878</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>UI Tests</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7E09B2A81CBB969700122878</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>name</key>
-			<string>AppConfig.plist</string>
-			<key>path</key>
-			<string>Config/AppConfig.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7E09B2A91CBB969700122878</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>name</key>
-			<string>AppConfig~alpha.plist</string>
-			<key>path</key>
-			<string>Config/AppConfig~alpha.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7E09B2AA1CBB969700122878</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>name</key>
-			<string>AppConfig~debug.plist</string>
-			<key>path</key>
-			<string>Config/AppConfig~debug.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7E09B2AB1CBB969700122878</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>name</key>
-			<string>ConfigReader+AppConfig.swift</string>
-			<key>path</key>
-			<string>Config/ConfigReader+AppConfig.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7E09B2AC1CBB969700122878</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7E09B2A81CBB969700122878</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7E09B2AD1CBB969700122878</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7E09B2A91CBB969700122878</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7E09B2AE1CBB969700122878</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7E09B2AA1CBB969700122878</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7E09B2AF1CBB969700122878</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7E09B2AB1CBB969700122878</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7E09B2B01CBB96A000122878</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>name</key>
-			<string>AppConfig~debug~uitests.plist</string>
-			<key>path</key>
-			<string>Config/UI Tests/AppConfig~debug~uitests.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7E09B2B11CBB96A000122878</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7E09B2B01CBB96A000122878</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7E09B2B21CBB970F00122878</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Fabric</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${PODS_ROOT}/Fabric/run" b7868f1a601bac93a7353bd5ec2dae71e4b540e5 aa3a94a2e2c9066a232955f7b9a401765e63bdc75a0989f5b8b1709fbee9b580</string>
-		</dict>
-		<key>7E09B2B31CBB971900122878</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>SwiftLint</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>if which swiftlint &gt;/dev/null; then
-  swiftlint
-else
-  echo "warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint"
-fi</string>
-		</dict>
-		<key>7E09B2B41CBB993100122878</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7E09B2A41CBB967900122878</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7E09B2B51CBB993500122878</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7E09B2991CBB966600122878</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7E09B2B61CBB993800122878</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7E09B29A1CBB966600122878</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7E09B2B71CBB993A00122878</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7E09B29B1CBB966600122878</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7E09B2B81CBB993D00122878</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7E09B29D1CBB966600122878</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7E09B2B91CBB993F00122878</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7E09B29C1CBB966600122878</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7E09B2BA1CBB994300122878</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7E09B2941CBB964F00122878</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7E09B2BB1CBB994500122878</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7E09B2951CBB964F00122878</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7E09B2BC1CBB994800122878</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7E09B2911CBB963E00122878</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7E09B2BD1CBB994E00122878</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7E09B28E1CBB962200122878</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7E09B2BE1CBB99DE00122878</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>BUNDLE_DISPLAY_NAME_SUFFIX</key>
-				<string>&#945;</string>
-				<key>BUNDLE_ID_SUFFIX</key>
-				<string>.alpha</string>
-				<key>CLANG_ANALYZER_NONNULL</key>
-				<string>YES</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_UNREACHABLE_CODE</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>DEBUG_INFORMATION_FORMAT</key>
-				<string>dwarf-with-dsym</string>
-				<key>ENABLE_NS_ASSERTIONS</key>
-				<string>YES</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_NO_COMMON_BLOCKS</key>
-				<string>YES</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES_AGGRESSIVE</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.0</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>NO</string>
-				<key>ONLY_ACTIVE_ARCH</key>
-				<string>NO</string>
-				<key>OTHER_SWIFT_FLAGS</key>
-				<string>-DALPHA</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>pl.dreamlab.backbone${BUNDLE_ID_SUFFIX}</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>NO</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Alpha</string>
-		</dict>
-		<key>7E09B2BF1CBB99DE00122878</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>928A43908C78B13CB0E6ED6A</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
-				<string>AppIcon</string>
-				<key>INFOPLIST_FILE</key>
-				<string>Backbone/Info.plist</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.0</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>pl.dreamlab.backbone.dev</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Alpha</string>
-		</dict>
-		<key>7E09B2C01CBB99DE00122878</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>6F48D479EA376AD23E174446</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>INFOPLIST_FILE</key>
-				<string>BackboneTests/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>DL.BackboneTests</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Alpha</string>
-		</dict>
-		<key>7E09B2C11CBB99DE00122878</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>C92FF7FEE58646153131330B</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
-				<string>AppIcon</string>
-				<key>INFOPLIST_FILE</key>
-				<string>$(SRCROOT)/Backbone/Info.plist</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>9.0</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>pl.dreamlab.backbone.dev</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Alpha</string>
-		</dict>
-		<key>7E09B2C21CBB99DE00122878</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>9E0F99140E15782B184692DC</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>INFOPLIST_FILE</key>
-				<string>BackboneUITests/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>DL.BackboneUITests</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>TEST_TARGET_NAME</key>
-				<string>BackboneUI</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Alpha</string>
-		</dict>
-		<key>820374D7F6CA59D5033B0348</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.framework</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>Pods_BackboneTests.framework</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>8A9E9C504B9886D085CED89E</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Embed Pods Frameworks</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods-Backbone/Pods-Backbone-frameworks.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>91F2F4B3AA5874FB31B5FE41</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-BackboneUITests.debug.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-BackboneUITests/Pods-BackboneUITests.debug.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>928A43908C78B13CB0E6ED6A</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-Backbone.alpha.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-Backbone/Pods-Backbone.alpha.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>99C0FD120513BC7397356DAD</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-BackboneTests.release.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-BackboneTests/Pods-BackboneTests.release.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>9E0F99140E15782B184692DC</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-BackboneUITests.alpha.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-BackboneUITests/Pods-BackboneUITests.alpha.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>9EA7A469EC70D5FAA4157DD6</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Embed Pods Frameworks</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods-BackboneUI/Pods-BackboneUI-frameworks.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>BB2046DD4647BB2567B312A9</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Check Pods Manifest.lock</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
-if [[ $? != 0 ]] ; then
-    cat &lt;&lt; EOM
-error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
-EOM
-    exit 1
-fi
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>C2D92BF3663590D8A1D9FD67</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Check Pods Manifest.lock</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
-if [[ $? != 0 ]] ; then
-    cat &lt;&lt; EOM
-error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
-EOM
-    exit 1
-fi
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>C92FF7FEE58646153131330B</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-BackboneUI.alpha.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-BackboneUI/Pods-BackboneUI.alpha.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CA2634AB7061B8E6A27E120F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>02BA91E5AC49FD23E0166510</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>CABC0048B7062EDC4A65C3C4</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>EE9FAEA13EE1BB346533A482</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>D08E3B758E3CDB0A6794AC54</key>
-		<dict>
-			<key>fileRef</key>
-			<string>820374D7F6CA59D5033B0348</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>D233BDB952F9AEBA8C32FCBC</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>02BA91E5AC49FD23E0166510</string>
-				<string>820374D7F6CA59D5033B0348</string>
-				<string>DED2A738BBAEF5480A1F14E3</string>
-				<string>0002158E421FE9E0B6ED9734</string>
-				<string>322F0225E7595753AFD2B229</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>DD96C6259CEB19AF0E811423</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-BackboneUI.release.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-BackboneUI/Pods-BackboneUI.release.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>DED2A738BBAEF5480A1F14E3</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.framework</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>Pods_BackboneUI.framework</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>EE9FAEA13EE1BB346533A482</key>
-		<dict>
-			<key>fileRef</key>
-			<string>0002158E421FE9E0B6ED9734</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>F05798926CFF9F7FCD15F3C6</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-BackboneAppTests.alpha.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-BackboneAppTests/Pods-BackboneAppTests.alpha.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F2E14C615B4EC3AC68A340A9</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Copy Pods Resources</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods-BackboneUI/Pods-BackboneUI-resources.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-	</dict>
-	<key>rootObject</key>
-	<string>7E09B2451CBB8C6F00122878</string>
-</dict>
-</plist>
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		22531E84E21A08F7E200D239 /* Pods_BackboneUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DED2A738BBAEF5480A1F14E3 /* Pods_BackboneUI.framework */; };
+		7E09B2511CBB8C7000122878 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09B2501CBB8C7000122878 /* AppDelegate.swift */; };
+		7E09B2531CBB8C7000122878 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09B2521CBB8C7000122878 /* ViewController.swift */; };
+		7E09B2561CBB8C7000122878 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E09B2541CBB8C7000122878 /* Main.storyboard */; };
+		7E09B2581CBB8C7000122878 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E09B2571CBB8C7000122878 /* Assets.xcassets */; };
+		7E09B25B1CBB8C7000122878 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E09B2591CBB8C7000122878 /* LaunchScreen.storyboard */; };
+		7E09B2661CBB8C7000122878 /* BackboneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09B2651CBB8C7000122878 /* BackboneTests.swift */; };
+		7E09B2721CBB8C7F00122878 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09B2521CBB8C7000122878 /* ViewController.swift */; };
+		7E09B2731CBB8C7F00122878 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09B2501CBB8C7000122878 /* AppDelegate.swift */; };
+		7E09B2761CBB8C7F00122878 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E09B2591CBB8C7000122878 /* LaunchScreen.storyboard */; };
+		7E09B2771CBB8C7F00122878 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E09B2571CBB8C7000122878 /* Assets.xcassets */; };
+		7E09B2781CBB8C7F00122878 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E09B2541CBB8C7000122878 /* Main.storyboard */; };
+		7E09B2851CBB8CAD00122878 /* BackboneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09B2841CBB8CAD00122878 /* BackboneUITests.swift */; };
+		7E09B28F1CBB962200122878 /* UIColor+NotificationCenterColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09B28E1CBB962200122878 /* UIColor+NotificationCenterColors.swift */; };
+		7E09B2921CBB963E00122878 /* DBFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09B2911CBB963E00122878 /* DBFactoryProtocol.swift */; };
+		7E09B2961CBB964F00122878 /* DBAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09B2941CBB964F00122878 /* DBAccess.swift */; };
+		7E09B2971CBB964F00122878 /* RealmFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09B2951CBB964F00122878 /* RealmFactory.swift */; };
+		7E09B29E1CBB966600122878 /* ASNotificationServiceInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09B2991CBB966600122878 /* ASNotificationServiceInitializer.swift */; };
+		7E09B29F1CBB966600122878 /* AssetDownloadServiceInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09B29A1CBB966600122878 /* AssetDownloadServiceInitializer.swift */; };
+		7E09B2A01CBB966600122878 /* CocoaLumberjackInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09B29B1CBB966600122878 /* CocoaLumberjackInitializer.swift */; };
+		7E09B2A11CBB966600122878 /* DatabaseInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09B29C1CBB966600122878 /* DatabaseInitializer.swift */; };
+		7E09B2A21CBB966600122878 /* FabricInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09B29D1CBB966600122878 /* FabricInitializer.swift */; };
+		7E09B2A51CBB967900122878 /* EnvironmentSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09B2A41CBB967900122878 /* EnvironmentSettings.swift */; };
+		7E09B2AC1CBB969700122878 /* AppConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7E09B2A81CBB969700122878 /* AppConfig.plist */; };
+		7E09B2AD1CBB969700122878 /* AppConfig~alpha.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7E09B2A91CBB969700122878 /* AppConfig~alpha.plist */; };
+		7E09B2AE1CBB969700122878 /* AppConfig~debug.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7E09B2AA1CBB969700122878 /* AppConfig~debug.plist */; };
+		7E09B2AF1CBB969700122878 /* ConfigReader+AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09B2AB1CBB969700122878 /* ConfigReader+AppConfig.swift */; };
+		7E09B2B11CBB96A000122878 /* AppConfig~debug~uitests.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7E09B2B01CBB96A000122878 /* AppConfig~debug~uitests.plist */; };
+		7E09B2B41CBB993100122878 /* EnvironmentSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09B2A41CBB967900122878 /* EnvironmentSettings.swift */; };
+		7E09B2B51CBB993500122878 /* ASNotificationServiceInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09B2991CBB966600122878 /* ASNotificationServiceInitializer.swift */; };
+		7E09B2B61CBB993800122878 /* AssetDownloadServiceInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09B29A1CBB966600122878 /* AssetDownloadServiceInitializer.swift */; };
+		7E09B2B71CBB993A00122878 /* CocoaLumberjackInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09B29B1CBB966600122878 /* CocoaLumberjackInitializer.swift */; };
+		7E09B2B81CBB993D00122878 /* FabricInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09B29D1CBB966600122878 /* FabricInitializer.swift */; };
+		7E09B2B91CBB993F00122878 /* DatabaseInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09B29C1CBB966600122878 /* DatabaseInitializer.swift */; };
+		7E09B2BA1CBB994300122878 /* DBAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09B2941CBB964F00122878 /* DBAccess.swift */; };
+		7E09B2BB1CBB994500122878 /* RealmFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09B2951CBB964F00122878 /* RealmFactory.swift */; };
+		7E09B2BC1CBB994800122878 /* DBFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09B2911CBB963E00122878 /* DBFactoryProtocol.swift */; };
+		7E09B2BD1CBB994E00122878 /* UIColor+NotificationCenterColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09B28E1CBB962200122878 /* UIColor+NotificationCenterColors.swift */; };
+		7EFA8EFD1CBBC5220050FD82 /* BackboneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09B2651CBB8C7000122878 /* BackboneTests.swift */; };
+		7EFA8EFF1CBBC5220050FD82 /* Pods_BackboneTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 820374D7F6CA59D5033B0348 /* Pods_BackboneTests.framework */; };
+		CA2634AB7061B8E6A27E120F /* Pods_Backbone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02BA91E5AC49FD23E0166510 /* Pods_Backbone.framework */; };
+		D08E3B758E3CDB0A6794AC54 /* Pods_BackboneTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 820374D7F6CA59D5033B0348 /* Pods_BackboneTests.framework */; };
+		EE9FAEA13EE1BB346533A482 /* Pods_BackboneUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0002158E421FE9E0B6ED9734 /* Pods_BackboneUITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7E09B2621CBB8C7000122878 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7E09B2451CBB8C6F00122878 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7E09B24C1CBB8C6F00122878;
+			remoteInfo = Backbone;
+		};
+		7E09B2871CBB8CAD00122878 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7E09B2451CBB8C6F00122878 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7E09B2701CBB8C7F00122878;
+			remoteInfo = BackboneUI;
+		};
+		7EFA8EFB1CBBC5220050FD82 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7E09B2451CBB8C6F00122878 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7E09B24C1CBB8C6F00122878;
+			remoteInfo = Backbone;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0002158E421FE9E0B6ED9734 /* Pods_BackboneUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BackboneUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		02BA91E5AC49FD23E0166510 /* Pods_Backbone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Backbone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		18BDEFCDB31D6B5400FC39E1 /* Pods-BackboneUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BackboneUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BackboneUITests/Pods-BackboneUITests.release.xcconfig"; sourceTree = "<group>"; };
+		19C1C19187ACCC3FE4582109 /* Pods-BackboneAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BackboneAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BackboneAppTests/Pods-BackboneAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		322F0225E7595753AFD2B229 /* Pods_BackboneAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BackboneAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		37DF5E73314B91FA920CD7B5 /* Pods-BackboneUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BackboneUI.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BackboneUI/Pods-BackboneUI.debug.xcconfig"; sourceTree = "<group>"; };
+		3D7BA7740E0547D0DF8F311C /* Pods-Backbone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Backbone.release.xcconfig"; path = "Pods/Target Support Files/Pods-Backbone/Pods-Backbone.release.xcconfig"; sourceTree = "<group>"; };
+		417568BE800A9DE1C01C0BCE /* Pods-BackboneAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BackboneAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BackboneAppTests/Pods-BackboneAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		6ECA6B68FDCA5308689CC3EF /* Pods-BackboneTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BackboneTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BackboneTests/Pods-BackboneTests.debug.xcconfig"; sourceTree = "<group>"; };
+		6F48D479EA376AD23E174446 /* Pods-BackboneTests.alpha.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BackboneTests.alpha.xcconfig"; path = "Pods/Target Support Files/Pods-BackboneTests/Pods-BackboneTests.alpha.xcconfig"; sourceTree = "<group>"; };
+		7230211BAA0A5B9F75DDA81D /* Pods-Backbone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Backbone.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Backbone/Pods-Backbone.debug.xcconfig"; sourceTree = "<group>"; };
+		7E09B24D1CBB8C6F00122878 /* Backbone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Backbone.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E09B2501CBB8C7000122878 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7E09B2521CBB8C7000122878 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7E09B2551CBB8C7000122878 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7E09B2571CBB8C7000122878 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7E09B25A1CBB8C7000122878 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7E09B25C1CBB8C7000122878 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7E09B2611CBB8C7000122878 /* BackboneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BackboneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E09B2651CBB8C7000122878 /* BackboneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackboneTests.swift; sourceTree = "<group>"; };
+		7E09B2671CBB8C7000122878 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7E09B27C1CBB8C7F00122878 /* BackboneUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BackboneUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E09B2821CBB8CAD00122878 /* BackboneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BackboneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E09B2841CBB8CAD00122878 /* BackboneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackboneUITests.swift; sourceTree = "<group>"; };
+		7E09B2861CBB8CAD00122878 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7E09B28E1CBB962200122878 /* UIColor+NotificationCenterColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+NotificationCenterColors.swift"; path = "Extensions/UI/UIColor+NotificationCenterColors.swift"; sourceTree = "<group>"; };
+		7E09B2911CBB963E00122878 /* DBFactoryProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DBFactoryProtocol.swift; path = Protocols/DBFactoryProtocol.swift; sourceTree = "<group>"; };
+		7E09B2941CBB964F00122878 /* DBAccess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DBAccess.swift; path = DB/DBAccess.swift; sourceTree = "<group>"; };
+		7E09B2951CBB964F00122878 /* RealmFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RealmFactory.swift; path = DB/RealmFactory.swift; sourceTree = "<group>"; };
+		7E09B2991CBB966600122878 /* ASNotificationServiceInitializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ASNotificationServiceInitializer.swift; path = Initializers/ASNotificationServiceInitializer.swift; sourceTree = "<group>"; };
+		7E09B29A1CBB966600122878 /* AssetDownloadServiceInitializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AssetDownloadServiceInitializer.swift; path = Initializers/AssetDownloadServiceInitializer.swift; sourceTree = "<group>"; };
+		7E09B29B1CBB966600122878 /* CocoaLumberjackInitializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CocoaLumberjackInitializer.swift; path = Initializers/CocoaLumberjackInitializer.swift; sourceTree = "<group>"; };
+		7E09B29C1CBB966600122878 /* DatabaseInitializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DatabaseInitializer.swift; path = Initializers/DatabaseInitializer.swift; sourceTree = "<group>"; };
+		7E09B29D1CBB966600122878 /* FabricInitializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FabricInitializer.swift; path = Initializers/FabricInitializer.swift; sourceTree = "<group>"; };
+		7E09B2A41CBB967900122878 /* EnvironmentSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EnvironmentSettings.swift; path = Helpers/EnvironmentSettings.swift; sourceTree = "<group>"; };
+		7E09B2A81CBB969700122878 /* AppConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = AppConfig.plist; path = Config/AppConfig.plist; sourceTree = "<group>"; };
+		7E09B2A91CBB969700122878 /* AppConfig~alpha.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "AppConfig~alpha.plist"; path = "Config/AppConfig~alpha.plist"; sourceTree = "<group>"; };
+		7E09B2AA1CBB969700122878 /* AppConfig~debug.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "AppConfig~debug.plist"; path = "Config/AppConfig~debug.plist"; sourceTree = "<group>"; };
+		7E09B2AB1CBB969700122878 /* ConfigReader+AppConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "ConfigReader+AppConfig.swift"; path = "Config/ConfigReader+AppConfig.swift"; sourceTree = "<group>"; };
+		7E09B2B01CBB96A000122878 /* AppConfig~debug~uitests.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "AppConfig~debug~uitests.plist"; path = "Config/UI Tests/AppConfig~debug~uitests.plist"; sourceTree = "<group>"; };
+		7EFA8F061CBBC5220050FD82 /* BackboneAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BackboneAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		820374D7F6CA59D5033B0348 /* Pods_BackboneTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BackboneTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		91F2F4B3AA5874FB31B5FE41 /* Pods-BackboneUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BackboneUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BackboneUITests/Pods-BackboneUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		928A43908C78B13CB0E6ED6A /* Pods-Backbone.alpha.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Backbone.alpha.xcconfig"; path = "Pods/Target Support Files/Pods-Backbone/Pods-Backbone.alpha.xcconfig"; sourceTree = "<group>"; };
+		99C0FD120513BC7397356DAD /* Pods-BackboneTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BackboneTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BackboneTests/Pods-BackboneTests.release.xcconfig"; sourceTree = "<group>"; };
+		9E0F99140E15782B184692DC /* Pods-BackboneUITests.alpha.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BackboneUITests.alpha.xcconfig"; path = "Pods/Target Support Files/Pods-BackboneUITests/Pods-BackboneUITests.alpha.xcconfig"; sourceTree = "<group>"; };
+		C92FF7FEE58646153131330B /* Pods-BackboneUI.alpha.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BackboneUI.alpha.xcconfig"; path = "Pods/Target Support Files/Pods-BackboneUI/Pods-BackboneUI.alpha.xcconfig"; sourceTree = "<group>"; };
+		DD96C6259CEB19AF0E811423 /* Pods-BackboneUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BackboneUI.release.xcconfig"; path = "Pods/Target Support Files/Pods-BackboneUI/Pods-BackboneUI.release.xcconfig"; sourceTree = "<group>"; };
+		DED2A738BBAEF5480A1F14E3 /* Pods_BackboneUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BackboneUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F05798926CFF9F7FCD15F3C6 /* Pods-BackboneAppTests.alpha.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BackboneAppTests.alpha.xcconfig"; path = "Pods/Target Support Files/Pods-BackboneAppTests/Pods-BackboneAppTests.alpha.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7E09B24A1CBB8C6F00122878 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA2634AB7061B8E6A27E120F /* Pods_Backbone.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E09B25E1CBB8C7000122878 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D08E3B758E3CDB0A6794AC54 /* Pods_BackboneTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E09B2741CBB8C7F00122878 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22531E84E21A08F7E200D239 /* Pods_BackboneUI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7EFA8EFE1CBBC5220050FD82 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7EFA8EFF1CBBC5220050FD82 /* Pods_BackboneTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CABC0048B7062EDC4A65C3C4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE9FAEA13EE1BB346533A482 /* Pods_BackboneUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		688BE23D936BD2408A4AA2C7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7230211BAA0A5B9F75DDA81D /* Pods-Backbone.debug.xcconfig */,
+				3D7BA7740E0547D0DF8F311C /* Pods-Backbone.release.xcconfig */,
+				6ECA6B68FDCA5308689CC3EF /* Pods-BackboneTests.debug.xcconfig */,
+				99C0FD120513BC7397356DAD /* Pods-BackboneTests.release.xcconfig */,
+				37DF5E73314B91FA920CD7B5 /* Pods-BackboneUI.debug.xcconfig */,
+				DD96C6259CEB19AF0E811423 /* Pods-BackboneUI.release.xcconfig */,
+				91F2F4B3AA5874FB31B5FE41 /* Pods-BackboneUITests.debug.xcconfig */,
+				18BDEFCDB31D6B5400FC39E1 /* Pods-BackboneUITests.release.xcconfig */,
+				928A43908C78B13CB0E6ED6A /* Pods-Backbone.alpha.xcconfig */,
+				6F48D479EA376AD23E174446 /* Pods-BackboneTests.alpha.xcconfig */,
+				C92FF7FEE58646153131330B /* Pods-BackboneUI.alpha.xcconfig */,
+				9E0F99140E15782B184692DC /* Pods-BackboneUITests.alpha.xcconfig */,
+				417568BE800A9DE1C01C0BCE /* Pods-BackboneAppTests.debug.xcconfig */,
+				19C1C19187ACCC3FE4582109 /* Pods-BackboneAppTests.release.xcconfig */,
+				F05798926CFF9F7FCD15F3C6 /* Pods-BackboneAppTests.alpha.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7E09B2441CBB8C6F00122878 = {
+			isa = PBXGroup;
+			children = (
+				7E09B24F1CBB8C7000122878 /* Backbone */,
+				7E09B2641CBB8C7000122878 /* BackboneTests */,
+				7E09B2831CBB8CAD00122878 /* BackboneUITests */,
+				7E09B24E1CBB8C6F00122878 /* Products */,
+				688BE23D936BD2408A4AA2C7 /* Pods */,
+				D233BDB952F9AEBA8C32FCBC /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		7E09B24E1CBB8C6F00122878 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7E09B24D1CBB8C6F00122878 /* Backbone.app */,
+				7E09B2611CBB8C7000122878 /* BackboneTests.xctest */,
+				7E09B27C1CBB8C7F00122878 /* BackboneUI.app */,
+				7E09B2821CBB8CAD00122878 /* BackboneUITests.xctest */,
+				7EFA8F061CBBC5220050FD82 /* BackboneAppTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7E09B24F1CBB8C7000122878 /* Backbone */ = {
+			isa = PBXGroup;
+			children = (
+				7E09B2A61CBB967E00122878 /* Config */,
+				7E09B2A31CBB967000122878 /* Helpers */,
+				7E09B2981CBB965400122878 /* Initializers */,
+				7E09B2931CBB964400122878 /* DB */,
+				7E09B2901CBB962D00122878 /* Protocols */,
+				7E09B28C1CBB960200122878 /* Extensions */,
+				7E09B2501CBB8C7000122878 /* AppDelegate.swift */,
+				7E09B2521CBB8C7000122878 /* ViewController.swift */,
+				7E09B2541CBB8C7000122878 /* Main.storyboard */,
+				7E09B2571CBB8C7000122878 /* Assets.xcassets */,
+				7E09B2591CBB8C7000122878 /* LaunchScreen.storyboard */,
+				7E09B25C1CBB8C7000122878 /* Info.plist */,
+			);
+			path = Backbone;
+			sourceTree = "<group>";
+		};
+		7E09B2641CBB8C7000122878 /* BackboneTests */ = {
+			isa = PBXGroup;
+			children = (
+				7E09B2651CBB8C7000122878 /* BackboneTests.swift */,
+				7E09B2671CBB8C7000122878 /* Info.plist */,
+			);
+			path = BackboneTests;
+			sourceTree = "<group>";
+		};
+		7E09B2831CBB8CAD00122878 /* BackboneUITests */ = {
+			isa = PBXGroup;
+			children = (
+				7E09B2841CBB8CAD00122878 /* BackboneUITests.swift */,
+				7E09B2861CBB8CAD00122878 /* Info.plist */,
+			);
+			path = BackboneUITests;
+			sourceTree = "<group>";
+		};
+		7E09B28C1CBB960200122878 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7E09B28D1CBB961A00122878 /* UI */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		7E09B28D1CBB961A00122878 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				7E09B28E1CBB962200122878 /* UIColor+NotificationCenterColors.swift */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		7E09B2901CBB962D00122878 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				7E09B2911CBB963E00122878 /* DBFactoryProtocol.swift */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		7E09B2931CBB964400122878 /* DB */ = {
+			isa = PBXGroup;
+			children = (
+				7E09B2941CBB964F00122878 /* DBAccess.swift */,
+				7E09B2951CBB964F00122878 /* RealmFactory.swift */,
+			);
+			name = DB;
+			sourceTree = "<group>";
+		};
+		7E09B2981CBB965400122878 /* Initializers */ = {
+			isa = PBXGroup;
+			children = (
+				7E09B2991CBB966600122878 /* ASNotificationServiceInitializer.swift */,
+				7E09B29A1CBB966600122878 /* AssetDownloadServiceInitializer.swift */,
+				7E09B29B1CBB966600122878 /* CocoaLumberjackInitializer.swift */,
+				7E09B29C1CBB966600122878 /* DatabaseInitializer.swift */,
+				7E09B29D1CBB966600122878 /* FabricInitializer.swift */,
+			);
+			name = Initializers;
+			sourceTree = "<group>";
+		};
+		7E09B2A31CBB967000122878 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				7E09B2A41CBB967900122878 /* EnvironmentSettings.swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		7E09B2A61CBB967E00122878 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				7E09B2A81CBB969700122878 /* AppConfig.plist */,
+				7E09B2A91CBB969700122878 /* AppConfig~alpha.plist */,
+				7E09B2AA1CBB969700122878 /* AppConfig~debug.plist */,
+				7E09B2AB1CBB969700122878 /* ConfigReader+AppConfig.swift */,
+				7E09B2A71CBB968700122878 /* UI Tests */,
+			);
+			name = Config;
+			sourceTree = "<group>";
+		};
+		7E09B2A71CBB968700122878 /* UI Tests */ = {
+			isa = PBXGroup;
+			children = (
+				7E09B2B01CBB96A000122878 /* AppConfig~debug~uitests.plist */,
+			);
+			name = "UI Tests";
+			sourceTree = "<group>";
+		};
+		D233BDB952F9AEBA8C32FCBC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				02BA91E5AC49FD23E0166510 /* Pods_Backbone.framework */,
+				820374D7F6CA59D5033B0348 /* Pods_BackboneTests.framework */,
+				DED2A738BBAEF5480A1F14E3 /* Pods_BackboneUI.framework */,
+				0002158E421FE9E0B6ED9734 /* Pods_BackboneUITests.framework */,
+				322F0225E7595753AFD2B229 /* Pods_BackboneAppTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7E09B24C1CBB8C6F00122878 /* Backbone */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7E09B26A1CBB8C7000122878 /* Build configuration list for PBXNativeTarget "Backbone" */;
+			buildPhases = (
+				C2D92BF3663590D8A1D9FD67 /* Check Pods Manifest.lock */,
+				7E09B2491CBB8C6F00122878 /* Sources */,
+				7E09B24A1CBB8C6F00122878 /* Frameworks */,
+				7E09B24B1CBB8C6F00122878 /* Resources */,
+				8A9E9C504B9886D085CED89E /* Embed Pods Frameworks */,
+				6A89C94D1B13E2E84CB2F776 /* Copy Pods Resources */,
+				7E09B2B21CBB970F00122878 /* Fabric */,
+				7E09B2B31CBB971900122878 /* SwiftLint */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Backbone;
+			productName = Backbone;
+			productReference = 7E09B24D1CBB8C6F00122878 /* Backbone.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7E09B2601CBB8C7000122878 /* BackboneTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7E09B26D1CBB8C7000122878 /* Build configuration list for PBXNativeTarget "BackboneTests" */;
+			buildPhases = (
+				7E09B25D1CBB8C7000122878 /* Sources */,
+				7E09B25E1CBB8C7000122878 /* Frameworks */,
+				7E09B25F1CBB8C7000122878 /* Resources */,
+				665303D4CADC9AE9AF66BDCB /* Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7E09B2631CBB8C7000122878 /* PBXTargetDependency */,
+			);
+			name = BackboneTests;
+			productName = BackboneTests;
+			productReference = 7E09B2611CBB8C7000122878 /* BackboneTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		7E09B2701CBB8C7F00122878 /* BackboneUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7E09B2791CBB8C7F00122878 /* Build configuration list for PBXNativeTarget "BackboneUI" */;
+			buildPhases = (
+				BB2046DD4647BB2567B312A9 /* Check Pods Manifest.lock */,
+				7E09B2711CBB8C7F00122878 /* Sources */,
+				7E09B2741CBB8C7F00122878 /* Frameworks */,
+				7E09B2751CBB8C7F00122878 /* Resources */,
+				9EA7A469EC70D5FAA4157DD6 /* Embed Pods Frameworks */,
+				F2E14C615B4EC3AC68A340A9 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BackboneUI;
+			productName = Backbone;
+			productReference = 7E09B27C1CBB8C7F00122878 /* BackboneUI.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7E09B2811CBB8CAD00122878 /* BackboneUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7E09B2891CBB8CAD00122878 /* Build configuration list for PBXNativeTarget "BackboneUITests" */;
+			buildPhases = (
+				6B024B87C12658682579B1DB /* Check Pods Manifest.lock */,
+				7E09B27E1CBB8CAD00122878 /* Sources */,
+				7E09B2801CBB8CAD00122878 /* Resources */,
+				CABC0048B7062EDC4A65C3C4 /* Frameworks */,
+				21CC284835BF3294C1065609 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7E09B2881CBB8CAD00122878 /* PBXTargetDependency */,
+			);
+			name = BackboneUITests;
+			productName = BackboneUITests;
+			productReference = 7E09B2821CBB8CAD00122878 /* BackboneUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		7EFA8EF91CBBC5220050FD82 /* BackboneAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7EFA8F021CBBC5220050FD82 /* Build configuration list for PBXNativeTarget "BackboneAppTests" */;
+			buildPhases = (
+				7EFA8EFC1CBBC5220050FD82 /* Sources */,
+				7EFA8EFE1CBBC5220050FD82 /* Frameworks */,
+				7EFA8F001CBBC5220050FD82 /* Resources */,
+				7EFA8F011CBBC5220050FD82 /* Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7EFA8EFA1CBBC5220050FD82 /* PBXTargetDependency */,
+			);
+			name = BackboneAppTests;
+			productName = BackboneTests;
+			productReference = 7EFA8F061CBBC5220050FD82 /* BackboneAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7E09B2451CBB8C6F00122878 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = DreamLab;
+				TargetAttributes = {
+					7E09B24C1CBB8C6F00122878 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					7E09B2601CBB8C7000122878 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					7E09B2811CBB8CAD00122878 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 7E09B2701CBB8C7F00122878;
+					};
+					7EFA8EF91CBBC5220050FD82 = {
+						TestTargetID = 7E09B24C1CBB8C6F00122878;
+					};
+				};
+			};
+			buildConfigurationList = 7E09B2481CBB8C6F00122878 /* Build configuration list for PBXProject "Backbone" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7E09B2441CBB8C6F00122878;
+			productRefGroup = 7E09B24E1CBB8C6F00122878 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7E09B24C1CBB8C6F00122878 /* Backbone */,
+				7E09B2601CBB8C7000122878 /* BackboneTests */,
+				7EFA8EF91CBBC5220050FD82 /* BackboneAppTests */,
+				7E09B2701CBB8C7F00122878 /* BackboneUI */,
+				7E09B2811CBB8CAD00122878 /* BackboneUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7E09B24B1CBB8C6F00122878 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E09B2B11CBB96A000122878 /* AppConfig~debug~uitests.plist in Resources */,
+				7E09B2AD1CBB969700122878 /* AppConfig~alpha.plist in Resources */,
+				7E09B2AC1CBB969700122878 /* AppConfig.plist in Resources */,
+				7E09B25B1CBB8C7000122878 /* LaunchScreen.storyboard in Resources */,
+				7E09B2581CBB8C7000122878 /* Assets.xcassets in Resources */,
+				7E09B2561CBB8C7000122878 /* Main.storyboard in Resources */,
+				7E09B2AE1CBB969700122878 /* AppConfig~debug.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E09B25F1CBB8C7000122878 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E09B2751CBB8C7F00122878 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E09B2761CBB8C7F00122878 /* LaunchScreen.storyboard in Resources */,
+				7E09B2771CBB8C7F00122878 /* Assets.xcassets in Resources */,
+				7E09B2781CBB8C7F00122878 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E09B2801CBB8CAD00122878 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7EFA8F001CBBC5220050FD82 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		21CC284835BF3294C1065609 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BackboneUITests/Pods-BackboneUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		665303D4CADC9AE9AF66BDCB /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BackboneTests/Pods-BackboneTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6A89C94D1B13E2E84CB2F776 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Backbone/Pods-Backbone-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6B024B87C12658682579B1DB /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7E09B2B21CBB970F00122878 /* Fabric */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Fabric;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" b7868f1a601bac93a7353bd5ec2dae71e4b540e5 aa3a94a2e2c9066a232955f7b9a401765e63bdc75a0989f5b8b1709fbee9b580";
+		};
+		7E09B2B31CBB971900122878 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+		7EFA8F011CBBC5220050FD82 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BackboneTests/Pods-BackboneTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8A9E9C504B9886D085CED89E /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Backbone/Pods-Backbone-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9EA7A469EC70D5FAA4157DD6 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BackboneUI/Pods-BackboneUI-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BB2046DD4647BB2567B312A9 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C2D92BF3663590D8A1D9FD67 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F2E14C615B4EC3AC68A340A9 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BackboneUI/Pods-BackboneUI-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7E09B2491CBB8C6F00122878 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E09B2A21CBB966600122878 /* FabricInitializer.swift in Sources */,
+				7E09B2A01CBB966600122878 /* CocoaLumberjackInitializer.swift in Sources */,
+				7E09B2A51CBB967900122878 /* EnvironmentSettings.swift in Sources */,
+				7E09B2AF1CBB969700122878 /* ConfigReader+AppConfig.swift in Sources */,
+				7E09B2531CBB8C7000122878 /* ViewController.swift in Sources */,
+				7E09B29E1CBB966600122878 /* ASNotificationServiceInitializer.swift in Sources */,
+				7E09B2961CBB964F00122878 /* DBAccess.swift in Sources */,
+				7E09B2971CBB964F00122878 /* RealmFactory.swift in Sources */,
+				7E09B2A11CBB966600122878 /* DatabaseInitializer.swift in Sources */,
+				7E09B2511CBB8C7000122878 /* AppDelegate.swift in Sources */,
+				7E09B29F1CBB966600122878 /* AssetDownloadServiceInitializer.swift in Sources */,
+				7E09B2921CBB963E00122878 /* DBFactoryProtocol.swift in Sources */,
+				7E09B28F1CBB962200122878 /* UIColor+NotificationCenterColors.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E09B25D1CBB8C7000122878 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E09B2661CBB8C7000122878 /* BackboneTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E09B2711CBB8C7F00122878 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E09B2B71CBB993A00122878 /* CocoaLumberjackInitializer.swift in Sources */,
+				7E09B2721CBB8C7F00122878 /* ViewController.swift in Sources */,
+				7E09B2B51CBB993500122878 /* ASNotificationServiceInitializer.swift in Sources */,
+				7E09B2B61CBB993800122878 /* AssetDownloadServiceInitializer.swift in Sources */,
+				7E09B2BC1CBB994800122878 /* DBFactoryProtocol.swift in Sources */,
+				7E09B2731CBB8C7F00122878 /* AppDelegate.swift in Sources */,
+				7E09B2B91CBB993F00122878 /* DatabaseInitializer.swift in Sources */,
+				7E09B2BB1CBB994500122878 /* RealmFactory.swift in Sources */,
+				7E09B2B81CBB993D00122878 /* FabricInitializer.swift in Sources */,
+				7E09B2B41CBB993100122878 /* EnvironmentSettings.swift in Sources */,
+				7E09B2BA1CBB994300122878 /* DBAccess.swift in Sources */,
+				7E09B2BD1CBB994E00122878 /* UIColor+NotificationCenterColors.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E09B27E1CBB8CAD00122878 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E09B2851CBB8CAD00122878 /* BackboneUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7EFA8EFC1CBBC5220050FD82 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7EFA8EFD1CBBC5220050FD82 /* BackboneTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7E09B2631CBB8C7000122878 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7E09B24C1CBB8C6F00122878 /* Backbone */;
+			targetProxy = 7E09B2621CBB8C7000122878 /* PBXContainerItemProxy */;
+		};
+		7E09B2881CBB8CAD00122878 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7E09B2701CBB8C7F00122878 /* BackboneUI */;
+			targetProxy = 7E09B2871CBB8CAD00122878 /* PBXContainerItemProxy */;
+		};
+		7EFA8EFA1CBBC5220050FD82 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7E09B24C1CBB8C6F00122878 /* Backbone */;
+			targetProxy = 7EFA8EFB1CBBC5220050FD82 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7E09B2541CBB8C7000122878 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7E09B2551CBB8C7000122878 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7E09B2591CBB8C7000122878 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7E09B25A1CBB8C7000122878 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7E09B2681CBB8C7000122878 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_DISPLAY_NAME_SUFFIX = "Δ";
+				BUNDLE_ID_SUFFIX = .dev;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_SWIFT_FLAGS = "-DDEBUG";
+				PRODUCT_BUNDLE_IDENTIFIER = "pl.dreamlab.backbone${BUNDLE_ID_SUFFIX}";
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7E09B2691CBB8C7000122878 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_DISPLAY_NAME_SUFFIX = "";
+				BUNDLE_ID_SUFFIX = "";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_SWIFT_FLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = "pl.dreamlab.backbone${BUNDLE_ID_SUFFIX}";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7E09B26B1CBB8C7000122878 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7230211BAA0A5B9F75DDA81D /* Pods-Backbone.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Backbone/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = pl.dreamlab.backbone.dev;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		7E09B26C1CBB8C7000122878 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D7BA7740E0547D0DF8F311C /* Pods-Backbone.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Backbone/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = pl.dreamlab.backbone.dev;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		7E09B26E1CBB8C7000122878 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6ECA6B68FDCA5308689CC3EF /* Pods-BackboneTests.debug.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = BackboneTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = DL.BackboneTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		7E09B26F1CBB8C7000122878 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 99C0FD120513BC7397356DAD /* Pods-BackboneTests.release.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = BackboneTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = DL.BackboneTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		7E09B27A1CBB8C7F00122878 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 37DF5E73314B91FA920CD7B5 /* Pods-BackboneUI.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "$(SRCROOT)/Backbone/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = pl.dreamlab.backbone.dev;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		7E09B27B1CBB8C7F00122878 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD96C6259CEB19AF0E811423 /* Pods-BackboneUI.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "$(SRCROOT)/Backbone/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = pl.dreamlab.backbone.dev;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		7E09B28A1CBB8CAD00122878 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 91F2F4B3AA5874FB31B5FE41 /* Pods-BackboneUITests.debug.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = BackboneUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = DL.BackboneUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = BackboneUI;
+			};
+			name = Debug;
+		};
+		7E09B28B1CBB8CAD00122878 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 18BDEFCDB31D6B5400FC39E1 /* Pods-BackboneUITests.release.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = BackboneUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = DL.BackboneUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = BackboneUI;
+			};
+			name = Release;
+		};
+		7E09B2BE1CBB99DE00122878 /* Alpha */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_DISPLAY_NAME_SUFFIX = "α";
+				BUNDLE_ID_SUFFIX = .alpha;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_SWIFT_FLAGS = "-DALPHA";
+				PRODUCT_BUNDLE_IDENTIFIER = "pl.dreamlab.backbone${BUNDLE_ID_SUFFIX}";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = NO;
+			};
+			name = Alpha;
+		};
+		7E09B2BF1CBB99DE00122878 /* Alpha */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 928A43908C78B13CB0E6ED6A /* Pods-Backbone.alpha.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Backbone/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = pl.dreamlab.backbone.dev;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Alpha;
+		};
+		7E09B2C01CBB99DE00122878 /* Alpha */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6F48D479EA376AD23E174446 /* Pods-BackboneTests.alpha.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = BackboneTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = DL.BackboneTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Alpha;
+		};
+		7E09B2C11CBB99DE00122878 /* Alpha */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C92FF7FEE58646153131330B /* Pods-BackboneUI.alpha.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "$(SRCROOT)/Backbone/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = pl.dreamlab.backbone.dev;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Alpha;
+		};
+		7E09B2C21CBB99DE00122878 /* Alpha */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9E0F99140E15782B184692DC /* Pods-BackboneUITests.alpha.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = BackboneUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = DL.BackboneUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = BackboneUI;
+			};
+			name = Alpha;
+		};
+		7EFA8F031CBBC5220050FD82 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6ECA6B68FDCA5308689CC3EF /* Pods-BackboneTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = BackboneTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = DL.BackboneTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Backbone.app/Backbone";
+			};
+			name = Debug;
+		};
+		7EFA8F041CBBC5220050FD82 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 99C0FD120513BC7397356DAD /* Pods-BackboneTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = BackboneTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = DL.BackboneTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Backbone.app/Backbone";
+			};
+			name = Release;
+		};
+		7EFA8F051CBBC5220050FD82 /* Alpha */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6F48D479EA376AD23E174446 /* Pods-BackboneTests.alpha.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = BackboneTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = DL.BackboneTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Backbone.app/Backbone";
+			};
+			name = Alpha;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7E09B2481CBB8C6F00122878 /* Build configuration list for PBXProject "Backbone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7E09B2681CBB8C7000122878 /* Debug */,
+				7E09B2691CBB8C7000122878 /* Release */,
+				7E09B2BE1CBB99DE00122878 /* Alpha */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		7E09B26A1CBB8C7000122878 /* Build configuration list for PBXNativeTarget "Backbone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7E09B26B1CBB8C7000122878 /* Debug */,
+				7E09B26C1CBB8C7000122878 /* Release */,
+				7E09B2BF1CBB99DE00122878 /* Alpha */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		7E09B26D1CBB8C7000122878 /* Build configuration list for PBXNativeTarget "BackboneTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7E09B26E1CBB8C7000122878 /* Debug */,
+				7E09B26F1CBB8C7000122878 /* Release */,
+				7E09B2C01CBB99DE00122878 /* Alpha */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		7E09B2791CBB8C7F00122878 /* Build configuration list for PBXNativeTarget "BackboneUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7E09B27A1CBB8C7F00122878 /* Debug */,
+				7E09B27B1CBB8C7F00122878 /* Release */,
+				7E09B2C11CBB99DE00122878 /* Alpha */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		7E09B2891CBB8CAD00122878 /* Build configuration list for PBXNativeTarget "BackboneUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7E09B28A1CBB8CAD00122878 /* Debug */,
+				7E09B28B1CBB8CAD00122878 /* Release */,
+				7E09B2C21CBB99DE00122878 /* Alpha */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		7EFA8F021CBBC5220050FD82 /* Build configuration list for PBXNativeTarget "BackboneAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7EFA8F031CBBC5220050FD82 /* Debug */,
+				7EFA8F041CBBC5220050FD82 /* Release */,
+				7EFA8F051CBBC5220050FD82 /* Alpha */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7E09B2451CBB8C6F00122878 /* Project object */;
+}
