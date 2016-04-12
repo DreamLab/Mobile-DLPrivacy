@@ -17,8 +17,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "7EFA8EF91CBBC5220050FD82"
-               BuildableName = "BackboneAppTests.xctest"
-               BlueprintName = "BackboneAppTests"
+               BuildableName = "BackboneIntegrationTests.xctest"
+               BlueprintName = "BackboneIntegrationTests"
                ReferencedContainer = "container:Backbone.xcodeproj">
             </BuildableReference>
          </TestableReference>

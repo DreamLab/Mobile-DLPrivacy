@@ -117,7 +117,7 @@
 		7E09B2AA1CBB969700122878 /* AppConfig~debug.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "AppConfig~debug.plist"; path = "Config/AppConfig~debug.plist"; sourceTree = "<group>"; };
 		7E09B2AB1CBB969700122878 /* ConfigReader+AppConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "ConfigReader+AppConfig.swift"; path = "Config/ConfigReader+AppConfig.swift"; sourceTree = "<group>"; };
 		7E09B2B01CBB96A000122878 /* AppConfig~debug~uitests.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "AppConfig~debug~uitests.plist"; path = "Config/UI Tests/AppConfig~debug~uitests.plist"; sourceTree = "<group>"; };
-		7EFA8F061CBBC5220050FD82 /* BackboneAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BackboneAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7EFA8F061CBBC5220050FD82 /* BackboneIntegrationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BackboneIntegrationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		820374D7F6CA59D5033B0348 /* Pods_BackboneTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BackboneTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		91F2F4B3AA5874FB31B5FE41 /* Pods-BackboneUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BackboneUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BackboneUITests/Pods-BackboneUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		928A43908C78B13CB0E6ED6A /* Pods-Backbone.alpha.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Backbone.alpha.xcconfig"; path = "Pods/Target Support Files/Pods-Backbone/Pods-Backbone.alpha.xcconfig"; sourceTree = "<group>"; };
@@ -214,7 +214,7 @@
 				7E09B2611CBB8C7000122878 /* BackboneTests.xctest */,
 				7E09B27C1CBB8C7F00122878 /* BackboneUI.app */,
 				7E09B2821CBB8CAD00122878 /* BackboneUITests.xctest */,
-				7EFA8F061CBBC5220050FD82 /* BackboneAppTests.xctest */,
+				7EFA8F061CBBC5220050FD82 /* BackboneIntegrationTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -425,9 +425,9 @@
 			productReference = 7E09B2821CBB8CAD00122878 /* BackboneUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
-		7EFA8EF91CBBC5220050FD82 /* BackboneAppTests */ = {
+		7EFA8EF91CBBC5220050FD82 /* BackboneIntegrationTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7EFA8F021CBBC5220050FD82 /* Build configuration list for PBXNativeTarget "BackboneAppTests" */;
+			buildConfigurationList = 7EFA8F021CBBC5220050FD82 /* Build configuration list for PBXNativeTarget "BackboneIntegrationTests" */;
 			buildPhases = (
 				7EFA8EFC1CBBC5220050FD82 /* Sources */,
 				7EFA8EFE1CBBC5220050FD82 /* Frameworks */,
@@ -439,9 +439,9 @@
 			dependencies = (
 				7EFA8EFA1CBBC5220050FD82 /* PBXTargetDependency */,
 			);
-			name = BackboneAppTests;
+			name = BackboneIntegrationTests;
 			productName = BackboneTests;
-			productReference = 7EFA8F061CBBC5220050FD82 /* BackboneAppTests.xctest */;
+			productReference = 7EFA8F061CBBC5220050FD82 /* BackboneIntegrationTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -484,7 +484,7 @@
 			targets = (
 				7E09B24C1CBB8C6F00122878 /* Backbone */,
 				7E09B2601CBB8C7000122878 /* BackboneTests */,
-				7EFA8EF91CBBC5220050FD82 /* BackboneAppTests */,
+				7EFA8EF91CBBC5220050FD82 /* BackboneIntegrationTests */,
 				7E09B2701CBB8C7F00122878 /* BackboneUI */,
 				7E09B2811CBB8CAD00122878 /* BackboneUITests */,
 			);
@@ -1193,7 +1193,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		7EFA8F021CBBC5220050FD82 /* Build configuration list for PBXNativeTarget "BackboneAppTests" */ = {
+		7EFA8F021CBBC5220050FD82 /* Build configuration list for PBXNativeTarget "BackboneIntegrationTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7EFA8F031CBBC5220050FD82 /* Debug */,
