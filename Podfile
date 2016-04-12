@@ -16,17 +16,18 @@ def common_pods
     pod 'DLUIExtensions'
     pod 'DLRealmHelpers'
     pod 'DLAssetDownloadService'
-    pod 'Fabric', '~> 1.6.0'
-    pod 'Crashlytics', '~> 3.5.0'
+
 end
 
 target 'Backbone' do
 	platform :ios, '8.0'
     common_pods
+    pod 'Fabric', '~> 1.6.0'
+    pod 'Crashlytics', '~> 3.5.0'
 end
 
 target 'BackboneTests' do
-    pod 'DLRealmHelpers'
+    common_pods
 end
 
 target 'BackboneUI' do
