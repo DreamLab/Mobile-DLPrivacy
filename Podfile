@@ -19,11 +19,15 @@ def common_pods
 
 end
 
+def fabric_pods
+    pod 'Fabric', '~> 1.6.0'
+    pod 'Crashlytics', '~> 3.5.0'
+end
+
 target 'Backbone' do
 	platform :ios, '8.0'
     common_pods
-    pod 'Fabric', '~> 1.6.0'
-    pod 'Crashlytics', '~> 3.5.0'
+    fabric_pods
 end
 
 target 'BackboneTests' do
@@ -33,7 +37,7 @@ end
 target 'BackboneUI' do
     platform :ios, '9.0'
     common_pods
-    pod 'DLRealmHelpers'
+    fabric_pods
     pod 'DLRemoteControl'
 end
 
