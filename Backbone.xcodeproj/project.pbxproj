@@ -34,7 +34,6 @@
 		7E09B2AD1CBB969700122878 /* AppConfig~alpha.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7E09B2A91CBB969700122878 /* AppConfig~alpha.plist */; };
 		7E09B2AE1CBB969700122878 /* AppConfig~debug.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7E09B2AA1CBB969700122878 /* AppConfig~debug.plist */; };
 		7E09B2AF1CBB969700122878 /* ConfigReader+AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09B2AB1CBB969700122878 /* ConfigReader+AppConfig.swift */; };
-		7E09B2B11CBB96A000122878 /* AppConfig~debug~uitests.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7E09B2B01CBB96A000122878 /* AppConfig~debug~uitests.plist */; };
 		7E09B2B41CBB993100122878 /* EnvironmentSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09B2A41CBB967900122878 /* EnvironmentSettings.swift */; };
 		7E09B2B51CBB993500122878 /* ASNotificationServiceInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09B2991CBB966600122878 /* ASNotificationServiceInitializer.swift */; };
 		7E09B2B61CBB993800122878 /* AssetDownloadServiceInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09B29A1CBB966600122878 /* AssetDownloadServiceInitializer.swift */; };
@@ -47,6 +46,7 @@
 		7E09B2BD1CBB994E00122878 /* UIColor+NotificationCenterColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09B28E1CBB962200122878 /* UIColor+NotificationCenterColors.swift */; };
 		7EFA8EFD1CBBC5220050FD82 /* BackboneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09B2651CBB8C7000122878 /* BackboneTests.swift */; };
 		7EFA8EFF1CBBC5220050FD82 /* Pods_BackboneTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 820374D7F6CA59D5033B0348 /* Pods_BackboneTests.framework */; };
+		7EFA8F0D1CBD02A70050FD82 /* AppConfig~debug~uitests.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7EFA8F0C1CBD02A70050FD82 /* AppConfig~debug~uitests.plist */; };
 		CA2634AB7061B8E6A27E120F /* Pods_Backbone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02BA91E5AC49FD23E0166510 /* Pods_Backbone.framework */; };
 		D08E3B758E3CDB0A6794AC54 /* Pods_BackboneTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 820374D7F6CA59D5033B0348 /* Pods_BackboneTests.framework */; };
 		EE9FAEA13EE1BB346533A482 /* Pods_BackboneUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0002158E421FE9E0B6ED9734 /* Pods_BackboneUITests.framework */; };
@@ -116,8 +116,8 @@
 		7E09B2A91CBB969700122878 /* AppConfig~alpha.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "AppConfig~alpha.plist"; path = "Config/AppConfig~alpha.plist"; sourceTree = "<group>"; };
 		7E09B2AA1CBB969700122878 /* AppConfig~debug.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "AppConfig~debug.plist"; path = "Config/AppConfig~debug.plist"; sourceTree = "<group>"; };
 		7E09B2AB1CBB969700122878 /* ConfigReader+AppConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "ConfigReader+AppConfig.swift"; path = "Config/ConfigReader+AppConfig.swift"; sourceTree = "<group>"; };
-		7E09B2B01CBB96A000122878 /* AppConfig~debug~uitests.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "AppConfig~debug~uitests.plist"; path = "Config/UI Tests/AppConfig~debug~uitests.plist"; sourceTree = "<group>"; };
 		7EFA8F061CBBC5220050FD82 /* BackboneAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BackboneAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7EFA8F0C1CBD02A70050FD82 /* AppConfig~debug~uitests.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "AppConfig~debug~uitests.plist"; path = "Config/UITests/AppConfig~debug~uitests.plist"; sourceTree = "<group>"; };
 		820374D7F6CA59D5033B0348 /* Pods_BackboneTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BackboneTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		91F2F4B3AA5874FB31B5FE41 /* Pods-BackboneUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BackboneUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BackboneUITests/Pods-BackboneUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		928A43908C78B13CB0E6ED6A /* Pods-Backbone.alpha.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Backbone.alpha.xcconfig"; path = "Pods/Target Support Files/Pods-Backbone/Pods-Backbone.alpha.xcconfig"; sourceTree = "<group>"; };
@@ -316,17 +316,17 @@
 				7E09B2A91CBB969700122878 /* AppConfig~alpha.plist */,
 				7E09B2AA1CBB969700122878 /* AppConfig~debug.plist */,
 				7E09B2AB1CBB969700122878 /* ConfigReader+AppConfig.swift */,
-				7E09B2A71CBB968700122878 /* UI Tests */,
+				7E09B2A71CBB968700122878 /* UITests */,
 			);
 			name = Config;
 			sourceTree = "<group>";
 		};
-		7E09B2A71CBB968700122878 /* UI Tests */ = {
+		7E09B2A71CBB968700122878 /* UITests */ = {
 			isa = PBXGroup;
 			children = (
-				7E09B2B01CBB96A000122878 /* AppConfig~debug~uitests.plist */,
+				7EFA8F0C1CBD02A70050FD82 /* AppConfig~debug~uitests.plist */,
 			);
-			name = "UI Tests";
+			name = UITests;
 			sourceTree = "<group>";
 		};
 		D233BDB952F9AEBA8C32FCBC /* Frameworks */ = {
@@ -496,7 +496,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7E09B2B11CBB96A000122878 /* AppConfig~debug~uitests.plist in Resources */,
+				7EFA8F0D1CBD02A70050FD82 /* AppConfig~debug~uitests.plist in Resources */,
 				7E09B2AD1CBB969700122878 /* AppConfig~alpha.plist in Resources */,
 				7E09B2AC1CBB969700122878 /* AppConfig.plist in Resources */,
 				7E09B25B1CBB8C7000122878 /* LaunchScreen.storyboard in Resources */,
