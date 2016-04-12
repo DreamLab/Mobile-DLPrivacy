@@ -32,6 +32,7 @@ end
 
 target 'BackboneTests' do
     common_pods
+    fabric_pods
 end
 
 target 'BackboneUI' do
