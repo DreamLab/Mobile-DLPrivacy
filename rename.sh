@@ -1,4 +1,6 @@
 #!/bin/bash
+export LC_CTYPE=C
+NAME="Backbone"
 if [ $# -eq 0 ]
   then
     echo "No arguments supplied"
@@ -7,6 +9,7 @@ fi
 rm -rf Pods/
 for i in {1..2}
 do
-    find . -name 'Backbone*' -print0 | xargs -0 rename -S 'Backbone' "$1"
+    find . -name "$NAME*" -print0 | xargs -0 rename -S "$NAME" "$1"
 done
-ack --literal --files-with-matches 'Backbone' | xargs sed -i '' "s/Backbone/$1/g"
+#export LC_CTYPE=C
+find . -type f | xargs sed -i '' "s/$NAME/$1/g"
