@@ -5,6 +5,7 @@ use_frameworks!
 inhibit_all_warnings!
 
 def common_pods
+    platform :ios, '8.0'
     pod 'ASNotificationCenter'
     pod 'DLReachabilityService'
     pod 'DLNetworkingService'
@@ -24,17 +25,16 @@ def fabric_pods
 end
 
 target 'Backbone' do
-	platform :ios, '8.0'
     common_pods
     fabric_pods
 end
 
 target 'BackboneTests' do
     common_pods
+    fabric_pods
 end
 
 target 'BackboneUI' do
-    platform :ios, '9.0'
     common_pods
     fabric_pods
     pod 'DLRemoteControl'

@@ -45,6 +45,8 @@
 		7E09B2BB1CBB994500122878 /* RealmFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09B2951CBB964F00122878 /* RealmFactory.swift */; };
 		7E09B2BC1CBB994800122878 /* DBFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09B2911CBB963E00122878 /* DBFactoryProtocol.swift */; };
 		7E09B2BD1CBB994E00122878 /* UIColor+NotificationCenterColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09B28E1CBB962200122878 /* UIColor+NotificationCenterColors.swift */; };
+		7EBD25F51CBE36C100C21E8F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09B2501CBB8C7000122878 /* AppDelegate.swift */; };
+		7EBD25F61CBE37B100C21E8F /* FabricInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09B29D1CBB966600122878 /* FabricInitializer.swift */; };
 		7EFA8EFD1CBBC5220050FD82 /* BackboneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09B2651CBB8C7000122878 /* BackboneTests.swift */; };
 		AE7D381955FB9226891AA5E3 /* Pods_BackboneUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D980329D40A70CC4B46C7B2 /* Pods_BackboneUITests.framework */; };
 		D0AF5C3FA75B923037779AFE /* Pods_Backbone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9226EA7C315E6F5C020942CE /* Pods_Backbone.framework */; };
@@ -744,9 +746,11 @@
 				7E09B2661CBB8C7000122878 /* BackboneTests.swift in Sources */,
 				D5BDA8111CBD1F310030CE23 /* ASNotificationServiceInitializer.swift in Sources */,
 				D58CC4431CBD70AB00DDE147 /* AssetDownloadServiceInitializer.swift in Sources */,
+				7EBD25F61CBE37B100C21E8F /* FabricInitializer.swift in Sources */,
 				D58CC4491CBD70BC00DDE147 /* DBFactoryProtocol.swift in Sources */,
 				D58CC4411CBD708600DDE147 /* ConfigReader+AppConfig.swift in Sources */,
 				D58CC44B1CBD70C800DDE147 /* ViewController.swift in Sources */,
+				7EBD25F51CBE36C100C21E8F /* AppDelegate.swift in Sources */,
 				D58CC4481CBD70B900DDE147 /* RealmFactory.swift in Sources */,
 				D5BDA8121CBD1F340030CE23 /* UIColor+NotificationCenterColors.swift in Sources */,
 				D58CC4451CBD70B000DDE147 /* DatabaseInitializer.swift in Sources */,
