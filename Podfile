@@ -16,7 +16,6 @@ def common_pods
     pod 'DLUIExtensions'
     pod 'DLRealmHelpers'
     pod 'DLAssetDownloadService'
-
 end
 
 def fabric_pods
@@ -32,7 +31,6 @@ end
 
 target 'BackboneTests' do
     common_pods
-    fabric_pods
 end
 
 target 'BackboneUI' do
