@@ -1,6 +1,6 @@
 #!/bin/bash
 export LC_CTYPE=C
-NAME="Backbone"
+NAME="DLRib"
 if [ $# -eq 0 ]
   then
     echo "No arguments supplied"
@@ -9,6 +9,6 @@ fi
 rm -rf Pods/
 for i in {1..2}
 do
-    find . -name "$NAME*" -print0 | xargs -0 rename -S "$NAME" "$1"
+    find . -name "$NAME*" |  sed -e "p;s/$NAME/$1/g" | xargs -n2 mv
 done
 find . -type f | xargs sed -i '' "s/$NAME/$1/g"
