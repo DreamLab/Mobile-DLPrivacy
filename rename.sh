@@ -11,4 +11,4 @@ for i in {1..2}
 do
     find . -name "$NAME*" |  sed -e "p;s/$NAME/$1/g" | xargs -n2 mv
 done
-find . -type f | xargs sed -i '' "s/$NAME/$1/g"
+find . -type f | grep -v "\.git" | xargs sed -i '' "s/$NAME/$1/g"
