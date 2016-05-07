@@ -40,11 +40,23 @@ Run code validation, fails on warnings
 ```
 fastlane publish_to_staging
 ```
-Publishes produced .ipa to staging
+Publishes produced .ipa and symbols to staging
 
 Parameters:
 
 * **`release_notes`**: Release notes.
+
+* **`recipients`**: Extension of DL_CRASHLYTICS_EMAILS or DL_CRASHLYTICS_GROUPS environments defining concrete set of recipients, e.g. when = DEV,QA it will read data from DL_CRASHLYTICS_GROUPS_DEV and DL_CRASHLYTICS_GROUPS_QA
+### release_app
+```
+fastlane release_app
+```
+Release app
+### upload_symbols_to_crashlytics
+```
+fastlane upload_symbols_to_crashlytics
+```
+Upload symbols to crashlytics
 ### build_pod_static_lib
 ```
 fastlane build_pod_static_lib

@@ -10,9 +10,11 @@ import Foundation
 
 /// Empty class which purpose is to show exact place of Pod classes
 public class ExampleClass {
-    
+
     /**
      Example method
+
+     - returns: Bool true
      */
     func exampleMethod() -> Bool {
         return true

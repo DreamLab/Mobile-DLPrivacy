@@ -330,8 +330,7 @@
 			children = (
 				D558E6F01CDB859C0055F30A /* Classes */,
 			);
-			name = Pod;
-			path = ../Pod;
+			path = Pod;
 			sourceTree = "<group>";
 		};
 		D558E6F01CDB859C0055F30A /* Classes */ = {
