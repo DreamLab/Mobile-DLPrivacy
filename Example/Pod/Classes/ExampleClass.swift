@@ -20,4 +20,14 @@ public class ExampleClass {
         // Returns true to satisfy example unit test
         return true
     }
+
+    /**
+     Example method 2
+
+     - returns: Bool true
+     */
+    func exampleMethod2() -> Bool {
+        // Returns true to satisfy example unit test
+        return true
+    }
 }
