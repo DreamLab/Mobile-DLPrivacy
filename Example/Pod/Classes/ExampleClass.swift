@@ -17,6 +17,7 @@ public class ExampleClass {
      - returns: Bool true
      */
     func exampleMethod() -> Bool {
+        // Returns true to satisfy example unit test
         return true
     }
 }
