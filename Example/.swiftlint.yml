@@ -1,5 +1,8 @@
 excluded: # paths to ignore during linting. Takes precedence over `included`.
   - Pods
+included:
+  - .
+  - ../Pod/
   
 # configurable rules can be customized from this configuration file
 # binary rules can set their severity level
