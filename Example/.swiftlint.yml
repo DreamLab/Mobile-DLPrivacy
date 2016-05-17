@@ -1,13 +1,15 @@
 excluded: # paths to ignore during linting. Takes precedence over `included`.
-  - Pods
+- Pods
 included:
-  - .
-  - ../Pod/
-  
+- ./
+- ../Pod/  
 # configurable rules can be customized from this configuration file
 # binary rules can set their severity level
 force_cast: warning
 force_try: warning 
+opt_in_rules:
+- force_unwrapping
+- missing_docs
 # rules that have both warning and error levels, can set just the warning level
 # implicitly
 line_length: 140
@@ -22,11 +24,11 @@ file_length:
 # naming rules can set warnings/errors for min_length and max_length
 # additionally they can set excluded names
 type_name:
-  min_length: 4 # only warning
+  min_length: 3 # only warning
   max_length: # warning and error
     warning: 40
     error: 50
   excluded: iPhone # excluded via string
 variable_name:
   min_length: # only min_length
-    error: 4 # only error
+    error: 3 # only error
