@@ -7,6 +7,6 @@ s.license      = { :type => 'Copyright. DreamLab', :file => 'LICENSE' }
 s.authors      = { "John Doe" => "john.doe@dreamlab.pl" }
 s.platform     = :ios, '8.0'
 s.source       = { :git => "ssh://git@stash.grupa.onet:7999/mb/ios-rib.git", :tag => s.version }
-s.source_files = 'Pod/Classes/*.swift'
+s.source_files = 'Pod/Classes/**/*.swift'
 s.requires_arc = true
 end
