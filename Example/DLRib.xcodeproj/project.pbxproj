@@ -124,6 +124,9 @@
 		BBE799287C6D6F3CC012DA86 /* Pods-DLRibTests.alpha.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DLRibTests.alpha.xcconfig"; path = "Pods/Target Support Files/Pods-DLRibTests/Pods-DLRibTests.alpha.xcconfig"; sourceTree = "<group>"; };
 		C91B91655D247F548D796DB5 /* Pods-DLRibUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DLRibUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DLRibUITests/Pods-DLRibUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D558E6F11CDB85D20055F30A /* ExampleClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleClass.swift; sourceTree = "<group>"; };
+		D5F7C7561CEDE6790048A0B5 /* DLRib.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = DLRib.podspec; path = ../DLRib.podspec; sourceTree = "<group>"; };
+		D5F7C7571CEDE6790048A0B5 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		D5F7C7581CEDE6790048A0B5 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				D558E6EF1CDB85810055F30A /* Pod */,
+				D5F7C7551CEDE65D0048A0B5 /* Podspec Metadata */,
 				7E09B24F1CBB8C7000122878 /* DLRib */,
 				7E09B2641CBB8C7000122878 /* DLRibTests */,
 				7E09B2831CBB8CAD00122878 /* DLRibUITests */,
@@ -340,6 +344,16 @@
 				D558E6F11CDB85D20055F30A /* ExampleClass.swift */,
 			);
 			path = Classes;
+			sourceTree = "<group>";
+		};
+		D5F7C7551CEDE65D0048A0B5 /* Podspec Metadata */ = {
+			isa = PBXGroup;
+			children = (
+				D5F7C7561CEDE6790048A0B5 /* DLRib.podspec */,
+				D5F7C7571CEDE6790048A0B5 /* LICENSE */,
+				D5F7C7581CEDE6790048A0B5 /* README.md */,
+			);
+			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
