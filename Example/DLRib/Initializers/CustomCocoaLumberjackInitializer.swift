@@ -25,9 +25,9 @@ class CustomCocoaLumberjackInitializer: CocoaLumberjackInitializer {
         // Info, Warning and Error
         if !EnvironmentSettings.isDebug {
             defaultDebugLevel = DDLogLevel.Info
+            DDLog.addLogger(crashlyticsLogger())
         }
         DDLog.addLogger(ttyLogger(CocoaLumberjackLogFormatter()))
-        DDLog.addLogger(crashlyticsLogger())
     }
 
     /**
