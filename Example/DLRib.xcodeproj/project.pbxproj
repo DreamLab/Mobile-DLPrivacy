@@ -22,7 +22,7 @@
 		7E09B2851CBB8CAD00122878 /* DLRibUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09B2841CBB8CAD00122878 /* DLRibUITests.swift */; };
 		7E09B28F1CBB962200122878 /* UIColor+NotificationCenterColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09B28E1CBB962200122878 /* UIColor+NotificationCenterColors.swift */; };
 		7E09B29E1CBB966600122878 /* ASNotificationServiceInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09B2991CBB966600122878 /* ASNotificationServiceInitializer.swift */; };
-		7E09B2A01CBB966600122878 /* CocoaLumberjackInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09B29B1CBB966600122878 /* CocoaLumberjackInitializer.swift */; };
+		7E09B2A01CBB966600122878 /* CustomCocoaLumberjackInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09B29B1CBB966600122878 /* CustomCocoaLumberjackInitializer.swift */; };
 		7E09B2A21CBB966600122878 /* FabricInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09B29D1CBB966600122878 /* FabricInitializer.swift */; };
 		7E09B2A51CBB967900122878 /* EnvironmentSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09B2A41CBB967900122878 /* EnvironmentSettings.swift */; };
 		7E09B2AC1CBB969700122878 /* AppConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7E09B2A81CBB969700122878 /* AppConfig.plist */; };
@@ -31,7 +31,7 @@
 		7E09B2AF1CBB969700122878 /* ConfigReader+AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09B2AB1CBB969700122878 /* ConfigReader+AppConfig.swift */; };
 		7E09B2B41CBB993100122878 /* EnvironmentSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09B2A41CBB967900122878 /* EnvironmentSettings.swift */; };
 		7E09B2B51CBB993500122878 /* ASNotificationServiceInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09B2991CBB966600122878 /* ASNotificationServiceInitializer.swift */; };
-		7E09B2B71CBB993A00122878 /* CocoaLumberjackInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09B29B1CBB966600122878 /* CocoaLumberjackInitializer.swift */; };
+		7E09B2B71CBB993A00122878 /* CustomCocoaLumberjackInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09B29B1CBB966600122878 /* CustomCocoaLumberjackInitializer.swift */; };
 		7E09B2B81CBB993D00122878 /* FabricInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09B29D1CBB966600122878 /* FabricInitializer.swift */; };
 		7E09B2BD1CBB994E00122878 /* UIColor+NotificationCenterColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09B28E1CBB962200122878 /* UIColor+NotificationCenterColors.swift */; };
 		7EBD25F51CBE36C100C21E8F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09B2501CBB8C7000122878 /* AppDelegate.swift */; };
@@ -46,7 +46,7 @@
 		D56146801CDC7CBF00317A06 /* ExampleClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D558E6F11CDB85D20055F30A /* ExampleClass.swift */; };
 		D58CC4411CBD708600DDE147 /* ConfigReader+AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09B2AB1CBB969700122878 /* ConfigReader+AppConfig.swift */; };
 		D58CC4421CBD709D00DDE147 /* ConfigReader+AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09B2AB1CBB969700122878 /* ConfigReader+AppConfig.swift */; };
-		D58CC4441CBD70AD00DDE147 /* CocoaLumberjackInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09B29B1CBB966600122878 /* CocoaLumberjackInitializer.swift */; };
+		D58CC4441CBD70AD00DDE147 /* CustomCocoaLumberjackInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09B29B1CBB966600122878 /* CustomCocoaLumberjackInitializer.swift */; };
 		D58CC44B1CBD70C800DDE147 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09B2521CBB8C7000122878 /* ViewController.swift */; };
 		D58CC44C1CBD711B00DDE147 /* EnvironmentSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09B2A41CBB967900122878 /* EnvironmentSettings.swift */; };
 		D5BDA8111CBD1F310030CE23 /* ASNotificationServiceInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09B2991CBB966600122878 /* ASNotificationServiceInitializer.swift */; };
@@ -106,7 +106,7 @@
 		7E09B2861CBB8CAD00122878 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E09B28E1CBB962200122878 /* UIColor+NotificationCenterColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+NotificationCenterColors.swift"; path = "Extensions/UI/UIColor+NotificationCenterColors.swift"; sourceTree = "<group>"; };
 		7E09B2991CBB966600122878 /* ASNotificationServiceInitializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ASNotificationServiceInitializer.swift; path = Initializers/ASNotificationServiceInitializer.swift; sourceTree = "<group>"; };
-		7E09B29B1CBB966600122878 /* CocoaLumberjackInitializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CocoaLumberjackInitializer.swift; path = Initializers/CocoaLumberjackInitializer.swift; sourceTree = "<group>"; };
+		7E09B29B1CBB966600122878 /* CustomCocoaLumberjackInitializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomCocoaLumberjackInitializer.swift; path = Initializers/CustomCocoaLumberjackInitializer.swift; sourceTree = "<group>"; };
 		7E09B29D1CBB966600122878 /* FabricInitializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FabricInitializer.swift; path = Initializers/FabricInitializer.swift; sourceTree = "<group>"; };
 		7E09B2A41CBB967900122878 /* EnvironmentSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EnvironmentSettings.swift; path = Helpers/EnvironmentSettings.swift; sourceTree = "<group>"; };
 		7E09B2A81CBB969700122878 /* AppConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = AppConfig.plist; path = Config/AppConfig.plist; sourceTree = "<group>"; };
@@ -273,7 +273,7 @@
 			isa = PBXGroup;
 			children = (
 				7E09B2991CBB966600122878 /* ASNotificationServiceInitializer.swift */,
-				7E09B29B1CBB966600122878 /* CocoaLumberjackInitializer.swift */,
+				7E09B29B1CBB966600122878 /* CustomCocoaLumberjackInitializer.swift */,
 				7E09B29D1CBB966600122878 /* FabricInitializer.swift */,
 			);
 			name = Initializers;
@@ -757,7 +757,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E09B2A21CBB966600122878 /* FabricInitializer.swift in Sources */,
-				7E09B2A01CBB966600122878 /* CocoaLumberjackInitializer.swift in Sources */,
+				7E09B2A01CBB966600122878 /* CustomCocoaLumberjackInitializer.swift in Sources */,
 				7E09B2A51CBB967900122878 /* EnvironmentSettings.swift in Sources */,
 				D558E6F21CDB85D20055F30A /* ExampleClass.swift in Sources */,
 				7E09B2AF1CBB969700122878 /* ConfigReader+AppConfig.swift in Sources */,
@@ -772,7 +772,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D58CC4441CBD70AD00DDE147 /* CocoaLumberjackInitializer.swift in Sources */,
+				D58CC4441CBD70AD00DDE147 /* CustomCocoaLumberjackInitializer.swift in Sources */,
 				D58CC44C1CBD711B00DDE147 /* EnvironmentSettings.swift in Sources */,
 				7E09B2661CBB8C7000122878 /* DLRibTests.swift in Sources */,
 				D5BDA8111CBD1F310030CE23 /* ASNotificationServiceInitializer.swift in Sources */,
@@ -789,7 +789,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7E09B2B71CBB993A00122878 /* CocoaLumberjackInitializer.swift in Sources */,
+				7E09B2B71CBB993A00122878 /* CustomCocoaLumberjackInitializer.swift in Sources */,
 				7E09B2721CBB8C7F00122878 /* ViewController.swift in Sources */,
 				7E09B2B51CBB993500122878 /* ASNotificationServiceInitializer.swift in Sources */,
 				D558E6F31CDB85D20055F30A /* ExampleClass.swift in Sources */,
