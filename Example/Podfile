@@ -9,11 +9,11 @@ def common_pods
     # List pods here
     pod 'ASNotificationCenter'
     pod 'DLMessageBus'
-    pod 'DLDeviceHelper'
-    pod 'DLConfigReader'
-    pod 'DLCocoaLumberjackHelper'
-    pod 'DLAppHelper'
-    pod 'DLUIExtensions'
+    pod 'DLDeviceHelper', '~> 2.0.0'
+    pod 'DLConfigReader', '~> 2.0.0'
+    pod 'DLCocoaLumberjackHelper', '~> 2.0.0'
+    pod 'DLAppHelper', '~> 2.0.0'
+    pod 'DLUIExtensions', '~> 2.0.0'
 end
 
 def fabric_pods
@@ -34,11 +34,11 @@ end
 target 'DLRibUI' do
     common_pods
     fabric_pods
-    pod 'DLRemoteControl'
+    pod 'DLRemoteControl', '~> 2.0.0'
 end
 
 target 'DLRibUITests' do
     platform :ios, '9.0'
-    pod 'DLTestHelpers'
+    pod 'DLTestHelpers', '~> 2.0.0'
 end
 
