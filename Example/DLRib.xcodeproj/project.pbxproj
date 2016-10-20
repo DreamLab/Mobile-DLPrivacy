@@ -473,6 +473,7 @@
 				TargetAttributes = {
 					7E09B24C1CBB8C6F00122878 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 97W46277W4;
 						LastSwiftMigration = 0800;
 					};
 					7E09B2601CBB8C7000122878 = {
@@ -976,6 +977,7 @@
 			baseConfigurationReference = B3F9B44754735EBCEBFC039A /* Pods-DLRib.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 97W46277W4;
 				INFOPLIST_FILE = DLRib/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -988,6 +990,7 @@
 			baseConfigurationReference = A8775C9F65078915BF9EA826 /* Pods-DLRib.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 97W46277W4;
 				INFOPLIST_FILE = DLRib/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1118,9 +1121,12 @@
 			baseConfigurationReference = A5106936A52E97FBC5216DCF /* Pods-DLRib.alpha.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				DEVELOPMENT_TEAM = 97W46277W4;
 				INFOPLIST_FILE = DLRib/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PROVISIONING_PROFILE = "f0f6a0da-4bb0-4cf7-a150-588775ac5835";
 				SWIFT_VERSION = 2.3;
 			};
 			name = Alpha;
