@@ -478,13 +478,19 @@
 					};
 					7E09B2601CBB8C7000122878 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 97W46277W4;
 						LastSwiftMigration = 0800;
+					};
+					7E09B2701CBB8C7F00122878 = {
+						DevelopmentTeam = 97W46277W4;
 					};
 					7E09B2811CBB8CAD00122878 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 97W46277W4;
 						TestTargetID = 7E09B2701CBB8C7F00122878;
 					};
 					7EFA8EF91CBBC5220050FD82 = {
+						DevelopmentTeam = 97W46277W4;
 						TestTargetID = 7E09B24C1CBB8C6F00122878;
 					};
 				};
@@ -899,6 +905,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 97W46277W4;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -921,6 +928,7 @@
 				OTHER_SWIFT_FLAGS = "-DDEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = "pl.dreamlab.DLRib${BUNDLE_ID_SUFFIX}";
 				PRODUCT_NAME = DLRib;
+				PROVISIONING_PROFILE = "f0f6a0da-4bb0-4cf7-a150-588775ac5835";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 2.3;
@@ -950,6 +958,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 97W46277W4;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -966,6 +975,7 @@
 				OTHER_SWIFT_FLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "pl.dreamlab.DLRib${BUNDLE_ID_SUFFIX}";
 				PRODUCT_NAME = DLRib;
+				PROVISIONING_PROFILE = "f0f6a0da-4bb0-4cf7-a150-588775ac5835";
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 2.3;
 				VALIDATE_PRODUCT = YES;
@@ -1090,9 +1100,11 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 97W46277W4;
 				ENABLE_NS_ASSERTIONS = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1110,6 +1122,7 @@
 				OTHER_SWIFT_FLAGS = "-DALPHA";
 				PRODUCT_BUNDLE_IDENTIFIER = "pl.dreamlab.DLRib${BUNDLE_ID_SUFFIX}";
 				PRODUCT_NAME = DLRib;
+				PROVISIONING_PROFILE = "f0f6a0da-4bb0-4cf7-a150-588775ac5835";
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 2.3;
 				VALIDATE_PRODUCT = NO;
