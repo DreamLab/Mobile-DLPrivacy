@@ -14,7 +14,7 @@ Class to read current environment
 final class EnvironmentSettings {
 
     enum Environment: String {
-        case Alpha = "Alpha", Debug = "Debug", Live = "Live"
+        case alpha = "Alpha", debug = "Debug", live = "Live"
     }
 
     /**
@@ -23,7 +23,7 @@ final class EnvironmentSettings {
     - returns: true if debug else false
     */
     class var isDebug: Bool {
-        return currentEnv == .Debug
+        return currentEnv.rawValue == Environment.debug.rawValue
     }
 
     /**
@@ -32,7 +32,7 @@ final class EnvironmentSettings {
     - returns: Bool
     */
     class var isUnitTest: Bool {
-        if let _ = NSClassFromString("XCTest") {
+        if NSClassFromString("XCTest") != nil {
             return true
         }
 
@@ -46,11 +46,11 @@ final class EnvironmentSettings {
     */
     class var currentEnv: Environment {
         #if ALPHA
-            return .Alpha
+            return .alpha
         #elseif DEBUG
-            return .Debug
+            return .debug
         #else
-            return .Live
+            return .live
         #endif
     }
 
@@ -63,11 +63,11 @@ final class EnvironmentSettings {
         var suffix = ""
 
         switch EnvironmentSettings.currentEnv {
-        case .Alpha:
+        case .alpha:
             suffix += "~alpha"
-        case .Debug:
+        case .debug:
             suffix += "~debug"
-        case .Live:
+        case .live:
             // Do not add anything
             break
         }

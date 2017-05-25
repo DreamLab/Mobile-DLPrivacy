@@ -5,15 +5,15 @@ use_frameworks!
 inhibit_all_warnings!
 
 def common_pods
-    platform :ios, '8.0'
+    platform :ios, '9.0'
     # List pods here
-    pod 'ASNotificationCenter'
-    pod 'DLMessageBus'
-    pod 'DLDeviceHelper', '~> 2.0.0'
-    pod 'DLConfigReader', '~> 2.0.0'
-    pod 'DLCocoaLumberjackHelper', '~> 2.0.0'
-    pod 'DLAppHelper', '~> 2.0.0'
-    pod 'DLUIExtensions', '~> 2.0.0'
+    pod 'DLMessageBus', '~> 3.0.0'
+    pod 'DLDeviceHelper', '~> 3.0.0'
+    pod 'DLConfigReader', '~> 3.0.0'
+    pod 'DLCocoaLumberjackHelper', '~> 3.0.0'
+    pod 'DLAppHelper', '~> 3.0.0'
+    pod 'DLUIExtensions', '~> 3.0.0'
+    pod 'SwiftLint', '~> 0.18.1'
 end
 
 def fabric_pods
@@ -34,11 +34,11 @@ end
 target 'DLRibUI' do
     common_pods
     fabric_pods
-    pod 'DLRemoteControl', '~> 2.0.0'
+    pod 'DLRemoteControl', '~> 3.0.0'
 end
 
 target 'DLRibUITests' do
     platform :ios, '9.0'
-    pod 'DLTestHelpers', '~> 2.0.0'
+    pod 'DLTestHelpers', '~> 3.0.0'
 end
 
