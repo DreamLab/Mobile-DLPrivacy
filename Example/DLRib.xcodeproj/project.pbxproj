@@ -976,6 +976,8 @@
 				INFOPLIST_FILE = DLRib/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PROVISIONING_PROFILE = "b3db08ea-b32f-4232-83ff-33f5331926d2";
+				PROVISIONING_PROFILE_SPECIFIER = "match InHouse pl.dreamlab.DLRib.alpha";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -988,6 +990,8 @@
 				INFOPLIST_FILE = DLRib/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PROVISIONING_PROFILE = "b3db08ea-b32f-4232-83ff-33f5331926d2";
+				PROVISIONING_PROFILE_SPECIFIER = "match InHouse pl.dreamlab.DLRib.alpha";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -1120,6 +1124,8 @@
 				INFOPLIST_FILE = DLRib/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PROVISIONING_PROFILE = "b3db08ea-b32f-4232-83ff-33f5331926d2";
+				PROVISIONING_PROFILE_SPECIFIER = "match InHouse pl.dreamlab.DLRib.alpha";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Alpha;
