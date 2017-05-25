@@ -11,9 +11,9 @@ import DLConfigReader
 
 //This is start point. To be changed when necessary. Example of implementation of ConfigName protocol
 enum ConfigItem: String, ConfigName {
-    case Item1 = "Item1"
-    case Item2 = "Item2"
-    case Item3 = "Item3"
+    case item1 = "Item1"
+    case item2 = "Item2"
+    case item3 = "Item3"
 }
 
 // Usage of the Config reader.
@@ -25,6 +25,6 @@ extension ConfigReader {
      - returns: value assign to the key in config
      */
     func someConfigValue() -> String {
-        return getConfig(ConfigItem.Item1, "Key1", String.self)
+        return getConfig(ConfigItem.item1, "Key1", String.self)
     }
 }

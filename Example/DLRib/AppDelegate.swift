@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CocoaLumberjack
 import DLCocoaLumberjackHelper
 import DLAppHelper
 
@@ -22,7 +23,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         earlyInitialize()
     }
 
-    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+    func application(_ application: UIApplication,
+                     didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         initialize()
         displayDebugInfo()
         DDLogInfo("Application did finish launching")
@@ -30,23 +32,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 
-    func applicationWillResignActive(application: UIApplication) {
+    func applicationWillResignActive(_ application: UIApplication) {
         DDLogInfo("Application will resign active")
     }
 
-    func applicationDidEnterBackground(application: UIApplication) {
+    func applicationDidEnterBackground(_ application: UIApplication) {
         DDLogInfo("Application did enter background")
     }
 
-    func applicationWillEnterForeground(application: UIApplication) {
+    func applicationWillEnterForeground(_ application: UIApplication) {
         DDLogInfo("Application will enter foreground")
     }
 
-    func applicationDidBecomeActive(application: UIApplication) {
+    func applicationDidBecomeActive(_ application: UIApplication) {
         DDLogInfo("Application did become active")
     }
 
-    func applicationWillTerminate(application: UIApplication) {
+    func applicationWillTerminate(_ application: UIApplication) {
         DDLogInfo("Application will be terminated")
     }
 }
@@ -57,8 +59,9 @@ extension AppDelegate {
      Initialize frameworks, libraries and other components needed by the app
      Initialization is done before didFinishLaunchingWithOptions
      */
-    private func earlyInitialize() {
+    fileprivate func earlyInitialize() {
         CustomCocoaLumberjackInitializer.initialize()
+        CocoaLumberjackInitializer.initialize()
 
         DDLogInfo("Application did start early initializing")
 
@@ -69,17 +72,16 @@ extension AppDelegate {
      Initialize frameworks, libraries and other components needed by the app
      Initialization is done in didFinishLaunchingWithOptions
      */
-    private func initialize() {
+    fileprivate func initialize() {
         DDLogInfo("Application did start initializing")
 
         FabricInitializer.initialize()
-        ASNotificationServiceInitializer.initialize()
 
         DDLogInfo("Application did finish initializing")
     }
 
-    private func displayDebugInfo() {
-        if let window = window where EnvironmentSettings.currentEnv != .Live {
+    fileprivate func displayDebugInfo() {
+        if let window = window, EnvironmentSettings.currentEnv != .live {
             AppHelper.displayEnvironmentAndVersionOnView(window, environmentString: EnvironmentSettings.currentEnv.rawValue)
         }
     }

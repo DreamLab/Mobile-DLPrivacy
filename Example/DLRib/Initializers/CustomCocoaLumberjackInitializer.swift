@@ -14,20 +14,24 @@ import Crashlytics
 /**
  Class that adds specific loggers for ArticleListView demo app
  */
-class CustomCocoaLumberjackInitializer: CocoaLumberjackInitializer {
+class CustomCocoaLumberjackInitializer {
 
     /**
      Initialize loggers
      */
-    override class func initialize() {
+    class func initialize() {
 
+        var loggers = [CocoaLumberjackLogger]()
         // For builds other than 'Debug' we want to log only
         // Info, Warning and Error
         if !EnvironmentSettings.isDebug {
-            defaultDebugLevel = DDLogLevel.Info
-            DDLog.addLogger(crashlyticsLogger())
+            defaultDebugLevel = DDLogLevel.info
+            DDLog.add(crashlyticsLogger())
         }
-        DDLog.addLogger(ttyLogger(CocoaLumberjackLogFormatter()))
+
+        loggers.append(.ttyLogger(formatter: CocoaLumberjackLogFormatter()))
+        CocoaLumberjackInitializer.initializeWithLoggers(loggers, logLevel: defaultDebugLevel)
+
     }
 
     /**

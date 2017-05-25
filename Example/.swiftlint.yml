@@ -9,7 +9,7 @@ force_cast: warning
 force_try: warning 
 opt_in_rules:
 - force_unwrapping
-- missing_docs
+# - missing_docs
 # rules that have both warning and error levels, can set just the warning level
 # implicitly
 line_length: 140
