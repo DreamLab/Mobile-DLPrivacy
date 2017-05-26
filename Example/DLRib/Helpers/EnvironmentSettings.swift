@@ -23,7 +23,7 @@ final class EnvironmentSettings {
     - returns: true if debug else false
     */
     class var isDebug: Bool {
-        return currentEnv.rawValue == Environment.debug.rawValue
+        return currentEnv == .debug
     }
 
     /**

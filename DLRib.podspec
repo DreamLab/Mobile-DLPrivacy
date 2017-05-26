@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name         = "DLRib"
-s.version      = "0.0.1"
+s.version      = "3.0"
 s.homepage     = "http://stash.grupa.onet/projects/MB/repos/ios-rib"
 s.summary      = "Summary of pod's purpose. To be edited for each pod separately."
 s.license      = { :type => 'Copyright. DreamLab', :file => 'LICENSE' }
