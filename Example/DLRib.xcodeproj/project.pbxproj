@@ -21,7 +21,6 @@
 		7E09B2781CBB8C7F00122878 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E09B2541CBB8C7000122878 /* Main.storyboard */; };
 		7E09B2851CBB8CAD00122878 /* DLRibUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09B2841CBB8CAD00122878 /* DLRibUITests.swift */; };
 		7E09B28F1CBB962200122878 /* UIColor+NotificationCenterColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09B28E1CBB962200122878 /* UIColor+NotificationCenterColors.swift */; };
-		7E09B29E1CBB966600122878 /* ASNotificationServiceInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09B2991CBB966600122878 /* ASNotificationServiceInitializer.swift */; };
 		7E09B2A01CBB966600122878 /* CustomCocoaLumberjackInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09B29B1CBB966600122878 /* CustomCocoaLumberjackInitializer.swift */; };
 		7E09B2A21CBB966600122878 /* FabricInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09B29D1CBB966600122878 /* FabricInitializer.swift */; };
 		7E09B2A51CBB967900122878 /* EnvironmentSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09B2A41CBB967900122878 /* EnvironmentSettings.swift */; };
@@ -30,7 +29,6 @@
 		7E09B2AE1CBB969700122878 /* AppConfig~debug.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7E09B2AA1CBB969700122878 /* AppConfig~debug.plist */; };
 		7E09B2AF1CBB969700122878 /* ConfigReader+AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09B2AB1CBB969700122878 /* ConfigReader+AppConfig.swift */; };
 		7E09B2B41CBB993100122878 /* EnvironmentSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09B2A41CBB967900122878 /* EnvironmentSettings.swift */; };
-		7E09B2B51CBB993500122878 /* ASNotificationServiceInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09B2991CBB966600122878 /* ASNotificationServiceInitializer.swift */; };
 		7E09B2B71CBB993A00122878 /* CustomCocoaLumberjackInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09B29B1CBB966600122878 /* CustomCocoaLumberjackInitializer.swift */; };
 		7E09B2B81CBB993D00122878 /* FabricInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09B29D1CBB966600122878 /* FabricInitializer.swift */; };
 		7E09B2BD1CBB994E00122878 /* UIColor+NotificationCenterColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09B28E1CBB962200122878 /* UIColor+NotificationCenterColors.swift */; };
@@ -49,7 +47,6 @@
 		D58CC4441CBD70AD00DDE147 /* CustomCocoaLumberjackInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09B29B1CBB966600122878 /* CustomCocoaLumberjackInitializer.swift */; };
 		D58CC44B1CBD70C800DDE147 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09B2521CBB8C7000122878 /* ViewController.swift */; };
 		D58CC44C1CBD711B00DDE147 /* EnvironmentSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09B2A41CBB967900122878 /* EnvironmentSettings.swift */; };
-		D5BDA8111CBD1F310030CE23 /* ASNotificationServiceInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09B2991CBB966600122878 /* ASNotificationServiceInitializer.swift */; };
 		D5BDA8121CBD1F340030CE23 /* UIColor+NotificationCenterColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09B28E1CBB962200122878 /* UIColor+NotificationCenterColors.swift */; };
 /* End PBXBuildFile section */
 
@@ -105,7 +102,6 @@
 		7E09B2841CBB8CAD00122878 /* DLRibUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DLRibUITests.swift; sourceTree = "<group>"; };
 		7E09B2861CBB8CAD00122878 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E09B28E1CBB962200122878 /* UIColor+NotificationCenterColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+NotificationCenterColors.swift"; path = "Extensions/UI/UIColor+NotificationCenterColors.swift"; sourceTree = "<group>"; };
-		7E09B2991CBB966600122878 /* ASNotificationServiceInitializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ASNotificationServiceInitializer.swift; path = Initializers/ASNotificationServiceInitializer.swift; sourceTree = "<group>"; };
 		7E09B29B1CBB966600122878 /* CustomCocoaLumberjackInitializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomCocoaLumberjackInitializer.swift; path = Initializers/CustomCocoaLumberjackInitializer.swift; sourceTree = "<group>"; };
 		7E09B29D1CBB966600122878 /* FabricInitializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FabricInitializer.swift; path = Initializers/FabricInitializer.swift; sourceTree = "<group>"; };
 		7E09B2A41CBB967900122878 /* EnvironmentSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EnvironmentSettings.swift; path = Helpers/EnvironmentSettings.swift; sourceTree = "<group>"; };
@@ -272,7 +268,6 @@
 		7E09B2981CBB965400122878 /* Initializers */ = {
 			isa = PBXGroup;
 			children = (
-				7E09B2991CBB966600122878 /* ASNotificationServiceInitializer.swift */,
 				7E09B29B1CBB966600122878 /* CustomCocoaLumberjackInitializer.swift */,
 				7E09B29D1CBB966600122878 /* FabricInitializer.swift */,
 			);
@@ -364,11 +359,11 @@
 			buildConfigurationList = 7E09B26A1CBB8C7000122878 /* Build configuration list for PBXNativeTarget "DLRib" */;
 			buildPhases = (
 				567BD42C7545863460850D0C /* [CP] Check Pods Manifest.lock */,
+				7E09B2B31CBB971900122878 /* SwiftLint */,
 				7E09B2491CBB8C6F00122878 /* Sources */,
 				7E09B24A1CBB8C6F00122878 /* Frameworks */,
 				7E09B24B1CBB8C6F00122878 /* Resources */,
 				7E09B2B21CBB970F00122878 /* Fabric */,
-				7E09B2B31CBB971900122878 /* SwiftLint */,
 				82532A852ADB63A823710189 /* [CP] Embed Pods Frameworks */,
 				7D3CB55162863867F3B6EEC0 /* [CP] Copy Pods Resources */,
 			);
@@ -468,22 +463,29 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = DreamLab;
 				TargetAttributes = {
 					7E09B24C1CBB8C6F00122878 = {
 						CreatedOnToolsVersion = 7.3;
-						LastSwiftMigration = 0800;
+						DevelopmentTeam = 97W46277W4;
+						LastSwiftMigration = 0830;
 					};
 					7E09B2601CBB8C7000122878 = {
 						CreatedOnToolsVersion = 7.3;
-						LastSwiftMigration = 0800;
+						DevelopmentTeam = 97W46277W4;
+						LastSwiftMigration = 0830;
+					};
+					7E09B2701CBB8C7F00122878 = {
+						DevelopmentTeam = 97W46277W4;
 					};
 					7E09B2811CBB8CAD00122878 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 97W46277W4;
 						TestTargetID = 7E09B2701CBB8C7F00122878;
 					};
 					7EFA8EF91CBBC5220050FD82 = {
+						DevelopmentTeam = 97W46277W4;
 						TestTargetID = 7E09B24C1CBB8C6F00122878;
 					};
 				};
@@ -571,7 +573,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		32071B34F00F6812BDBEA743 /* [CP] Copy Pods Resources */ = {
@@ -616,7 +618,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		57539221B445BB86378A1C51 /* [CP] Check Pods Manifest.lock */ = {
@@ -631,7 +633,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		788EC18CEB74C0F81ACB1B6A /* [CP] Copy Pods Resources */ = {
@@ -690,7 +692,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+			shellScript = "${PODS_ROOT}/SwiftLint/swiftlint";
 		};
 		82532A852ADB63A823710189 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -749,7 +751,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		DBCD395D1F2F52300BB1D7E8 /* [CP] Embed Pods Frameworks */ = {
@@ -780,7 +782,6 @@
 				D558E6F21CDB85D20055F30A /* ExampleClass.swift in Sources */,
 				7E09B2AF1CBB969700122878 /* ConfigReader+AppConfig.swift in Sources */,
 				7E09B2531CBB8C7000122878 /* ViewController.swift in Sources */,
-				7E09B29E1CBB966600122878 /* ASNotificationServiceInitializer.swift in Sources */,
 				7E09B2511CBB8C7000122878 /* AppDelegate.swift in Sources */,
 				7E09B28F1CBB962200122878 /* UIColor+NotificationCenterColors.swift in Sources */,
 			);
@@ -793,7 +794,6 @@
 				D58CC4441CBD70AD00DDE147 /* CustomCocoaLumberjackInitializer.swift in Sources */,
 				D58CC44C1CBD711B00DDE147 /* EnvironmentSettings.swift in Sources */,
 				7E09B2661CBB8C7000122878 /* DLRibTests.swift in Sources */,
-				D5BDA8111CBD1F310030CE23 /* ASNotificationServiceInitializer.swift in Sources */,
 				7EBD25F61CBE37B100C21E8F /* FabricInitializer.swift in Sources */,
 				D58CC4411CBD708600DDE147 /* ConfigReader+AppConfig.swift in Sources */,
 				D58CC44B1CBD70C800DDE147 /* ViewController.swift in Sources */,
@@ -809,7 +809,6 @@
 			files = (
 				7E09B2B71CBB993A00122878 /* CustomCocoaLumberjackInitializer.swift in Sources */,
 				7E09B2721CBB8C7F00122878 /* ViewController.swift in Sources */,
-				7E09B2B51CBB993500122878 /* ASNotificationServiceInitializer.swift in Sources */,
 				D558E6F31CDB85D20055F30A /* ExampleClass.swift in Sources */,
 				D58CC4421CBD709D00DDE147 /* ConfigReader+AppConfig.swift in Sources */,
 				7E09B2731CBB8C7F00122878 /* AppDelegate.swift in Sources */,
@@ -891,13 +890,16 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 97W46277W4;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -914,7 +916,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_SWIFT_FLAGS = "-DDEBUG";
@@ -922,7 +924,7 @@
 				PRODUCT_NAME = DLRib;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -942,13 +944,16 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 97W46277W4;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -959,14 +964,15 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_SWIFT_FLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "pl.dreamlab.DLRib${BUNDLE_ID_SUFFIX}";
 				PRODUCT_NAME = DLRib;
 				SDKROOT = iphoneos;
-				SWIFT_VERSION = 2.3;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -977,9 +983,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = DLRib/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				SWIFT_VERSION = 2.3;
+				PROVISIONING_PROFILE = "b3db08ea-b32f-4232-83ff-33f5331926d2";
+				PROVISIONING_PROFILE_SPECIFIER = "match InHouse pl.dreamlab.DLRib.alpha";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -989,9 +997,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = DLRib/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				SWIFT_VERSION = 2.3;
+				PROVISIONING_PROFILE = "b3db08ea-b32f-4232-83ff-33f5331926d2";
+				PROVISIONING_PROFILE_SPECIFIER = "match InHouse pl.dreamlab.DLRib.alpha";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -1003,7 +1013,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = DL.DLRibTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -1015,7 +1025,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = DL.DLRibTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -1083,13 +1093,16 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 97W46277W4;
 				ENABLE_NS_ASSERTIONS = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1101,14 +1114,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_SWIFT_FLAGS = "-DALPHA";
 				PRODUCT_BUNDLE_IDENTIFIER = "pl.dreamlab.DLRib${BUNDLE_ID_SUFFIX}";
 				PRODUCT_NAME = DLRib;
 				SDKROOT = iphoneos;
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 				VALIDATE_PRODUCT = NO;
 			};
 			name = Alpha;
@@ -1119,9 +1132,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = DLRib/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				SWIFT_VERSION = 2.3;
+				PROVISIONING_PROFILE = "b3db08ea-b32f-4232-83ff-33f5331926d2";
+				PROVISIONING_PROFILE_SPECIFIER = "match InHouse pl.dreamlab.DLRib.alpha";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Alpha;
 		};
@@ -1133,7 +1148,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = DL.DLRibTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Alpha;
 		};

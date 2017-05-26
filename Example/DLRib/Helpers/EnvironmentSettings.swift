@@ -8,66 +8,50 @@
 
 import Foundation
 
-/*
-Class to read current environment
-*/
+/// Class to read current environment
 final class EnvironmentSettings {
 
     enum Environment: String {
-        case Alpha = "Alpha", Debug = "Debug", Live = "Live"
+        case alpha = "Alpha", debug = "Debug", live = "Live"
     }
 
-    /**
-    Check if this is debug or release build
-
-    - returns: true if debug else false
-    */
+    /// Check if this is debug or release build
     class var isDebug: Bool {
-        return currentEnv == .Debug
+        return currentEnv == .debug
     }
 
-    /**
-    Check if application runs unit tests
-
-    - returns: Bool
-    */
+    /// Check if application runs unit tests
     class var isUnitTest: Bool {
-        if let _ = NSClassFromString("XCTest") {
+        if NSClassFromString("XCTest") != nil {
             return true
         }
 
         return false
     }
 
-    /**
-    Returns current environment depends on defined macro
-
-    - returns: Environment enum value
-    */
+    /// Returns current environment enum depends on defined macro
     class var currentEnv: Environment {
         #if ALPHA
-            return .Alpha
+            return .alpha
         #elseif DEBUG
-            return .Debug
+            return .debug
         #else
-            return .Live
+            return .live
         #endif
     }
 
-    /**
-     Returns current environment suffix
-
-     - returns: String enviroment suffix
-     */
+    /// Returns current environment suffix
+    ///
+    /// - Returns: String enviroment suffix
     class func environmentSuffix() -> String {
         var suffix = ""
 
         switch EnvironmentSettings.currentEnv {
-        case .Alpha:
+        case .alpha:
             suffix += "~alpha"
-        case .Debug:
+        case .debug:
             suffix += "~debug"
-        case .Live:
+        case .live:
             // Do not add anything
             break
         }
