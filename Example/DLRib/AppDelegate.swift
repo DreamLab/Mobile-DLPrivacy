@@ -12,7 +12,6 @@ import DLCocoaLumberjackHelper
 import DLAppHelper
 
 @UIApplicationMain
-
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
@@ -55,10 +54,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 // MARK: App initialization
 extension AppDelegate {
-    /**
-     Initialize frameworks, libraries and other components needed by the app
-     Initialization is done before didFinishLaunchingWithOptions
-     */
+
+    /// Initialize frameworks, libraries and other components needed by the app
+    /// Initialization is done before didFinishLaunchingWithOptions
     fileprivate func earlyInitialize() {
         CustomCocoaLumberjackInitializer.initialize()
         CocoaLumberjackInitializer.initialize()
@@ -68,10 +66,8 @@ extension AppDelegate {
         DDLogInfo("Application did finish early initializing")
     }
 
-    /**
-     Initialize frameworks, libraries and other components needed by the app
-     Initialization is done in didFinishLaunchingWithOptions
-     */
+    /// Initialize frameworks, libraries and other components needed by the app
+    /// Initialization is done in didFinishLaunchingWithOptions
     fileprivate func initialize() {
         DDLogInfo("Application did start initializing")
 

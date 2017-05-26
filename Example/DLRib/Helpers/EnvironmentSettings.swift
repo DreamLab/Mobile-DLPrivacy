@@ -8,29 +8,19 @@
 
 import Foundation
 
-/*
-Class to read current environment
-*/
+/// Class to read current environment
 final class EnvironmentSettings {
 
     enum Environment: String {
         case alpha = "Alpha", debug = "Debug", live = "Live"
     }
 
-    /**
-    Check if this is debug or release build
-
-    - returns: true if debug else false
-    */
+    /// Check if this is debug or release build
     class var isDebug: Bool {
         return currentEnv == .debug
     }
 
-    /**
-    Check if application runs unit tests
-
-    - returns: Bool
-    */
+    /// Check if application runs unit tests
     class var isUnitTest: Bool {
         if NSClassFromString("XCTest") != nil {
             return true
@@ -39,11 +29,7 @@ final class EnvironmentSettings {
         return false
     }
 
-    /**
-    Returns current environment depends on defined macro
-
-    - returns: Environment enum value
-    */
+    /// Returns current environment enum depends on defined macro
     class var currentEnv: Environment {
         #if ALPHA
             return .alpha
@@ -54,11 +40,9 @@ final class EnvironmentSettings {
         #endif
     }
 
-    /**
-     Returns current environment suffix
-
-     - returns: String enviroment suffix
-     */
+    /// Returns current environment suffix
+    ///
+    /// - Returns: String enviroment suffix
     class func environmentSuffix() -> String {
         var suffix = ""
 

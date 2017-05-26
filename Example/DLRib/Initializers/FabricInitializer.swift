@@ -10,14 +10,10 @@ import Foundation
 import Fabric
 import Crashlytics
 
-/**
-Class to initialize Fabric SDK
-*/
+/// Class to initialize Fabric SDK
 class FabricInitializer {
 
-    /**
-    Initialize Fabric SDK
-    */
+    /// Initialize Fabric SDK
     class func initialize() {
         if !EnvironmentSettings.isDebug {
             Fabric.sharedSDK().debug = true

@@ -11,14 +11,10 @@ import CocoaLumberjack
 import DLCocoaLumberjackHelper
 import Crashlytics
 
-/**
- Class that adds specific loggers for ArticleListView demo app
- */
+/// Class that adds specific loggers for ArticleListView demo app
 class CustomCocoaLumberjackInitializer {
 
-    /**
-     Initialize loggers
-     */
+    /// Initialize loggers
     class func initialize() {
 
         var loggers = [CocoaLumberjackLogger]()
@@ -34,11 +30,9 @@ class CustomCocoaLumberjackInitializer {
 
     }
 
-    /**
-     Initialize Crashlytics Logger
-
-     - returns: Crashlytics logger
-     */
+    /// Initialize Crashlytics Logger
+    ///
+    /// - Returns: Crashlytics logger
     class func crashlyticsLogger() -> UniversalLogger {
         let crashlyticsLogger = UniversalLogger(formatter: CocoaLumberjackLogFormatter(), loggingFunction: CLSLogv)
         return crashlyticsLogger
