@@ -9,7 +9,7 @@
 import Foundation
 
 /// Empty class which purpose is to show exact place of Pod classes
-open class ExampleClass {
+public class ExampleClass {
 
     /**
      Example method
