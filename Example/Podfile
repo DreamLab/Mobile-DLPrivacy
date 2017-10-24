@@ -13,7 +13,7 @@ def common_pods
     pod 'DLCocoaLumberjackHelper', '~> 4.0.0'
     pod 'DLAppHelper', '~> 4.0.0'
     pod 'DLUIExtensions', '~> 4.0.0'
-    pod 'SwiftLint', '~> 0.17.0'
+    pod 'SwiftLint', '~> 0.23.0'
 end
 
 def fabric_pods
