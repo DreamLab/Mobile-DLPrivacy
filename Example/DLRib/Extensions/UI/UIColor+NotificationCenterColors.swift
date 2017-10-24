@@ -18,11 +18,11 @@ extension UIColor {
 
     /// Notification Center positive background color
     static var notificationPositiveBackgroundColor: UIColor {
-        return UIColor(red:0.00, green:0.59, blue:0.25, alpha:1.0)
+        return UIColor(red: 0.00, green: 0.59, blue: 0.25, alpha: 1.0)
     }
 
     /// Notification Center critical background color
     static var notificationCriticalBackgroundColor: UIColor {
-        return UIColor(red:0.89, green:0.02, blue:0.07, alpha:1.0)
+        return UIColor(red: 0.89, green: 0.02, blue: 0.07, alpha: 1.0)
     }
 }
