@@ -11,30 +11,28 @@ import CocoaLumberjack
 import DLCocoaLumberjackHelper
 import Crashlytics
 
-/**
- Class that adds specific loggers for ArticleListView demo app
- */
-class CustomCocoaLumberjackInitializer: CocoaLumberjackInitializer {
+/// Class that adds specific loggers for ArticleListView demo app
+class CustomCocoaLumberjackInitializer {
 
-    /**
-     Initialize loggers
-     */
-    override class func initialize() {
+    /// Initialize loggers
+    class func initialize() {
 
+        var loggers = [CocoaLumberjackLogger]()
         // For builds other than 'Debug' we want to log only
         // Info, Warning and Error
         if !EnvironmentSettings.isDebug {
-            defaultDebugLevel = DDLogLevel.Info
-            DDLog.addLogger(crashlyticsLogger())
+            defaultDebugLevel = DDLogLevel.info
+            DDLog.add(crashlyticsLogger())
         }
-        DDLog.addLogger(ttyLogger(CocoaLumberjackLogFormatter()))
+
+        loggers.append(.ttyLogger(formatter: CocoaLumberjackLogFormatter()))
+        CocoaLumberjackInitializer.initializeWithLoggers(loggers, logLevel: defaultDebugLevel)
+
     }
 
-    /**
-     Initialize Crashlytics Logger
-
-     - returns: Crashlytics logger
-     */
+    /// Initialize Crashlytics Logger
+    ///
+    /// - Returns: Crashlytics logger
     class func crashlyticsLogger() -> UniversalLogger {
         let crashlyticsLogger = UniversalLogger(formatter: CocoaLumberjackLogFormatter(), loggingFunction: CLSLogv)
         return crashlyticsLogger
