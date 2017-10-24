@@ -472,24 +472,27 @@
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = 97W46277W4;
 						LastSwiftMigration = 0900;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					7E09B2601CBB8C7000122878 = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = 97W46277W4;
 						LastSwiftMigration = 0900;
+						ProvisioningStyle = Manual;
 					};
 					7E09B2701CBB8C7F00122878 = {
 						DevelopmentTeam = 97W46277W4;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					7E09B2811CBB8CAD00122878 = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = 97W46277W4;
+						ProvisioningStyle = Manual;
 						TestTargetID = 7E09B2701CBB8C7F00122878;
 					};
 					7EFA8EF91CBBC5220050FD82 = {
 						DevelopmentTeam = 97W46277W4;
+						ProvisioningStyle = Manual;
 						TestTargetID = 7E09B24C1CBB8C6F00122878;
 					};
 				};
@@ -1030,6 +1033,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -1056,7 +1060,6 @@
 				OTHER_SWIFT_FLAGS = "-DDEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = "pl.dreamlab.DLRib${BUNDLE_ID_SUFFIX}";
 				PRODUCT_NAME = DLRib;
-				PROVISIONING_PROFILE = "f0f6a0da-4bb0-4cf7-a150-588775ac5835";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
@@ -1091,6 +1094,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -1111,7 +1115,6 @@
 				OTHER_SWIFT_FLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "pl.dreamlab.DLRib${BUNDLE_ID_SUFFIX}";
 				PRODUCT_NAME = DLRib;
-				PROVISIONING_PROFILE = "f0f6a0da-4bb0-4cf7-a150-588775ac5835";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.0;
@@ -1124,14 +1127,9 @@
 			baseConfigurationReference = B3F9B44754735EBCEBFC039A /* Pods-DLRib.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = DLRib/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
@@ -1140,14 +1138,9 @@
 			baseConfigurationReference = A8775C9F65078915BF9EA826 /* Pods-DLRib.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = DLRib/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};
@@ -1178,14 +1171,10 @@
 			baseConfigurationReference = 1E61B05A06FD62BE76437F72 /* Pods-DLRibUI.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 97W46277W4;
 				INFOPLIST_FILE = DLRib/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
@@ -1194,14 +1183,10 @@
 			baseConfigurationReference = 6F38241F705D92635B63C41A /* Pods-DLRibUI.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 97W46277W4;
 				INFOPLIST_FILE = DLRib/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};
@@ -1279,7 +1264,7 @@
 				OTHER_SWIFT_FLAGS = "-DALPHA";
 				PRODUCT_BUNDLE_IDENTIFIER = "pl.dreamlab.DLRib${BUNDLE_ID_SUFFIX}";
 				PRODUCT_NAME = DLRib;
-				PROVISIONING_PROFILE = "f0f6a0da-4bb0-4cf7-a150-588775ac5835";
+				PROVISIONING_PROFILE = "b3db08ea-b32f-4232-83ff-33f5331926d2";
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 4.0;
 				VALIDATE_PRODUCT = NO;
@@ -1291,15 +1276,9 @@
 			baseConfigurationReference = A5106936A52E97FBC5216DCF /* Pods-DLRib.alpha.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = DLRib/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Alpha;
 		};
@@ -1319,14 +1298,10 @@
 			baseConfigurationReference = 60A0252E9B044582DFE718C5 /* Pods-DLRibUI.alpha.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 97W46277W4;
 				INFOPLIST_FILE = DLRib/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Alpha;
 		};
