@@ -481,6 +481,10 @@
 					7E09B2701CBB8C7F00122878 = {
 						DevelopmentTeam = 97W46277W4;
 					};
+					7E09B2701CBB8C7F00122878 = {
+						DevelopmentTeam = 97W46277W4;
+						ProvisioningStyle = Automatic;
+					};
 					7E09B2811CBB8CAD00122878 = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = 97W46277W4;
@@ -1048,6 +1052,7 @@
 				OTHER_SWIFT_FLAGS = "-DDEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = "pl.dreamlab.DLRib${BUNDLE_ID_SUFFIX}";
 				PRODUCT_NAME = DLRib;
+				PROVISIONING_PROFILE = "f0f6a0da-4bb0-4cf7-a150-588775ac5835";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
@@ -1096,6 +1101,7 @@
 				OTHER_SWIFT_FLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "pl.dreamlab.DLRib${BUNDLE_ID_SUFFIX}";
 				PRODUCT_NAME = DLRib;
+				PROVISIONING_PROFILE = "f0f6a0da-4bb0-4cf7-a150-588775ac5835";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.0;
@@ -1108,6 +1114,8 @@
 			baseConfigurationReference = B3F9B44754735EBCEBFC039A /* Pods-DLRib.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = DLRib/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1121,6 +1129,8 @@
 			baseConfigurationReference = A8775C9F65078915BF9EA826 /* Pods-DLRib.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = DLRib/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1156,10 +1166,13 @@
 			baseConfigurationReference = 1E61B05A06FD62BE76437F72 /* Pods-DLRibUI.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = DLRib/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
@@ -1168,10 +1181,13 @@
 			baseConfigurationReference = 6F38241F705D92635B63C41A /* Pods-DLRibUI.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = DLRib/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};
@@ -1221,6 +1237,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -1242,6 +1259,7 @@
 				OTHER_SWIFT_FLAGS = "-DALPHA";
 				PRODUCT_BUNDLE_IDENTIFIER = "pl.dreamlab.DLRib${BUNDLE_ID_SUFFIX}";
 				PRODUCT_NAME = DLRib;
+				PROVISIONING_PROFILE = "f0f6a0da-4bb0-4cf7-a150-588775ac5835";
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 4.0;
 				VALIDATE_PRODUCT = NO;
@@ -1253,6 +1271,8 @@
 			baseConfigurationReference = A5106936A52E97FBC5216DCF /* Pods-DLRib.alpha.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = DLRib/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1277,10 +1297,13 @@
 			baseConfigurationReference = 60A0252E9B044582DFE718C5 /* Pods-DLRibUI.alpha.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = DLRib/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Alpha;
 		};
