@@ -1,6 +1,6 @@
 # DLRib
 
-... Pod description ...
+Root project for other PODs. Just fork it and work it.
 
 ## Usage
 
@@ -8,7 +8,7 @@ To run the example project, clone the repo, and run in Example folder: `bundle i
 
 ## Author
 
-John Doe, john.doe@dreamlab.pl
+Konrad Falkowski, konrad.@dreamlab.pl
 
 ## License
 
