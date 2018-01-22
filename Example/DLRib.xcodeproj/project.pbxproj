@@ -717,7 +717,6 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-DLRib/Pods-DLRib-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/ASPropertyReader/ASPropertyReader.framework",
 				"${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework",
 				"${BUILT_PRODUCTS_DIR}/DLAppHelper/DLAppHelper.framework",
 				"${BUILT_PRODUCTS_DIR}/DLCocoaLumberjackHelper/DLCocoaLumberjackHelper.framework",
@@ -734,7 +733,6 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ASPropertyReader.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaLumberjack.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DLAppHelper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DLCocoaLumberjackHelper.framework",
@@ -761,7 +759,6 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-DLRibUI/Pods-DLRibUI-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/ASPropertyReader/ASPropertyReader.framework",
 				"${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework",
 				"${BUILT_PRODUCTS_DIR}/DLAppHelper/DLAppHelper.framework",
 				"${BUILT_PRODUCTS_DIR}/DLCocoaLumberjackHelper/DLCocoaLumberjackHelper.framework",
@@ -782,7 +779,6 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ASPropertyReader.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaLumberjack.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DLAppHelper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DLCocoaLumberjackHelper.framework",
@@ -863,7 +859,6 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-DLRibTests/Pods-DLRibTests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/ASPropertyReader/ASPropertyReader.framework",
 				"${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework",
 				"${BUILT_PRODUCTS_DIR}/DLAppHelper/DLAppHelper.framework",
 				"${BUILT_PRODUCTS_DIR}/DLCocoaLumberjackHelper/DLCocoaLumberjackHelper.framework",
@@ -880,7 +875,6 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ASPropertyReader.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaLumberjack.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DLAppHelper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DLCocoaLumberjackHelper.framework",

@@ -9,7 +9,7 @@ def common_pods
     # List pods here
     pod 'DLMessageBus', '~> 4.0.0'
     pod 'DLDeviceHelper', '~> 4.0.0'
-    pod 'DLConfigReader', '~> 4.0.0'
+    pod 'DLConfigReader', '~> 4.3.0'
     pod 'DLCocoaLumberjackHelper', '~> 4.0.0'
     pod 'DLAppHelper', '~> 4.0.0'
     pod 'DLUIExtensions', '~> 4.0.0'
