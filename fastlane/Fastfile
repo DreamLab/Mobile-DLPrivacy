@@ -1,0 +1,1 @@
+import_from_git(url: 'ssh://git@stash.grupa.onet:7999/dep/bamboo-mobile-ios.git')
