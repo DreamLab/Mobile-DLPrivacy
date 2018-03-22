@@ -592,9 +592,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-DLRibTests/Pods-DLRibTests-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/DLAppHelper/DLAppHelper.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/DLAppHelper.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -658,9 +661,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-DLRibUI/Pods-DLRibUI-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/DLAppHelper/DLAppHelper.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/DLAppHelper.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -673,9 +679,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-DLRib/Pods-DLRib-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/DLAppHelper/DLAppHelper.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/DLAppHelper.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -718,14 +727,6 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-DLRib/Pods-DLRib-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework",
-				"${BUILT_PRODUCTS_DIR}/DLAppHelper/DLAppHelper.framework",
-				"${BUILT_PRODUCTS_DIR}/DLCocoaLumberjackHelper/DLCocoaLumberjackHelper.framework",
-				"${BUILT_PRODUCTS_DIR}/DLConfigReader/DLConfigReader.framework",
-				"${BUILT_PRODUCTS_DIR}/DLDeviceHelper/DLDeviceHelper.framework",
-				"${BUILT_PRODUCTS_DIR}/DLMessageBus/DLMessageBus.framework",
-				"${BUILT_PRODUCTS_DIR}/DLTestHelpers-Common/DLTestHelpers.framework",
-				"${BUILT_PRODUCTS_DIR}/DLTestMockHelper-MainApp/DLTestMockHelper.framework",
-				"${BUILT_PRODUCTS_DIR}/DLUIExtensions/DLUIExtensions.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
@@ -734,14 +735,6 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaLumberjack.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DLAppHelper.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DLCocoaLumberjackHelper.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DLConfigReader.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DLDeviceHelper.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DLMessageBus.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DLTestHelpers.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DLTestMockHelper.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DLUIExtensions.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
@@ -760,14 +753,6 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-DLRibUI/Pods-DLRibUI-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework",
-				"${BUILT_PRODUCTS_DIR}/DLAppHelper/DLAppHelper.framework",
-				"${BUILT_PRODUCTS_DIR}/DLCocoaLumberjackHelper/DLCocoaLumberjackHelper.framework",
-				"${BUILT_PRODUCTS_DIR}/DLConfigReader/DLConfigReader.framework",
-				"${BUILT_PRODUCTS_DIR}/DLDeviceHelper/DLDeviceHelper.framework",
-				"${BUILT_PRODUCTS_DIR}/DLMessageBus/DLMessageBus.framework",
-				"${BUILT_PRODUCTS_DIR}/DLTestHelpers-UIApp/DLTestHelpers.framework",
-				"${BUILT_PRODUCTS_DIR}/DLTestMockHelper-UIApp/DLTestMockHelper.framework",
-				"${BUILT_PRODUCTS_DIR}/DLUIExtensions/DLUIExtensions.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
@@ -780,14 +765,6 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaLumberjack.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DLAppHelper.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DLCocoaLumberjackHelper.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DLConfigReader.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DLDeviceHelper.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DLMessageBus.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DLTestHelpers.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DLTestMockHelper.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DLUIExtensions.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
@@ -810,24 +787,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-DLRibUITests/Pods-DLRibUITests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework",
-				"${BUILT_PRODUCTS_DIR}/DLCocoaLumberjackHelper/DLCocoaLumberjackHelper.framework",
-				"${BUILT_PRODUCTS_DIR}/DLTestHelpers-UITests/DLTestHelpers.framework",
-				"${BUILT_PRODUCTS_DIR}/DLTestMockHelper-UITests/DLTestMockHelper.framework",
-				"${BUILT_PRODUCTS_DIR}/Http.swift/HttpSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/Socket.swift/SocketSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
-				"${BUILT_PRODUCTS_DIR}/DLRemoteControl/DLRemoteControl.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaLumberjack.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DLCocoaLumberjackHelper.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DLTestHelpers.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DLTestMockHelper.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HttpSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SocketSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DLRemoteControl.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -860,14 +825,6 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-DLRibTests/Pods-DLRibTests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework",
-				"${BUILT_PRODUCTS_DIR}/DLAppHelper/DLAppHelper.framework",
-				"${BUILT_PRODUCTS_DIR}/DLCocoaLumberjackHelper/DLCocoaLumberjackHelper.framework",
-				"${BUILT_PRODUCTS_DIR}/DLConfigReader/DLConfigReader.framework",
-				"${BUILT_PRODUCTS_DIR}/DLDeviceHelper/DLDeviceHelper.framework",
-				"${BUILT_PRODUCTS_DIR}/DLMessageBus/DLMessageBus.framework",
-				"${BUILT_PRODUCTS_DIR}/DLTestHelpers-Common/DLTestHelpers.framework",
-				"${BUILT_PRODUCTS_DIR}/DLTestMockHelper-MainApp/DLTestMockHelper.framework",
-				"${BUILT_PRODUCTS_DIR}/DLUIExtensions/DLUIExtensions.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
@@ -876,14 +833,6 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaLumberjack.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DLAppHelper.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DLCocoaLumberjackHelper.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DLConfigReader.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DLDeviceHelper.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DLMessageBus.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DLTestHelpers.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DLTestMockHelper.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DLUIExtensions.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",

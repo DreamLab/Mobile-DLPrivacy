@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name         = "DLRib"
-s.version      = "4.0"
+s.version      = "5.0.100"
 s.homepage     = "http://stash.grupa.onet/projects/MB/repos/ios-rib"
 s.summary      = "Root project for other PODs to be forked."
 s.license      = { :type => 'Copyright. DreamLab', :file => 'LICENSE' }
@@ -10,6 +10,7 @@ s.source       = { :git => "ssh://git@stash.grupa.onet:7999/mb/ios-rib.git", :ta
 s.source_files = 'Pod/Classes/**/*.swift'
 s.requires_arc = true
 
-s.pod_target_xcconfig = { 'SWIFT_VERSION' => '4.0' }
+s.swift_version = '4.0'
+s.static_framework = true
 
 end
