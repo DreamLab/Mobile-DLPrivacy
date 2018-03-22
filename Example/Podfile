@@ -7,12 +7,12 @@ inhibit_all_warnings!
 def common_pods
     platform :ios, '9.0'
     # List pods here
-    pod 'DLMessageBus', '~> 4.0.0'
-    pod 'DLDeviceHelper', '~> 4.0.0'
-    pod 'DLConfigReader', '~> 4.3.0'
-    pod 'DLCocoaLumberjackHelper', '~> 4.0.0'
-    pod 'DLAppHelper', '~> 4.0.0'
-    pod 'DLUIExtensions', '~> 4.0.0'
+    pod 'DLMessageBus', '~> 5.0.0'
+    pod 'DLDeviceHelper', '~> 5.0.0'
+    pod 'DLConfigReader', '~> 5.0.0'
+    pod 'DLCocoaLumberjackHelper', '~> 5.0.0'
+    pod 'DLAppHelper', '~> 5.0.0'
+    pod 'DLUIExtensions', '~> 5.0.0'
     pod 'SwiftLint', '~> 0.23.0'
 end
 
@@ -24,28 +24,28 @@ end
 target 'DLRib' do
     common_pods
     fabric_pods
-    pod 'DLTestMockHelper/MainApp', '~> 4.0.0'
-    pod 'DLTestHelpers/Common', '~> 4.0.0'
+    pod 'DLTestMockHelper/MainApp', '~> 5.0.0'
+    pod 'DLTestHelpers/Common', '~> 5.0.0'
 end
 
 target 'DLRibTests' do
     common_pods
     fabric_pods
-    pod 'DLTestMockHelper/MainApp', '~> 4.0.0'
-    pod 'DLTestHelpers/Common', '~> 4.0.0'
+    pod 'DLTestMockHelper/MainApp', '~> 5.0.0'
+    pod 'DLTestHelpers/Common', '~> 5.0.0'
 end
 
 target 'DLRibUI' do
     common_pods
     fabric_pods
-    pod 'DLTestMockHelper/UIApp', '~> 4.0.0'
-    pod 'DLTestHelpers/UIApp', '~> 4.0.0'
+    pod 'DLTestMockHelper/UIApp', '~> 5.0.0'
+    pod 'DLTestHelpers/UIApp', '~> 5.0.0'
     
 end
 
 target 'DLRibUITests' do
     platform :ios, '9.0'
-    pod 'DLTestMockHelper/UITests', '~> 4.0.0'
-    pod 'DLTestHelpers/UITests', '~> 4.0.0'
+    pod 'DLTestMockHelper/UITests', '~> 5.0.0'
+    pod 'DLTestHelpers/UITests', '~> 5.0.0'
 end
 
