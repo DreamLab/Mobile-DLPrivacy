@@ -29,6 +29,9 @@
 		7D00E72F20A31A78006C27CC /* AppSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D00E72E20A31A78006C27CC /* AppSDK.swift */; };
 		7D00E73020A31A78006C27CC /* AppSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D00E72E20A31A78006C27CC /* AppSDK.swift */; };
 		7D00E73120A31A78006C27CC /* AppSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D00E72E20A31A78006C27CC /* AppSDK.swift */; };
+		7D00E73620A32BE8006C27CC /* DLPrivacyFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D00E73520A32BE8006C27CC /* DLPrivacyFormView.swift */; };
+		7D00E73720A32BE8006C27CC /* DLPrivacyFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D00E73520A32BE8006C27CC /* DLPrivacyFormView.swift */; };
+		7D00E73820A32BE8006C27CC /* DLPrivacyFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D00E73520A32BE8006C27CC /* DLPrivacyFormView.swift */; };
 		7D2AD86020A2D27E00E86996 /* DLPrivacy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2AD85F20A2D27E00E86996 /* DLPrivacy.swift */; };
 		7D2AD86120A2D27E00E86996 /* DLPrivacy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2AD85F20A2D27E00E86996 /* DLPrivacy.swift */; };
 		7D2AD86220A2D63700E86996 /* DLPrivacy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2AD85F20A2D27E00E86996 /* DLPrivacy.swift */; };
@@ -109,6 +112,7 @@
 		7D00E72620A2F4E8006C27CC /* CMPEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMPEvent.swift; sourceTree = "<group>"; };
 		7D00E72A20A3077C006C27CC /* DLPrivacyDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DLPrivacyDelegate.swift; sourceTree = "<group>"; };
 		7D00E72E20A31A78006C27CC /* AppSDK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSDK.swift; sourceTree = "<group>"; };
+		7D00E73520A32BE8006C27CC /* DLPrivacyFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DLPrivacyFormView.swift; sourceTree = "<group>"; };
 		7D2AD85F20A2D27E00E86996 /* DLPrivacy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DLPrivacy.swift; sourceTree = "<group>"; };
 		7D2AD86420A2DAA700E86996 /* CMPAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMPAction.swift; sourceTree = "<group>"; };
 		7E09B24D1CBB8C6F00122878 /* DLPrivacy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DLPrivacy.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -200,7 +204,8 @@
 		7D00E71320A2E227006C27CC /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				7D00E71520A2E940006C27CC /* CMPEventListeners.js */,
+				7D00E73320A32B7B006C27CC /* Scripts */,
+				7D00E73220A32B73006C27CC /* Views */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -218,6 +223,29 @@
 				7D00E72220A2F32B006C27CC /* WKScriptMessageHandlerWrapper.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		7D00E73220A32B73006C27CC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7D00E73320A32B7B006C27CC /* Scripts */ = {
+			isa = PBXGroup;
+			children = (
+				7D00E71520A2E940006C27CC /* CMPEventListeners.js */,
+			);
+			path = Scripts;
+			sourceTree = "<group>";
+		};
+		7D00E73420A32BB7006C27CC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7D00E73520A32BE8006C27CC /* DLPrivacyFormView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		7D2AD86320A2DA5700E86996 /* Enum */ = {
@@ -345,6 +373,7 @@
 				7D00E71D20A2F014006C27CC /* DLPrivacy+WKScriptMessageHandler.swift */,
 				7D00E71920A2ED02006C27CC /* DLPrivacy+Bundle.swift */,
 				7D00E72A20A3077C006C27CC /* DLPrivacyDelegate.swift */,
+				7D00E73420A32BB7006C27CC /* Views */,
 				7D00E72120A2F31E006C27CC /* Utils */,
 				7D00E71420A2E231006C27CC /* Extensions */,
 				7D2AD86320A2DA5700E86996 /* Enum */,
@@ -846,6 +875,7 @@
 				7E09B2531CBB8C7000122878 /* ViewController.swift in Sources */,
 				7D2AD86020A2D27E00E86996 /* DLPrivacy.swift in Sources */,
 				7E09B2511CBB8C7000122878 /* AppDelegate.swift in Sources */,
+				7D00E73620A32BE8006C27CC /* DLPrivacyFormView.swift in Sources */,
 				7D00E71E20A2F014006C27CC /* DLPrivacy+WKScriptMessageHandler.swift in Sources */,
 				7D00E72720A2F4E8006C27CC /* CMPEvent.swift in Sources */,
 			);
@@ -863,6 +893,7 @@
 				D58CC44C1CBD711B00DDE147 /* EnvironmentSettings.swift in Sources */,
 				7E09B2661CBB8C7000122878 /* DLPrivacyTests.swift in Sources */,
 				7EBD25F61CBE37B100C21E8F /* FabricInitializer.swift in Sources */,
+				7D00E73820A32BE8006C27CC /* DLPrivacyFormView.swift in Sources */,
 				D58CC44B1CBD70C800DDE147 /* ViewController.swift in Sources */,
 				7D2AD86220A2D63700E86996 /* DLPrivacy.swift in Sources */,
 				7D00E72D20A3077C006C27CC /* DLPrivacyDelegate.swift in Sources */,
@@ -887,6 +918,7 @@
 				7E09B2B81CBB993D00122878 /* FabricInitializer.swift in Sources */,
 				7D2AD86120A2D27E00E86996 /* DLPrivacy.swift in Sources */,
 				7E09B2B41CBB993100122878 /* EnvironmentSettings.swift in Sources */,
+				7D00E73720A32BE8006C27CC /* DLPrivacyFormView.swift in Sources */,
 				7D00E71F20A2F014006C27CC /* DLPrivacy+WKScriptMessageHandler.swift in Sources */,
 				7D00E72820A2F4E8006C27CC /* CMPEvent.swift in Sources */,
 			);
