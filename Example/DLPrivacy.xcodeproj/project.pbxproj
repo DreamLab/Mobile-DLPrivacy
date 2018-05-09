@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		229F8896F030366F1F9D6C56 /* Pods_DLPrivacyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5012179E2AC162ECEAD17560 /* Pods_DLPrivacyTests.framework */; };
+		7D2AD86020A2D27E00E86996 /* DLPrivacy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2AD85F20A2D27E00E86996 /* DLPrivacy.swift */; };
+		7D2AD86120A2D27E00E86996 /* DLPrivacy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2AD85F20A2D27E00E86996 /* DLPrivacy.swift */; };
+		7D2AD86220A2D63700E86996 /* DLPrivacy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2AD85F20A2D27E00E86996 /* DLPrivacy.swift */; };
 		7E09B2511CBB8C7000122878 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09B2501CBB8C7000122878 /* AppDelegate.swift */; };
 		7E09B2531CBB8C7000122878 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09B2521CBB8C7000122878 /* ViewController.swift */; };
 		7E09B2561CBB8C7000122878 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E09B2541CBB8C7000122878 /* Main.storyboard */; };
@@ -32,9 +35,6 @@
 		AE7D381955FB9226891AA5E3 /* Pods_DLPrivacyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D980329D40A70CC4B46C7B2 /* Pods_DLPrivacyUITests.framework */; };
 		D0AF5C3FA75B923037779AFE /* Pods_DLPrivacy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9226EA7C315E6F5C020942CE /* Pods_DLPrivacy.framework */; };
 		D520B166504CBBE214EAA585 /* Pods_DLPrivacyUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61755ECBF06B4989503D4678 /* Pods_DLPrivacyUI.framework */; };
-		D558E6F21CDB85D20055F30A /* ExampleClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D558E6F11CDB85D20055F30A /* ExampleClass.swift */; };
-		D558E6F31CDB85D20055F30A /* ExampleClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D558E6F11CDB85D20055F30A /* ExampleClass.swift */; };
-		D56146801CDC7CBF00317A06 /* ExampleClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D558E6F11CDB85D20055F30A /* ExampleClass.swift */; };
 		D58CC4441CBD70AD00DDE147 /* CustomCocoaLumberjackInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09B29B1CBB966600122878 /* CustomCocoaLumberjackInitializer.swift */; };
 		D58CC44B1CBD70C800DDE147 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09B2521CBB8C7000122878 /* ViewController.swift */; };
 		D58CC44C1CBD711B00DDE147 /* EnvironmentSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09B2A41CBB967900122878 /* EnvironmentSettings.swift */; };
@@ -78,6 +78,7 @@
 		61755ECBF06B4989503D4678 /* Pods_DLPrivacyUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DLPrivacyUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F38241F705D92635B63C41A /* Pods-DLPrivacyUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DLPrivacyUI.release.xcconfig"; path = "Pods/Target Support Files/Pods-DLPrivacyUI/Pods-DLPrivacyUI.release.xcconfig"; sourceTree = "<group>"; };
 		73B5516E45A10E523F7691EF /* Pods-DLPrivacyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DLPrivacyUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DLPrivacyUITests/Pods-DLPrivacyUITests.release.xcconfig"; sourceTree = "<group>"; };
+		7D2AD85F20A2D27E00E86996 /* DLPrivacy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DLPrivacy.swift; sourceTree = "<group>"; };
 		7E09B24D1CBB8C6F00122878 /* DLPrivacy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DLPrivacy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E09B2501CBB8C7000122878 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7E09B2521CBB8C7000122878 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -104,7 +105,6 @@
 		B3F9B44754735EBCEBFC039A /* Pods-DLPrivacy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DLPrivacy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DLPrivacy/Pods-DLPrivacy.debug.xcconfig"; sourceTree = "<group>"; };
 		BBE799287C6D6F3CC012DA86 /* Pods-DLPrivacyTests.alpha.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DLPrivacyTests.alpha.xcconfig"; path = "Pods/Target Support Files/Pods-DLPrivacyTests/Pods-DLPrivacyTests.alpha.xcconfig"; sourceTree = "<group>"; };
 		C91B91655D247F548D796DB5 /* Pods-DLPrivacyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DLPrivacyUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DLPrivacyUITests/Pods-DLPrivacyUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		D558E6F11CDB85D20055F30A /* ExampleClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleClass.swift; sourceTree = "<group>"; };
 		D5F7C7561CEDE6790048A0B5 /* DLPrivacy.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = DLPrivacy.podspec; path = ../DLPrivacy.podspec; sourceTree = "<group>"; };
 		D5F7C7571CEDE6790048A0B5 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		D5F7C7581CEDE6790048A0B5 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
@@ -275,7 +275,7 @@
 		D558E6F01CDB859C0055F30A /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				D558E6F11CDB85D20055F30A /* ExampleClass.swift */,
+				7D2AD85F20A2D27E00E86996 /* DLPrivacy.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -763,8 +763,8 @@
 				7E09B2A21CBB966600122878 /* FabricInitializer.swift in Sources */,
 				7E09B2A01CBB966600122878 /* CustomCocoaLumberjackInitializer.swift in Sources */,
 				7E09B2A51CBB967900122878 /* EnvironmentSettings.swift in Sources */,
-				D558E6F21CDB85D20055F30A /* ExampleClass.swift in Sources */,
 				7E09B2531CBB8C7000122878 /* ViewController.swift in Sources */,
+				7D2AD86020A2D27E00E86996 /* DLPrivacy.swift in Sources */,
 				7E09B2511CBB8C7000122878 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -778,8 +778,8 @@
 				7E09B2661CBB8C7000122878 /* DLPrivacyTests.swift in Sources */,
 				7EBD25F61CBE37B100C21E8F /* FabricInitializer.swift in Sources */,
 				D58CC44B1CBD70C800DDE147 /* ViewController.swift in Sources */,
+				7D2AD86220A2D63700E86996 /* DLPrivacy.swift in Sources */,
 				7EBD25F51CBE36C100C21E8F /* AppDelegate.swift in Sources */,
-				D56146801CDC7CBF00317A06 /* ExampleClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -789,9 +789,9 @@
 			files = (
 				7E09B2B71CBB993A00122878 /* CustomCocoaLumberjackInitializer.swift in Sources */,
 				7E09B2721CBB8C7F00122878 /* ViewController.swift in Sources */,
-				D558E6F31CDB85D20055F30A /* ExampleClass.swift in Sources */,
 				7E09B2731CBB8C7F00122878 /* AppDelegate.swift in Sources */,
 				7E09B2B81CBB993D00122878 /* FabricInitializer.swift in Sources */,
+				7D2AD86120A2D27E00E86996 /* DLPrivacy.swift in Sources */,
 				7E09B2B41CBB993100122878 /* EnvironmentSettings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
