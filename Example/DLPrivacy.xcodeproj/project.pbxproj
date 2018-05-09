@@ -26,6 +26,9 @@
 		7D00E72B20A3077C006C27CC /* DLPrivacyDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D00E72A20A3077C006C27CC /* DLPrivacyDelegate.swift */; };
 		7D00E72C20A3077C006C27CC /* DLPrivacyDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D00E72A20A3077C006C27CC /* DLPrivacyDelegate.swift */; };
 		7D00E72D20A3077C006C27CC /* DLPrivacyDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D00E72A20A3077C006C27CC /* DLPrivacyDelegate.swift */; };
+		7D00E72F20A31A78006C27CC /* AppSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D00E72E20A31A78006C27CC /* AppSDK.swift */; };
+		7D00E73020A31A78006C27CC /* AppSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D00E72E20A31A78006C27CC /* AppSDK.swift */; };
+		7D00E73120A31A78006C27CC /* AppSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D00E72E20A31A78006C27CC /* AppSDK.swift */; };
 		7D2AD86020A2D27E00E86996 /* DLPrivacy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2AD85F20A2D27E00E86996 /* DLPrivacy.swift */; };
 		7D2AD86120A2D27E00E86996 /* DLPrivacy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2AD85F20A2D27E00E86996 /* DLPrivacy.swift */; };
 		7D2AD86220A2D63700E86996 /* DLPrivacy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2AD85F20A2D27E00E86996 /* DLPrivacy.swift */; };
@@ -105,6 +108,7 @@
 		7D00E72220A2F32B006C27CC /* WKScriptMessageHandlerWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WKScriptMessageHandlerWrapper.swift; sourceTree = "<group>"; };
 		7D00E72620A2F4E8006C27CC /* CMPEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMPEvent.swift; sourceTree = "<group>"; };
 		7D00E72A20A3077C006C27CC /* DLPrivacyDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DLPrivacyDelegate.swift; sourceTree = "<group>"; };
+		7D00E72E20A31A78006C27CC /* AppSDK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSDK.swift; sourceTree = "<group>"; };
 		7D2AD85F20A2D27E00E86996 /* DLPrivacy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DLPrivacy.swift; sourceTree = "<group>"; };
 		7D2AD86420A2DAA700E86996 /* CMPAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMPAction.swift; sourceTree = "<group>"; };
 		7E09B24D1CBB8C6F00122878 /* DLPrivacy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DLPrivacy.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -221,6 +225,7 @@
 			children = (
 				7D2AD86420A2DAA700E86996 /* CMPAction.swift */,
 				7D00E72620A2F4E8006C27CC /* CMPEvent.swift */,
+				7D00E72E20A31A78006C27CC /* AppSDK.swift */,
 			);
 			path = Enum;
 			sourceTree = "<group>";
@@ -837,6 +842,7 @@
 				7D00E72320A2F32B006C27CC /* WKScriptMessageHandlerWrapper.swift in Sources */,
 				7E09B2A51CBB967900122878 /* EnvironmentSettings.swift in Sources */,
 				7D00E71A20A2ED02006C27CC /* DLPrivacy+Bundle.swift in Sources */,
+				7D00E72F20A31A78006C27CC /* AppSDK.swift in Sources */,
 				7E09B2531CBB8C7000122878 /* ViewController.swift in Sources */,
 				7D2AD86020A2D27E00E86996 /* DLPrivacy.swift in Sources */,
 				7E09B2511CBB8C7000122878 /* AppDelegate.swift in Sources */,
@@ -861,6 +867,7 @@
 				7D2AD86220A2D63700E86996 /* DLPrivacy.swift in Sources */,
 				7D00E72D20A3077C006C27CC /* DLPrivacyDelegate.swift in Sources */,
 				7EBD25F51CBE36C100C21E8F /* AppDelegate.swift in Sources */,
+				7D00E73120A31A78006C27CC /* AppSDK.swift in Sources */,
 				7D00E72920A2F4E8006C27CC /* CMPEvent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -876,6 +883,7 @@
 				7D00E72420A2F32B006C27CC /* WKScriptMessageHandlerWrapper.swift in Sources */,
 				7E09B2731CBB8C7F00122878 /* AppDelegate.swift in Sources */,
 				7D00E71B20A2ED02006C27CC /* DLPrivacy+Bundle.swift in Sources */,
+				7D00E73020A31A78006C27CC /* AppSDK.swift in Sources */,
 				7E09B2B81CBB993D00122878 /* FabricInitializer.swift in Sources */,
 				7D2AD86120A2D27E00E86996 /* DLPrivacy.swift in Sources */,
 				7E09B2B41CBB993100122878 /* EnvironmentSettings.swift in Sources */,

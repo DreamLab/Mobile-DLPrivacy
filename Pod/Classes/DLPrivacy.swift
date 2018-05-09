@@ -57,6 +57,7 @@ public extension DLPrivacy {
 
     func initialize() {
         // TODO: [ASZ]
+        // https://m.onet.pl/?test_kwrd=vappn
 
         guard let url = URL(string: "http://10.69.42.31:5000") else {
             return
@@ -67,7 +68,7 @@ public extension DLPrivacy {
     }
 
     func getPrivacyConsentsView() -> UIView {
-        // TODO: [ASZ]
+        // TODO: [ASZ] Wrap this and move some of the methods to view
         return webview
     }
 
@@ -79,8 +80,10 @@ public extension DLPrivacy {
         // TODO: [ASZ]
     }
 
-    func getSDKConsents() {
+    func getSDKConsent(_ sdk: AppSDK) -> Bool {
         // TODO: [ASZ]
+
+        return true
     }
 }
 

@@ -13,8 +13,10 @@ import CocoaLumberjack
 // MARK: WKScriptMessageHandler
 extension DLPrivacy: WKScriptMessageHandler {
 
+    /// CMP event name key
     private static let cmpEventNameKey = "event"
 
+    /// CMP event payload key
     private static let cmpEventPayloadKey = "payload"
 
     public func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
@@ -45,8 +47,7 @@ extension DLPrivacy: WKScriptMessageHandler {
             return
         case .vendorsConsentsReceived:
             // todo
-
-            print("payload: \(messageDict["payload"] as? [String: Any])")
+            //print("payload: \(messageDict["payload"] as? [String: Any])")
 
             return
         case .error:
