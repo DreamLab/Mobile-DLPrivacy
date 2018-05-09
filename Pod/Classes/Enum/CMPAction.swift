@@ -29,9 +29,9 @@ enum CMPAction: Int {
 
         case .getVendorConsents:
             return """
-            window.__cmp('getVendorConsents', [1, 2, 3, 4], function(result) {
-            myLogger('getVendorConsents callback result:\n' + JSON.stringify(result, null, 2));
-            });
+                window.__cmp('getVendorConsents', null, function(result) {
+                    webkit.messageHandlers.cmpEvents.postMessage({"event": "cmpVendorsConsentsReceived", "payload": result});
+                });
             """
         }
     }

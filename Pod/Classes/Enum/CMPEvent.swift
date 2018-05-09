@@ -22,6 +22,7 @@ enum CMPEvent: Int {
     case formReady
     case formSubmitted
     case welcomeScreenVisible
+    case vendorsConsentsReceived
     case error
 
     /// Initialize CMPEvent from JavaScript message
@@ -37,6 +38,8 @@ enum CMPEvent: Int {
             self = .formSubmitted
         case "cmpWelcomeVisible":
             self = .welcomeScreenVisible
+        case "cmpVendorsConsentsReceived":
+            self = .vendorsConsentsReceived
         case "cmpError":
             self = .error
         default:

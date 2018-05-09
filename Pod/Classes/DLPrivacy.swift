@@ -16,18 +16,22 @@ public class DLPrivacy: NSObject {
 
     // MARK: Shared instance
 
+    /// Shared instance
     public static let shared = DLPrivacy()
 
-    // MARK: Properties
+    // MARK: Properties (Internal/Private)
 
     /// Underlaying "content" view
-    private let webview: WKWebView
+    let webview: WKWebView
 
     /// JavaScript scripts used in underlaying web view
     private static let jsScripts = ["CMPEventListeners"]
 
     /// WebKit message handler name for CMP events
     private let cmpMessageHandlerName = "cmpEvents"
+
+    /// Module delegate
+    weak var delegate: DLPrivacyDelegate?
 
     // MARK: Init
 
@@ -68,20 +72,21 @@ public extension DLPrivacy {
     }
 
     func showConsentsWelcomeScreen() {
-        let action = CMPAction.showWelcomeScreen
-
-        webview.evaluateJavaScript(action.getJavaScriptCode(), completionHandler: nil)
-
+        performAction(.showWelcomeScreen)
     }
 
     func showConsentsSettingsScreen() {
         // TODO: [ASZ]
     }
+
+    func getSDKConsents() {
+        // TODO: [ASZ]
+    }
 }
 
-// MARK: Private
+// MARK: Internal
 
-private extension DLPrivacy {
+extension DLPrivacy {
 
     // MARK: WKWebView config
 
@@ -91,7 +96,6 @@ private extension DLPrivacy {
     static func defaultWebViewConfiguration() -> WKWebViewConfiguration {
         let wkUserController = WKUserContentController()
         let config = WKWebViewConfiguration()
-
         config.userContentController = wkUserController
 
         // Insert scripts
@@ -108,5 +112,14 @@ private extension DLPrivacy {
         }
 
         return config
+    }
+
+    // MARK: JavaScript evaluation / CMP actions
+
+    /// Sends message to JavaScript to perform desired action
+    ///
+    /// - Parameter cmpAction: CMPAction
+    func performAction(_ cmpAction: CMPAction) {
+        webview.evaluateJavaScript(cmpAction.getJavaScriptCode(), completionHandler: nil)
     }
 }

@@ -13,9 +13,13 @@ import CocoaLumberjack
 // MARK: WKScriptMessageHandler
 extension DLPrivacy: WKScriptMessageHandler {
 
+    private static let cmpEventNameKey = "event"
+
+    private static let cmpEventPayloadKey = "payload"
+
     public func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
-        guard let messageDict = message.body as? [String: String],
-            let eventMessage = messageDict["event"],
+        guard let messageDict = message.body as? [String: Any],
+            let eventMessage = messageDict[DLPrivacy.cmpEventNameKey] as? String,
             let cmpEvent = CMPEvent(from: eventMessage) else {
             DDLogError("Failed to parse WKScriptMessage: \(message.body)")
             return
@@ -32,9 +36,18 @@ extension DLPrivacy: WKScriptMessageHandler {
             return
         case .formSubmitted:
             // TODO
+
+            performAction(.getVendorConsents)
+
             return
         case .welcomeScreenVisible:
             // TODO:[ ASZ] Hide loading
+            return
+        case .vendorsConsentsReceived:
+            // todo
+
+            print("payload: \(messageDict["payload"] as? [String: Any])")
+
             return
         case .error:
             // TODO

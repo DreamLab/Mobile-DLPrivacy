@@ -23,6 +23,9 @@
 		7D00E72720A2F4E8006C27CC /* CMPEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D00E72620A2F4E8006C27CC /* CMPEvent.swift */; };
 		7D00E72820A2F4E8006C27CC /* CMPEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D00E72620A2F4E8006C27CC /* CMPEvent.swift */; };
 		7D00E72920A2F4E8006C27CC /* CMPEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D00E72620A2F4E8006C27CC /* CMPEvent.swift */; };
+		7D00E72B20A3077C006C27CC /* DLPrivacyDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D00E72A20A3077C006C27CC /* DLPrivacyDelegate.swift */; };
+		7D00E72C20A3077C006C27CC /* DLPrivacyDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D00E72A20A3077C006C27CC /* DLPrivacyDelegate.swift */; };
+		7D00E72D20A3077C006C27CC /* DLPrivacyDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D00E72A20A3077C006C27CC /* DLPrivacyDelegate.swift */; };
 		7D2AD86020A2D27E00E86996 /* DLPrivacy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2AD85F20A2D27E00E86996 /* DLPrivacy.swift */; };
 		7D2AD86120A2D27E00E86996 /* DLPrivacy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2AD85F20A2D27E00E86996 /* DLPrivacy.swift */; };
 		7D2AD86220A2D63700E86996 /* DLPrivacy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2AD85F20A2D27E00E86996 /* DLPrivacy.swift */; };
@@ -101,6 +104,7 @@
 		7D00E71D20A2F014006C27CC /* DLPrivacy+WKScriptMessageHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DLPrivacy+WKScriptMessageHandler.swift"; sourceTree = "<group>"; };
 		7D00E72220A2F32B006C27CC /* WKScriptMessageHandlerWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WKScriptMessageHandlerWrapper.swift; sourceTree = "<group>"; };
 		7D00E72620A2F4E8006C27CC /* CMPEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMPEvent.swift; sourceTree = "<group>"; };
+		7D00E72A20A3077C006C27CC /* DLPrivacyDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DLPrivacyDelegate.swift; sourceTree = "<group>"; };
 		7D2AD85F20A2D27E00E86996 /* DLPrivacy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DLPrivacy.swift; sourceTree = "<group>"; };
 		7D2AD86420A2DAA700E86996 /* CMPAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMPAction.swift; sourceTree = "<group>"; };
 		7E09B24D1CBB8C6F00122878 /* DLPrivacy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DLPrivacy.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -335,6 +339,7 @@
 				7D2AD85F20A2D27E00E86996 /* DLPrivacy.swift */,
 				7D00E71D20A2F014006C27CC /* DLPrivacy+WKScriptMessageHandler.swift */,
 				7D00E71920A2ED02006C27CC /* DLPrivacy+Bundle.swift */,
+				7D00E72A20A3077C006C27CC /* DLPrivacyDelegate.swift */,
 				7D00E72120A2F31E006C27CC /* Utils */,
 				7D00E71420A2E231006C27CC /* Extensions */,
 				7D2AD86320A2DA5700E86996 /* Enum */,
@@ -828,6 +833,7 @@
 				7D2AD86520A2DAA700E86996 /* CMPAction.swift in Sources */,
 				7E09B2A21CBB966600122878 /* FabricInitializer.swift in Sources */,
 				7E09B2A01CBB966600122878 /* CustomCocoaLumberjackInitializer.swift in Sources */,
+				7D00E72B20A3077C006C27CC /* DLPrivacyDelegate.swift in Sources */,
 				7D00E72320A2F32B006C27CC /* WKScriptMessageHandlerWrapper.swift in Sources */,
 				7E09B2A51CBB967900122878 /* EnvironmentSettings.swift in Sources */,
 				7D00E71A20A2ED02006C27CC /* DLPrivacy+Bundle.swift in Sources */,
@@ -853,6 +859,7 @@
 				7EBD25F61CBE37B100C21E8F /* FabricInitializer.swift in Sources */,
 				D58CC44B1CBD70C800DDE147 /* ViewController.swift in Sources */,
 				7D2AD86220A2D63700E86996 /* DLPrivacy.swift in Sources */,
+				7D00E72D20A3077C006C27CC /* DLPrivacyDelegate.swift in Sources */,
 				7EBD25F51CBE36C100C21E8F /* AppDelegate.swift in Sources */,
 				7D00E72920A2F4E8006C27CC /* CMPEvent.swift in Sources */,
 			);
@@ -865,6 +872,7 @@
 				7D2AD86620A2DAA700E86996 /* CMPAction.swift in Sources */,
 				7E09B2B71CBB993A00122878 /* CustomCocoaLumberjackInitializer.swift in Sources */,
 				7E09B2721CBB8C7F00122878 /* ViewController.swift in Sources */,
+				7D00E72C20A3077C006C27CC /* DLPrivacyDelegate.swift in Sources */,
 				7D00E72420A2F32B006C27CC /* WKScriptMessageHandlerWrapper.swift in Sources */,
 				7E09B2731CBB8C7F00122878 /* AppDelegate.swift in Sources */,
 				7D00E71B20A2ED02006C27CC /* DLPrivacy+Bundle.swift in Sources */,
