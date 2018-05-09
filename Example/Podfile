@@ -6,14 +6,9 @@ inhibit_all_warnings!
 
 def common_pods
     platform :ios, '9.0'
-    # List pods here
-    pod 'DLMessageBus', '~> 5.0.0'
-    pod 'DLDeviceHelper', '~> 5.0.0'
-    pod 'DLConfigReader', '~> 5.0.0'
     pod 'DLCocoaLumberjackHelper', '~> 5.0.0'
     pod 'DLAppHelper', '~> 5.0.0'
-    pod 'DLUIExtensions', '~> 5.0.0'
-    pod 'SwiftLint', '~> 0.23.0'
+    pod 'SwiftLint', '~> 0.25.0'
 end
 
 def fabric_pods
@@ -21,21 +16,21 @@ def fabric_pods
     pod 'Crashlytics'
 end
 
-target 'DLRib' do
+target 'DLPrivacy' do
     common_pods
     fabric_pods
     pod 'DLTestMockHelper/MainApp', '~> 5.0.0'
     pod 'DLTestHelpers/Common', '~> 5.0.0'
 end
 
-target 'DLRibTests' do
+target 'DLPrivacyTests' do
     common_pods
     fabric_pods
     pod 'DLTestMockHelper/MainApp', '~> 5.0.0'
     pod 'DLTestHelpers/Common', '~> 5.0.0'
 end
 
-target 'DLRibUI' do
+target 'DLPrivacyUI' do
     common_pods
     fabric_pods
     pod 'DLTestMockHelper/UIApp', '~> 5.0.0'
@@ -43,7 +38,7 @@ target 'DLRibUI' do
     
 end
 
-target 'DLRibUITests' do
+target 'DLPrivacyUITests' do
     platform :ios, '9.0'
     pod 'DLTestMockHelper/UITests', '~> 5.0.0'
     pod 'DLTestHelpers/UITests', '~> 5.0.0'

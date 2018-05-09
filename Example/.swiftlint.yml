@@ -1,15 +1,14 @@
 ---
 excluded:
 - Pods
+- build
 included:
-- ./
-- ../Pod/
+- "./"
+- "../Pod/"
 force_cast: warning
 force_try: warning
 opt_in_rules:
 - force_unwrapping
-- missing_docs
-- private_outlet
 - switch_case_on_newline
 - first_where
 - attributes
@@ -39,3 +38,4 @@ identifier_name:
     error: 3
 disabled_rules:
 - todo
+- block_based_kvo
