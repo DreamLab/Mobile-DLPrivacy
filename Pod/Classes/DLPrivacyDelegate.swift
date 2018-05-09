@@ -25,5 +25,6 @@ public protocol DLPrivacyDelegate: class {
     /// - Parameters:
     ///   - module: DLPrivacy
     ///   - form: UIView
-    func dlPrivacyModule(_ module: DLPrivacy, shouldHideConsentsForm form: UIView)
+    ///   - consents: Dictionary with SDK and answer if this SDK can be enabled
+    func dlPrivacyModule(_ module: DLPrivacy, shouldHideConsentsForm form: UIView, andApplyConsents consents: [AppSDK: Bool])
 }

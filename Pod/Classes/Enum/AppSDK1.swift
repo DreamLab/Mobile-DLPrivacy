@@ -22,7 +22,7 @@ import Foundation
 /// - justWifi: JustWiFi
 /// - spiceMobile: SpiceMobile
 @objc
-public enum AppSDK: Int {
+public enum AppSDKAA: Int {
 
     case dfpAds
     case googleAnalytics
@@ -38,3 +38,10 @@ public enum AppSDK: Int {
 
     // TODO: [ASZ] Add enum to name mapping
 }
+
+
+//typedef NSString * TrafficLightColor NS_EXTENSIBLE_STRING_ENUM;
+
+//static TrafficLightColor const TrafficLightColorRed = @"Red";
+//static TrafficLightColor const TrafficLightColorYellow = @"Yellow";
+//static TrafficLightColor const TrafficLightColorGreen = @"Green";

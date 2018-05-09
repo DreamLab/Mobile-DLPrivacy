@@ -25,7 +25,7 @@ public class DLPrivacy: NSObject {
     let webview: WKWebView
 
     /// JavaScript scripts used in underlaying web view
-    private static let jsScripts = ["CMPEventListeners"]
+    static let jsScripts = ["CMPEventListeners"]
 
     /// WebKit message handler name for CMP events
     private let cmpMessageHandlerName = "cmpEvents"
@@ -80,10 +80,10 @@ public extension DLPrivacy {
         // TODO: [ASZ]
     }
 
-    func getSDKConsent(_ sdk: AppSDK) -> Bool {
+    func getSDKConsents(_ sdk: [AppSDK]) -> [AppSDK: Bool] {
         // TODO: [ASZ]
-
-        return true
+        
+        return [:]
     }
 }
 
