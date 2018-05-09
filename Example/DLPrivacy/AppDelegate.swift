@@ -59,7 +59,6 @@ extension AppDelegate {
     /// Initialization is done before didFinishLaunchingWithOptions
     fileprivate func earlyInitialize() {
         CustomCocoaLumberjackInitializer.initialize()
-        CocoaLumberjackInitializer.initialize()
 
         DDLogInfo("Application did start early initializing")
 

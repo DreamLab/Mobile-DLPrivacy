@@ -23,14 +23,21 @@ class ViewController: UIViewController {
         view.addSubview(privacyView)
 
         let views = ["privacyView": privacyView]
-        let hConstrains = NSLayoutConstraint.constraints(withVisualFormat: "H:|-(0)-[privacyView]-(0)-|", options: NSLayoutFormatOptions(), metrics: nil, views: views)
-        let vConstrains = NSLayoutConstraint.constraints(withVisualFormat: "V:|-(0)-[privacyView]-(0)-|", options: NSLayoutFormatOptions(), metrics: nil, views: views)
+        let hConstrains = NSLayoutConstraint.constraints(withVisualFormat: "H:|-(0)-[privacyView]-(0)-|",
+                                                         options: NSLayoutFormatOptions(),
+                                                         metrics: nil,
+                                                         views: views)
+        let vConstrains = NSLayoutConstraint.constraints(withVisualFormat: "V:|-(0)-[privacyView]-(0)-|",
+                                                         options: NSLayoutFormatOptions(),
+                                                         metrics: nil,
+                                                         views: views)
         view.addConstraints(hConstrains + vConstrains)
 
         // Show consents
 
-
+        // TODO: [ASZ] Remove async when loading screen is added
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            DLPrivacy.shared.showConsentsWelcomeScreen()
+        }
     }
-
-
 }
