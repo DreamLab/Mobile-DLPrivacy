@@ -3,8 +3,8 @@ excluded:
 - Pods
 - build
 included:
-- "./"
-- "../Pod/"
+- ./
+- ../Pod/
 force_cast: warning
 force_try: warning
 opt_in_rules:
@@ -20,6 +20,7 @@ opt_in_rules:
 - overridden_super_call
 - prohibited_super_call
 - redundant_nil_coalescing
+- private_outlet
 line_length: 140
 type_body_length:
   warning: 300
