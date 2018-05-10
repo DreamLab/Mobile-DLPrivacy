@@ -14,6 +14,9 @@ import CocoaLumberjack
 /// Main class for DLPrivacy module
 public class DLPrivacy: NSObject {
 
+    /// Default CMP Form web site
+    public static let cmpDefaultSite = "http://10.69.42.31:5000"
+
     // MARK: Shared instance
 
     /// Shared instance
@@ -23,6 +26,9 @@ public class DLPrivacy: NSObject {
 
     /// Underlaying "content" view
     let webview: WKWebView
+
+    /// Wrapper view with loading, error and content
+    let privacyView: DLPrivacyFormView
 
     /// JavaScript scripts used in underlaying web view
     static let jsScripts = ["CMPEventListeners"]
@@ -38,10 +44,13 @@ public class DLPrivacy: NSObject {
     /// Initializer
     public override init() {
         self.webview = WKWebView(frame: UIScreen.main.bounds, configuration: DLPrivacy.defaultWebViewConfiguration())
+        self.privacyView = DLPrivacyFormView.loadFromNib()
 
         super.init()
 
         self.webview.configuration.userContentController.add(WKScriptMessageHandlerWrapper(delegate: self), name: cmpMessageHandlerName)
+        self.webview.navigationDelegate = self
+        self.privacyView.configure(with: self.webview)
     }
 
     // MARK: Deinit
@@ -52,43 +61,42 @@ public class DLPrivacy: NSObject {
 }
 
 // MARK: Public interface
-
 public extension DLPrivacy {
 
-    func initialize() {
-        // TODO: [ASZ]
-        // https://m.onet.pl/?test_kwrd=vappn
+    /// Configure DLPrivacy module
+    /// Calling this method causes loading view state to be set on the view and CMP site load starts
+    ///
+    /// - Parameters:
+    ///   - theme: Theme color used for loading indicator and retry button color
+    ///   - site: Optional - if different CMP site then default should be used
+    func initialize(withThemeColor theme: UIColor, cmpSite site: String = DLPrivacy.cmpDefaultSite) {
+        // Configure privacy view and set state to loading
+        privacyView.configure(withThemeColor: theme)
+        privacyView.showLoadingState()
 
-        guard let url = URL(string: "http://10.69.42.31:5000") else {
-            return
-        }
-
-        let request = URLRequest(url: url)
-        webview.load(request)
+        // Load CMP
+        loadCMPSite(site)
     }
 
-    func getPrivacyConsentsView() -> UIView {
-        // TODO: [ASZ] Wrap this and move some of the methods to view
-        return webview
+    /// Get DLPrivacyFormView which should be presented to the user
+    ///
+    /// - Returns: DLPrivacyFormView
+    func getPrivacyConsentsView() -> DLPrivacyFormView {
+        return privacyView
     }
 
-    func showConsentsWelcomeScreen() {
-        performAction(.showWelcomeScreen)
-    }
-
-    func showConsentsSettingsScreen() {
-        // TODO: [ASZ]
-    }
-
+    /// Get user consents for given SDK
+    ///
+    /// - Parameter sdk: [AppSDK]
+    /// - Returns: Dictionary where AppSDK is a key, value is either true or false (true if user agreed for given SDK)
     func getSDKConsents(_ sdk: [AppSDK]) -> [AppSDK: Bool] {
         // TODO: [ASZ]
-        
+
         return [:]
     }
 }
 
 // MARK: Internal
-
 extension DLPrivacy {
 
     // MARK: WKWebView config
@@ -115,6 +123,21 @@ extension DLPrivacy {
         }
 
         return config
+    }
+
+    // MARK: CMP site loading
+
+    /// Load CMP site into WKWebView
+    ///
+    /// - Parameter site: String
+    func loadCMPSite(_ site: String) {
+        guard let cmpURL = URL(string: site) else {
+            DDLogError("CMP site url is not valid!: \(site)")
+            return
+        }
+
+        let request = URLRequest(url: cmpURL)
+        webview.load(request)
     }
 
     // MARK: JavaScript evaluation / CMP actions

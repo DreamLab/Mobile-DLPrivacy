@@ -15,7 +15,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
         // Initialize private module
-        DLPrivacy.shared.initialize()
+        DLPrivacy.shared.initialize(withThemeColor: .red)
 
         // Add privacy view to your window hierarchy
         let privacyView = DLPrivacy.shared.getPrivacyConsentsView()
@@ -37,7 +37,7 @@ class ViewController: UIViewController {
 
         // TODO: [ASZ] Remove async when loading screen is added
         DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-            DLPrivacy.shared.showConsentsWelcomeScreen()
+            //DLPrivacy.shared.showConsentsWelcomeScreen()
         }
     }
 }

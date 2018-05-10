@@ -10,12 +10,29 @@
 
 typedef NSString *AppSDK NS_EXTENSIBLE_STRING_ENUM;
 
+/// Google Ads
 extern AppSDK const DFPAds;
+
+/// Google Analytics
 extern AppSDK const GoogleAnalytics;
+
+/// Fabric (Crashylytics & Answers)
 extern AppSDK const Fabric;
+
+/// Instabug
 extern AppSDK const Instabug;
+
+/// Branch.io
 extern AppSDK const BranchIO;
+
+/// Pushwoosh
 extern AppSDK const Pushwoosh;
+
+/// Firebase (Analytics & Remote Config)
 extern AppSDK const Firebase;
+
+/// Gemius
 extern AppSDK const Gemius;
+
+/// Bitplaces SDK
 extern AppSDK const Bitplaces;

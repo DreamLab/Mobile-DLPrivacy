@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  DLPrivacy
+
+  Created by Szeremeta Adam on 10.05.2018.
+  Copyright © 2018 DreamLab. All rights reserved.
+*/
+
+"DLPrivacy.errorView.errorLabel" = "Coś poszło nie tak. Spróbuj ponownie";
+"DLPrivace.errorView.retryButton" = "Spróbuj ponownie";
