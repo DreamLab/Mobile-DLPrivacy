@@ -30,14 +30,50 @@ public class DLPrivacy: NSObject {
     /// Wrapper view with loading, error and content
     let privacyView: DLPrivacyFormView
 
+    /// Module state
+    var moduleState: DLPrivacyModuleState = .cmpLoading {
+        didSet {
+            guard moduleState == .cmpLoaded else {
+                return
+            }
+
+            actionsQueue.forEach {
+                performAction($0)
+            }
+
+            actionsQueue.removeAll()
+        }
+    }
+
+    /// Actions queue
+    var actionsQueue: [CMPAction] = []
+
     /// JavaScript scripts used in underlaying web view
-    static let jsScripts = ["CMPEventListeners"]
+    fileprivate static let jsScripts = ["CMPEventListeners"]
 
     /// WebKit message handler name for CMP events
-    private let cmpMessageHandlerName = "cmpEvents"
+    fileprivate let cmpMessageHandlerName = "cmpEvents"
+
+    /// All available SDK
+    fileprivate var allAvailableSDK: [AppSDK: Bool] {
+        return [
+            AppSDK.DFPAds: false,
+            AppSDK.GoogleAnalytics: false,
+            AppSDK.Fabric: false,
+            AppSDK.Instabug: false,
+            AppSDK.BranchIO: false,
+            AppSDK.Pushwoosh: false,
+            AppSDK.Firebase: false,
+            AppSDK.Gemius: false,
+            AppSDK.Bitplaces: false
+        ]
+    }
 
     /// Module delegate
     weak var delegate: DLPrivacyDelegate?
+
+    /// CMP site to load
+    var cmpSiteToLoad: String?
 
     // MARK: Init
 
@@ -50,7 +86,7 @@ public class DLPrivacy: NSObject {
 
         self.webview.configuration.userContentController.add(WKScriptMessageHandlerWrapper(delegate: self), name: cmpMessageHandlerName)
         self.webview.navigationDelegate = self
-        self.privacyView.configure(with: self.webview)
+        self.privacyView.configure(with: self.webview, delegate: self)
     }
 
     // MARK: Deinit
@@ -68,10 +104,17 @@ public extension DLPrivacy {
     ///
     /// - Parameters:
     ///   - theme: Theme color used for loading indicator and retry button color
+    ///   - retryTextColor: Color used for retry button text color
+    ///   - delegate: DLPrivacyDelegate
     ///   - site: Optional - if different CMP site then default should be used
-    func initialize(withThemeColor theme: UIColor, cmpSite site: String = DLPrivacy.cmpDefaultSite) {
+    func initialize(withThemeColor theme: UIColor,
+                    retryTextColor: UIColor,
+                    delegate: DLPrivacyDelegate,
+                    cmpSite site: String = DLPrivacy.cmpDefaultSite) {
+        self.delegate = delegate
+
         // Configure privacy view and set state to loading
-        privacyView.configure(withThemeColor: theme)
+        privacyView.configure(withThemeColor: theme, retryTextColor: retryTextColor)
         privacyView.showLoadingState()
 
         // Load CMP
@@ -131,6 +174,8 @@ extension DLPrivacy {
     ///
     /// - Parameter site: String
     func loadCMPSite(_ site: String) {
+        cmpSiteToLoad = site
+
         guard let cmpURL = URL(string: site) else {
             DDLogError("CMP site url is not valid!: \(site)")
             return
@@ -140,12 +185,44 @@ extension DLPrivacy {
         webview.load(request)
     }
 
+    /// Handle WKWebView error and show proper error state
+    ///
+    /// - Parameter error: Error
+    func handleCMPLoadingError(_ error: Error) {
+        guard (error as NSError).code == NSURLErrorNotConnectedToInternet else {
+            // Call delegate that privacy view should be closed and return all consents set to false
+            delegate?.dlPrivacyModule(self, shouldHideConsentsForm: privacyView, andApplyConsents: allAvailableSDK)
+            return
+        }
+
+        privacyView.showErrorState()
+        moduleState = .cmpError
+    }
+
     // MARK: JavaScript evaluation / CMP actions
 
     /// Sends message to JavaScript to perform desired action
     ///
     /// - Parameter cmpAction: CMPAction
     func performAction(_ cmpAction: CMPAction) {
+        guard moduleState == .cmpLoaded else {
+            DDLogInfo("CMP site is not yet loaded, adding action to queue: \(cmpAction.rawValue)")
+            actionsQueue.append(cmpAction)
+            return
+        }
+
         webview.evaluateJavaScript(cmpAction.getJavaScriptCode(), completionHandler: nil)
+    }
+
+    // MARK: Consents
+
+    /// Store user consents in cache and call delegate that privacy view should be closed
+    ///
+    /// - Parameter consents: User consents settings
+    func storeUserConsents(_ consents: [String: Any]) {
+        // TODO: [ASZ]
+
+
+        delegate?.dlPrivacyModule(self, shouldHideConsentsForm: privacyView, andApplyConsents: allAvailableSDK)
     }
 }

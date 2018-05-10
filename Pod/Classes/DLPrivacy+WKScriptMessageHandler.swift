@@ -33,26 +33,26 @@ extension DLPrivacy: WKScriptMessageHandler {
         case .formLoaded:
             // Nothing to here
             return
-        case .formReady:
-            // TODO
-            return
-        case .formSubmitted:
-            // TODO
 
+        case .formReady:
+            moduleState = .cmpLoaded
+
+        case .formSubmitted:
             performAction(.getVendorConsents)
 
-            return
         case .welcomeScreenVisible:
-            // TODO:[ ASZ] Hide loading
-            return
+           privacyView.showContentState()
+
         case .vendorsConsentsReceived:
-            // todo
+            // TODO: [ASZ]
             //print("payload: \(messageDict["payload"] as? [String: Any])")
 
-            return
+            storeUserConsents([:])
+
         case .error:
-            // TODO
-            return
+            moduleState = .cmpError
+            let error = NSError(domain: "CMP", code: -1, userInfo: nil)
+            handleCMPLoadingError(error)
         }
     }
 }

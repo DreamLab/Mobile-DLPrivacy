@@ -8,12 +8,12 @@
 
 #import "AppSDK.h"
 
-static AppSDK const AppSDKDFPAds = @"DFPAds";
-static AppSDK const AppSDKDGoogleAnalytics = @"GoogleAnalytics";
-static AppSDK const AppSDKDFabric = @"Fabric";
-static AppSDK const AppSDKDInstabug = @"Instabug";
-static AppSDK const AppSDKDBranchIO = @"BranchIO";
-static AppSDK const AppSDKDPushwoosh = @"Pushwoosh";
-static AppSDK const AppSDKDFirebase = @"Firebase";
-static AppSDK const AppSDKDGemius = @"Gemius";
-static AppSDK const AppSDKDBitplaces = @"Bitplaces";
+AppSDK const DFPAds = @"DFPAds";
+AppSDK const GoogleAnalytics = @"GoogleAnalytics";
+AppSDK const Fabric = @"Fabric";
+AppSDK const Instabug = @"Instabug";
+AppSDK const BranchIO = @"BranchIO";
+AppSDK const Pushwoosh = @"Pushwoosh";
+AppSDK const Firebase = @"Firebase";
+AppSDK const Gemius = @"Gemius";
+AppSDK const Bitplaces = @"Bitplaces";

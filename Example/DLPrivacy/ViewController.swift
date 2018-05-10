@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CocoaLumberjack
 
 /// Template view controller, to be replaced when needed
 class ViewController: UIViewController {
@@ -15,7 +16,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
         // Initialize private module
-        DLPrivacy.shared.initialize(withThemeColor: .red)
+        DLPrivacy.shared.initialize(withThemeColor: .red, retryTextColor: .white, delegate: self)
 
         // Add privacy view to your window hierarchy
         let privacyView = DLPrivacy.shared.getPrivacyConsentsView()
@@ -34,10 +35,18 @@ class ViewController: UIViewController {
         view.addConstraints(hConstrains + vConstrains)
 
         // Show consents
+        privacyView.showConsentsWelcomeScreen()
+    }
+}
 
-        // TODO: [ASZ] Remove async when loading screen is added
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-            //DLPrivacy.shared.showConsentsWelcomeScreen()
-        }
+// MARK: DLPrivacyDelegate
+extension ViewController: DLPrivacyDelegate {
+
+    func dlPrivacyModule(_ module: DLPrivacy, shouldShowConsentsForm form: UIView) {
+        DDLogInfo("DLPrivacy module should show consents form")
+    }
+
+    func dlPrivacyModule(_ module: DLPrivacy, shouldHideConsentsForm form: UIView, andApplyConsents consents: [AppSDK: Bool]) {
+        DDLogInfo("DLPrivacy module should hide consents form")
     }
 }

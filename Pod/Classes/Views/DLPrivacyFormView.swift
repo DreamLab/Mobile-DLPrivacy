@@ -13,12 +13,14 @@ import WebKit
 /// View presenting loading, error and consents form
 public class DLPrivacyFormView: UIView {
 
-    @IBOutlet private weak var loadingView: UIView!
+    @IBOutlet fileprivate weak var loadingView: UIView!
     @IBOutlet fileprivate weak var loadingIndicator: UIActivityIndicatorView!
 
-    @IBOutlet private weak var errorView: UIView!
+    @IBOutlet fileprivate weak var errorView: UIView!
     @IBOutlet fileprivate weak var errorLabel: UILabel!
     @IBOutlet fileprivate weak var errorRetryButton: UIButton!
+
+    fileprivate weak var delegate: DLPrivacyFormViewDelegate?
 
     // MARK: Instance
 
@@ -42,8 +44,33 @@ public class DLPrivacyFormView: UIView {
         loadTranslations()
     }
 
+    // MARK: Actions
+
+    @IBAction func onRetryButtonTouch(_ sender: Any) {
+        delegate?.privacyViewRequestingReload(self)
+    }
+}
+
+// MARK: Public interface
+public extension DLPrivacyFormView {
+
+    /// Show consents welcome screen
+    func showConsentsWelcomeScreen() {
+        delegate?.privacyViewRequestingWelcomeScreen(self)
+    }
+
+    /// Show consents settings screen
+    func showConsentsSettingsScreen() {
+        delegate?.privacyViewRequestingSetingsScreen(self)
+    }
+}
+
+// MARK: Internal
+extension DLPrivacyFormView {
+
     // MARK: State
 
+    /// Show loading indicator
     func showLoadingState() {
         loadingIndicator.startAnimating()
         loadingView.isHidden = false
@@ -51,63 +78,42 @@ public class DLPrivacyFormView: UIView {
         errorView.isHidden = true
     }
 
+    /// Show error view with retry button
     func showErrorState() {
+        errorView.isHidden = false
 
-
+        loadingView.isHidden = true
+        loadingIndicator.stopAnimating()
     }
 
+    /// Show WebView with its content
     func showContentState() {
-
-
+        loadingView.isHidden = true
+        loadingIndicator.stopAnimating()
+        errorView.isHidden = true
     }
-
-    // MARK: Actions
-
-    @IBAction func onRetryButtonTouch(_ sender: Any) {
-
-    }
-
-
-
-
-
-
-    // wspolny protokol dla modulu i view ???
-}
-
-// MARK: Public interface
-
-public extension DLPrivacyFormView {
-
-    func showConsentsWelcomeScreen() {
-        //performAction(.showWelcomeScreen)
-    }
-
-    func showConsentsSettingsScreen() {
-        // TODO: [ASZ]
-    }
-}
-
-// MARK: Internal
-
-extension DLPrivacyFormView {
 
     // MARK: Localization
 
+    /// Load translated texts into view
     func loadTranslations() {
         let bundle = DLPrivacy.resourcesBundle
 
-        errorLabel.text = NSLocalizedString("DLPrivacy.errorView.errorLabel", tableName: nil, bundle: bundle, value: "", comment: "")
+        errorLabel.text = NSLocalizedString("DLPrivacy.errorView.errorNoInternet", tableName: nil, bundle: bundle, value: "", comment: "")
         let retryTitle = NSLocalizedString("DLPrivace.errorView.retryButton", tableName: nil, bundle: bundle, value: "", comment: "")
         errorRetryButton.setTitle(retryTitle, for: .normal)
     }
 
     // MARK: Configuration
 
-    /// Add WKWebView to view hierarchy
+    /// Add WKWebView to view hierarchy and assign delegate
     ///
-    /// - Parameter webView: WKWebView
-    func configure(with webView: WKWebView) {
+    /// - Parameters:
+    ///   - webView: WKWebView
+    ///   - delegate: DLPrivacyFormViewDelegate
+    func configure(with webView: WKWebView, delegate: DLPrivacyFormViewDelegate) {
+        self.delegate = delegate
+
         webView.translatesAutoresizingMaskIntoConstraints = false
         insertSubview(webView, at: 0)
 
@@ -125,9 +131,12 @@ extension DLPrivacyFormView {
 
     /// Configure loading view and error view using theme color
     ///
-    /// - Parameter color: UIColor
-    func configure(withThemeColor color: UIColor) {
+    /// - Parameters:
+    ///   - color: UIColor
+    ///   - retryTextColor: UIColor
+    func configure(withThemeColor color: UIColor, retryTextColor: UIColor) {
         loadingIndicator.color = color
         errorRetryButton.backgroundColor = color
+        errorRetryButton.setTitleColor(retryTextColor, for: .normal)
     }
 }

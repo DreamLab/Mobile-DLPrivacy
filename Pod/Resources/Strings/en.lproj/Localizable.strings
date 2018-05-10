@@ -6,5 +6,5 @@
   Copyright © 2018 DreamLab. All rights reserved.
 */
 
-"DLPrivacy.errorView.errorLabel" = "Coś poszło nie tak. Spróbuj ponownie";
+"DLPrivacy.errorView.errorNoInternet" = "Wygląda na to, że twoje połączenie internetowe jest niedostępne.";
 "DLPrivace.errorView.retryButton" = "Spróbuj ponownie";
