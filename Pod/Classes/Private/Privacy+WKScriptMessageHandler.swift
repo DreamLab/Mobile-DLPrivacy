@@ -1,5 +1,5 @@
 //
-//  DLPrivacy+WKScriptMessageHandler.swift
+//  Privacy+WKScriptMessageHandler.swift
 //  DLPrivacy
 //
 //  Created by Szeremeta Adam on 09.05.2018.
@@ -11,7 +11,7 @@ import WebKit
 import CocoaLumberjack
 
 // MARK: WKScriptMessageHandler
-extension DLPrivacy: WKScriptMessageHandler {
+extension Privacy: WKScriptMessageHandler {
 
     /// CMP event name key
     private static let cmpEventNameKey = "event"
@@ -19,15 +19,17 @@ extension DLPrivacy: WKScriptMessageHandler {
     /// CMP event payload key
     private static let cmpEventPayloadKey = "payload"
 
+    // MARK: Delegate
+
     public func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
         guard let messageDict = message.body as? [String: Any],
-            let eventMessage = messageDict[DLPrivacy.cmpEventNameKey] as? String,
+            let eventMessage = messageDict[Privacy.cmpEventNameKey] as? String,
             let cmpEvent = CMPEvent(from: eventMessage) else {
             DDLogError("Failed to parse WKScriptMessage: \(message.body)")
             return
         }
 
-        DDLogInfo("Received CMPEvent: \(cmpEvent.rawValue)")
+        DDLogInfo("Received CMPEvent: \(cmpEvent)")
 
         switch cmpEvent {
         case .formLoaded:

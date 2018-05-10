@@ -15,8 +15,7 @@ import Foundation
 /// - formSubmitted: Form was submitted by the user
 /// - welcomeScreenVisible: Form was asked to show welcome screen and returned response
 /// - error: Something went wrong with event listeners
-@objc
-enum CMPEvent: Int {
+enum CMPEvent {
 
     case formLoaded
     case formReady

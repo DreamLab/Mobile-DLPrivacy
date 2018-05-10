@@ -11,7 +11,7 @@ import CocoaLumberjack
 import DLCocoaLumberjackHelper
 import Crashlytics
 
-/// Class that adds specific loggers for ArticleListView demo app
+/// Class that adds specific loggers for DLPrivacy demo app
 class CustomCocoaLumberjackInitializer {
 
     /// Initialize loggers

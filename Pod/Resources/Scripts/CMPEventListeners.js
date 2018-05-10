@@ -1,19 +1,34 @@
 // Events from JS Consent Management Platform
 
-try {
+function addCMPListeners() {
 
-    window.__cmp('addEventListener', 'isLoaded', function(result) {
-        webkit.messageHandlers.cmpEvents.postMessage(result);
-    });
+    // If we have CMP object -> add handlers
+    if (window.__cmp != undefined) {
 
-    window.__cmp('addEventListener', 'cmpReady', function(result) {
-        webkit.messageHandlers.cmpEvents.postMessage(result);
-    });
+        // Add listeners
+        try {
 
-    window.__cmp('addEventListener', 'onSubmit', function(result) {
-        webkit.messageHandlers.cmpEvents.postMessage(result);
-    });
+            window.__cmp('addEventListener', 'isLoaded', function(result) {
+                webkit.messageHandlers.cmpEvents.postMessage(result);
+            });
 
-} catch (error) {
-    webkit.messageHandlers.cmpEvents.postMessage({"event": "cmpError"});
+            window.__cmp('addEventListener', 'cmpReady', function(result) {
+                webkit.messageHandlers.cmpEvents.postMessage(result);
+            });
+
+            window.__cmp('addEventListener', 'onSubmit', function(result) {
+                webkit.messageHandlers.cmpEvents.postMessage(result);
+            });
+
+        } catch (error) {
+            webkit.messageHandlers.cmpEvents.postMessage({"event": error});
+        }
+
+        return
+    }
+
+    // Try again in a moment
+    setTimeout(addCMPListeners, 1000);
 }
+
+addCMPListeners();

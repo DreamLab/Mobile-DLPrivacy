@@ -12,15 +12,15 @@ import WebKit
 import CocoaLumberjack
 
 /// Main class for DLPrivacy module
-public class DLPrivacy: NSObject {
+public class Privacy: NSObject {
 
     /// Default CMP Form web site
-    public static let cmpDefaultSite = "http://10.69.42.31:5000"
+    let cmpDefaultSite = "https://www.onet.pl/#test_tid=EA-1111111&test_site=TEST&test_area=RODOTEST&test_kwrd=cmp"
 
     // MARK: Shared instance
 
     /// Shared instance
-    public static let shared = DLPrivacy()
+    public static let shared = Privacy()
 
     // MARK: Properties (Internal/Private)
 
@@ -28,10 +28,10 @@ public class DLPrivacy: NSObject {
     let webview: WKWebView
 
     /// Wrapper view with loading, error and content
-    let privacyView: DLPrivacyFormView
+    public let privacyView: PrivacyFormView
 
     /// Module state
-    var moduleState: DLPrivacyModuleState = .cmpLoading {
+    var moduleState: PrivacyModuleState = .cmpLoading {
         didSet {
             guard moduleState == .cmpLoaded else {
                 return
@@ -49,19 +49,19 @@ public class DLPrivacy: NSObject {
     var actionsQueue: [CMPAction] = []
 
     /// JavaScript scripts used in underlaying web view
-    fileprivate static let jsScripts = ["CMPEventListeners"]
+    private static let jsScripts = ["CMPEventListeners"]
 
     /// WebKit message handler name for CMP events
-    fileprivate let cmpMessageHandlerName = "cmpEvents"
+    private let cmpMessageHandlerName = "cmpEvents"
 
     /// All available SDK
-    fileprivate var allAvailableSDK: [AppSDK: Bool] {
+    private var allAvailableSDK: [AppSDK: Bool] {
         return [
-            AppSDK.DFPAds: false,
+            AppSDK.GoogleMobileAds: false,
             AppSDK.GoogleAnalytics: false,
             AppSDK.Fabric: false,
             AppSDK.Instabug: false,
-            AppSDK.BranchIO: false,
+            AppSDK.Branch: false,
             AppSDK.Pushwoosh: false,
             AppSDK.Firebase: false,
             AppSDK.Gemius: false,
@@ -70,17 +70,14 @@ public class DLPrivacy: NSObject {
     }
 
     /// Module delegate
-    weak var delegate: DLPrivacyDelegate?
-
-    /// CMP site to load
-    var cmpSiteToLoad: String?
+    weak var delegate: PrivacyDelegate?
 
     // MARK: Init
 
     /// Initializer
     public override init() {
-        self.webview = WKWebView(frame: UIScreen.main.bounds, configuration: DLPrivacy.defaultWebViewConfiguration())
-        self.privacyView = DLPrivacyFormView.loadFromNib()
+        self.webview = WKWebView(frame: UIScreen.main.bounds, configuration: Privacy.defaultWebViewConfiguration())
+        self.privacyView = PrivacyFormView.loadFromNib()
 
         super.init()
 
@@ -93,38 +90,39 @@ public class DLPrivacy: NSObject {
 
     deinit {
         webview.configuration.userContentController.removeScriptMessageHandler(forName: cmpMessageHandlerName)
+        webview.navigationDelegate = nil
     }
 }
 
 // MARK: Public interface
-public extension DLPrivacy {
+public extension Privacy {
 
-    /// Configure DLPrivacy module
+    /// Configure Privacy module
     /// Calling this method causes loading view state to be set on the view and CMP site load starts
     ///
     /// - Parameters:
     ///   - theme: Theme color used for loading indicator and retry button color
-    ///   - retryTextColor: Color used for retry button text color
-    ///   - delegate: DLPrivacyDelegate
-    ///   - site: Optional - if different CMP site then default should be used
+    ///   - buttonTextColor: Color used for retry button text
+    ///   - font: Font used in error view
+    ///   - delegate: PrivacyDelegate
     func initialize(withThemeColor theme: UIColor,
-                    retryTextColor: UIColor,
-                    delegate: DLPrivacyDelegate,
-                    cmpSite site: String = DLPrivacy.cmpDefaultSite) {
+                    buttonTextColor: UIColor,
+                    font: UIFont,
+                    delegate: PrivacyDelegate) {
         self.delegate = delegate
 
         // Configure privacy view and set state to loading
-        privacyView.configure(withThemeColor: theme, retryTextColor: retryTextColor)
+        privacyView.configure(withThemeColor: theme, buttonTextColor: buttonTextColor, font: font)
         privacyView.showLoadingState()
 
         // Load CMP
-        loadCMPSite(site)
+        loadCMPSite()
     }
 
-    /// Get DLPrivacyFormView which should be presented to the user
+    /// Get PrivacyFormView which should be presented to the user
     ///
-    /// - Returns: DLPrivacyFormView
-    func getPrivacyConsentsView() -> DLPrivacyFormView {
+    /// - Returns: PrivacyFormView
+    func getPrivacyConsentsView() -> PrivacyFormView {
         return privacyView
     }
 
@@ -140,7 +138,7 @@ public extension DLPrivacy {
 }
 
 // MARK: Internal
-extension DLPrivacy {
+extension Privacy {
 
     // MARK: WKWebView config
 
@@ -153,8 +151,8 @@ extension DLPrivacy {
         config.userContentController = wkUserController
 
         // Insert scripts
-        DLPrivacy.jsScripts.compactMap {
-            guard let url = DLPrivacy.resourcesBundle.url(forResource: $0, withExtension: "js"),
+        Privacy.jsScripts.compactMap {
+            guard let url = Privacy.resourcesBundle.url(forResource: $0, withExtension: "js"),
                 let jsScript = try? String(contentsOf: url) else {
                 return nil
             }
@@ -171,13 +169,9 @@ extension DLPrivacy {
     // MARK: CMP site loading
 
     /// Load CMP site into WKWebView
-    ///
-    /// - Parameter site: String
-    func loadCMPSite(_ site: String) {
-        cmpSiteToLoad = site
-
-        guard let cmpURL = URL(string: site) else {
-            DDLogError("CMP site url is not valid!: \(site)")
+    func loadCMPSite() {
+        guard let cmpURL = URL(string: cmpDefaultSite) else {
+            DDLogError("CMP site url is not valid!: \(cmpDefaultSite)")
             return
         }
 
@@ -191,7 +185,7 @@ extension DLPrivacy {
     func handleCMPLoadingError(_ error: Error) {
         guard (error as NSError).code == NSURLErrorNotConnectedToInternet else {
             // Call delegate that privacy view should be closed and return all consents set to false
-            delegate?.dlPrivacyModule(self, shouldHideConsentsForm: privacyView, andApplyConsents: allAvailableSDK)
+            delegate?.privacyModule(self, shouldHideConsentsForm: privacyView, andApplyConsents: allAvailableSDK)
             return
         }
 
@@ -211,7 +205,7 @@ extension DLPrivacy {
             return
         }
 
-        webview.evaluateJavaScript(cmpAction.getJavaScriptCode(), completionHandler: nil)
+        webview.evaluateJavaScript(cmpAction.javaScriptCode, completionHandler: nil)
     }
 
     // MARK: Consents
@@ -222,7 +216,6 @@ extension DLPrivacy {
     func storeUserConsents(_ consents: [String: Any]) {
         // TODO: [ASZ]
 
-
-        delegate?.dlPrivacyModule(self, shouldHideConsentsForm: privacyView, andApplyConsents: allAvailableSDK)
+        delegate?.privacyModule(self, shouldHideConsentsForm: privacyView, andApplyConsents: allAvailableSDK)
     }
 }

@@ -57,7 +57,7 @@ extension AppDelegate {
 
     /// Initialize frameworks, libraries and other components needed by the app
     /// Initialization is done before didFinishLaunchingWithOptions
-    fileprivate func earlyInitialize() {
+    private func earlyInitialize() {
         CustomCocoaLumberjackInitializer.initialize()
 
         DDLogInfo("Application did start early initializing")
@@ -67,7 +67,7 @@ extension AppDelegate {
 
     /// Initialize frameworks, libraries and other components needed by the app
     /// Initialization is done in didFinishLaunchingWithOptions
-    fileprivate func initialize() {
+    private func initialize() {
         DDLogInfo("Application did start initializing")
 
         FabricInitializer.initialize()
@@ -75,7 +75,7 @@ extension AppDelegate {
         DDLogInfo("Application did finish initializing")
     }
 
-    fileprivate func displayDebugInfo() {
+    private func displayDebugInfo() {
         if let window = window, EnvironmentSettings.currentEnv != .live {
             AppHelper.displayEnvironmentAndVersionOnView(window, environmentString: EnvironmentSettings.currentEnv.rawValue)
         }

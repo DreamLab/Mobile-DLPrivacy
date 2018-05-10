@@ -1,5 +1,5 @@
 //
-//  DLPrivacyModuleState.swift
+//  PrivacyModuleState.swift
 //  DLPrivacy
 //
 //  Created by Szeremeta Adam on 10.05.2018.
@@ -13,7 +13,7 @@ import Foundation
 /// - cmpLoading: CMP site is loading
 /// - cmpLoaded: CMP site is loaded and can accept actions
 /// - cmpError: CMP site loading failed
-enum DLPrivacyModuleState: Int {
+enum PrivacyModuleState {
 
     case cmpLoading
     case cmpLoaded

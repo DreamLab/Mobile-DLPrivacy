@@ -13,7 +13,7 @@ import WebKit
 class WKScriptMessageHandlerWrapper: NSObject, WKScriptMessageHandler {
 
     /// Weak delegate (original)
-    fileprivate weak var delegate: WKScriptMessageHandler?
+    private weak var delegate: WKScriptMessageHandler?
 
     /// Initializer
     ///

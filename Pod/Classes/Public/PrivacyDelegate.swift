@@ -1,5 +1,5 @@
 //
-//  DLPrivacyDelegate.swift
+//  PrivacyDelegate.swift
 //  DLPrivacy
 //
 //  Created by Szeremeta Adam on 09.05.2018.
@@ -9,22 +9,22 @@
 import Foundation
 import UIKit
 
-/// DLPrivacy module delegate
+/// Privacy module delegate
 @objc
-public protocol DLPrivacyDelegate: class {
+public protocol PrivacyDelegate: class {
 
     /// Delegate method saying that application should show again consents form
     ///
     /// - Parameters:
-    ///   - module: DLPrivacy
-    ///   - form: UIView
-    func dlPrivacyModule(_ module: DLPrivacy, shouldShowConsentsForm form: UIView)
+    ///   - module: Privacy
+    ///   - form: PrivacyFormView
+    func privacyModule(_ module: Privacy, shouldShowConsentsForm form: PrivacyFormView)
 
     /// Delegate method saying that application should close consents form and apply selected consents by the user
     ///
     /// - Parameters:
-    ///   - module: DLPrivacy
-    ///   - form: UIView
+    ///   - module: Privacy
+    ///   - form: PrivacyFormView
     ///   - consents: Dictionary with SDK and answer if this SDK can be enabled
-    func dlPrivacyModule(_ module: DLPrivacy, shouldHideConsentsForm form: UIView, andApplyConsents consents: [AppSDK: Bool])
+    func privacyModule(_ module: Privacy, shouldHideConsentsForm form: PrivacyFormView, andApplyConsents consents: [AppSDK: Bool])
 }

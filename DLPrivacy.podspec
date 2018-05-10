@@ -10,13 +10,12 @@ s.source       = { :git => "ssh://git@stash.grupa.onet:7999/POD/dlprivacy.git", 
 
 s.dependency   'CocoaLumberjack/Swift', '~> 3.3.0'
 
-s.source_files = 'Pod/Classes/**/*.swift'
-s.resource_bundles  = { 'DLPrivacy' => [
-    'Pod/Resources/**/*'
+s.source_files = ['Pod/DLPrivacy.h', 'Pod/Classes/**/*.{swift,m,h}']
+s.resource_bundles = { 'DLPrivacy' => [
+    'Pod/Resources/**/*.{strings,xib,js}'
 ] }
 
 s.swift_version = '4.0'
-s.static_framework = true
 s.requires_arc = true
 
 end

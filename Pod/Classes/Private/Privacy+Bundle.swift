@@ -1,5 +1,5 @@
 //
-//  DLPrivacy+Bundle.swift
+//  Privacy+Bundle.swift
 //  DLPrivacy
 //
 //  Created by Szeremeta Adam on 09.05.2018.
@@ -9,7 +9,7 @@
 import Foundation
 
 /// Resources bundle for module
-extension DLPrivacy {
+extension Privacy {
 
     static var resourcesBundle: Bundle {
         guard let bundlePath = Bundle.main.path(forResource: "DLPrivacy", ofType: "bundle") else {

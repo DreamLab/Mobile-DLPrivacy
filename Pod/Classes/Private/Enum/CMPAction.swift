@@ -12,26 +12,26 @@ import Foundation
 ///
 /// - showWelcomeScreen: Show consents welcome screen
 /// - getVendorConsents: Get list of consents for vendors
-@objc
-enum CMPAction: Int {
+enum CMPAction: String {
 
     case showWelcomeScreen
     case getVendorConsents
 
-    func getJavaScriptCode() -> String {
+    /// Get JavaScript code for given action
+    var javaScriptCode: String {
         switch self {
         case .showWelcomeScreen:
             return """
-                window.__cmp('showConsentTool', null, function(result) {
-                    webkit.messageHandlers.cmpEvents.postMessage({"event": "cmpWelcomeVisible"});
-                });
+            window.__cmp('showConsentTool', null, function(result) {
+            webkit.messageHandlers.cmpEvents.postMessage({"event": "cmpWelcomeVisible"});
+            });
             """
 
         case .getVendorConsents:
             return """
-                window.__cmp('getVendorConsents', null, function(result) {
-                    webkit.messageHandlers.cmpEvents.postMessage({"event": "cmpVendorsConsentsReceived", "payload": result});
-                });
+            window.__cmp('getVendorConsents', null, function(result) {
+            webkit.messageHandlers.cmpEvents.postMessage({"event": "cmpVendorsConsentsReceived", "payload": result});
+            });
             """
         }
     }

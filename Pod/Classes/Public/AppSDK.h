@@ -11,7 +11,7 @@
 typedef NSString *AppSDK NS_EXTENSIBLE_STRING_ENUM;
 
 /// Google Ads
-extern AppSDK const DFPAds;
+extern AppSDK const GoogleMobileAds;
 
 /// Google Analytics
 extern AppSDK const GoogleAnalytics;
@@ -23,7 +23,7 @@ extern AppSDK const Fabric;
 extern AppSDK const Instabug;
 
 /// Branch.io
-extern AppSDK const BranchIO;
+extern AppSDK const Branch;
 
 /// Pushwoosh
 extern AppSDK const Pushwoosh;

@@ -16,10 +16,10 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
         // Initialize private module
-        DLPrivacy.shared.initialize(withThemeColor: .red, retryTextColor: .white, delegate: self)
+        Privacy.shared.initialize(withThemeColor: .red, buttonTextColor: .white, font: UIFont.systemFont(ofSize: 10), delegate: self)
 
         // Add privacy view to your window hierarchy
-        let privacyView = DLPrivacy.shared.getPrivacyConsentsView()
+        let privacyView = Privacy.shared.getPrivacyConsentsView()
         privacyView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(privacyView)
 
@@ -39,14 +39,14 @@ class ViewController: UIViewController {
     }
 }
 
-// MARK: DLPrivacyDelegate
-extension ViewController: DLPrivacyDelegate {
+// MARK: PrivacyDelegate
+extension ViewController: PrivacyDelegate {
 
-    func dlPrivacyModule(_ module: DLPrivacy, shouldShowConsentsForm form: UIView) {
+    func privacyModule(_ module: Privacy, shouldShowConsentsForm form: PrivacyFormView) {
         DDLogInfo("DLPrivacy module should show consents form")
     }
 
-    func dlPrivacyModule(_ module: DLPrivacy, shouldHideConsentsForm form: UIView, andApplyConsents consents: [AppSDK: Bool]) {
+    func privacyModule(_ module: Privacy, shouldHideConsentsForm form: PrivacyFormView, andApplyConsents consents: [AppSDK: Bool]) {
         DDLogInfo("DLPrivacy module should hide consents form")
     }
 }
