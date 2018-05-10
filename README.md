@@ -1,14 +1,14 @@
-# DLRib
+# DLPrivacy
 
-Root project for other PODs. Just fork it and work it.
+TODO
 
 ## Usage
 
-To run the example project, clone the repo, and run in Example folder: `bundle install && bundle exec pod install` from the Example directory first.
+TODO
 
 ## Author
 
-Konrad Falkowski, konrad.@dreamlab.pl
+Adam Szeremeta, adam.szeremeta@dreamlab.pl
 
 ## License
 

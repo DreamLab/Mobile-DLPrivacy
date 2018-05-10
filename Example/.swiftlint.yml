@@ -1,6 +1,7 @@
 ---
 excluded:
 - Pods
+- build
 included:
 - ./
 - ../Pod/
@@ -8,8 +9,6 @@ force_cast: warning
 force_try: warning
 opt_in_rules:
 - force_unwrapping
-- missing_docs
-- private_outlet
 - switch_case_on_newline
 - first_where
 - attributes
@@ -21,6 +20,7 @@ opt_in_rules:
 - overridden_super_call
 - prohibited_super_call
 - redundant_nil_coalescing
+- private_outlet
 line_length: 140
 type_body_length:
   warning: 300
@@ -39,3 +39,4 @@ identifier_name:
     error: 3
 disabled_rules:
 - todo
+- block_based_kvo

@@ -1,6 +1,6 @@
 //
 //  ExampleClass.swift
-//  DLRib
+//  DLPrivacy
 //
 //  Created by Pawel Kordal on 05.05.2016.
 //  Copyright © 2016 DreamLab. All rights reserved.
