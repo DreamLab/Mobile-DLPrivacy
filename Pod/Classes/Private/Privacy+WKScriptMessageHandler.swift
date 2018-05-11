@@ -54,6 +54,16 @@ extension Privacy: WKScriptMessageHandler {
         case .shouldShowConsentsForm:
             delegate?.privacyModule(self, shouldShowConsentsForm: privacyView)
 
+        case .canShowPersonalizedAds:
+            let canAdsBePersonalized = (messageDict[Privacy.cmpEventPayloadKey] as? Bool) ?? false
+            personalizedAdsCallback?(canAdsBePersonalized)
+            personalizedAdsCallback = nil
+
+        case .sponsoringAdsConsents:
+            let sponsoringConsents = messageDict[Privacy.cmpEventPayloadKey] as? [String: Any]
+            sponsoringAdsConsentsCallback?(sponsoringConsents)
+            sponsoringAdsConsentsCallback = nil
+
         case .error:
             moduleState = .cmpError
             let error = NSError(domain: "CMP", code: -1, userInfo: nil)

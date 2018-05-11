@@ -48,6 +48,18 @@ class ViewController: UIViewController {
         // If your SDK is not predefined in Privacy module, you can pass value from rawValue with given SDK codename
         let mySDK = AppSDK(rawValue: "mySDKName")
         DDLogInfo("My SDK enum: \(mySDK)")
+
+        // Additional data
+
+        // You can ask if ads (Google DFP) can be personalized
+        Privacy.shared.canShowPersonalizedAds { canAdsBePersonalized in
+            DDLogInfo("Personalized Ads: \(canAdsBePersonalized)")
+        }
+
+        // You can retrieve consents ids user by sponsoring ads
+        Privacy.shared.getSponsoringAdsConsents { consents in
+            DDLogInfo("Sponsoring consents: \(String(describing: consents))")
+        }
     }
 }
 

@@ -8,7 +8,6 @@
 
 #import "AppSDK.h"
 
-AppSDK const GoogleMobileAds = @"DFPAds";
 AppSDK const GoogleAnalytics = @"GoogleAnalytics";
 AppSDK const Fabric = @"Fabric";
 AppSDK const Instabug = @"Instabug";

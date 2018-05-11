@@ -14,12 +14,16 @@ import Foundation
 /// - showSettingsScreen: Show consents setting screen
 /// - getVendorConsents: Get list of consents for vendors
 /// - shouldShowConsentsForm: Check if vendors list has changed and app should show again consents form
+/// - canShowPersonalizedAds: Check if application can show personalized ads based on user consents
+/// - getSponsoringAdsConsents: Get sponsoring ads consents identifiers
 enum CMPAction: String {
 
     case showWelcomeScreen
     case showSettingsScreen
     case getVendorConsents
     case shouldShowConsentsForm
+    case canShowPersonalizedAds
+    case getSponsoringAdsConsents
 
     /// Get JavaScript code for given action
     var javaScriptCode: String {
@@ -49,6 +53,20 @@ enum CMPAction: String {
             return """
             window.dlApi.shouldDisplayConsentTool(function() {
                 webkit.messageHandlers.cmpEvents.postMessage({"event": "shouldShowConsentsForm"});
+            });
+            """
+
+        case .canShowPersonalizedAds:
+            return """
+            window.dlApi.canBePersonalized(function(canBePersonalized) {
+                webkit.messageHandlers.cmpEvents.postMessage({"event": "canShowPersonalizedAds", "payload": canBePersonalized});
+            });
+            """
+
+        case .getSponsoringAdsConsents:
+            return """
+            dlApi.getConsents(function(data) {
+                webkit.messageHandlers.cmpEvents.postMessage({"event": "sponsoringAdsConsents", "payload": data});
             });
             """
         }

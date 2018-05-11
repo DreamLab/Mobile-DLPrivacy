@@ -38,6 +38,7 @@ public class Privacy: NSObject {
             }
 
             actionsQueue.forEach {
+                DDLogInfo("Executing action from queue: \($0)")
                 performAction($0)
             }
 
@@ -57,7 +58,6 @@ public class Privacy: NSObject {
     /// All available SDK
     var allAvailableSDK: [AppSDK: Bool] {
         return [
-            AppSDK.GoogleMobileAds: false,
             AppSDK.GoogleAnalytics: false,
             AppSDK.Fabric: false,
             AppSDK.Instabug: false,
@@ -74,6 +74,12 @@ public class Privacy: NSObject {
 
     /// Module delegate
     weak var delegate: PrivacyDelegate?
+
+    /// Callback/completion closure for personalized ads request
+    var personalizedAdsCallback: ((_ canAdsBePersonalized: Bool) -> Void)?
+
+    /// Callback/completion closure for sponsoring ads consents request
+    var sponsoringAdsConsentsCallback: ((_ consents: [String: Any]?) -> Void)?
 
     // MARK: Init
 
@@ -97,6 +103,8 @@ public class Privacy: NSObject {
     deinit {
         webview.configuration.userContentController.removeScriptMessageHandler(forName: cmpMessageHandlerName)
         webview.navigationDelegate = nil
+
+        NotificationCenter.default.removeObserver(self)
     }
 }
 
@@ -162,6 +170,22 @@ public extension Privacy {
         // TODO: [ASZ]
 
         return false
+    }
+
+    /// Check whether application can display personalized Google Ads (DFP)
+    ///
+    /// - Parameter completion: Completion handler
+    func canShowPersonalizedAds(_ completion: ((_ canAdsBePersonalized: Bool) -> Void)?) {
+        personalizedAdsCallback = completion
+        performAction(.canShowPersonalizedAds)
+    }
+
+    /// Get sponsoring ads consents identifiers
+    ///
+    /// - Parameter completion: Completion handler
+    func getSponsoringAdsConsents(_ completion: ((_ consents: [String: Any]?) -> Void)?) {
+        sponsoringAdsConsentsCallback = completion
+        performAction(.getSponsoringAdsConsents)
     }
 }
 
