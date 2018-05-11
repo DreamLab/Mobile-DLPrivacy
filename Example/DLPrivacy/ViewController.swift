@@ -35,7 +35,8 @@ class ViewController: UIViewController {
         privacyView.showConsentsWelcomeScreen()
 
         // Or maybe you want to show details (settings) skipping welcome screen
-        //privacyView.showConsentsSettingsScreen()
+
+        // privacyView.showConsentsSettingsScreen()
 
         // After user is done selecting his preferences, you will be informed by PrivacyDelegate about that fact
         // In this delegate method you will also receive all available SDK together with user consents
@@ -44,10 +45,6 @@ class ViewController: UIViewController {
         // call "getSDKConsents" passing SDK which you are interested in
         let sdkInMyApp: [AppSDK] = [.GoogleAnalytics, .Fabric]
         _ = Privacy.shared.getSDKConsents(sdkInMyApp)
-
-        // If your SDK is not predefined in Privacy module, you can pass value from rawValue with given SDK codename
-        let mySDK = AppSDK(rawValue: "mySDKName")
-        DDLogInfo("My SDK enum: \(mySDK)")
 
         // Additional data
 
@@ -59,6 +56,15 @@ class ViewController: UIViewController {
         // You can retrieve consents ids user by sponsoring ads
         Privacy.shared.getSponsoringAdsConsents { consents in
             DDLogInfo("Sponsoring consents: \(String(describing: consents))")
+        }
+
+        // If your SDK is not predefined in Privacy module, you can pass value from rawValue with given SDK codename
+        let mySDK = AppSDK(rawValue: "mySDKName")
+        DDLogInfo("My SDK enum: \(mySDK)")
+
+        // Then you can ask for consent using this SDK name
+        Privacy.shared.getCustomSDKConsent(mySDK, vendorName: "myVendor", purposeId: [1, 2]) { consent in
+            DDLogInfo("Consent for my custom SDK: \(consent)")
         }
     }
 }

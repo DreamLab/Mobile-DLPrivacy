@@ -40,25 +40,13 @@ extension Privacy: WKScriptMessageHandler {
             moduleState = .cmpLoaded
 
         case .formSubmitted:
-            // Get consent for all predefined SDK
-            for sdk in allAvailableSDK.keys {
-                guard let mapping = CMPVendorsMapping.sdkMapping[sdk] else {
-                    continue
-                }
-
-                performAction(.getVendorConsent(sdk: sdk, mapping: mapping))
-            }
+            requestConsentsForDefaultSDKs()
 
         case .welcomeScreenVisible, .settingsScreenVisible:
            privacyView.showContentState()
 
         case .getVendorConsent:
-            guard let sdkName = messageDict["sdkName"] as? String, let consent = messageDict["consent"] as? Bool else {
-                DDLogError("Failed to map consent response for: \(messageDict)")
-                return
-            }
-
-            storeUserConsent(consent, for: AppSDK(rawValue: sdkName))
+            handleConsentResponse(messageDict)
 
         case .shouldShowConsentsForm:
             delegate?.privacyModule(self, shouldShowConsentsForm: privacyView)
@@ -77,6 +65,43 @@ extension Privacy: WKScriptMessageHandler {
             moduleState = .cmpError
             let error = NSError(domain: "CMP", code: -1, userInfo: nil)
             handleCMPLoadingError(error)
+        }
+    }
+}
+
+// MARK: Private
+private extension Privacy {
+
+    func requestConsentsForDefaultSDKs() {
+        // Clear cache
+        consentsCache.clearAppSDKCache(Array(allAvailableSDK.keys))
+
+        // Get consent for all predefined SDK
+        for sdk in allAvailableSDK.keys {
+            guard let mapping = CMPVendorsMapping.sdkMapping[sdk] else {
+                continue
+            }
+
+            performAction(.getVendorConsent(sdk: sdk, mapping: mapping))
+        }
+    }
+
+    func handleConsentResponse(_ messageDict: [String: Any]) {
+        guard let sdkName = messageDict["sdkName"] as? String, let consent = messageDict["consent"] as? Bool else {
+            DDLogError("Failed to map consent response for: \(messageDict)")
+            return
+        }
+
+        let appSDK = AppSDK(rawValue: sdkName)
+        let isDefaultSDK = allAvailableSDK.keys.contains(appSDK)
+
+        // Store in cache if this is default SDK, if not call callback
+        if isDefaultSDK {
+            storeUserConsent(consent, for: appSDK)
+        } else {
+            let callback = customSDKConsentCallback[appSDK]
+            callback??(consent)
+            customSDKConsentCallback[appSDK] = nil
         }
     }
 }

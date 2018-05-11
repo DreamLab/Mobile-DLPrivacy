@@ -46,6 +46,9 @@ public class Privacy: NSObject {
         }
     }
 
+    /// Cache
+    let consentsCache = CMPConsentsCache()
+
     /// Actions queue
     var actionsQueue: [CMPAction] = []
 
@@ -80,6 +83,9 @@ public class Privacy: NSObject {
 
     /// Callback/completion closure for sponsoring ads consents request
     var sponsoringAdsConsentsCallback: ((_ consents: [String: Any]?) -> Void)?
+
+    /// Callback/completion closure for custom SDK consent
+    var customSDKConsentCallback = [AppSDK: ((consent: Bool) -> Void)?]()
 
     // MARK: Init
 
@@ -152,29 +158,41 @@ public extension Privacy {
     /// There are many predefined SDK, for example AppSDK.GoogleAnalytics.
     /// AppSDK is an enum so you can see for yourself what is already defined.
     ///
+    /// - Parameter sdks: [AppSDK]
+    /// - Returns: Dictionary where AppSDK is a key, value is either true or false (true if user agreed for given SDK)
+    func getSDKConsents(_ sdks: [AppSDK]) -> [AppSDK: Bool] {
+        var consents = [AppSDK: Bool]()
+
+        for sdk in sdks {
+            consents[sdk] = consentsCache.consent(for: sdk)
+        }
+
+        return consents
+    }
+
+    /// Get user consent for given SDK which is not defined by default in module
+    ///
     /// If something you need is not defined, you can create your own value and pass to Privacy module using construction like this:
     /// AppSDK(rawValue: "mySDKCodeName")
     ///
-    /// - Parameter sdk: [AppSDK]
-    /// - Returns: Dictionary where AppSDK is a key, value is either true or false (true if user agreed for given SDK)
-    func getSDKConsents(_ sdk: [AppSDK]) -> [AppSDK: Bool] {
-        // TODO: [ASZ]
+    /// - Parameters:
+    ///   - sdk: AppSDK, for example: AppSDK(rawValue: "mySDKCodeName")
+    ///   - vendorName: Vendor name defined in CMP
+    ///   - purposeId: Array of purpose ids defined in CMP
+    ///   - completion: Completion handler
+    func getCustomSDKConsent(_ sdk: AppSDK, vendorName: String, purposeId: [Int], completion: ((_ consent: Bool) -> Void)?) {
+        customSDKConsentCallback[sdk] = completion
 
-        return [:]
-    }
-
-    func getSDKConsent(_ sdk: AppSDK) {
-
-        //todo pass callback with action ???
+        let mapping = CMPVendorsMapping.CMPMapping(vendorName: vendorName, purposeId: purposeId)
+        let action = CMPAction.getVendorConsent(sdk: sdk, mapping: mapping)
+        performAction(action)
     }
 
     /// Check if user was already asked about consents (so we don't have to show this form at app start)
     ///
     /// - Returns: True if user was already asked and submitted the privacy form
     func didAskUserForConsents() -> Bool {
-        // TODO: [ASZ]
-
-        return false
+        return consentsCache.didAskUserForConsents
     }
 
     /// Check whether application can display personalized Google Ads (DFP)
@@ -275,17 +293,20 @@ extension Privacy {
     ///   - consent: True / false
     ///   - sdk: AppSDK
     func storeUserConsent(_ consent: Bool, for sdk: AppSDK) {
+        // Store consent in cache
+        DDLogInfo("Storing in cache consent: \(consent) for \(sdk.rawValue)")
+        consentsCache.storeConsent(for: sdk, consent: consent)
 
-
-
-
-        // TODO: [ASZ]
+        // Check if we have received all consents (for default set of SDKs)
+        guard consentsCache.hasAllSDKConsentsCached(Array(allAvailableSDK.keys)) else {
+            return
+        }
 
         guard didAskUserForConsents() else {
-            delegate?.privacyModule(self, shouldHideConsentsForm: privacyView, andApplyConsents: allAvailableSDK)
+            consentsCache.didAskUserForConsents = true
 
-            // TODO: [ASZ] store that consents were shown
-
+            let consents = getSDKConsents(Array(allAvailableSDK.keys))
+            delegate?.privacyModule(self, shouldHideConsentsForm: privacyView, andApplyConsents: consents)
             return
         }
 
