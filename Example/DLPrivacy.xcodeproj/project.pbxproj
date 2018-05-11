@@ -59,6 +59,9 @@
 		7D22C51D20A584E7001C231A /* UIView+Subview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D22C51C20A584E7001C231A /* UIView+Subview.swift */; };
 		7D22C51E20A584E7001C231A /* UIView+Subview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D22C51C20A584E7001C231A /* UIView+Subview.swift */; };
 		7D22C51F20A584E7001C231A /* UIView+Subview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D22C51C20A584E7001C231A /* UIView+Subview.swift */; };
+		7D22C52120A5BC63001C231A /* CMPVendorsMapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D22C52020A5BC63001C231A /* CMPVendorsMapping.swift */; };
+		7D22C52220A5BC63001C231A /* CMPVendorsMapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D22C52020A5BC63001C231A /* CMPVendorsMapping.swift */; };
+		7D22C52320A5BC63001C231A /* CMPVendorsMapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D22C52020A5BC63001C231A /* CMPVendorsMapping.swift */; };
 		7D2AD86020A2D27E00E86996 /* Privacy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2AD85F20A2D27E00E86996 /* Privacy.swift */; };
 		7D2AD86120A2D27E00E86996 /* Privacy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2AD85F20A2D27E00E86996 /* Privacy.swift */; };
 		7D2AD86220A2D63700E86996 /* Privacy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2AD85F20A2D27E00E86996 /* Privacy.swift */; };
@@ -168,6 +171,7 @@
 		7D22C51320A58239001C231A /* PrivacyAppRestartInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PrivacyAppRestartInfoView.xib; sourceTree = "<group>"; };
 		7D22C51820A583B8001C231A /* UIView+FromNib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+FromNib.swift"; sourceTree = "<group>"; };
 		7D22C51C20A584E7001C231A /* UIView+Subview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Subview.swift"; sourceTree = "<group>"; };
+		7D22C52020A5BC63001C231A /* CMPVendorsMapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMPVendorsMapping.swift; sourceTree = "<group>"; };
 		7D2AD85F20A2D27E00E86996 /* Privacy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Privacy.swift; sourceTree = "<group>"; };
 		7D2AD86420A2DAA700E86996 /* CMPAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMPAction.swift; sourceTree = "<group>"; };
 		7D61B55D20A4206A00C4BCD3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -276,6 +280,7 @@
 		7D00E72120A2F31E006C27CC /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				7D22C52020A5BC63001C231A /* CMPVendorsMapping.swift */,
 				7D00E72220A2F32B006C27CC /* WKScriptMessageHandlerWrapper.swift */,
 			);
 			path = Utils;
@@ -1001,6 +1006,7 @@
 				7D00E71A20A2ED02006C27CC /* Privacy+Bundle.swift in Sources */,
 				7E09B2531CBB8C7000122878 /* ViewController.swift in Sources */,
 				7D22C51920A583B8001C231A /* UIView+FromNib.swift in Sources */,
+				7D22C52120A5BC63001C231A /* CMPVendorsMapping.swift in Sources */,
 				7D61B56520A430FB00C4BCD3 /* PrivacyModuleState.swift in Sources */,
 				7D2AD86020A2D27E00E86996 /* Privacy.swift in Sources */,
 				7E09B2511CBB8C7000122878 /* AppDelegate.swift in Sources */,
@@ -1018,6 +1024,7 @@
 			files = (
 				7D00E72020A2F014006C27CC /* Privacy+WKScriptMessageHandler.swift in Sources */,
 				7D61B56720A430FB00C4BCD3 /* PrivacyModuleState.swift in Sources */,
+				7D22C52320A5BC63001C231A /* CMPVendorsMapping.swift in Sources */,
 				7D22C51B20A583B8001C231A /* UIView+FromNib.swift in Sources */,
 				7D61B56B20A4501400C4BCD3 /* PrivacyFormViewDelegate.swift in Sources */,
 				7D2AD86720A2DAA700E86996 /* CMPAction.swift in Sources */,
@@ -1062,6 +1069,7 @@
 				7D00E71B20A2ED02006C27CC /* Privacy+Bundle.swift in Sources */,
 				7E09B2B81CBB993D00122878 /* FabricInitializer.swift in Sources */,
 				7D22C51A20A583B8001C231A /* UIView+FromNib.swift in Sources */,
+				7D22C52220A5BC63001C231A /* CMPVendorsMapping.swift in Sources */,
 				7D61B56620A430FB00C4BCD3 /* PrivacyModuleState.swift in Sources */,
 				7D2AD86120A2D27E00E86996 /* Privacy.swift in Sources */,
 				7E09B2B41CBB993100122878 /* EnvironmentSettings.swift in Sources */,

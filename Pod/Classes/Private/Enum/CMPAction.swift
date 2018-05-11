@@ -12,15 +12,15 @@ import Foundation
 ///
 /// - showWelcomeScreen: Show consents welcome screen
 /// - showSettingsScreen: Show consents setting screen
-/// - getVendorConsents: Get list of consents for vendors
+/// - getVendorConsent: Get consent for given SDK
 /// - shouldShowConsentsForm: Check if vendors list has changed and app should show again consents form
 /// - canShowPersonalizedAds: Check if application can show personalized ads based on user consents
 /// - getSponsoringAdsConsents: Get sponsoring ads consents identifiers
-enum CMPAction: String {
+enum CMPAction {
 
     case showWelcomeScreen
     case showSettingsScreen
-    case getVendorConsents
+    case getVendorConsent(sdk: AppSDK, mapping: CMPVendorsMapping.CMPMapping)
     case shouldShowConsentsForm
     case canShowPersonalizedAds
     case getSponsoringAdsConsents
@@ -42,10 +42,14 @@ enum CMPAction: String {
             );
             """
 
-        case .getVendorConsents:
+        case .getVendorConsent(let sdk, let mapping):
+            let sdkName = sdk.rawValue
+            let vendorName = mapping.vendorName
+            let purpose = mapping.purposeId
+
             return """
-            window.__cmp('getVendorConsents', null, function(result) {
-                webkit.messageHandlers.cmpEvents.postMessage({"event": "cmpVendorsConsentsReceived", "payload": result});
+            window.dlApi.hasVendorConsentByVendorName(\(vendorName), \(purpose.description), function (hasConsent) {
+                webkit.messageHandlers.cmpEvents.postMessage({"event": "getVendorConsent", "sdkName:": \(sdkName), "consent": hasConsent});
             });
             """
 

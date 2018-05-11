@@ -15,7 +15,7 @@ import CocoaLumberjack
 public class Privacy: NSObject {
 
     /// Default CMP Form web site
-    let cmpDefaultSite = "http://ocdn.eu/aops/mip/polityka/app_test.html?test_kwrd=vappn"
+    let cmpDefaultSite = "https://m.onet.pl/?test_kwrd=vappn"
 
     // MARK: Shared instance
 
@@ -163,6 +163,11 @@ public extension Privacy {
         return [:]
     }
 
+    func getSDKConsent(_ sdk: AppSDK) {
+
+        //todo pass callback with action ???
+    }
+
     /// Check if user was already asked about consents (so we don't have to show this form at app start)
     ///
     /// - Returns: True if user was already asked and submitted the privacy form
@@ -252,7 +257,7 @@ extension Privacy {
     /// - Parameter cmpAction: CMPAction
     func performAction(_ cmpAction: CMPAction) {
         guard moduleState == .cmpLoaded else {
-            DDLogInfo("CMP site is not yet loaded, adding action to queue: \(cmpAction.rawValue)")
+            DDLogInfo("CMP site is not yet loaded, adding action to queue: \(cmpAction)")
             actionsQueue.append(cmpAction)
             return
         }
@@ -262,10 +267,18 @@ extension Privacy {
 
     // MARK: Consents
 
-    /// Store user consents in cache and call delegate that privacy view should be closed
+    /// Store user consents in cache
     ///
-    /// - Parameter consents: User consents settings
-    func storeUserConsents(_ consents: [String: Any]) {
+    /// Call delegate that form view should be closed if we have all consent for default SDKs
+    ///
+    /// - Parameters:
+    ///   - consent: True / false
+    ///   - sdk: AppSDK
+    func storeUserConsent(_ consent: Bool, for sdk: AppSDK) {
+
+
+
+
         // TODO: [ASZ]
 
         guard didAskUserForConsents() else {

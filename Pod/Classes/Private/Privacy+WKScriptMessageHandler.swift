@@ -40,16 +40,25 @@ extension Privacy: WKScriptMessageHandler {
             moduleState = .cmpLoaded
 
         case .formSubmitted:
-            performAction(.getVendorConsents)
+            // Get consent for all predefined SDK
+            for sdk in allAvailableSDK.keys {
+                guard let mapping = CMPVendorsMapping.sdkMapping[sdk] else {
+                    continue
+                }
+
+                performAction(.getVendorConsent(sdk: sdk, mapping: mapping))
+            }
 
         case .welcomeScreenVisible, .settingsScreenVisible:
            privacyView.showContentState()
 
-        case .vendorsConsentsReceived:
-            // TODO: [ASZ]
-            //print("payload: \(messageDict["payload"] as? [String: Any])")
+        case .getVendorConsent:
+            guard let sdkName = messageDict["sdkName"] as? String, let consent = messageDict["consent"] as? Bool else {
+                DDLogError("Failed to map consent response for: \(messageDict)")
+                return
+            }
 
-            storeUserConsents([:])
+            storeUserConsent(consent, for: AppSDK(rawValue: sdkName))
 
         case .shouldShowConsentsForm:
             delegate?.privacyModule(self, shouldShowConsentsForm: privacyView)
