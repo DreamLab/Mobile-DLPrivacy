@@ -22,20 +22,6 @@ public class PrivacyFormView: UIView {
 
     private weak var delegate: PrivacyFormViewDelegate?
 
-    // MARK: Instance
-
-    /// Return PrivacyFormView instance loaded from nib
-    ///
-    /// - Returns: PrivacyFormView
-    static func loadFromNib() -> PrivacyFormView {
-        let formViewNib = UINib(nibName: "\(PrivacyFormView.self)", bundle: Privacy.resourcesBundle)
-        let formView = formViewNib.instantiate(withOwner: self, options: nil).first as? PrivacyFormView
-
-        // swiftlint:disable force_unwrapping
-        return formView!
-        // swiftlint:enable force_unwrapping
-    }
-
     // MARK: Life cycle
 
     public override func awakeFromNib() {
@@ -114,19 +100,7 @@ extension PrivacyFormView {
     func configure(with webView: WKWebView, delegate: PrivacyFormViewDelegate) {
         self.delegate = delegate
 
-        webView.translatesAutoresizingMaskIntoConstraints = false
-        insertSubview(webView, at: 0)
-
-        let views = ["webView": webView]
-        let hConstrains = NSLayoutConstraint.constraints(withVisualFormat: "H:|-(0)-[webView]-(0)-|",
-                                                         options: NSLayoutFormatOptions(),
-                                                         metrics: nil,
-                                                         views: views)
-        let vConstrains = NSLayoutConstraint.constraints(withVisualFormat: "V:|-(0)-[webView]-(0)-|",
-                                                         options: NSLayoutFormatOptions(),
-                                                         metrics: nil,
-                                                         views: views)
-        addConstraints(hConstrains + vConstrains)
+        addSubviewFullscreen(webView, at: 0)
     }
 
     /// Configure loading view and error view using theme color
