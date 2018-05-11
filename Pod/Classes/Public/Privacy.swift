@@ -69,6 +69,9 @@ public class Privacy: NSObject {
         ]
     }
 
+    /// Should application be killed when enters background?
+    private var shouldAppBeKilledWhenEntersBackground = false
+
     /// Module delegate
     weak var delegate: PrivacyDelegate?
 
@@ -84,6 +87,9 @@ public class Privacy: NSObject {
         self.webview.configuration.userContentController.add(WKScriptMessageHandlerWrapper(delegate: self), name: cmpMessageHandlerName)
         self.webview.navigationDelegate = self
         self.privacyView.configure(with: self.webview, delegate: self)
+
+        let notification = Notification.Name.UIApplicationDidEnterBackground
+        NotificationCenter.default.addObserver(self, selector: #selector(applicationDidEnterBackground), name: notification, object: nil)
     }
 
     // MARK: Deinit
@@ -239,6 +245,19 @@ extension Privacy {
             return
         }
 
+        /// Show restart info view and restart app when it goes to background
         privacyView.showAppRestartInfoView()
+        shouldAppBeKilledWhenEntersBackground = true
+    }
+
+    // MARK: Application background event & app restart
+
+    @objc
+    func applicationDidEnterBackground() {
+        guard shouldAppBeKilledWhenEntersBackground else {
+            return
+        }
+
+        exit(0)
     }
 }
