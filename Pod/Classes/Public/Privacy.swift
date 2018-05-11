@@ -231,8 +231,11 @@ extension Privacy {
     func storeUserConsents(_ consents: [String: Any]) {
         // TODO: [ASZ]
 
-        guard privacyView.shouldAppRestartViewBeShown else {
+        guard didAskUserForConsents() else {
             delegate?.privacyModule(self, shouldHideConsentsForm: privacyView, andApplyConsents: allAvailableSDK)
+
+            // TODO: [ASZ] store that consents were shown
+
             return
         }
 

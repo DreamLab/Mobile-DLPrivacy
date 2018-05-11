@@ -27,27 +27,18 @@ public class PrivacyFormView: UIView {
 
     /// Currently shown state view
     private weak var currentlyShownStateView: UIView?
-
-    /// Should we present restart info view after user send privacy form?
-    var shouldAppRestartViewBeShown = false
 }
 
 // MARK: Public interface
 public extension PrivacyFormView {
 
     /// Show consents welcome screen
-    ///
-    /// - Parameter showRestart: Should info view about required app restart be shown after user send privacy form?
-    func showConsentsWelcomeScreen(shouldAppRestartViewBeShown showRestart: Bool) {
-        shouldAppRestartViewBeShown = showRestart
+    func showConsentsWelcomeScreen() {
         delegate?.privacyViewRequestingWelcomeScreen(self)
     }
 
     /// Show consents settings screen
-    ///
-    /// - Parameter showRestart: Should info view about required app restart be shown after user send privacy form?
-    func showConsentsSettingsScreen(shouldAppRestartViewBeShown showRestart: Bool) {
-        shouldAppRestartViewBeShown = showRestart
+    func showConsentsSettingsScreen() {
         delegate?.privacyViewRequestingSetingsScreen(self)
     }
 }

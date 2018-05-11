@@ -32,10 +32,10 @@ class ViewController: UIViewController {
         addPrivacyViewFullscreen(privacyView)
 
         // Tell SDK that consents welcome screen should be shown
-        privacyView.showConsentsWelcomeScreen(shouldAppRestartViewBeShown: true)
+        privacyView.showConsentsWelcomeScreen()
 
         // Or maybe you want to show details (settings) skipping welcome screen
-        //privacyView.showConsentsSettingsScreen(shouldAppRestartViewBeShown: true)
+        //privacyView.showConsentsSettingsScreen()
 
         // After user is done selecting his preferences, you will be informed by PrivacyDelegate about that fact
         // In this delegate method you will also receive all available SDK together with user consents
