@@ -13,8 +13,10 @@ import WebKit
 /// View presenting loading, error and consents form
 public class PrivacyFormView: UIView {
 
-    @IBOutlet private weak var loadingView: UIView!
-    @IBOutlet private weak var loadingIndicator: UIActivityIndicatorView!
+    private lazy var loadingView = PrivacyLoadingView.loadFromNib()
+
+
+
 
     @IBOutlet private weak var errorView: UIView!
     @IBOutlet private weak var errorLabel: UILabel!
@@ -110,7 +112,7 @@ extension PrivacyFormView {
     ///   - buttonTextColor: UIColor
     ///   - font: UIFont
     func configure(withThemeColor color: UIColor, buttonTextColor: UIColor, font: UIFont) {
-        loadingIndicator.color = color
+
         errorRetryButton.backgroundColor = color
         errorRetryButton.setTitleColor(buttonTextColor, for: .normal)
 
