@@ -11,10 +11,12 @@ import Foundation
 /// Actions possible to perform with CMP tool
 ///
 /// - showWelcomeScreen: Show consents welcome screen
+/// - showSettingsScreen: Show consents setting screen
 /// - getVendorConsents: Get list of consents for vendors
 enum CMPAction: String {
 
     case showWelcomeScreen
+    case showSettingsScreen
     case getVendorConsents
 
     /// Get JavaScript code for given action
@@ -25,6 +27,12 @@ enum CMPAction: String {
             window.__cmp('showConsentTool', null, function(result) {
             webkit.messageHandlers.cmpEvents.postMessage({"event": "cmpWelcomeVisible"});
             });
+            """
+
+        case .showSettingsScreen:
+            // TODO: [ASZ]
+
+            return """
             """
 
         case .getVendorConsents:

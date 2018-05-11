@@ -27,18 +27,27 @@ public class PrivacyFormView: UIView {
 
     /// Currently shown state view
     private weak var currentlyShownStateView: UIView?
+
+    /// Should we present restart info view after user send privacy form?
+    var shouldAppRestartViewBeShown = false
 }
 
 // MARK: Public interface
 public extension PrivacyFormView {
 
     /// Show consents welcome screen
-    func showConsentsWelcomeScreen() {
+    ///
+    /// - Parameter showRestart: Should info view about required app restart be shown after user send privacy form?
+    func showConsentsWelcomeScreen(shouldAppRestartViewBeShown showRestart: Bool) {
+        shouldAppRestartViewBeShown = showRestart
         delegate?.privacyViewRequestingWelcomeScreen(self)
     }
 
     /// Show consents settings screen
-    func showConsentsSettingsScreen() {
+    ///
+    /// - Parameter showRestart: Should info view about required app restart be shown after user send privacy form?
+    func showConsentsSettingsScreen(shouldAppRestartViewBeShown showRestart: Bool) {
+        shouldAppRestartViewBeShown = showRestart
         delegate?.privacyViewRequestingSetingsScreen(self)
     }
 }
@@ -70,6 +79,14 @@ extension PrivacyFormView {
         currentlyShownStateView?.removeFromSuperview()
     }
 
+    /// Show app restart info view
+    func showAppRestartInfoView() {
+        addSubviewFullscreen(restartView)
+
+        currentlyShownStateView?.removeFromSuperview()
+        currentlyShownStateView = restartView
+    }
+
     // MARK: Configuration
 
     /// Add WKWebView to view hierarchy and assign delegate
@@ -80,6 +97,7 @@ extension PrivacyFormView {
     func configure(with webView: WKWebView, delegate: PrivacyFormViewDelegate) {
         self.delegate = delegate
         errorView.delegate = delegate
+        restartView.delegate = delegate
 
         addSubviewFullscreen(webView, at: 0)
     }
@@ -93,5 +111,6 @@ extension PrivacyFormView {
     func configure(withThemeColor color: UIColor, buttonTextColor: UIColor, font: UIFont) {
         loadingView.configure(color)
         errorView.configure(withThemeColor: color, buttonTextColor: buttonTextColor, font: font)
+        restartView.configure(withThemeColor: color, buttonTextColor: buttonTextColor, font: font)
     }
 }

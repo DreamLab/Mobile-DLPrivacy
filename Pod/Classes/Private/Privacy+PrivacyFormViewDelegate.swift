@@ -16,8 +16,13 @@ extension Privacy: PrivacyFormViewDelegate {
         loadCMPSite()
     }
 
+    func privacyViewRequestingClose(_ view: PrivacyFormView) {
+        let consents = getSDKConsents(Array(allAvailableSDK.keys))
+        delegate?.privacyModule(self, shouldHideConsentsForm: view, andApplyConsents: consents)
+    }
+
     func privacyViewRequestingSetingsScreen(_ view: PrivacyFormView) {
-        performAction(.showWelcomeScreen) // TODO: [ASZ]
+        performAction(.showSettingsScreen)
     }
 
     func privacyViewRequestingWelcomeScreen(_ view: PrivacyFormView) {

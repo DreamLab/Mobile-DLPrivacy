@@ -55,7 +55,7 @@ public class Privacy: NSObject {
     private let cmpMessageHandlerName = "cmpEvents"
 
     /// All available SDK
-    private var allAvailableSDK: [AppSDK: Bool] {
+    var allAvailableSDK: [AppSDK: Bool] {
         return [
             AppSDK.GoogleMobileAds: false,
             AppSDK.GoogleAnalytics: false,
@@ -231,6 +231,11 @@ extension Privacy {
     func storeUserConsents(_ consents: [String: Any]) {
         // TODO: [ASZ]
 
-        delegate?.privacyModule(self, shouldHideConsentsForm: privacyView, andApplyConsents: allAvailableSDK)
+        guard privacyView.shouldAppRestartViewBeShown else {
+            delegate?.privacyModule(self, shouldHideConsentsForm: privacyView, andApplyConsents: allAvailableSDK)
+            return
+        }
+
+        privacyView.showAppRestartInfoView()
     }
 }

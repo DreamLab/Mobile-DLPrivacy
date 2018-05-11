@@ -32,7 +32,7 @@ class ViewController: UIViewController {
         addPrivacyViewFullscreen(privacyView)
 
         // Tell SDK that consents welcome screen should be shown
-        privacyView.showConsentsWelcomeScreen()
+        privacyView.showConsentsWelcomeScreen(shouldAppRestartViewBeShown: true)
 
         // After user is done selecting his preferences, you will be informed by PrivacyDelegate about that fact
         // In this delegate method you will also receive all available SDK together with user consents
@@ -43,7 +43,8 @@ class ViewController: UIViewController {
         _ = Privacy.shared.getSDKConsents(sdkInMyApp)
 
         // If your SDK is not predefined in Privacy module, you can pass value from rawValue with given SDK codename
-        _ = AppSDK(rawValue: "mySDKName")
+        let mySDK = AppSDK(rawValue: "mySDKName")
+        DDLogInfo("My SDK enum: \(mySDK)")
     }
 }
 
@@ -56,6 +57,8 @@ extension ViewController: PrivacyDelegate {
 
     func privacyModule(_ module: Privacy, shouldHideConsentsForm form: PrivacyFormView, andApplyConsents consents: [AppSDK: Bool]) {
         DDLogInfo("DLPrivacy module should hide consents form")
+
+        form.removeFromSuperview()
     }
 }
 

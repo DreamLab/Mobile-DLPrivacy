@@ -44,6 +44,10 @@ class PrivacyErrorView: UIView {
             errorRetryButton.titleLabel?.font = font.withSize(label.font.pointSize)
         }
     }
+}
+
+// MARK: Private
+private extension PrivacyErrorView {
 
     // MARK: Actions
 
@@ -54,10 +58,8 @@ class PrivacyErrorView: UIView {
 
         delegate?.privacyViewRequestingReload(parent)
     }
-}
 
-// MARK: Private
-private extension PrivacyErrorView {
+    // MARK: Translations
 
     /// Load translated texts into view
     func loadTranslations() {
