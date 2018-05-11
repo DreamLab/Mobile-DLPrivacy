@@ -157,7 +157,7 @@ extension Privacy {
                 return nil
             }
 
-            return WKUserScript(source: jsScript, injectionTime: .atDocumentEnd, forMainFrameOnly: true)
+            return WKUserScript(source: jsScript, injectionTime: .atDocumentStart, forMainFrameOnly: true)
 
         }.forEach {
             wkUserController.addUserScript($0)

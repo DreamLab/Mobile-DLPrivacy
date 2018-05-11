@@ -16,6 +16,7 @@ s.resource_bundles = { 'DLPrivacy' => [
 ] }
 
 s.swift_version = '4.0'
+s.static_framework = true
 s.requires_arc = true
 
 end
