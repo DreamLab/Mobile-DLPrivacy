@@ -13,7 +13,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view hidden="YES" contentMode="scaleToFill" id="PU6-fV-w0d" userLabel="errorView" customClass="PrivacyErrorView" customModule="DLPrivacy">
+        <view hidden="YES" contentMode="scaleToFill" id="PU6-fV-w0d" customClass="PrivacyErrorView" customModule="DLPrivacy">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
@@ -27,6 +27,9 @@
                     <rect key="frame" x="152" y="365" width="70" height="26"/>
                     <inset key="contentEdgeInsets" minX="12" minY="4" maxX="12" maxY="4"/>
                     <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="onRetryButtonTouch:" destination="PU6-fV-w0d" eventType="touchUpInside" id="MhZ-Fz-hQn"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -38,6 +41,10 @@
                 <constraint firstItem="TlH-Wc-Vnl" firstAttribute="top" secondItem="ud0-8d-JE9" secondAttribute="bottom" constant="32" id="qv1-VM-DLd"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ecl-Hf-6bc"/>
+            <connections>
+                <outlet property="errorLabel" destination="ud0-8d-JE9" id="vKK-qn-ERf"/>
+                <outlet property="errorRetryButton" destination="TlH-Wc-Vnl" id="rhc-sM-fjr"/>
+            </connections>
             <point key="canvasLocation" x="-84" y="35"/>
         </view>
     </objects>

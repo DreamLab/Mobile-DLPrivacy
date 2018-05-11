@@ -12,7 +12,15 @@ import UIKit
 /// Loading view with animated element
 class PrivacyLoadingView: UIView {
 
-    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
+    @IBOutlet private weak var loadingIndicator: UIActivityIndicatorView!
+
+    // MARK: Life cycle
+
+    override func removeFromSuperview() {
+        super.removeFromSuperview()
+
+        stopAnimation()
+    }
 
     // MARK: Set up
 
