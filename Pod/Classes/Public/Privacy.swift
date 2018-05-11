@@ -128,12 +128,27 @@ public extension Privacy {
 
     /// Get user consents for given SDK
     ///
+    /// There are many predefined SDK, for example AppSDK.GoogleAnalytics.
+    /// AppSDK is an enum so you can see for yourself what is already defined.
+    ///
+    /// If something you need is not defined, you can create your own value and pass to Privacy module using construction like this:
+    /// AppSDK(rawValue: "mySDKCodeName")
+    ///
     /// - Parameter sdk: [AppSDK]
     /// - Returns: Dictionary where AppSDK is a key, value is either true or false (true if user agreed for given SDK)
     func getSDKConsents(_ sdk: [AppSDK]) -> [AppSDK: Bool] {
         // TODO: [ASZ]
 
         return [:]
+    }
+
+    /// Check if user was already asked about consents (so we don't have to show this form at app start)
+    ///
+    /// - Returns: True if user was already asked and submitted the privacy form
+    func didAskUserForConsents() -> Bool {
+        // TODO: [ASZ]
+
+        return false
     }
 }
 
