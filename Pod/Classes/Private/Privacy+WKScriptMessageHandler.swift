@@ -42,7 +42,7 @@ extension Privacy: WKScriptMessageHandler {
         case .formSubmitted:
             performAction(.getVendorConsents)
 
-        case .welcomeScreenVisible:
+        case .welcomeScreenVisible, .settingsScreenVisible:
            privacyView.showContentState()
 
         case .vendorsConsentsReceived:

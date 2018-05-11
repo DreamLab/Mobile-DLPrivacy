@@ -15,7 +15,7 @@ import CocoaLumberjack
 public class Privacy: NSObject {
 
     /// Default CMP Form web site
-    let cmpDefaultSite = "https://www.onet.pl/#test_tid=EA-1111111&test_site=TEST&test_area=RODOTEST&test_kwrd=cmp"
+    let cmpDefaultSite = "http://ocdn.eu/aops/mip/polityka/app_test.html?test_kwrd=vappn"
 
     // MARK: Shared instance
 

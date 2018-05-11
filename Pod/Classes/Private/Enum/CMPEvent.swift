@@ -14,6 +14,7 @@ import Foundation
 /// - formReady: Form is ready to perform actions
 /// - formSubmitted: Form was submitted by the user
 /// - welcomeScreenVisible: Form was asked to show welcome screen and returned response
+/// - settingsScreenVisible: Form was asked to show settings screen and returned response
 /// - error: Something went wrong with event listeners
 enum CMPEvent {
 
@@ -21,6 +22,7 @@ enum CMPEvent {
     case formReady
     case formSubmitted
     case welcomeScreenVisible
+    case settingsScreenVisible
     case vendorsConsentsReceived
     case error
 
@@ -37,6 +39,8 @@ enum CMPEvent {
             self = .formSubmitted
         case "cmpWelcomeVisible":
             self = .welcomeScreenVisible
+        case "cmpSettingsVisible":
+            self = .settingsScreenVisible
         case "cmpVendorsConsentsReceived":
             self = .vendorsConsentsReceived
         case "cmpError":

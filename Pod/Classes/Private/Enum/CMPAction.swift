@@ -25,14 +25,15 @@ enum CMPAction: String {
         case .showWelcomeScreen:
             return """
             window.__cmp('showConsentTool', null, function(result) {
-            webkit.messageHandlers.cmpEvents.postMessage({"event": "cmpWelcomeVisible"});
+                webkit.messageHandlers.cmpEvents.postMessage({"event": "cmpWelcomeVisible"});
             });
             """
 
         case .showSettingsScreen:
-            // TODO: [ASZ]
-
             return """
+            window.__cmp('showConsentTool', {page: "advanced"}, function(result) {
+                webkit.messageHandlers.cmpEvents.postMessage({"event": "cmpSettingsVisible"});
+            );
             """
 
         case .getVendorConsents:
