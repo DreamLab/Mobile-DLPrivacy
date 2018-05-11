@@ -51,6 +51,9 @@ extension Privacy: WKScriptMessageHandler {
 
             storeUserConsents([:])
 
+        case .shouldShowConsentsForm:
+            delegate?.privacyModule(self, shouldShowConsentsForm: privacyView)
+
         case .error:
             moduleState = .cmpError
             let error = NSError(domain: "CMP", code: -1, userInfo: nil)

@@ -123,6 +123,13 @@ public extension Privacy {
 
         // Load CMP
         loadCMPSite()
+
+        // Check if app should show again consents form (if form was already displayed once)
+        guard didAskUserForConsents() else {
+            return
+        }
+
+        performAction(.shouldShowConsentsForm)
     }
 
     /// Get PrivacyFormView which should be presented to the user

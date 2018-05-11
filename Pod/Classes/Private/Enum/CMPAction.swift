@@ -13,11 +13,13 @@ import Foundation
 /// - showWelcomeScreen: Show consents welcome screen
 /// - showSettingsScreen: Show consents setting screen
 /// - getVendorConsents: Get list of consents for vendors
+/// - shouldShowConsentsForm: Check if vendors list has changed and app should show again consents form
 enum CMPAction: String {
 
     case showWelcomeScreen
     case showSettingsScreen
     case getVendorConsents
+    case shouldShowConsentsForm
 
     /// Get JavaScript code for given action
     var javaScriptCode: String {
@@ -39,7 +41,14 @@ enum CMPAction: String {
         case .getVendorConsents:
             return """
             window.__cmp('getVendorConsents', null, function(result) {
-            webkit.messageHandlers.cmpEvents.postMessage({"event": "cmpVendorsConsentsReceived", "payload": result});
+                webkit.messageHandlers.cmpEvents.postMessage({"event": "cmpVendorsConsentsReceived", "payload": result});
+            });
+            """
+
+        case .shouldShowConsentsForm:
+            return """
+            window.dlApi.shouldDisplayConsentTool(function() {
+                webkit.messageHandlers.cmpEvents.postMessage({"event": "shouldShowConsentsForm"});
             });
             """
         }
