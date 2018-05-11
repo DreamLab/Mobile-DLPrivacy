@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="PrivacyFormView" customModule="DLPrivacy">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sp9-d4-5T3" userLabel="errorView">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mvG-RR-8tY" userLabel="errorLabel">
+                            <rect key="frame" x="32" y="313" width="311" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5VB-zf-qla" userLabel="retryButton">
+                            <rect key="frame" x="152" y="365" width="70" height="26"/>
+                            <inset key="contentEdgeInsets" minX="12" minY="4" maxX="12" maxY="4"/>
+                            <state key="normal" title="Button"/>
+                            <connections>
+                                <action selector="onRetryButtonTouch:" destination="iN0-l3-epB" eventType="touchUpInside" id="a81-B4-az5"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="mvG-RR-8tY" secondAttribute="trailing" constant="32" id="3DE-6M-X7k"/>
+                        <constraint firstItem="5VB-zf-qla" firstAttribute="top" secondItem="mvG-RR-8tY" secondAttribute="bottom" constant="32" id="9gi-Mb-WlX"/>
+                        <constraint firstItem="mvG-RR-8tY" firstAttribute="leading" secondItem="sp9-d4-5T3" secondAttribute="leading" constant="32" id="O9x-fC-Ob7"/>
+                        <constraint firstItem="mvG-RR-8tY" firstAttribute="bottom" secondItem="sp9-d4-5T3" secondAttribute="centerY" id="Rj0-pO-RBc"/>
+                        <constraint firstItem="5VB-zf-qla" firstAttribute="centerX" secondItem="sp9-d4-5T3" secondAttribute="centerX" id="ZFJ-gF-cKq"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="loy-21-mYg" userLabel="loadingView">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="L3H-uE-sQw">
+                            <rect key="frame" x="169" y="315" width="37" height="37"/>
+                            <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </activityIndicatorView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="L3H-uE-sQw" firstAttribute="centerX" secondItem="loy-21-mYg" secondAttribute="centerX" id="cUk-Ax-Igo"/>
+                        <constraint firstItem="L3H-uE-sQw" firstAttribute="centerY" secondItem="loy-21-mYg" secondAttribute="centerY" id="plA-HD-O84"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="sp9-d4-5T3" secondAttribute="trailing" id="6Tx-yq-JKQ"/>
+                <constraint firstItem="sp9-d4-5T3" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Ha1-pe-HTA"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="sp9-d4-5T3" secondAttribute="bottom" id="LTH-ui-SIB"/>
+                <constraint firstItem="sp9-d4-5T3" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="SvT-K9-ofY"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="loy-21-mYg" secondAttribute="bottom" id="XJp-0d-Kxj"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="loy-21-mYg" secondAttribute="trailing" id="dzO-WH-zct"/>
+                <constraint firstItem="loy-21-mYg" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="sbh-3S-KbD"/>
+                <constraint firstItem="loy-21-mYg" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="yBU-T0-Jb6"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="errorLabel" destination="mvG-RR-8tY" id="FJF-F9-KPK"/>
+                <outlet property="errorRetryButton" destination="5VB-zf-qla" id="gcs-5e-bsK"/>
+                <outlet property="errorView" destination="sp9-d4-5T3" id="daW-2v-22T"/>
+                <outlet property="loadingIndicator" destination="L3H-uE-sQw" id="K7h-pv-0xj"/>
+                <outlet property="loadingView" destination="loy-21-mYg" id="B9g-xi-7LJ"/>
+            </connections>
+            <point key="canvasLocation" x="24.5" y="51.5"/>
+        </view>
+    </objects>
+</document>

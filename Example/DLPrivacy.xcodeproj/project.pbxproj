@@ -8,6 +8,54 @@
 
 /* Begin PBXBuildFile section */
 		229F8896F030366F1F9D6C56 /* Pods_DLPrivacyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5012179E2AC162ECEAD17560 /* Pods_DLPrivacyTests.framework */; };
+		7D00E71620A2E940006C27CC /* CMPEventListeners.js in Resources */ = {isa = PBXBuildFile; fileRef = 7D00E71520A2E940006C27CC /* CMPEventListeners.js */; };
+		7D00E71720A2E940006C27CC /* CMPEventListeners.js in Resources */ = {isa = PBXBuildFile; fileRef = 7D00E71520A2E940006C27CC /* CMPEventListeners.js */; };
+		7D00E71820A2E940006C27CC /* CMPEventListeners.js in Resources */ = {isa = PBXBuildFile; fileRef = 7D00E71520A2E940006C27CC /* CMPEventListeners.js */; };
+		7D00E71A20A2ED02006C27CC /* Privacy+Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D00E71920A2ED02006C27CC /* Privacy+Bundle.swift */; };
+		7D00E71B20A2ED02006C27CC /* Privacy+Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D00E71920A2ED02006C27CC /* Privacy+Bundle.swift */; };
+		7D00E71C20A2ED02006C27CC /* Privacy+Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D00E71920A2ED02006C27CC /* Privacy+Bundle.swift */; };
+		7D00E71E20A2F014006C27CC /* Privacy+WKScriptMessageHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D00E71D20A2F014006C27CC /* Privacy+WKScriptMessageHandler.swift */; };
+		7D00E71F20A2F014006C27CC /* Privacy+WKScriptMessageHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D00E71D20A2F014006C27CC /* Privacy+WKScriptMessageHandler.swift */; };
+		7D00E72020A2F014006C27CC /* Privacy+WKScriptMessageHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D00E71D20A2F014006C27CC /* Privacy+WKScriptMessageHandler.swift */; };
+		7D00E72320A2F32B006C27CC /* WKScriptMessageHandlerWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D00E72220A2F32B006C27CC /* WKScriptMessageHandlerWrapper.swift */; };
+		7D00E72420A2F32B006C27CC /* WKScriptMessageHandlerWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D00E72220A2F32B006C27CC /* WKScriptMessageHandlerWrapper.swift */; };
+		7D00E72520A2F32B006C27CC /* WKScriptMessageHandlerWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D00E72220A2F32B006C27CC /* WKScriptMessageHandlerWrapper.swift */; };
+		7D00E72720A2F4E8006C27CC /* CMPEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D00E72620A2F4E8006C27CC /* CMPEvent.swift */; };
+		7D00E72820A2F4E8006C27CC /* CMPEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D00E72620A2F4E8006C27CC /* CMPEvent.swift */; };
+		7D00E72920A2F4E8006C27CC /* CMPEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D00E72620A2F4E8006C27CC /* CMPEvent.swift */; };
+		7D00E72B20A3077C006C27CC /* PrivacyDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D00E72A20A3077C006C27CC /* PrivacyDelegate.swift */; };
+		7D00E72C20A3077C006C27CC /* PrivacyDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D00E72A20A3077C006C27CC /* PrivacyDelegate.swift */; };
+		7D00E72D20A3077C006C27CC /* PrivacyDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D00E72A20A3077C006C27CC /* PrivacyDelegate.swift */; };
+		7D00E73620A32BE8006C27CC /* PrivacyFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D00E73520A32BE8006C27CC /* PrivacyFormView.swift */; };
+		7D00E73720A32BE8006C27CC /* PrivacyFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D00E73520A32BE8006C27CC /* PrivacyFormView.swift */; };
+		7D00E73820A32BE8006C27CC /* PrivacyFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D00E73520A32BE8006C27CC /* PrivacyFormView.swift */; };
+		7D00E74220A331F9006C27CC /* AppSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D00E74120A331F9006C27CC /* AppSDK.m */; };
+		7D00E74320A331F9006C27CC /* AppSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D00E74120A331F9006C27CC /* AppSDK.m */; };
+		7D00E74420A331F9006C27CC /* AppSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D00E74120A331F9006C27CC /* AppSDK.m */; };
+		7D00E74620A3372B006C27CC /* PrivacyFormView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D00E74520A3372B006C27CC /* PrivacyFormView.xib */; };
+		7D00E74720A3372B006C27CC /* PrivacyFormView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D00E74520A3372B006C27CC /* PrivacyFormView.xib */; };
+		7D00E74820A3372B006C27CC /* PrivacyFormView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D00E74520A3372B006C27CC /* PrivacyFormView.xib */; };
+		7D2AD86020A2D27E00E86996 /* Privacy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2AD85F20A2D27E00E86996 /* Privacy.swift */; };
+		7D2AD86120A2D27E00E86996 /* Privacy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2AD85F20A2D27E00E86996 /* Privacy.swift */; };
+		7D2AD86220A2D63700E86996 /* Privacy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2AD85F20A2D27E00E86996 /* Privacy.swift */; };
+		7D2AD86520A2DAA700E86996 /* CMPAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2AD86420A2DAA700E86996 /* CMPAction.swift */; };
+		7D2AD86620A2DAA700E86996 /* CMPAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2AD86420A2DAA700E86996 /* CMPAction.swift */; };
+		7D2AD86720A2DAA700E86996 /* CMPAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2AD86420A2DAA700E86996 /* CMPAction.swift */; };
+		7D61B55A20A4206A00C4BCD3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7D61B55E20A4206A00C4BCD3 /* Localizable.strings */; };
+		7D61B55B20A4206A00C4BCD3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7D61B55E20A4206A00C4BCD3 /* Localizable.strings */; };
+		7D61B55C20A4206A00C4BCD3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7D61B55E20A4206A00C4BCD3 /* Localizable.strings */; };
+		7D61B56120A42D0700C4BCD3 /* Privacy+WKNavigationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D61B56020A42D0700C4BCD3 /* Privacy+WKNavigationDelegate.swift */; };
+		7D61B56220A42D0700C4BCD3 /* Privacy+WKNavigationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D61B56020A42D0700C4BCD3 /* Privacy+WKNavigationDelegate.swift */; };
+		7D61B56320A42D0700C4BCD3 /* Privacy+WKNavigationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D61B56020A42D0700C4BCD3 /* Privacy+WKNavigationDelegate.swift */; };
+		7D61B56520A430FB00C4BCD3 /* PrivacyModuleState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D61B56420A430FB00C4BCD3 /* PrivacyModuleState.swift */; };
+		7D61B56620A430FB00C4BCD3 /* PrivacyModuleState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D61B56420A430FB00C4BCD3 /* PrivacyModuleState.swift */; };
+		7D61B56720A430FB00C4BCD3 /* PrivacyModuleState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D61B56420A430FB00C4BCD3 /* PrivacyModuleState.swift */; };
+		7D61B56920A4501400C4BCD3 /* PrivacyFormViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D61B56820A4501400C4BCD3 /* PrivacyFormViewDelegate.swift */; };
+		7D61B56A20A4501400C4BCD3 /* PrivacyFormViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D61B56820A4501400C4BCD3 /* PrivacyFormViewDelegate.swift */; };
+		7D61B56B20A4501400C4BCD3 /* PrivacyFormViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D61B56820A4501400C4BCD3 /* PrivacyFormViewDelegate.swift */; };
+		7D61B56D20A4528B00C4BCD3 /* Privacy+PrivacyFormViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D61B56C20A4528B00C4BCD3 /* Privacy+PrivacyFormViewDelegate.swift */; };
+		7D61B56E20A4528B00C4BCD3 /* Privacy+PrivacyFormViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D61B56C20A4528B00C4BCD3 /* Privacy+PrivacyFormViewDelegate.swift */; };
+		7D61B56F20A4528B00C4BCD3 /* Privacy+PrivacyFormViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D61B56C20A4528B00C4BCD3 /* Privacy+PrivacyFormViewDelegate.swift */; };
 		7E09B2511CBB8C7000122878 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09B2501CBB8C7000122878 /* AppDelegate.swift */; };
 		7E09B2531CBB8C7000122878 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09B2521CBB8C7000122878 /* ViewController.swift */; };
 		7E09B2561CBB8C7000122878 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E09B2541CBB8C7000122878 /* Main.storyboard */; };
@@ -32,9 +80,6 @@
 		AE7D381955FB9226891AA5E3 /* Pods_DLPrivacyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D980329D40A70CC4B46C7B2 /* Pods_DLPrivacyUITests.framework */; };
 		D0AF5C3FA75B923037779AFE /* Pods_DLPrivacy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9226EA7C315E6F5C020942CE /* Pods_DLPrivacy.framework */; };
 		D520B166504CBBE214EAA585 /* Pods_DLPrivacyUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61755ECBF06B4989503D4678 /* Pods_DLPrivacyUI.framework */; };
-		D558E6F21CDB85D20055F30A /* ExampleClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D558E6F11CDB85D20055F30A /* ExampleClass.swift */; };
-		D558E6F31CDB85D20055F30A /* ExampleClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D558E6F11CDB85D20055F30A /* ExampleClass.swift */; };
-		D56146801CDC7CBF00317A06 /* ExampleClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D558E6F11CDB85D20055F30A /* ExampleClass.swift */; };
 		D58CC4441CBD70AD00DDE147 /* CustomCocoaLumberjackInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09B29B1CBB966600122878 /* CustomCocoaLumberjackInitializer.swift */; };
 		D58CC44B1CBD70C800DDE147 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09B2521CBB8C7000122878 /* ViewController.swift */; };
 		D58CC44C1CBD711B00DDE147 /* EnvironmentSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09B2A41CBB967900122878 /* EnvironmentSettings.swift */; };
@@ -78,6 +123,28 @@
 		61755ECBF06B4989503D4678 /* Pods_DLPrivacyUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DLPrivacyUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F38241F705D92635B63C41A /* Pods-DLPrivacyUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DLPrivacyUI.release.xcconfig"; path = "Pods/Target Support Files/Pods-DLPrivacyUI/Pods-DLPrivacyUI.release.xcconfig"; sourceTree = "<group>"; };
 		73B5516E45A10E523F7691EF /* Pods-DLPrivacyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DLPrivacyUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DLPrivacyUITests/Pods-DLPrivacyUITests.release.xcconfig"; sourceTree = "<group>"; };
+		7D00E71520A2E940006C27CC /* CMPEventListeners.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = CMPEventListeners.js; sourceTree = "<group>"; };
+		7D00E71920A2ED02006C27CC /* Privacy+Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Privacy+Bundle.swift"; sourceTree = "<group>"; };
+		7D00E71D20A2F014006C27CC /* Privacy+WKScriptMessageHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Privacy+WKScriptMessageHandler.swift"; sourceTree = "<group>"; };
+		7D00E72220A2F32B006C27CC /* WKScriptMessageHandlerWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WKScriptMessageHandlerWrapper.swift; sourceTree = "<group>"; };
+		7D00E72620A2F4E8006C27CC /* CMPEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMPEvent.swift; sourceTree = "<group>"; };
+		7D00E72A20A3077C006C27CC /* PrivacyDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyDelegate.swift; sourceTree = "<group>"; };
+		7D00E73520A32BE8006C27CC /* PrivacyFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyFormView.swift; sourceTree = "<group>"; };
+		7D00E73920A32E65006C27CC /* DLPrivacy-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DLPrivacy-Bridging-Header.h"; sourceTree = "<group>"; };
+		7D00E73A20A32E65006C27CC /* DLPrivacyUI-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DLPrivacyUI-Bridging-Header.h"; sourceTree = "<group>"; };
+		7D00E73B20A32E65006C27CC /* DLPrivacyTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DLPrivacyTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		7D00E74020A331F9006C27CC /* AppSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppSDK.h; sourceTree = "<group>"; };
+		7D00E74120A331F9006C27CC /* AppSDK.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppSDK.m; sourceTree = "<group>"; };
+		7D00E74520A3372B006C27CC /* PrivacyFormView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PrivacyFormView.xib; sourceTree = "<group>"; };
+		7D2AD85F20A2D27E00E86996 /* Privacy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Privacy.swift; sourceTree = "<group>"; };
+		7D2AD86420A2DAA700E86996 /* CMPAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMPAction.swift; sourceTree = "<group>"; };
+		7D61B55D20A4206A00C4BCD3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		7D61B55F20A4209700C4BCD3 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Localizable.strings; sourceTree = "<group>"; };
+		7D61B56020A42D0700C4BCD3 /* Privacy+WKNavigationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Privacy+WKNavigationDelegate.swift"; sourceTree = "<group>"; };
+		7D61B56420A430FB00C4BCD3 /* PrivacyModuleState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyModuleState.swift; sourceTree = "<group>"; };
+		7D61B56820A4501400C4BCD3 /* PrivacyFormViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyFormViewDelegate.swift; sourceTree = "<group>"; };
+		7D61B56C20A4528B00C4BCD3 /* Privacy+PrivacyFormViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Privacy+PrivacyFormViewDelegate.swift"; sourceTree = "<group>"; };
+		7D61B57020A45FC800C4BCD3 /* DLPrivacy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLPrivacy.h; sourceTree = "<group>"; };
 		7E09B24D1CBB8C6F00122878 /* DLPrivacy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DLPrivacy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E09B2501CBB8C7000122878 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7E09B2521CBB8C7000122878 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -104,7 +171,6 @@
 		B3F9B44754735EBCEBFC039A /* Pods-DLPrivacy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DLPrivacy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DLPrivacy/Pods-DLPrivacy.debug.xcconfig"; sourceTree = "<group>"; };
 		BBE799287C6D6F3CC012DA86 /* Pods-DLPrivacyTests.alpha.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DLPrivacyTests.alpha.xcconfig"; path = "Pods/Target Support Files/Pods-DLPrivacyTests/Pods-DLPrivacyTests.alpha.xcconfig"; sourceTree = "<group>"; };
 		C91B91655D247F548D796DB5 /* Pods-DLPrivacyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DLPrivacyUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DLPrivacyUITests/Pods-DLPrivacyUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		D558E6F11CDB85D20055F30A /* ExampleClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleClass.swift; sourceTree = "<group>"; };
 		D5F7C7561CEDE6790048A0B5 /* DLPrivacy.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = DLPrivacy.podspec; path = ../DLPrivacy.podspec; sourceTree = "<group>"; };
 		D5F7C7571CEDE6790048A0B5 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		D5F7C7581CEDE6790048A0B5 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
@@ -165,6 +231,84 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		7D00E71320A2E227006C27CC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7D00E73320A32B7B006C27CC /* Scripts */,
+				7D61B55520A4204200C4BCD3 /* Strings */,
+				7D00E73220A32B73006C27CC /* Views */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		7D00E72120A2F31E006C27CC /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				7D00E72220A2F32B006C27CC /* WKScriptMessageHandlerWrapper.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		7D00E73220A32B73006C27CC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7D00E74520A3372B006C27CC /* PrivacyFormView.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7D00E73320A32B7B006C27CC /* Scripts */ = {
+			isa = PBXGroup;
+			children = (
+				7D00E71520A2E940006C27CC /* CMPEventListeners.js */,
+			);
+			path = Scripts;
+			sourceTree = "<group>";
+		};
+		7D2AD86320A2DA5700E86996 /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				7D2AD86420A2DAA700E86996 /* CMPAction.swift */,
+				7D00E72620A2F4E8006C27CC /* CMPEvent.swift */,
+				7D61B56420A430FB00C4BCD3 /* PrivacyModuleState.swift */,
+			);
+			path = Enum;
+			sourceTree = "<group>";
+		};
+		7D61B55520A4204200C4BCD3 /* Strings */ = {
+			isa = PBXGroup;
+			children = (
+				7D61B55E20A4206A00C4BCD3 /* Localizable.strings */,
+			);
+			path = Strings;
+			sourceTree = "<group>";
+		};
+		7D61B57120A471E800C4BCD3 /* Public */ = {
+			isa = PBXGroup;
+			children = (
+				7D2AD85F20A2D27E00E86996 /* Privacy.swift */,
+				7D00E72A20A3077C006C27CC /* PrivacyDelegate.swift */,
+				7D00E73520A32BE8006C27CC /* PrivacyFormView.swift */,
+				7D00E74020A331F9006C27CC /* AppSDK.h */,
+				7D00E74120A331F9006C27CC /* AppSDK.m */,
+			);
+			path = Public;
+			sourceTree = "<group>";
+		};
+		7D61B57220A471EE00C4BCD3 /* Private */ = {
+			isa = PBXGroup;
+			children = (
+				7D61B56020A42D0700C4BCD3 /* Privacy+WKNavigationDelegate.swift */,
+				7D00E71D20A2F014006C27CC /* Privacy+WKScriptMessageHandler.swift */,
+				7D61B56C20A4528B00C4BCD3 /* Privacy+PrivacyFormViewDelegate.swift */,
+				7D00E71920A2ED02006C27CC /* Privacy+Bundle.swift */,
+				7D61B56820A4501400C4BCD3 /* PrivacyFormViewDelegate.swift */,
+				7D2AD86320A2DA5700E86996 /* Enum */,
+				7D00E72120A2F31E006C27CC /* Utils */,
+			);
+			path = Private;
+			sourceTree = "<group>";
+		};
 		7E09B2441CBB8C6F00122878 = {
 			isa = PBXGroup;
 			children = (
@@ -194,6 +338,9 @@
 		7E09B24F1CBB8C7000122878 /* DLPrivacy */ = {
 			isa = PBXGroup;
 			children = (
+				7D00E73920A32E65006C27CC /* DLPrivacy-Bridging-Header.h */,
+				7D00E73A20A32E65006C27CC /* DLPrivacyUI-Bridging-Header.h */,
+				7D00E73B20A32E65006C27CC /* DLPrivacyTests-Bridging-Header.h */,
 				7E09B2A31CBB967000122878 /* Helpers */,
 				7E09B2981CBB965400122878 /* Initializers */,
 				7E09B2501CBB8C7000122878 /* AppDelegate.swift */,
@@ -266,6 +413,8 @@
 		D558E6EF1CDB85810055F30A /* Pod */ = {
 			isa = PBXGroup;
 			children = (
+				7D61B57020A45FC800C4BCD3 /* DLPrivacy.h */,
+				7D00E71320A2E227006C27CC /* Resources */,
 				D558E6F01CDB859C0055F30A /* Classes */,
 			);
 			name = Pod;
@@ -275,7 +424,8 @@
 		D558E6F01CDB859C0055F30A /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				D558E6F11CDB85D20055F30A /* ExampleClass.swift */,
+				7D61B57120A471E800C4BCD3 /* Public */,
+				7D61B57220A471EE00C4BCD3 /* Private */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -403,23 +553,24 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = DreamLab;
 				TargetAttributes = {
 					7E09B24C1CBB8C6F00122878 = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = 97W46277W4;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 0930;
 						ProvisioningStyle = Manual;
 					};
 					7E09B2601CBB8C7000122878 = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = 97W46277W4;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 0930;
 						ProvisioningStyle = Manual;
 					};
 					7E09B2701CBB8C7F00122878 = {
 						DevelopmentTeam = 97W46277W4;
+						LastSwiftMigration = 0930;
 						ProvisioningStyle = Manual;
 					};
 					7E09B2811CBB8CAD00122878 = {
@@ -442,6 +593,7 @@
 			knownRegions = (
 				en,
 				Base,
+				pl,
 			);
 			mainGroup = 7E09B2441CBB8C6F00122878;
 			productRefGroup = 7E09B24E1CBB8C6F00122878 /* Products */;
@@ -463,8 +615,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E09B25B1CBB8C7000122878 /* LaunchScreen.storyboard in Resources */,
+				7D61B55A20A4206A00C4BCD3 /* Localizable.strings in Resources */,
 				7E09B2581CBB8C7000122878 /* Assets.xcassets in Resources */,
+				7D00E71620A2E940006C27CC /* CMPEventListeners.js in Resources */,
 				7E09B2561CBB8C7000122878 /* Main.storyboard in Resources */,
+				7D00E74620A3372B006C27CC /* PrivacyFormView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -472,6 +627,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D00E71820A2E940006C27CC /* CMPEventListeners.js in Resources */,
+				7D61B55C20A4206A00C4BCD3 /* Localizable.strings in Resources */,
+				7D00E74820A3372B006C27CC /* PrivacyFormView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -480,8 +638,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E09B2761CBB8C7F00122878 /* LaunchScreen.storyboard in Resources */,
+				7D61B55B20A4206A00C4BCD3 /* Localizable.strings in Resources */,
 				7E09B2771CBB8C7F00122878 /* Assets.xcassets in Resources */,
+				7D00E71720A2E940006C27CC /* CMPEventListeners.js in Resources */,
 				7E09B2781CBB8C7F00122878 /* Main.storyboard in Resources */,
+				7D00E74720A3372B006C27CC /* PrivacyFormView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -760,12 +921,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D2AD86520A2DAA700E86996 /* CMPAction.swift in Sources */,
+				7D61B56920A4501400C4BCD3 /* PrivacyFormViewDelegate.swift in Sources */,
 				7E09B2A21CBB966600122878 /* FabricInitializer.swift in Sources */,
 				7E09B2A01CBB966600122878 /* CustomCocoaLumberjackInitializer.swift in Sources */,
+				7D61B56120A42D0700C4BCD3 /* Privacy+WKNavigationDelegate.swift in Sources */,
+				7D61B56D20A4528B00C4BCD3 /* Privacy+PrivacyFormViewDelegate.swift in Sources */,
+				7D00E72B20A3077C006C27CC /* PrivacyDelegate.swift in Sources */,
+				7D00E74220A331F9006C27CC /* AppSDK.m in Sources */,
+				7D00E72320A2F32B006C27CC /* WKScriptMessageHandlerWrapper.swift in Sources */,
 				7E09B2A51CBB967900122878 /* EnvironmentSettings.swift in Sources */,
-				D558E6F21CDB85D20055F30A /* ExampleClass.swift in Sources */,
+				7D00E71A20A2ED02006C27CC /* Privacy+Bundle.swift in Sources */,
 				7E09B2531CBB8C7000122878 /* ViewController.swift in Sources */,
+				7D61B56520A430FB00C4BCD3 /* PrivacyModuleState.swift in Sources */,
+				7D2AD86020A2D27E00E86996 /* Privacy.swift in Sources */,
 				7E09B2511CBB8C7000122878 /* AppDelegate.swift in Sources */,
+				7D00E73620A32BE8006C27CC /* PrivacyFormView.swift in Sources */,
+				7D00E71E20A2F014006C27CC /* Privacy+WKScriptMessageHandler.swift in Sources */,
+				7D00E72720A2F4E8006C27CC /* CMPEvent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -773,13 +946,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D00E72020A2F014006C27CC /* Privacy+WKScriptMessageHandler.swift in Sources */,
+				7D61B56720A430FB00C4BCD3 /* PrivacyModuleState.swift in Sources */,
+				7D61B56B20A4501400C4BCD3 /* PrivacyFormViewDelegate.swift in Sources */,
+				7D2AD86720A2DAA700E86996 /* CMPAction.swift in Sources */,
+				7D00E71C20A2ED02006C27CC /* Privacy+Bundle.swift in Sources */,
 				D58CC4441CBD70AD00DDE147 /* CustomCocoaLumberjackInitializer.swift in Sources */,
+				7D00E72520A2F32B006C27CC /* WKScriptMessageHandlerWrapper.swift in Sources */,
+				7D61B56320A42D0700C4BCD3 /* Privacy+WKNavigationDelegate.swift in Sources */,
 				D58CC44C1CBD711B00DDE147 /* EnvironmentSettings.swift in Sources */,
+				7D00E74420A331F9006C27CC /* AppSDK.m in Sources */,
 				7E09B2661CBB8C7000122878 /* DLPrivacyTests.swift in Sources */,
 				7EBD25F61CBE37B100C21E8F /* FabricInitializer.swift in Sources */,
+				7D00E73820A32BE8006C27CC /* PrivacyFormView.swift in Sources */,
 				D58CC44B1CBD70C800DDE147 /* ViewController.swift in Sources */,
+				7D2AD86220A2D63700E86996 /* Privacy.swift in Sources */,
+				7D00E72D20A3077C006C27CC /* PrivacyDelegate.swift in Sources */,
 				7EBD25F51CBE36C100C21E8F /* AppDelegate.swift in Sources */,
-				D56146801CDC7CBF00317A06 /* ExampleClass.swift in Sources */,
+				7D00E72920A2F4E8006C27CC /* CMPEvent.swift in Sources */,
+				7D61B56F20A4528B00C4BCD3 /* Privacy+PrivacyFormViewDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -787,12 +972,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D2AD86620A2DAA700E86996 /* CMPAction.swift in Sources */,
+				7D61B56A20A4501400C4BCD3 /* PrivacyFormViewDelegate.swift in Sources */,
 				7E09B2B71CBB993A00122878 /* CustomCocoaLumberjackInitializer.swift in Sources */,
 				7E09B2721CBB8C7F00122878 /* ViewController.swift in Sources */,
-				D558E6F31CDB85D20055F30A /* ExampleClass.swift in Sources */,
+				7D61B56220A42D0700C4BCD3 /* Privacy+WKNavigationDelegate.swift in Sources */,
+				7D61B56E20A4528B00C4BCD3 /* Privacy+PrivacyFormViewDelegate.swift in Sources */,
+				7D00E72C20A3077C006C27CC /* PrivacyDelegate.swift in Sources */,
+				7D00E74320A331F9006C27CC /* AppSDK.m in Sources */,
+				7D00E72420A2F32B006C27CC /* WKScriptMessageHandlerWrapper.swift in Sources */,
 				7E09B2731CBB8C7F00122878 /* AppDelegate.swift in Sources */,
+				7D00E71B20A2ED02006C27CC /* Privacy+Bundle.swift in Sources */,
 				7E09B2B81CBB993D00122878 /* FabricInitializer.swift in Sources */,
+				7D61B56620A430FB00C4BCD3 /* PrivacyModuleState.swift in Sources */,
+				7D2AD86120A2D27E00E86996 /* Privacy.swift in Sources */,
 				7E09B2B41CBB993100122878 /* EnvironmentSettings.swift in Sources */,
+				7D00E73720A32BE8006C27CC /* PrivacyFormView.swift in Sources */,
+				7D00E71F20A2F014006C27CC /* Privacy+WKScriptMessageHandler.swift in Sources */,
+				7D00E72820A2F4E8006C27CC /* CMPEvent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -833,6 +1030,15 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		7D61B55E20A4206A00C4BCD3 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7D61B55D20A4206A00C4BCD3 /* en */,
+				7D61B55F20A4209700C4BCD3 /* pl */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		7E09B2541CBB8C7000122878 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -858,6 +1064,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				BUNDLE_DISPLAY_NAME_SUFFIX = "Δ";
 				BUNDLE_ID_SUFFIX = .dev;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -867,12 +1074,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -919,6 +1128,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				BUNDLE_DISPLAY_NAME_SUFFIX = "";
 				BUNDLE_ID_SUFFIX = "";
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -928,12 +1138,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -974,9 +1186,12 @@
 			baseConfigurationReference = B3F9B44754735EBCEBFC039A /* Pods-DLPrivacy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = DLPrivacy/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				SWIFT_OBJC_BRIDGING_HEADER = "DLPrivacy/DLPrivacy-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -985,9 +1200,11 @@
 			baseConfigurationReference = A8775C9F65078915BF9EA826 /* Pods-DLPrivacy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = DLPrivacy/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				SWIFT_OBJC_BRIDGING_HEADER = "DLPrivacy/DLPrivacy-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -995,10 +1212,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 552EE9CC6390F3F700D7BE69 /* Pods-DLPrivacyTests.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = DLPrivacyTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = DL.DLPrivacyTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DLPrivacy/DLPrivacyTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -1006,10 +1226,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A9797B8F3A4CBEC017861A21 /* Pods-DLPrivacyTests.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = DLPrivacyTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = DL.DLPrivacyTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DLPrivacy/DLPrivacyTests-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -1018,10 +1240,13 @@
 			baseConfigurationReference = 1E61B05A06FD62BE76437F72 /* Pods-DLPrivacyUI.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = DLPrivacy/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DLPrivacy/DLPrivacyUI-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -1030,10 +1255,12 @@
 			baseConfigurationReference = 6F38241F705D92635B63C41A /* Pods-DLPrivacyUI.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = DLPrivacy/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DLPrivacy/DLPrivacyUI-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -1067,6 +1294,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				BUNDLE_DISPLAY_NAME_SUFFIX = "α";
 				BUNDLE_ID_SUFFIX = .alpha;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -1076,12 +1304,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -1123,9 +1353,12 @@
 			baseConfigurationReference = A5106936A52E97FBC5216DCF /* Pods-DLPrivacy.alpha.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = DLPrivacy/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				SWIFT_OBJC_BRIDGING_HEADER = "DLPrivacy/DLPrivacy-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Alpha;
 		};
@@ -1133,10 +1366,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BBE799287C6D6F3CC012DA86 /* Pods-DLPrivacyTests.alpha.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = DLPrivacyTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = DL.DLPrivacyTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DLPrivacy/DLPrivacyTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Alpha;
 		};
@@ -1145,10 +1381,13 @@
 			baseConfigurationReference = 60A0252E9B044582DFE718C5 /* Pods-DLPrivacyUI.alpha.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = DLPrivacy/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DLPrivacy/DLPrivacyUI-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Alpha;
 		};
