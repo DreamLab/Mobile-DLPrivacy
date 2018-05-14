@@ -18,6 +18,9 @@ public class Privacy: NSObject {
     let cmpDefaultSite = "https://m.onet.pl/?test_kwrd=vappn"
     //let cmpDefaultSite = "http://ocdn.eu/aops/mip/polityka/app_test.html?test_kwrd=vappn"
 
+    /// Default web view timeout
+    let defaultWebViewTimeout: TimeInterval = 10
+
     // MARK: Shared instance
 
     /// Shared instance
@@ -27,6 +30,9 @@ public class Privacy: NSObject {
 
     /// Underlaying "content" view
     let webview: WKWebView
+
+    /// Web view loading timer
+    var webViewLoadingTimer: Timer?
 
     /// Wrapper view with loading, error and content
     public let privacyView: PrivacyFormView
@@ -131,9 +137,8 @@ public extension Privacy {
                     delegate: PrivacyDelegate) {
         self.delegate = delegate
 
-        // Configure privacy view and set state to loading
+        // Configure privacy view
         privacyView.configure(withThemeColor: theme, buttonTextColor: buttonTextColor, font: font)
-        privacyView.showLoadingState()
 
         // Load CMP
         loadCMPSite()
@@ -267,14 +272,28 @@ extension Privacy {
             return
         }
 
+        // Set loading state
+        moduleState = .cmpLoading
+        privacyView.showLoadingState()
+
+        // Load web page
         let request = URLRequest(url: cmpURL)
         webview.load(request)
+
+        // Start loading timer
+        webViewLoadingTimer = Timer.scheduledTimer(timeInterval: defaultWebViewTimeout,
+                                                   target: self,
+                                                   selector: #selector(webViewLoadingTimeout),
+                                                   userInfo: nil,
+                                                   repeats: false)
     }
 
     /// Handle WKWebView error and show proper error state
     ///
     /// - Parameter error: Error
     func handleCMPLoadingError(_ error: Error) {
+        moduleState = .cmpError
+
         guard (error as NSError).code == NSURLErrorNotConnectedToInternet else {
             // Call delegate that privacy view should be closed and return all consents set to false
             delegate?.privacyModule(self, shouldHideConsentsForm: privacyView, andApplyConsents: allAvailableSDK)
@@ -282,7 +301,12 @@ extension Privacy {
         }
 
         privacyView.showErrorState()
-        moduleState = .cmpError
+    }
+
+    /// Called when web page was not able to load in given time
+    @objc
+    func webViewLoadingTimeout() {
+        webview.stopLoading()
     }
 
     // MARK: JavaScript evaluation / CMP actions
@@ -294,6 +318,12 @@ extension Privacy {
         guard moduleState == .cmpLoaded else {
             DDLogInfo("CMP site is not yet loaded, adding action to queue: \(cmpAction)")
             actionsQueue.append(cmpAction)
+
+            // If we are in error state, try to load web page again
+            if moduleState == .cmpError {
+                loadCMPSite()
+            }
+
             return
         }
 
