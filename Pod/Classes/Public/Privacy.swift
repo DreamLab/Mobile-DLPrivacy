@@ -173,10 +173,12 @@ public extension Privacy {
 
         for sdk in sdks {
             consents[sdk] = consentsCache.consent(for: sdk)
-        }
 
-        // TODO: [ASZ] For now Gemius is hardcoded to true
-        consents[AppSDK.Gemius] = true
+            // TODO: [ASZ] For now Gemius is hardcoded to true
+            if sdk == AppSDK.Gemius {
+                consents[AppSDK.Gemius] = true
+            }
+        }
 
         return consents
     }
