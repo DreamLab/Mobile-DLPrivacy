@@ -81,7 +81,7 @@ If you would like to skip initial consents form screen (welcome screen explainin
 
 If you would like to get user consents (without showing him the form view) you can get last saved user choices by calling method:
 ```
-let sdkInMyApp: [AppSDK] = [.GoogleAnalytics, .Fabric]
+let sdkInMyApp: [AppSDK] = [.GoogleAnalytics, .Gemius]
 _ = Privacy.shared.getSDKConsents(sdkInMyApp)
 ```
 where *sdkInMyApp* is an array of SDK you would like to enable in your app (only those predefined ones).

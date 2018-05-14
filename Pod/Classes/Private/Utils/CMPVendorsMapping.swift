@@ -17,12 +17,11 @@ class CMPVendorsMapping {
     /// AppSDK mapping in CMP system
     static let sdkMapping: [AppSDK: CMPMapping] = [
         .GoogleAnalytics: CMPMapping(vendorName: "google", purposeId: [5]),
-        .Fabric: CMPMapping(vendorName: "fabric", purposeId: [5]),
-        .Instabug: CMPMapping(vendorName: "instabug", purposeId: [5]),
-        .Branch: CMPMapping(vendorName: "branchio", purposeId: [5]),
-        .Pushwoosh: CMPMapping(vendorName: "pushwoosh", purposeId: [5]),
-        .Firebase: CMPMapping(vendorName: "firebase", purposeId: [4, 5]),
+        .FabricAnswers: CMPMapping(vendorName: "fabric", purposeId: [5]),
+        .FirebaseAnalytics: CMPMapping(vendorName: "firebase", purposeId: [5]),
+        .FirebaseRemoteConfig: CMPMapping(vendorName: "firebase", purposeId: [4]),
         .Gemius: CMPMapping(vendorName: "gemius", purposeId: [5]),
-        .Bitplaces: CMPMapping(vendorName: "bitplaces", purposeId: [3])
+        .Bitplaces: CMPMapping(vendorName: "bitplaces", purposeId: [3, 5]),
+        .GoogleConversionTracking: CMPMapping(vendorName: "google", purposeId: [3, 5])
     ]
 }

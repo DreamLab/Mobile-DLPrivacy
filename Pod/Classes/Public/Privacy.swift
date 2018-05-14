@@ -15,8 +15,8 @@ import CocoaLumberjack
 public class Privacy: NSObject {
 
     /// Default CMP Form web site
-    //let cmpDefaultSite = "https://m.onet.pl/?test_kwrd=vappn"
-    let cmpDefaultSite = "http://ocdn.eu/aops/mip/polityka/app_test.html?test_kwrd=vappn"
+    let cmpDefaultSite = "https://m.onet.pl/?test_kwrd=vappn"
+    //let cmpDefaultSite = "http://ocdn.eu/aops/mip/polityka/app_test.html?test_kwrd=vappn"
 
     // MARK: Shared instance
 
@@ -63,13 +63,12 @@ public class Privacy: NSObject {
     var allAvailableSDK: [AppSDK: Bool] {
         return [
             AppSDK.GoogleAnalytics: false,
-            AppSDK.Fabric: false,
-            AppSDK.Instabug: false,
-            AppSDK.Branch: false,
-            AppSDK.Pushwoosh: false,
-            AppSDK.Firebase: false,
-            AppSDK.Gemius: false,
-            AppSDK.Bitplaces: false
+            AppSDK.FabricAnswers: false,
+            AppSDK.FirebaseAnalytics: false,
+            AppSDK.FirebaseRemoteConfig: false,
+            AppSDK.Gemius: true, // TODO: [ASZ] For now Gemius is hardcoded to true
+            AppSDK.Bitplaces: false,
+            AppSDK.GoogleConversionTracking: false
         ]
     }
 
@@ -167,6 +166,9 @@ public extension Privacy {
         for sdk in sdks {
             consents[sdk] = consentsCache.consent(for: sdk)
         }
+
+        // TODO: [ASZ] For now Gemius is hardcoded to true
+        consents[AppSDK.Gemius] = true
 
         return consents
     }

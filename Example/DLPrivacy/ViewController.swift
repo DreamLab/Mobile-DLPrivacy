@@ -43,7 +43,7 @@ class ViewController: UIViewController {
 
         // If you want manually check (for example at next app launch) which SDK can be enabled,
         // call "getSDKConsents" passing SDK which you are interested in
-        let sdkInMyApp: [AppSDK] = [.GoogleAnalytics, .Fabric]
+        let sdkInMyApp: [AppSDK] = [.GoogleAnalytics, .Gemius]
         _ = Privacy.shared.getSDKConsents(sdkInMyApp)
 
         // Additional data
