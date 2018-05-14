@@ -226,7 +226,7 @@ extension Privacy {
         config.userContentController = wkUserController
 
         // Insert scripts
-        Privacy.jsScripts.compactMap {
+        Privacy.jsScripts.flatMap {
             guard let url = Privacy.resourcesBundle.url(forResource: $0, withExtension: "js"),
                 let jsScript = try? String(contentsOf: url) else {
                 return nil

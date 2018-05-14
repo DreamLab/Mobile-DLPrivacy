@@ -4,6 +4,8 @@ Module for gathering user consents for tools used across all company application
 
 ## Installation
 
+> Module has one dependency: 'CocoaLumberjack/Swift', '~> 3.3.0' - logger tool which you can initialize however you want or don't do it at all
+
 DLPrivacy module can be installed in two ways:
 
 **1) Manually**
@@ -14,11 +16,9 @@ Adding soure files contained inside 'Pod' directory to your project. This approa
 
 This is the recommended way of installing this module. 
 
-In your Podfile add: ```pod 'DLPrivacy``` and execute ```pod install``` or ```pod update``` command.
+In your Podfile add: ```pod 'DLPrivacy'``` and execute ```pod install``` or ```pod update``` command.
 
 >  Because module Podspec defines it as static framework - Cocoapods in version 1.5.x are required (as module contains both Swift and Obj-C files)
-
-> Module has one dependency: 'CocoaLumberjack/Swift', '~> 3.3.0' - logger tool which you can initialize however you want or don't do it at all
 
 ## Usage (Basic)
 
@@ -63,11 +63,11 @@ func privacyModule(_ module: Privacy, shouldShowConsentsForm form: PrivacyFormVi
 
 > Example below is written using Swift code snippets
 
-**Skipping welcome screen**
+### Skipping welcome screen
 
 If you would like to skip initial consents form screen (welcome screen explaining what is going on) and go directly to settings screen - you can do that by calling meethod ```showConsentsSettingsScreen()``` on *PrivacyFormView* object (instead of calling ```showConsentsWelcomeScreen()``` method).
 
-**Get saved user consents**
+### Get saved user consents
 
 If you would like to get user consents (without showing him the form view) you can get last saved user choices by calling method:
 ```
@@ -76,7 +76,7 @@ _ = Privacy.shared.getSDKConsents(sdkInMyApp)
 ```
 where *sdkInMyApp* is an array of SDK you would like to enable in your app (only those predefined ones).
 
-**Check if application can show personalized ads**
+### Check if application can show personalized ads
 
 To check if application can show personalized ads (either rectangle/native ads or video ads) call asynchronous method:
 ```
@@ -85,7 +85,7 @@ Privacy.shared.canShowPersonalizedAds { personalized in
 }
 ```
 
-**Retrieve ad identifiers user by *DLSponsoring* and *DLSplash* modules**
+### Retrieve ad identifiers user by *DLSponsoring* and *DLSplash* modules
 
 Get identifiers required by those ad modules. Method returns dictionary with named identifiers as keys.
 ```
@@ -94,7 +94,7 @@ Privacy.shared.getSponsoringAdsConsents { consents in
 }
 ```
 
-**Retrieve consent for SDK not defined in module**
+### Retrieve consent for SDK not defined in module
 
 If your application is using SDK not predefined inside *DLPrivacy* module you can still retrieve user consent for it. To do so you have to know vendor name for under which this SDK should fall and also 
 what purposes you want consent for.
