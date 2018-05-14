@@ -15,7 +15,9 @@ import CocoaLumberjack
 public class Privacy: NSObject {
 
     /// Default CMP Form web site
-    let cmpDefaultSite = "https://m.onet.pl/?test_kwrd=vappn"
+    //let cmpDefaultSite = "https://m.onet.pl/?test_kwrd=vappn"
+    let cmpDefaultSite = "http://ocdn.eu/aops/mip/polityka/app_test.html?test_kwrd=vappn"
+
 
     // MARK: Shared instance
 
@@ -199,8 +201,14 @@ public extension Privacy {
     ///
     /// - Parameter completion: Completion handler
     func canShowPersonalizedAds(_ completion: ((_ canAdsBePersonalized: Bool) -> Void)?) {
-        personalizedAdsCallback = completion
-        performAction(.canShowPersonalizedAds)
+        guard let consent = consentsCache.canShowPersonalizedAds else {
+            // Call JS if cache is empty
+            personalizedAdsCallback = completion
+            performAction(.canShowPersonalizedAds)
+            return
+        }
+
+        completion?(consent)
     }
 
     /// Get sponsoring ads consents identifiers

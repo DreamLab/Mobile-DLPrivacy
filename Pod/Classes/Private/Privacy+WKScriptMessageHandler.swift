@@ -40,7 +40,9 @@ extension Privacy: WKScriptMessageHandler {
             moduleState = .cmpLoaded
 
         case .formSubmitted:
+            // Request consents for default SDK and other things which will be cached
             requestConsentsForDefaultSDKs()
+            performAction(.canShowPersonalizedAds)
 
         case .welcomeScreenVisible, .settingsScreenVisible:
            privacyView.showContentState()
@@ -53,6 +55,12 @@ extension Privacy: WKScriptMessageHandler {
 
         case .canShowPersonalizedAds:
             let canAdsBePersonalized = (messageDict[Privacy.cmpEventPayloadKey] as? Bool) ?? false
+            DDLogInfo("Can show personalized ads JavaScript response: \(canAdsBePersonalized)")
+
+            // Store in cache
+            consentsCache.canShowPersonalizedAds = canAdsBePersonalized
+
+            // Call delegate
             personalizedAdsCallback?(canAdsBePersonalized)
             personalizedAdsCallback = nil
 

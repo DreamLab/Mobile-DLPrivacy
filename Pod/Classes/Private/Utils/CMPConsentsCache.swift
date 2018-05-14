@@ -14,6 +14,7 @@ class CMPConsentsCache {
     // MARK: Keys
 
     private let didAskUserForConsentsKey = "DLPrivacy.didAskUserForConsentsKey"
+    private let canShowPersonalizedAdsKey = "DLPrivacy.canShowPersonalizedAdsKey"
 
     private let appSDKConsentKey = "DLPrivacy.appSDKConsentKey-"
 
@@ -22,7 +23,7 @@ class CMPConsentsCache {
     /// Cache storage
     private let storage = UserDefaults.standard
 
-    // MARK: Cache
+    // MARK: Cache (Consents form)
 
     /// Did user submited privacy form at least once?
     var didAskUserForConsents: Bool {
@@ -31,6 +32,24 @@ class CMPConsentsCache {
         }
         set {
             storage.set(newValue, forKey: didAskUserForConsentsKey)
+            storage.synchronize()
+        }
+    }
+
+    // MARK: Cache (Personalized Ads)
+
+    /// Can application show personalized ads to the user
+    var canShowPersonalizedAds: Bool? {
+        get {
+            return storage.object(forKey: canShowPersonalizedAdsKey) as? Bool
+        }
+        set {
+            if newValue == nil {
+                storage.removeObject(forKey: canShowPersonalizedAdsKey)
+            } else {
+                storage.set(newValue ?? false, forKey: canShowPersonalizedAdsKey)
+            }
+
             storage.synchronize()
         }
     }

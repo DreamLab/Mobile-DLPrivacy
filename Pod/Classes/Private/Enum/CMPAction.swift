@@ -37,7 +37,7 @@ enum CMPAction {
 
         case .showSettingsScreen:
             return """
-            window.__cmp('showConsentTool', {page: "advanced"}, function(result) {
+            window.__cmp('showConsentTool', {"page": "advanced"}, function(result) {
                 webkit.messageHandlers.cmpEvents.postMessage({"event": "cmpSettingsVisible"});
             );
             """
@@ -48,7 +48,7 @@ enum CMPAction {
             let purpose = mapping.purposeId
 
             return """
-            window.dlApi.hasVendorConsentByVendorName(\(vendorName), \(purpose.description), function (hasConsent) {
+            window.dlApi.hasVendorConsentByVendorName("\(vendorName)", \(purpose.description), function (hasConsent) {
                 webkit.messageHandlers.cmpEvents.postMessage({"event": "getVendorConsent", "sdkName:": \(sdkName), "consent": hasConsent});
             });
             """

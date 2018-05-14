@@ -20,6 +20,11 @@ In your Podfile add: ```pod 'DLPrivacy'``` and execute ```pod install``` or ```p
 
 >  Because module Podspec defines it as static framework - Cocoapods in version 1.5.x are required (as module contains both Swift and Obj-C files)
 
+Then in code simply import module:
+```
+import DLPrivacy
+```
+
 ## Usage (Basic)
 
 > Example below is written using Swift code snippets
@@ -58,6 +63,11 @@ If something would have changed in consents form, you are obligated to show it a
 ```
 func privacyModule(_ module: Privacy, shouldShowConsentsForm form: PrivacyFormView)
 ```
+
+If you want to show consents form again (for example when user select this from your application menu option) you just have to add form view to hierarchy and call ```privacyView.showConsentsWelcomeScreen()``` 
+
+> IMPORTANT
+> When user is asked again for consents (after he save his choice once) view will show him afterwards screen with information that changes will be applied when app is restarted. Then when user goes to  background, *DLPrivacy* module will kill your application (while it's in background) so changes to privacy can be applied when user goes back to your app.
 
 ## Usage (Advanced)
 
