@@ -98,8 +98,8 @@ DDLogInfo("Personalized Ads: \(canAdsBePersonalized)")
 
 Get identifiers required by those modules. Returns dictionary with named identifiers as keys.
 ```
-let consents = Privacy.shared.consentsData
-DDLogInfo("Consents data: \(String(describing: consents))")
+let consents: PrivacyConsentsData = Privacy.shared.consentsData
+DDLogInfo("Consents data: \(consents.adpConsent) \(consents.pubConsent) \(consents.venConsent)")
 ```
 
 ### Retrieve consent for SDK not defined in module

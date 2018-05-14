@@ -59,8 +59,12 @@ public class Privacy: NSObject {
     /// Returns cached value if present.
     ///
     /// Cache content will be updated when again user submits consents form.
-    public var consentsData: [String: String]? {
-        return consentsCache.consentsData
+    public var consentsData: PrivacyConsentsData {
+        guard let cachedData = consentsCache.consentsData else {
+            return PrivacyConsentsData(pubConsent: "", adpConsent: "", venConsent: "")
+        }
+
+        return PrivacyConsentsData.initialize(from: cachedData)
     }
 
     /// Module state
