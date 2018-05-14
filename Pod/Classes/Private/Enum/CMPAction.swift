@@ -49,7 +49,9 @@ enum CMPAction {
 
             return """
             window.dlApi.hasVendorConsentByVendorName("\(vendorName)", \(purpose.description), function (hasConsent) {
-                webkit.messageHandlers.cmpEvents.postMessage({"event": "getVendorConsent", "sdkName:": \(sdkName), "consent": hasConsent});
+                webkit.messageHandlers.cmpEvents.postMessage(
+                    {"event": "getVendorConsent", "sdkName": "\(sdkName)", "consent": hasConsent}
+                );
             });
             """
 

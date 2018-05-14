@@ -90,10 +90,6 @@ private extension Privacy {
         performAction(.canShowPersonalizedAds)
         performAction(.getConsentsData)
         requestConsentsForDefaultSDKs()
-
-        // TODO: [ASZ] Remove this when JS API will be working
-        let consents = getSDKConsents(Array(allAvailableSDK.keys))
-        delegate?.privacyModule(self, shouldHideConsentsForm: privacyView, andApplyConsents: consents)
     }
 
     func requestConsentsForDefaultSDKs() {
@@ -106,6 +102,7 @@ private extension Privacy {
                 continue
             }
 
+            DDLogInfo("Requesting consent for: \(sdk.rawValue) from JavaScript CMP tool")
             performAction(.getVendorConsent(sdk: sdk, mapping: mapping))
         }
     }
