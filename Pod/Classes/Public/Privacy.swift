@@ -87,12 +87,6 @@ public class Privacy: NSObject {
     /// Module delegate
     weak var delegate: PrivacyDelegate?
 
-    /// Callback/completion closure for personalized ads request
-    var personalizedAdsCallback: ((_ canAdsBePersonalized: Bool) -> Void)?
-
-    /// Callback/completion closure for consents data request
-    var consentsDataCallback: ((_ consents: [String: String]?) -> Void)?
-
     /// Callback/completion closure for custom SDK consent
     var customSDKConsentCallback = [AppSDK: ((consent: Bool) -> Void)?]()
 
@@ -209,33 +203,23 @@ public extension Privacy {
     }
 
     /// Check whether application can display personalized Google Ads (DFP)
-    /// Method is asynchronous. Return cached value if present.
+    /// Method is synchronous. Return cached value if present.
+    ///
+    /// Cache content will be updated when again user submits consents form.
     ///
     /// - Parameter completion: Completion handler
-    func canShowPersonalizedAds(_ completion: ((_ canAdsBePersonalized: Bool) -> Void)?) {
-        guard let consent = consentsCache.canShowPersonalizedAds else {
-            // Call JS if cache is empty
-            personalizedAdsCallback = completion
-            performAction(.canShowPersonalizedAds)
-            return
-        }
-
-        completion?(consent)
+    func canShowPersonalizedAds() -> Bool {
+        return consentsCache.canShowPersonalizedAds ?? false
     }
 
     /// Get consents data
-    /// Method is asynchronous. Return cached value if present.
+    /// Method is synchronous. Returns cached value if present.
     ///
-    /// - Parameter completion: Completion handler
-    func getConsentsData(_ completion: ((_ consents: [String: String]?) -> Void)?) {
-        guard let sponsoringConsents = consentsCache.sponsoringAdsConsents else {
-            // Call JS if cache is empty
-            consentsDataCallback = completion
-            performAction(.getSponsoringAdsConsents)
-            return
-        }
-
-        completion?(sponsoringConsents)
+    /// Cache content will be updated when again user submits consents form.
+    ///
+    /// - Returns: [String: String]
+    func getConsentsData() -> [String: String]? {
+        return consentsCache.consentsData
     }
 }
 

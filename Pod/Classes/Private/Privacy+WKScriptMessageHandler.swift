@@ -63,18 +63,15 @@ extension Privacy: WKScriptMessageHandler {
             let canAdsBePersonalized = (messageDict[Privacy.cmpEventPayloadKey] as? Bool) ?? false
             DDLogInfo("Can show personalized ads JavaScript response: \(canAdsBePersonalized)")
 
-            handlePersonalizedAdsResponse(canAdsBePersonalized)
+            // Store in cache
+            consentsCache.canShowPersonalizedAds = canAdsBePersonalized
 
-        case .sponsoringAdsConsents:
-            let sponsoringConsents = messageDict[Privacy.cmpEventPayloadKey] as? [String: String]
-            DDLogInfo("Sponsoring ads consent JavaScript response: \(String(describing: sponsoringConsents))")
+        case .consentsData:
+            let consentsData = messageDict[Privacy.cmpEventPayloadKey] as? [String: String]
+            DDLogInfo("Consent data JavaScript response: \(String(describing: consentsData))")
 
             // Store in cache
-            consentsCache.sponsoringAdsConsents = sponsoringConsents
-
-            // Call callback
-            consentsDataCallback?(sponsoringConsents)
-            consentsDataCallback = nil
+            consentsCache.consentsData = consentsData
 
         case .error:
             DDLogInfo("JavaScript listeners for CMP were not added; error was returned.")
@@ -90,9 +87,9 @@ private extension Privacy {
 
     func formSubmittedAction() {
         // Request consents for default SDK and other things which will be cached
-        requestConsentsForDefaultSDKs()
         performAction(.canShowPersonalizedAds)
-        performAction(.getSponsoringAdsConsents)
+        performAction(.getConsentsData)
+        requestConsentsForDefaultSDKs()
     }
 
     func requestConsentsForDefaultSDKs() {
@@ -107,15 +104,6 @@ private extension Privacy {
 
             performAction(.getVendorConsent(sdk: sdk, mapping: mapping))
         }
-    }
-
-    func handlePersonalizedAdsResponse(_ canAdsBePersonalized: Bool) {
-        // Store in cache
-        consentsCache.canShowPersonalizedAds = canAdsBePersonalized
-
-        // Call callback
-        personalizedAdsCallback?(canAdsBePersonalized)
-        personalizedAdsCallback = nil
     }
 
     func handleConsentResponse(_ messageDict: [String: Any]) {

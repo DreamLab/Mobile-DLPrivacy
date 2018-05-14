@@ -90,18 +90,16 @@ where *sdkInMyApp* is an array of SDK you would like to enable in your app (only
 
 To check if application can show personalized ads (either rectangle/native ads or video ads) call asynchronous method:
 ```
-Privacy.shared.canShowPersonalizedAds { personalized in
-    DDLogInfo("Personalized ads can be enabled: \(personalized)")
-}
+let canAdsBePersonalized = Privacy.shared.canShowPersonalizedAds()
+DDLogInfo("Personalized Ads: \(canAdsBePersonalized)")
 ```
 
 ### Retrieve ad identifiers user by *DLSponsoring* and *DLSplash* modules or other entities
 
 Get identifiers required by those modules. Method returns dictionary with named identifiers as keys.
 ```
-Privacy.shared.getConsentsData { consents in
-    DDLogInfo("Consents data: \(String(describing: consents))")
-}
+let consents = Privacy.shared.getConsentsData()
+DDLogInfo("Consents data: \(String(describing: consents))")
 ```
 
 ### Retrieve consent for SDK not defined in module

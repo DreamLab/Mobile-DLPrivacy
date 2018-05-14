@@ -15,7 +15,7 @@ import Foundation
 /// - getVendorConsent: Get consent for given SDK
 /// - shouldShowConsentsForm: Check if vendors list has changed and app should show again consents form
 /// - canShowPersonalizedAds: Check if application can show personalized ads based on user consents
-/// - getSponsoringAdsConsents: Get sponsoring ads consents identifiers
+/// - getConsentsData: Get consents identifiers and values
 enum CMPAction {
 
     case showWelcomeScreen
@@ -23,7 +23,7 @@ enum CMPAction {
     case getVendorConsent(sdk: AppSDK, mapping: CMPVendorsMapping.CMPMapping)
     case shouldShowConsentsForm
     case canShowPersonalizedAds
-    case getSponsoringAdsConsents
+    case getConsentsData
 
     /// Get JavaScript code for given action
     var javaScriptCode: String {
@@ -67,10 +67,10 @@ enum CMPAction {
             });
             """
 
-        case .getSponsoringAdsConsents:
+        case .getConsentsData:
             return """
             dlApi.getConsents(function(data) {
-                webkit.messageHandlers.cmpEvents.postMessage({"event": "sponsoringAdsConsents", "payload": data});
+                webkit.messageHandlers.cmpEvents.postMessage({"event": "consentsData", "payload": data});
             });
             """
         }
