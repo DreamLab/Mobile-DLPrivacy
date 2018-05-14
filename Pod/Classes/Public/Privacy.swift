@@ -18,7 +18,6 @@ public class Privacy: NSObject {
     //let cmpDefaultSite = "https://m.onet.pl/?test_kwrd=vappn"
     let cmpDefaultSite = "http://ocdn.eu/aops/mip/polityka/app_test.html?test_kwrd=vappn"
 
-
     // MARK: Shared instance
 
     /// Shared instance
@@ -84,7 +83,7 @@ public class Privacy: NSObject {
     var personalizedAdsCallback: ((_ canAdsBePersonalized: Bool) -> Void)?
 
     /// Callback/completion closure for sponsoring ads consents request
-    var sponsoringAdsConsentsCallback: ((_ consents: [String: Any]?) -> Void)?
+    var sponsoringAdsConsentsCallback: ((_ consents: [String: String]?) -> Void)?
 
     /// Callback/completion closure for custom SDK consent
     var customSDKConsentCallback = [AppSDK: ((consent: Bool) -> Void)?]()
@@ -198,6 +197,7 @@ public extension Privacy {
     }
 
     /// Check whether application can display personalized Google Ads (DFP)
+    /// Method is asynchronous. Return cached value if present.
     ///
     /// - Parameter completion: Completion handler
     func canShowPersonalizedAds(_ completion: ((_ canAdsBePersonalized: Bool) -> Void)?) {
@@ -212,11 +212,18 @@ public extension Privacy {
     }
 
     /// Get sponsoring ads consents identifiers
+    /// Method is asynchronous. Return cached value if present.
     ///
     /// - Parameter completion: Completion handler
-    func getSponsoringAdsConsents(_ completion: ((_ consents: [String: Any]?) -> Void)?) {
-        sponsoringAdsConsentsCallback = completion
-        performAction(.getSponsoringAdsConsents)
+    func getSponsoringAdsConsents(_ completion: ((_ consents: [String: String]?) -> Void)?) {
+        guard let sponsoringConsents = consentsCache.sponsoringAdsConsents else {
+            // Call JS if cache is empty
+            sponsoringAdsConsentsCallback = completion
+            performAction(.getSponsoringAdsConsents)
+            return
+        }
+
+        completion?(sponsoringConsents)
     }
 }
 

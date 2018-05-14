@@ -43,6 +43,7 @@ extension Privacy: WKScriptMessageHandler {
             // Request consents for default SDK and other things which will be cached
             requestConsentsForDefaultSDKs()
             performAction(.canShowPersonalizedAds)
+            performAction(.getSponsoringAdsConsents)
 
         case .welcomeScreenVisible, .settingsScreenVisible:
            privacyView.showContentState()
@@ -60,12 +61,18 @@ extension Privacy: WKScriptMessageHandler {
             // Store in cache
             consentsCache.canShowPersonalizedAds = canAdsBePersonalized
 
-            // Call delegate
+            // Call callback
             personalizedAdsCallback?(canAdsBePersonalized)
             personalizedAdsCallback = nil
 
         case .sponsoringAdsConsents:
-            let sponsoringConsents = messageDict[Privacy.cmpEventPayloadKey] as? [String: Any]
+            let sponsoringConsents = messageDict[Privacy.cmpEventPayloadKey] as? [String: String]
+            DDLogInfo("Sponsoring ads consent JavaScript response: \(String(describing: sponsoringConsents))")
+
+            // Store in cache
+            consentsCache.sponsoringAdsConsents = sponsoringConsents
+
+            // Call callback
             sponsoringAdsConsentsCallback?(sponsoringConsents)
             sponsoringAdsConsentsCallback = nil
 

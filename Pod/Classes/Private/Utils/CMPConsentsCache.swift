@@ -15,6 +15,7 @@ class CMPConsentsCache {
 
     private let didAskUserForConsentsKey = "DLPrivacy.didAskUserForConsentsKey"
     private let canShowPersonalizedAdsKey = "DLPrivacy.canShowPersonalizedAdsKey"
+    private let sponsoringAdsConsentsKey = "DLPrivacy.sponsoringAdsConsentsKey"
 
     private let appSDKConsentKey = "DLPrivacy.appSDKConsentKey-"
 
@@ -48,6 +49,24 @@ class CMPConsentsCache {
                 storage.removeObject(forKey: canShowPersonalizedAdsKey)
             } else {
                 storage.set(newValue ?? false, forKey: canShowPersonalizedAdsKey)
+            }
+
+            storage.synchronize()
+        }
+    }
+
+    // MARK: Cache (Sponsoring identifiers)
+
+    /// Get sponsoring consent identifiers
+    var sponsoringAdsConsents: [String: String]? {
+        get {
+            return storage.object(forKey: sponsoringAdsConsentsKey) as? [String: String]
+        }
+        set {
+            if newValue == nil {
+                storage.removeObject(forKey: sponsoringAdsConsentsKey)
+            } else {
+                storage.set(newValue, forKey: sponsoringAdsConsentsKey)
             }
 
             storage.synchronize()
