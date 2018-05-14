@@ -34,6 +34,9 @@ public class Privacy: NSObject {
     /// Web view loading timer
     var webViewLoadingTimer: Timer?
 
+    /// Web view host page loaded?
+    var webViewHostPageLoaded = false
+
     /// Wrapper view with loading, error and content
     public let privacyView: PrivacyFormView
 
@@ -274,6 +277,7 @@ extension Privacy {
 
         // Set loading state
         moduleState = .cmpLoading
+        webViewHostPageLoaded = false
         privacyView.showLoadingState()
 
         // Load web page
@@ -292,6 +296,8 @@ extension Privacy {
     ///
     /// - Parameter error: Error
     func handleCMPLoadingError(_ error: Error) {
+        DDLogInfo("Loading web page error: \(error.localizedDescription); \(error as NSError)")
+
         moduleState = .cmpError
 
         guard (error as NSError).code == NSURLErrorNotConnectedToInternet else {
@@ -307,6 +313,12 @@ extension Privacy {
     @objc
     func webViewLoadingTimeout() {
         webview.stopLoading()
+
+        if webViewHostPageLoaded {
+            // Send error manually so we can exist form view
+            let error = NSError(domain: "CMP", code: -1, userInfo: nil)
+            handleCMPLoadingError(error)
+        }
     }
 
     // MARK: JavaScript evaluation / CMP actions

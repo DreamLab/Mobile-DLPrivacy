@@ -18,8 +18,7 @@ extension Privacy: WKNavigationDelegate {
     public func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         DDLogInfo("Loading web page has been completed")
 
-        webViewLoadingTimer?.invalidate()
-        webViewLoadingTimer = nil
+        webViewHostPageLoaded = true
     }
 
     public func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
@@ -27,8 +26,6 @@ extension Privacy: WKNavigationDelegate {
     }
 
     public func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: Error) {
-        print("error: \(error.localizedDescription) \(error as NSError)")
-
         handleCMPLoadingError(error)
     }
 

@@ -37,6 +37,11 @@ extension Privacy: WKScriptMessageHandler {
             return
 
         case .formReady:
+            DDLogInfo("CMP form ready, cancelling loading timer...")
+
+            webViewLoadingTimer?.invalidate()
+            webViewLoadingTimer = nil
+
             moduleState = .cmpLoaded
 
         case .formSubmitted:
@@ -77,7 +82,6 @@ extension Privacy: WKScriptMessageHandler {
             sponsoringAdsConsentsCallback = nil
 
         case .error:
-            moduleState = .cmpError
             let error = NSError(domain: "CMP", code: -1, userInfo: nil)
             handleCMPLoadingError(error)
         }
