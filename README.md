@@ -96,7 +96,7 @@ DDLogInfo("Personalized Ads: \(canAdsBePersonalized)")
 
 ### Retrieve ad identifiers user by *DLSponsoring* and *DLSplash* modules or other entities
 
-Get identifiers required by those modules. Returns dictionary with named identifiers as keys.
+Get identifiers required by those modules. Returns PrivacyConsentsData class with available consents data.
 ```
 let consents: PrivacyConsentsData = Privacy.shared.consentsData
 DDLogInfo("Consents data: \(consents.adpConsent) \(consents.pubConsent) \(consents.venConsent)")
