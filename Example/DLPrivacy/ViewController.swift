@@ -53,9 +53,9 @@ class ViewController: UIViewController {
             DDLogInfo("Personalized Ads: \(canAdsBePersonalized)")
         }
 
-        // You can retrieve consents ids user by sponsoring ads
-        Privacy.shared.getSponsoringAdsConsents { consents in
-            DDLogInfo("Sponsoring consents: \(String(describing: consents))")
+        // You can retrieve consents ids for user
+        Privacy.shared.getConsentsData { consents in
+            DDLogInfo("Consents data: \(String(describing: consents))")
         }
 
         // If your SDK is not predefined in Privacy module, you can pass value from rawValue with given SDK codename

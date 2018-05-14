@@ -90,8 +90,8 @@ public class Privacy: NSObject {
     /// Callback/completion closure for personalized ads request
     var personalizedAdsCallback: ((_ canAdsBePersonalized: Bool) -> Void)?
 
-    /// Callback/completion closure for sponsoring ads consents request
-    var sponsoringAdsConsentsCallback: ((_ consents: [String: String]?) -> Void)?
+    /// Callback/completion closure for consents data request
+    var consentsDataCallback: ((_ consents: [String: String]?) -> Void)?
 
     /// Callback/completion closure for custom SDK consent
     var customSDKConsentCallback = [AppSDK: ((consent: Bool) -> Void)?]()
@@ -223,14 +223,14 @@ public extension Privacy {
         completion?(consent)
     }
 
-    /// Get sponsoring ads consents identifiers
+    /// Get consents data
     /// Method is asynchronous. Return cached value if present.
     ///
     /// - Parameter completion: Completion handler
-    func getSponsoringAdsConsents(_ completion: ((_ consents: [String: String]?) -> Void)?) {
+    func getConsentsData(_ completion: ((_ consents: [String: String]?) -> Void)?) {
         guard let sponsoringConsents = consentsCache.sponsoringAdsConsents else {
             // Call JS if cache is empty
-            sponsoringAdsConsentsCallback = completion
+            consentsDataCallback = completion
             performAction(.getSponsoringAdsConsents)
             return
         }

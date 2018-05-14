@@ -95,12 +95,12 @@ Privacy.shared.canShowPersonalizedAds { personalized in
 }
 ```
 
-### Retrieve ad identifiers user by *DLSponsoring* and *DLSplash* modules
+### Retrieve ad identifiers user by *DLSponsoring* and *DLSplash* modules or other entities
 
-Get identifiers required by those ad modules. Method returns dictionary with named identifiers as keys.
+Get identifiers required by those modules. Method returns dictionary with named identifiers as keys.
 ```
-Privacy.shared.getSponsoringAdsConsents { consents in
-    DDLogInfo("Sponsoring consents: \(String(describing: consents))")
+Privacy.shared.getConsentsData { consents in
+    DDLogInfo("Consents data: \(String(describing: consents))")
 }
 ```
 

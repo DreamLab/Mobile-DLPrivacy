@@ -33,8 +33,7 @@ extension Privacy: WKScriptMessageHandler {
 
         switch cmpEvent {
         case .formLoaded:
-            // Nothing to here
-            return
+            DDLogInfo("CMP form was loaded but is not ready yet")
 
         case .formReady:
             DDLogInfo("CMP form ready, cancelling loading timer...")
@@ -45,30 +44,26 @@ extension Privacy: WKScriptMessageHandler {
             moduleState = .cmpLoaded
 
         case .formSubmitted:
-            // Request consents for default SDK and other things which will be cached
-            requestConsentsForDefaultSDKs()
-            performAction(.canShowPersonalizedAds)
-            performAction(.getSponsoringAdsConsents)
+            DDLogInfo("JavaScript send info that consents form was completed by the user")
+            formSubmittedAction()
 
         case .welcomeScreenVisible, .settingsScreenVisible:
-           privacyView.showContentState()
+            DDLogInfo("JavaScript shown CMP content view")
+            privacyView.showContentState()
 
         case .getVendorConsent:
+            DDLogInfo("Vendor consent was returned from JavaScript: \(messageDict)")
             handleConsentResponse(messageDict)
 
         case .shouldShowConsentsForm:
+            DDLogInfo("Application 'should show consents form again' was returned from JavaScript")
             delegate?.privacyModule(self, shouldShowConsentsForm: privacyView)
 
         case .canShowPersonalizedAds:
             let canAdsBePersonalized = (messageDict[Privacy.cmpEventPayloadKey] as? Bool) ?? false
             DDLogInfo("Can show personalized ads JavaScript response: \(canAdsBePersonalized)")
 
-            // Store in cache
-            consentsCache.canShowPersonalizedAds = canAdsBePersonalized
-
-            // Call callback
-            personalizedAdsCallback?(canAdsBePersonalized)
-            personalizedAdsCallback = nil
+            handlePersonalizedAdsResponse(canAdsBePersonalized)
 
         case .sponsoringAdsConsents:
             let sponsoringConsents = messageDict[Privacy.cmpEventPayloadKey] as? [String: String]
@@ -78,10 +73,12 @@ extension Privacy: WKScriptMessageHandler {
             consentsCache.sponsoringAdsConsents = sponsoringConsents
 
             // Call callback
-            sponsoringAdsConsentsCallback?(sponsoringConsents)
-            sponsoringAdsConsentsCallback = nil
+            consentsDataCallback?(sponsoringConsents)
+            consentsDataCallback = nil
 
         case .error:
+            DDLogInfo("JavaScript listeners for CMP were not added; error was returned.")
+
             let error = NSError(domain: "CMP", code: -1, userInfo: nil)
             handleCMPLoadingError(error)
         }
@@ -90,6 +87,13 @@ extension Privacy: WKScriptMessageHandler {
 
 // MARK: Private
 private extension Privacy {
+
+    func formSubmittedAction() {
+        // Request consents for default SDK and other things which will be cached
+        requestConsentsForDefaultSDKs()
+        performAction(.canShowPersonalizedAds)
+        performAction(.getSponsoringAdsConsents)
+    }
 
     func requestConsentsForDefaultSDKs() {
         // Clear cache
@@ -103,6 +107,15 @@ private extension Privacy {
 
             performAction(.getVendorConsent(sdk: sdk, mapping: mapping))
         }
+    }
+
+    func handlePersonalizedAdsResponse(_ canAdsBePersonalized: Bool) {
+        // Store in cache
+        consentsCache.canShowPersonalizedAds = canAdsBePersonalized
+
+        // Call callback
+        personalizedAdsCallback?(canAdsBePersonalized)
+        personalizedAdsCallback = nil
     }
 
     func handleConsentResponse(_ messageDict: [String: Any]) {
