@@ -22,7 +22,7 @@ class ViewController: UIViewController {
         Privacy.shared.initialize(withThemeColor: .red, buttonTextColor: .white, font: UIFont.systemFont(ofSize: 10), delegate: self)
 
         // You can check if application should show privacy form view at app launch
-        guard !Privacy.shared.didAskUserForConsents() else {
+        guard !Privacy.shared.didAskUserForConsents else {
             return
         }
 
@@ -49,11 +49,11 @@ class ViewController: UIViewController {
         // Additional data
 
         // You can ask if ads (Google DFP) can be personalized
-        let canAdsBePersonalized = Privacy.shared.canShowPersonalizedAds()
+        let canAdsBePersonalized = Privacy.shared.canShowPersonalizedAds
         DDLogInfo("Personalized Ads: \(canAdsBePersonalized)")
 
         // You can retrieve consents ids for user
-        let consents = Privacy.shared.getConsentsData()
+        let consents = Privacy.shared.consentsData
         DDLogInfo("Consents data: \(String(describing: consents))")
 
         // If your SDK is not predefined in Privacy module, you can pass value from rawValue with given SDK codename

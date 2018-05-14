@@ -15,8 +15,8 @@ import CocoaLumberjack
 public class Privacy: NSObject {
 
     /// Default CMP Form web site
-    let cmpDefaultSite = "https://m.onet.pl/?test_kwrd=vappn"
-    //let cmpDefaultSite = "http://ocdn.eu/aops/mip/polityka/app_test.html?test_kwrd=vappn"
+    //let cmpDefaultSite = "https://m.onet.pl/?test_kwrd=vappn"
+    let cmpDefaultSite = "http://ocdn.eu/aops/mip/polityka/app_test.html?test_kwrd=vappn"
 
     /// Default web view timeout
     let defaultWebViewTimeout: TimeInterval = 10
@@ -39,6 +39,29 @@ public class Privacy: NSObject {
 
     /// Wrapper view with loading, error and content
     public let privacyView: PrivacyFormView
+
+    /// Check whether application can display personalized Google Ads (DFP)
+    /// Return cached value if present.
+    ///
+    /// Cache content will be updated when again user submits consents form.
+    public var canShowPersonalizedAds: Bool {
+        return consentsCache.canShowPersonalizedAds ?? false
+    }
+
+    /// Check if user was already asked about consents (so we don't have to show this form at app start)
+    ///
+    /// Returns True if user was already asked and submitted the privacy form
+    public var didAskUserForConsents: Bool {
+        return consentsCache.didAskUserForConsents
+    }
+
+    /// Get consents data
+    /// Returns cached value if present.
+    ///
+    /// Cache content will be updated when again user submits consents form.
+    public var consentsData: [String: String]? {
+        return consentsCache.consentsData
+    }
 
     /// Module state
     var moduleState: PrivacyModuleState = .cmpLoading {
@@ -141,7 +164,7 @@ public extension Privacy {
         loadCMPSite()
 
         // Check if app should show again consents form (if form was already displayed once)
-        guard didAskUserForConsents() else {
+        guard didAskUserForConsents else {
             return
         }
 
@@ -193,33 +216,6 @@ public extension Privacy {
         let mapping = CMPVendorsMapping.CMPMapping(vendorName: vendorName, purposeId: purposeId)
         let action = CMPAction.getVendorConsent(sdk: sdk, mapping: mapping)
         performAction(action)
-    }
-
-    /// Check if user was already asked about consents (so we don't have to show this form at app start)
-    ///
-    /// - Returns: True if user was already asked and submitted the privacy form
-    func didAskUserForConsents() -> Bool {
-        return consentsCache.didAskUserForConsents
-    }
-
-    /// Check whether application can display personalized Google Ads (DFP)
-    /// Method is synchronous. Return cached value if present.
-    ///
-    /// Cache content will be updated when again user submits consents form.
-    ///
-    /// - Parameter completion: Completion handler
-    func canShowPersonalizedAds() -> Bool {
-        return consentsCache.canShowPersonalizedAds ?? false
-    }
-
-    /// Get consents data
-    /// Method is synchronous. Returns cached value if present.
-    ///
-    /// Cache content will be updated when again user submits consents form.
-    ///
-    /// - Returns: [String: String]
-    func getConsentsData() -> [String: String]? {
-        return consentsCache.consentsData
     }
 }
 
@@ -347,7 +343,7 @@ extension Privacy {
             return
         }
 
-        guard didAskUserForConsents() else {
+        guard didAskUserForConsents else {
             consentsCache.didAskUserForConsents = true
 
             let consents = getSDKConsents(Array(allAvailableSDK.keys))

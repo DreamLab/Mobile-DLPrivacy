@@ -43,7 +43,7 @@ Privacy.shared.initialize(withThemeColor: UIColor, buttonTextColor: UIColor, fon
 
 > Module is defined as singleton so strong reference to it should not be needed
 
-Then you can use method ```Privacy.shared.didAskUserForConsents()``` to check if consents form should be shown immediately at application start. 
+Then you can use method ```Privacy.shared.didAskUserForConsents``` to check if consents form should be shown immediately at application start. 
 If this returns true, you should then show consents for to the user iimmediately. To do so:
 
 Retrieve consents form view from module:
@@ -90,15 +90,15 @@ where *sdkInMyApp* is an array of SDK you would like to enable in your app (only
 
 To check if application can show personalized ads (either rectangle/native ads or video ads) call asynchronous method:
 ```
-let canAdsBePersonalized = Privacy.shared.canShowPersonalizedAds()
+let canAdsBePersonalized = Privacy.shared.canShowPersonalizedAds
 DDLogInfo("Personalized Ads: \(canAdsBePersonalized)")
 ```
 
 ### Retrieve ad identifiers user by *DLSponsoring* and *DLSplash* modules or other entities
 
-Get identifiers required by those modules. Method returns dictionary with named identifiers as keys.
+Get identifiers required by those modules. Returns dictionary with named identifiers as keys.
 ```
-let consents = Privacy.shared.getConsentsData()
+let consents = Privacy.shared.consentsData
 DDLogInfo("Consents data: \(String(describing: consents))")
 ```
 
