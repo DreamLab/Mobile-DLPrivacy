@@ -54,7 +54,7 @@ class ViewController: UIViewController {
 
         // You can retrieve consents ids for user
         let consents: PrivacyConsentsData = Privacy.shared.consentsData
-        DDLogInfo("Consents data: \(consents.adpConsent) \(consents.pubConsent) \(consents.venConsent)")
+        DDLogInfo("Consents data: \(consents.adpConsent) \(consents.pubConsent) \(consents.euConsent)")
 
         // If your SDK is not predefined in Privacy module, you can pass value from rawValue with given SDK codename
         let mySDK = AppSDK(rawValue: "mySDKName")
