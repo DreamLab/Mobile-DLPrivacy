@@ -119,7 +119,7 @@ public class Privacy: NSObject {
     // MARK: Init
 
     /// Initializer
-    public override init() {
+    private override init() {
         self.webview = WKWebView(frame: UIScreen.main.bounds, configuration: Privacy.defaultWebViewConfiguration())
         self.privacyView = PrivacyFormView.loadFromNib()
 

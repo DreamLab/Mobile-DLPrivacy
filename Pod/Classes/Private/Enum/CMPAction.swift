@@ -39,7 +39,7 @@ enum CMPAction {
             return """
             window.__cmp('showConsentTool', {"page": "advanced"}, function(result) {
                 webkit.messageHandlers.cmpEvents.postMessage({"event": "cmpSettingsVisible"});
-            );
+            });
             """
 
         case .getVendorConsent(let sdk, let mapping):
