@@ -60,7 +60,7 @@ public class Privacy: NSObject {
     /// Cache content will be updated when again user submits consents form.
     public var consentsData: PrivacyConsentsData {
         guard let cachedData = consentsCache.consentsData else {
-            return PrivacyConsentsData(pubConsent: "", adpConsent: "", venConsent: "")
+            return PrivacyConsentsData(pubConsent: "", adpConsent: "", euConsent: "")
         }
 
         return PrivacyConsentsData.initialize(from: cachedData)

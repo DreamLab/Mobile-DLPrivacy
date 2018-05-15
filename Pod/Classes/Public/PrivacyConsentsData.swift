@@ -18,7 +18,7 @@ public class PrivacyConsentsData: NSObject {
     public let adpConsent: String
 
     /// Value
-    public let venConsent: String
+    public let euConsent: String
 
     // MARK: Init
 
@@ -28,10 +28,10 @@ public class PrivacyConsentsData: NSObject {
     ///   - pubConsent: String
     ///   - adpConsent: String
     ///   - venConsent: String
-    public init(pubConsent: String, adpConsent: String, venConsent: String) {
+    public init(pubConsent: String, adpConsent: String, euConsent: String) {
         self.pubConsent = pubConsent
         self.adpConsent = adpConsent
-        self.venConsent = venConsent
+        self.euConsent = euConsent
     }
 }
 
@@ -39,10 +39,10 @@ public class PrivacyConsentsData: NSObject {
 extension PrivacyConsentsData {
 
     static func initialize(from dictionay: [String: String]) -> PrivacyConsentsData {
-        let pub = dictionay["pubconsent"] ?? ""
-        let adp = dictionay["adpconsent"] ?? ""
-        let ven = dictionay["venconsent"] ?? ""
+        let pubConsent = dictionay["pubconsent"] ?? ""
+        let adpConsent = dictionay["adpconsent"] ?? ""
+        let euConsent = dictionay["euconsent"] ?? ""
 
-        return PrivacyConsentsData(pubConsent: pub, adpConsent: adp, venConsent: ven)
+        return PrivacyConsentsData(pubConsent: pubConsent, adpConsent: adpConsent, euConsent: euConsent)
     }
 }
