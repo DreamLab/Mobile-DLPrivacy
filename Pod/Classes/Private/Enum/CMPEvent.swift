@@ -14,6 +14,11 @@ import Foundation
 /// - formReady: Form is ready to perform actions
 /// - formSubmitted: Form was submitted by the user
 /// - welcomeScreenVisible: Form was asked to show welcome screen and returned response
+/// - settingsScreenVisible: Form was asked to show settings screen and returned response
+/// - getVendorConsent: Vendor consent data
+/// - shouldShowConsentsForm: Vendors list has changed and app should show again consents form
+/// - canShowPersonalizedAds: Form answered if app can show personalized ads
+/// - consentsData: Raw consents data
 /// - error: Something went wrong with event listeners
 enum CMPEvent {
 
@@ -21,8 +26,14 @@ enum CMPEvent {
     case formReady
     case formSubmitted
     case welcomeScreenVisible
-    case vendorsConsentsReceived
+    case settingsScreenVisible
+    case getVendorConsent
+    case shouldShowConsentsForm
+    case canShowPersonalizedAds
+    case consentsData
     case error
+
+    // swiftlint:disable cyclomatic_complexity
 
     /// Initialize CMPEvent from JavaScript message
     ///
@@ -37,12 +48,22 @@ enum CMPEvent {
             self = .formSubmitted
         case "cmpWelcomeVisible":
             self = .welcomeScreenVisible
-        case "cmpVendorsConsentsReceived":
-            self = .vendorsConsentsReceived
+        case "cmpSettingsVisible":
+            self = .settingsScreenVisible
+        case "getVendorConsent":
+            self = .getVendorConsent
+        case "shouldShowConsentsForm":
+            self = .shouldShowConsentsForm
+        case "canShowPersonalizedAds":
+            self = .canShowPersonalizedAds
+        case "consentsData":
+            self = .consentsData
         case "cmpError":
             self = .error
         default:
             return nil
         }
     }
+
+    // swiftlint:enable cyclomatic_complexity
 }

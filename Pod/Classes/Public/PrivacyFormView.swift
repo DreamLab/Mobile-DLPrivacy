@@ -13,36 +13,20 @@ import WebKit
 /// View presenting loading, error and consents form
 public class PrivacyFormView: UIView {
 
-    @IBOutlet private weak var loadingView: UIView!
-    @IBOutlet private weak var loadingIndicator: UIActivityIndicatorView!
+    /// Loading view
+    private lazy var loadingView: PrivacyLoadingView = PrivacyLoadingView.loadFromNib()
 
-    @IBOutlet private weak var errorView: UIView!
-    @IBOutlet private weak var errorLabel: UILabel!
-    @IBOutlet private weak var errorRetryButton: UIButton!
+    /// Error view
+    private lazy var errorView: PrivacyErrorView = PrivacyErrorView.loadFromNib()
 
+    /// App restart info view
+    private lazy var restartView: PrivacyAppRestartInfoView = PrivacyAppRestartInfoView.loadFromNib()
+
+    /// Internal module delegate
     private weak var delegate: PrivacyFormViewDelegate?
 
-    // MARK: Instance
-
-    /// Return PrivacyFormView instance loaded from nib
-    ///
-    /// - Returns: PrivacyFormView
-    static func loadFromNib() -> PrivacyFormView {
-        let formViewNib = UINib(nibName: "\(PrivacyFormView.self)", bundle: Privacy.resourcesBundle)
-        let formView = formViewNib.instantiate(withOwner: self, options: nil).first as? PrivacyFormView
-
-        // swiftlint:disable force_unwrapping
-        return formView!
-        // swiftlint:enable force_unwrapping
-    }
-
-    // MARK: Life cycle
-
-    public override func awakeFromNib() {
-        super.awakeFromNib()
-
-        loadTranslations()
-    }
+    /// Currently shown state view
+    private weak var currentlyShownStateView: UIView?
 }
 
 // MARK: Public interface
@@ -62,46 +46,36 @@ public extension PrivacyFormView {
 // MARK: Internal
 extension PrivacyFormView {
 
-    // MARK: Actions
-
-    @IBAction func onRetryButtonTouch(_ sender: Any) {
-        delegate?.privacyViewRequestingReload(self)
-    }
-
     // MARK: State
 
     /// Show loading indicator
     func showLoadingState() {
-        loadingIndicator.startAnimating()
-        loadingView.isHidden = false
+        loadingView.startAnimation()
+        addSubviewFullscreen(loadingView)
 
-        errorView.isHidden = true
+        currentlyShownStateView?.removeFromSuperview()
+        currentlyShownStateView = loadingView
     }
 
     /// Show error view with retry button
     func showErrorState() {
-        errorView.isHidden = false
+        addSubviewFullscreen(errorView)
 
-        loadingView.isHidden = true
-        loadingIndicator.stopAnimating()
+        currentlyShownStateView?.removeFromSuperview()
+        currentlyShownStateView = errorView
     }
 
     /// Show WebView with its content
     func showContentState() {
-        loadingView.isHidden = true
-        loadingIndicator.stopAnimating()
-        errorView.isHidden = true
+        currentlyShownStateView?.removeFromSuperview()
     }
 
-    // MARK: Localization
+    /// Show app restart info view
+    func showAppRestartInfoView() {
+        addSubviewFullscreen(restartView)
 
-    /// Load translated texts into view
-    func loadTranslations() {
-        let bundle = Privacy.resourcesBundle
-
-        errorLabel.text = NSLocalizedString("DLPrivacy.errorView.errorNoInternet", tableName: nil, bundle: bundle, value: "", comment: "")
-        let retryTitle = NSLocalizedString("DLPrivacy.errorView.retryButton", tableName: nil, bundle: bundle, value: "", comment: "")
-        errorRetryButton.setTitle(retryTitle, for: .normal)
+        currentlyShownStateView?.removeFromSuperview()
+        currentlyShownStateView = restartView
     }
 
     // MARK: Configuration
@@ -113,20 +87,10 @@ extension PrivacyFormView {
     ///   - delegate: PrivacyFormViewDelegate
     func configure(with webView: WKWebView, delegate: PrivacyFormViewDelegate) {
         self.delegate = delegate
+        errorView.delegate = delegate
+        restartView.delegate = delegate
 
-        webView.translatesAutoresizingMaskIntoConstraints = false
-        insertSubview(webView, at: 0)
-
-        let views = ["webView": webView]
-        let hConstrains = NSLayoutConstraint.constraints(withVisualFormat: "H:|-(0)-[webView]-(0)-|",
-                                                         options: NSLayoutFormatOptions(),
-                                                         metrics: nil,
-                                                         views: views)
-        let vConstrains = NSLayoutConstraint.constraints(withVisualFormat: "V:|-(0)-[webView]-(0)-|",
-                                                         options: NSLayoutFormatOptions(),
-                                                         metrics: nil,
-                                                         views: views)
-        addConstraints(hConstrains + vConstrains)
+        addSubviewFullscreen(webView, at: 0)
     }
 
     /// Configure loading view and error view using theme color
@@ -136,14 +100,8 @@ extension PrivacyFormView {
     ///   - buttonTextColor: UIColor
     ///   - font: UIFont
     func configure(withThemeColor color: UIColor, buttonTextColor: UIColor, font: UIFont) {
-        loadingIndicator.color = color
-        errorRetryButton.backgroundColor = color
-        errorRetryButton.setTitleColor(buttonTextColor, for: .normal)
-
-        errorLabel.font = font.withSize(errorLabel.font.pointSize)
-
-        if let label = errorRetryButton.titleLabel {
-            errorRetryButton.titleLabel?.font = font.withSize(label.font.pointSize)
-        }
+        loadingView.configure(color)
+        errorView.configure(withThemeColor: color, buttonTextColor: buttonTextColor, font: font)
+        restartView.configure(withThemeColor: color, buttonTextColor: buttonTextColor, font: font)
     }
 }

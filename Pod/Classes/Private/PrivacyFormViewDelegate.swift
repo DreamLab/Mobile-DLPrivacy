@@ -26,4 +26,9 @@ protocol PrivacyFormViewDelegate: class {
     ///
     /// - Parameter view: PrivacyFormView
     func privacyViewRequestingReload(_ view: PrivacyFormView)
+
+    /// View wants to close itself
+    ///
+    /// - Parameter view: PrivacyFormView
+    func privacyViewRequestingClose(_ view: PrivacyFormView)
 }

@@ -15,7 +15,11 @@ import CocoaLumberjack
 public class Privacy: NSObject {
 
     /// Default CMP Form web site
-    let cmpDefaultSite = "https://www.onet.pl/#test_tid=EA-1111111&test_site=TEST&test_area=RODOTEST&test_kwrd=cmp"
+    //let cmpDefaultSite = "https://m.onet.pl/?test_kwrd=vappn"
+    let cmpDefaultSite = "http://ocdn.eu/aops/mip/polityka/app_test.html?test_kwrd=vappn"
+
+    /// Default web view timeout
+    let defaultWebViewTimeout: TimeInterval = 10
 
     // MARK: Shared instance
 
@@ -27,8 +31,41 @@ public class Privacy: NSObject {
     /// Underlaying "content" view
     let webview: WKWebView
 
+    /// Web view loading timer
+    var webViewLoadingTimer: Timer?
+
+    /// Web view host page loaded?
+    var webViewHostPageLoaded = false
+
     /// Wrapper view with loading, error and content
     public let privacyView: PrivacyFormView
+
+    /// Check whether application can display personalized Google Ads (DFP)
+    /// Return cached value if present.
+    ///
+    /// Cache content will be updated when again user submits consents form.
+    public var canShowPersonalizedAds: Bool {
+        return consentsCache.canShowPersonalizedAds ?? false
+    }
+
+    /// Check if user was already asked about consents (so we don't have to show this form at app start)
+    ///
+    /// Returns True if user was already asked and submitted the privacy form
+    public var didAskUserForConsents: Bool {
+        return consentsCache.didAskUserForConsents
+    }
+
+    /// Get consents data
+    /// Returns cached value if present.
+    ///
+    /// Cache content will be updated when again user submits consents form.
+    public var consentsData: PrivacyConsentsData {
+        guard let cachedData = consentsCache.consentsData else {
+            return PrivacyConsentsData(pubConsent: "", adpConsent: "", venConsent: "")
+        }
+
+        return PrivacyConsentsData.initialize(from: cachedData)
+    }
 
     /// Module state
     var moduleState: PrivacyModuleState = .cmpLoading {
@@ -38,12 +75,16 @@ public class Privacy: NSObject {
             }
 
             actionsQueue.forEach {
+                DDLogInfo("Executing action from queue: \($0)")
                 performAction($0)
             }
 
             actionsQueue.removeAll()
         }
     }
+
+    /// Cache
+    let consentsCache = CMPConsentsCache()
 
     /// Actions queue
     var actionsQueue: [CMPAction] = []
@@ -55,22 +96,26 @@ public class Privacy: NSObject {
     private let cmpMessageHandlerName = "cmpEvents"
 
     /// All available SDK
-    private var allAvailableSDK: [AppSDK: Bool] {
+    var allAvailableSDK: [AppSDK: Bool] {
         return [
-            AppSDK.GoogleMobileAds: false,
             AppSDK.GoogleAnalytics: false,
-            AppSDK.Fabric: false,
-            AppSDK.Instabug: false,
-            AppSDK.Branch: false,
-            AppSDK.Pushwoosh: false,
-            AppSDK.Firebase: false,
-            AppSDK.Gemius: false,
-            AppSDK.Bitplaces: false
+            AppSDK.FabricAnswers: false,
+            AppSDK.FirebaseAnalytics: false,
+            AppSDK.FirebaseRemoteConfig: false,
+            AppSDK.Gemius: true, // TODO: [ASZ] For now Gemius is hardcoded to true
+            AppSDK.Bitplaces: false,
+            AppSDK.GoogleConversionTracking: false
         ]
     }
 
+    /// Should application be killed when enters background?
+    private var shouldAppBeKilledWhenEntersBackground = false
+
     /// Module delegate
     weak var delegate: PrivacyDelegate?
+
+    /// Callback/completion closure for custom SDK consent
+    var customSDKConsentCallback = [AppSDK: ((consent: Bool) -> Void)?]()
 
     // MARK: Init
 
@@ -84,6 +129,9 @@ public class Privacy: NSObject {
         self.webview.configuration.userContentController.add(WKScriptMessageHandlerWrapper(delegate: self), name: cmpMessageHandlerName)
         self.webview.navigationDelegate = self
         self.privacyView.configure(with: self.webview, delegate: self)
+
+        let notification = Notification.Name.UIApplicationDidEnterBackground
+        NotificationCenter.default.addObserver(self, selector: #selector(applicationDidEnterBackground), name: notification, object: nil)
     }
 
     // MARK: Deinit
@@ -91,6 +139,8 @@ public class Privacy: NSObject {
     deinit {
         webview.configuration.userContentController.removeScriptMessageHandler(forName: cmpMessageHandlerName)
         webview.navigationDelegate = nil
+
+        NotificationCenter.default.removeObserver(self)
     }
 }
 
@@ -111,12 +161,18 @@ public extension Privacy {
                     delegate: PrivacyDelegate) {
         self.delegate = delegate
 
-        // Configure privacy view and set state to loading
+        // Configure privacy view
         privacyView.configure(withThemeColor: theme, buttonTextColor: buttonTextColor, font: font)
-        privacyView.showLoadingState()
 
         // Load CMP
         loadCMPSite()
+
+        // Check if app should show again consents form (if form was already displayed once)
+        guard didAskUserForConsents else {
+            return
+        }
+
+        performAction(.shouldShowConsentsForm)
     }
 
     /// Get PrivacyFormView which should be presented to the user
@@ -131,24 +187,39 @@ public extension Privacy {
     /// There are many predefined SDK, for example AppSDK.GoogleAnalytics.
     /// AppSDK is an enum so you can see for yourself what is already defined.
     ///
+    /// - Parameter sdks: [AppSDK]
+    /// - Returns: Dictionary where AppSDK is a key, value is either true or false (true if user agreed for given SDK)
+    func getSDKConsents(_ sdks: [AppSDK]) -> [AppSDK: Bool] {
+        var consents = [AppSDK: Bool]()
+
+        for sdk in sdks {
+            consents[sdk] = consentsCache.consent(for: sdk)
+
+            // TODO: [ASZ] For now Gemius is hardcoded to true
+            if sdk == AppSDK.Gemius {
+                consents[AppSDK.Gemius] = true
+            }
+        }
+
+        return consents
+    }
+
+    /// Get user consent for given SDK which is not defined by default in module
+    ///
     /// If something you need is not defined, you can create your own value and pass to Privacy module using construction like this:
     /// AppSDK(rawValue: "mySDKCodeName")
     ///
-    /// - Parameter sdk: [AppSDK]
-    /// - Returns: Dictionary where AppSDK is a key, value is either true or false (true if user agreed for given SDK)
-    func getSDKConsents(_ sdk: [AppSDK]) -> [AppSDK: Bool] {
-        // TODO: [ASZ]
+    /// - Parameters:
+    ///   - sdk: AppSDK, for example: AppSDK(rawValue: "mySDKCodeName")
+    ///   - vendorName: Vendor name defined in CMP
+    ///   - purposeId: Array of purpose ids defined in CMP
+    ///   - completion: Completion handler
+    func getCustomSDKConsent(_ sdk: AppSDK, vendorName: String, purposeId: [Int], completion: ((_ consent: Bool) -> Void)?) {
+        customSDKConsentCallback[sdk] = completion
 
-        return [:]
-    }
-
-    /// Check if user was already asked about consents (so we don't have to show this form at app start)
-    ///
-    /// - Returns: True if user was already asked and submitted the privacy form
-    func didAskUserForConsents() -> Bool {
-        // TODO: [ASZ]
-
-        return false
+        let mapping = CMPVendorsMapping.CMPMapping(vendorName: vendorName, purposeId: purposeId)
+        let action = CMPAction.getVendorConsent(sdk: sdk, mapping: mapping)
+        performAction(action)
     }
 }
 
@@ -166,7 +237,7 @@ extension Privacy {
         config.userContentController = wkUserController
 
         // Insert scripts
-        Privacy.jsScripts.compactMap {
+        Privacy.jsScripts.flatMap {
             guard let url = Privacy.resourcesBundle.url(forResource: $0, withExtension: "js"),
                 let jsScript = try? String(contentsOf: url) else {
                 return nil
@@ -190,14 +261,31 @@ extension Privacy {
             return
         }
 
+        // Set loading state
+        moduleState = .cmpLoading
+        webViewHostPageLoaded = false
+        privacyView.showLoadingState()
+
+        // Load web page
         let request = URLRequest(url: cmpURL)
         webview.load(request)
+
+        // Start loading timer
+        webViewLoadingTimer = Timer.scheduledTimer(timeInterval: defaultWebViewTimeout,
+                                                   target: self,
+                                                   selector: #selector(webViewLoadingTimeout),
+                                                   userInfo: nil,
+                                                   repeats: false)
     }
 
     /// Handle WKWebView error and show proper error state
     ///
     /// - Parameter error: Error
     func handleCMPLoadingError(_ error: Error) {
+        DDLogInfo("Loading web page error: \(error.localizedDescription); \(error as NSError)")
+
+        moduleState = .cmpError
+
         guard (error as NSError).code == NSURLErrorNotConnectedToInternet else {
             // Call delegate that privacy view should be closed and return all consents set to false
             delegate?.privacyModule(self, shouldHideConsentsForm: privacyView, andApplyConsents: allAvailableSDK)
@@ -205,7 +293,18 @@ extension Privacy {
         }
 
         privacyView.showErrorState()
-        moduleState = .cmpError
+    }
+
+    /// Called when web page was not able to load in given time
+    @objc
+    func webViewLoadingTimeout() {
+        webview.stopLoading()
+
+        if webViewHostPageLoaded {
+            // Send error manually so we can exist form view
+            let error = NSError(domain: "CMP", code: -1, userInfo: nil)
+            handleCMPLoadingError(error)
+        }
     }
 
     // MARK: JavaScript evaluation / CMP actions
@@ -215,8 +314,14 @@ extension Privacy {
     /// - Parameter cmpAction: CMPAction
     func performAction(_ cmpAction: CMPAction) {
         guard moduleState == .cmpLoaded else {
-            DDLogInfo("CMP site is not yet loaded, adding action to queue: \(cmpAction.rawValue)")
+            DDLogInfo("CMP site is not yet loaded, adding action to queue: \(cmpAction)")
             actionsQueue.append(cmpAction)
+
+            // If we are in error state, try to load web page again
+            if moduleState == .cmpError {
+                loadCMPSite()
+            }
+
             return
         }
 
@@ -225,12 +330,44 @@ extension Privacy {
 
     // MARK: Consents
 
-    /// Store user consents in cache and call delegate that privacy view should be closed
+    /// Store user consents in cache
     ///
-    /// - Parameter consents: User consents settings
-    func storeUserConsents(_ consents: [String: Any]) {
-        // TODO: [ASZ]
+    /// Call delegate that form view should be closed if we have all consent for default SDKs
+    ///
+    /// - Parameters:
+    ///   - consent: True / false
+    ///   - sdk: AppSDK
+    func storeUserConsent(_ consent: Bool, for sdk: AppSDK) {
+        // Store consent in cache
+        DDLogInfo("Storing in cache consent: \(consent) for \(sdk.rawValue)")
+        consentsCache.storeConsent(for: sdk, consent: consent)
 
-        delegate?.privacyModule(self, shouldHideConsentsForm: privacyView, andApplyConsents: allAvailableSDK)
+        // Check if we have received all consents (for default set of SDKs)
+        guard consentsCache.hasAllSDKConsentsCached(Array(allAvailableSDK.keys)) else {
+            return
+        }
+
+        guard didAskUserForConsents else {
+            consentsCache.didAskUserForConsents = true
+
+            let consents = getSDKConsents(Array(allAvailableSDK.keys))
+            delegate?.privacyModule(self, shouldHideConsentsForm: privacyView, andApplyConsents: consents)
+            return
+        }
+
+        /// Show restart info view and restart app when it goes to background
+        privacyView.showAppRestartInfoView()
+        shouldAppBeKilledWhenEntersBackground = true
+    }
+
+    // MARK: Application background event & app restart
+
+    @objc
+    func applicationDidEnterBackground() {
+        guard shouldAppBeKilledWhenEntersBackground else {
+            return
+        }
+
+        exit(0)
     }
 }

@@ -22,7 +22,7 @@ class ViewController: UIViewController {
         Privacy.shared.initialize(withThemeColor: .red, buttonTextColor: .white, font: UIFont.systemFont(ofSize: 10), delegate: self)
 
         // You can check if application should show privacy form view at app launch
-        guard !Privacy.shared.didAskUserForConsents() else {
+        guard !Privacy.shared.didAskUserForConsents else {
             return
         }
 
@@ -34,16 +34,36 @@ class ViewController: UIViewController {
         // Tell SDK that consents welcome screen should be shown
         privacyView.showConsentsWelcomeScreen()
 
+        // Or maybe you want to show details (settings) skipping welcome screen
+
+        // privacyView.showConsentsSettingsScreen()
+
         // After user is done selecting his preferences, you will be informed by PrivacyDelegate about that fact
         // In this delegate method you will also receive all available SDK together with user consents
 
         // If you want manually check (for example at next app launch) which SDK can be enabled,
         // call "getSDKConsents" passing SDK which you are interested in
-        let sdkInMyApp: [AppSDK] = [.GoogleAnalytics, .Fabric]
+        let sdkInMyApp: [AppSDK] = [.GoogleAnalytics, .Gemius]
         _ = Privacy.shared.getSDKConsents(sdkInMyApp)
 
+        // Additional data
+
+        // You can ask if ads (Google DFP) can be personalized
+        let canAdsBePersonalized = Privacy.shared.canShowPersonalizedAds
+        DDLogInfo("Personalized Ads: \(canAdsBePersonalized)")
+
+        // You can retrieve consents ids for user
+        let consents: PrivacyConsentsData = Privacy.shared.consentsData
+        DDLogInfo("Consents data: \(consents.adpConsent) \(consents.pubConsent) \(consents.venConsent)")
+
         // If your SDK is not predefined in Privacy module, you can pass value from rawValue with given SDK codename
-        _ = AppSDK(rawValue: "mySDKName")
+        let mySDK = AppSDK(rawValue: "mySDKName")
+        DDLogInfo("My SDK enum: \(mySDK)")
+
+        // Then you can ask for consent using this SDK name
+        Privacy.shared.getCustomSDKConsent(mySDK, vendorName: "myVendor", purposeId: [1, 2]) { consent in
+            DDLogInfo("Consent for my custom SDK: \(consent)")
+        }
     }
 }
 
@@ -56,6 +76,8 @@ extension ViewController: PrivacyDelegate {
 
     func privacyModule(_ module: Privacy, shouldHideConsentsForm form: PrivacyFormView, andApplyConsents consents: [AppSDK: Bool]) {
         DDLogInfo("DLPrivacy module should hide consents form")
+
+        form.removeFromSuperview()
     }
 }
 

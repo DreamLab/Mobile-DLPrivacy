@@ -11,11 +11,19 @@ import Foundation
 /// Actions possible to perform with CMP tool
 ///
 /// - showWelcomeScreen: Show consents welcome screen
-/// - getVendorConsents: Get list of consents for vendors
-enum CMPAction: String {
+/// - showSettingsScreen: Show consents setting screen
+/// - getVendorConsent: Get consent for given SDK
+/// - shouldShowConsentsForm: Check if vendors list has changed and app should show again consents form
+/// - canShowPersonalizedAds: Check if application can show personalized ads based on user consents
+/// - getConsentsData: Get consents identifiers and values
+enum CMPAction {
 
     case showWelcomeScreen
-    case getVendorConsents
+    case showSettingsScreen
+    case getVendorConsent(sdk: AppSDK, mapping: CMPVendorsMapping.CMPMapping)
+    case shouldShowConsentsForm
+    case canShowPersonalizedAds
+    case getConsentsData
 
     /// Get JavaScript code for given action
     var javaScriptCode: String {
@@ -23,14 +31,48 @@ enum CMPAction: String {
         case .showWelcomeScreen:
             return """
             window.__cmp('showConsentTool', null, function(result) {
-            webkit.messageHandlers.cmpEvents.postMessage({"event": "cmpWelcomeVisible"});
+                webkit.messageHandlers.cmpEvents.postMessage({"event": "cmpWelcomeVisible"});
             });
             """
 
-        case .getVendorConsents:
+        case .showSettingsScreen:
             return """
-            window.__cmp('getVendorConsents', null, function(result) {
-            webkit.messageHandlers.cmpEvents.postMessage({"event": "cmpVendorsConsentsReceived", "payload": result});
+            window.__cmp('showConsentTool', {"page": "advanced"}, function(result) {
+                webkit.messageHandlers.cmpEvents.postMessage({"event": "cmpSettingsVisible"});
+            );
+            """
+
+        case .getVendorConsent(let sdk, let mapping):
+            let sdkName = sdk.rawValue
+            let vendorName = mapping.vendorName
+            let purpose = mapping.purposeId
+
+            return """
+            window.dlApi.hasVendorConsentByVendorName("\(vendorName)", \(purpose.description), function (hasConsent) {
+                webkit.messageHandlers.cmpEvents.postMessage(
+                    {"event": "getVendorConsent", "sdkName": "\(sdkName)", "consent": hasConsent}
+                );
+            });
+            """
+
+        case .shouldShowConsentsForm:
+            return """
+            window.dlApi.shouldDisplayConsentTool(function() {
+                webkit.messageHandlers.cmpEvents.postMessage({"event": "shouldShowConsentsForm"});
+            });
+            """
+
+        case .canShowPersonalizedAds:
+            return """
+            window.dlApi.canBePersonalized(function(canBePersonalized) {
+                webkit.messageHandlers.cmpEvents.postMessage({"event": "canShowPersonalizedAds", "payload": canBePersonalized});
+            });
+            """
+
+        case .getConsentsData:
+            return """
+            dlApi.getConsents(function(data) {
+                webkit.messageHandlers.cmpEvents.postMessage({"event": "consentsData", "payload": data});
             });
             """
         }

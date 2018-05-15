@@ -6,5 +6,8 @@
   Copyright © 2018 DreamLab. All rights reserved.
 */
 
-"DLPrivacy.errorView.errorNoInternet" = "Wygląda na to, że twoje połączenie internetowe jest niedostępne.";
+"DLPrivacy.errorView.errorNoInternet" = "Nie udało się pobrać danych. Spróbuj za chwilę lub sprawdź połączenie z internetem.";
 "DLPrivacy.errorView.retryButton" = "Spróbuj ponownie";
+
+"DLPrivacy.appRestartView.text" = "Twoje zmiany wejdą w życie po ponownym uruchomieniu aplikacji";
+"DLPrivacy.appRestartView.button" = "Ok";
