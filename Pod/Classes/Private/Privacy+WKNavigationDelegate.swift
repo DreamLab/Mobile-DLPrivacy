@@ -29,5 +29,21 @@ extension Privacy: WKNavigationDelegate {
         handleCMPLoadingError(error)
     }
 
+    public func webView(_ webView: WKWebView,
+                        decidePolicyFor navigationAction: WKNavigationAction,
+                        decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
+        guard navigationAction.navigationType == .linkActivated else {
+            decisionHandler(.allow)
+            return
+        }
+
+        // Open link in Safari browser
+        if let linkUrl = navigationAction.request.url, UIApplication.shared.canOpenURL(linkUrl) {
+            UIApplication.shared.openURL(linkUrl)
+        }
+
+        decisionHandler(.cancel)
+    }
+
     // swiftlint:enable implicitly_unwrapped_optional
 }

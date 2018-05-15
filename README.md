@@ -94,7 +94,7 @@ let canAdsBePersonalized = Privacy.shared.canShowPersonalizedAds
 DDLogInfo("Personalized Ads: \(canAdsBePersonalized)")
 ```
 
-### Retrieve ad identifiers user by *DLSponsoring* and *DLSplash* modules or other entities
+### Retrieve ad identifiers used by *DLSponsoring* and *DLSplash* modules or other entities
 
 Get identifiers required by those modules. Returns PrivacyConsentsData class with available consents data.
 ```
@@ -103,6 +103,8 @@ DDLogInfo("Consents data: \(consents.adpConsent) \(consents.pubConsent) \(consen
 ```
 
 ### Retrieve consent for SDK not defined in module
+
+> If something is not defined in module, please contact us and we can just add it so you don't have to use this method
 
 If your application is using SDK not predefined inside *DLPrivacy* module you can still retrieve user consent for it. To do so you have to know vendor name for under which this SDK should fall and also 
 what purposes you want consent for.
@@ -118,6 +120,25 @@ Privacy.shared.getCustomSDKConsent(mySDK, vendorName: "myVendor", purposeId: [1,
     DDLogInfo("Consent for my custom SDK: \(consent)")
 }
 ```
+
+## Usage in Application - How to do that? What and when?
+
+In your application - after application update with this module - you should start initializing this module as early as possible. Your responsibility is to show consents form at first app launch after update.
+To do so check for flag  ```Privacy.shared.didAskUserForConsents```, to determine if user already saw this form. If this is false (user did not saw the form) you should show it to him on the full screen. Get view instance using ```Privacy.shared.getPrivacyConsentsView()``` method and then request consents form by calling ```showConsentsWelcomeScreen()``` method on view instance.
+
+Next steps would be to apply user consents to SDK's in your app after form is dismissed (you will know that from delegate method).
+
+On the next app launches you can ask *Privacy* module for cached user consents and apply it during your normal app launch. You can fetch those consents using method: ```Privacy.shared.getSDKConsents(...)```.
+
+User must have the possibility to change his given consents at any time - there should be option somewhere in you app (for example in side menu if applicable) to show again consents form. Then after user made his choices *Privacy* module will show him information that changes will be applied on next app launch. You don't have to worry about that (module takes care of that and should kill your app when it's goes to background so next app launch will be performed with new user consents).
+
+To show again consents form simply grab a view from *Privacy* module -  ```Privacy.shared.getPrivacyConsentsView()``` , add it to your view hierarchy and call either  ```showConsentsWelcomeScreen()``` or ```showConsentsSettingsScreen()```.
+
+In addition to those requirements - there is one more - you should always respond to delegate methods that something has change in vendors list and you should show consents form again to the user (this is ```func privacyModule(_ module: Privacy, shouldShowConsentsForm form: PrivacyFormView)``` method)
+
+Getting user consents using *Privacy* module methods, like ```Privacy.shared.getSDKConsents(...)```,  ```Privacy.shared.canShowPersonalizedAds ``` or  ```Privacy.shared.consentsData``` should be done only after user submitted consents form for at least once (which is equal to ```Privacy.shared.didAskUserForConsents``` flag being set to true).
+
+If you have any questions - feel free to contact us.
 
 ## Demo application
 
