@@ -132,7 +132,11 @@ On the next app launches you can ask *Privacy* module for cached user consents a
 
 User must have the possibility to change his given consents at any time - there should be option somewhere in you app (for example in side menu if applicable) to show again consents form. Then after user made his choices *Privacy* module will show him information that changes will be applied on next app launch. You don't have to worry about that (module takes care of that and should kill your app when it's goes to background so next app launch will be performed with new user consents).
 
-In addition to those requirements - there is one more - you can be notified by delegate that something has change in vendors list and you should show consents form again to the user (this is ```func privacyModule(_ module: Privacy, shouldShowConsentsForm form: PrivacyFormView)``` method)
+To show again consents form simply grab a view from *Privacy* module -  ```Privacy.shared.getPrivacyConsentsView()``` , add it to your view hierarchy and call either  ```showConsentsWelcomeScreen()``` or ```showConsentsSettingsScreen()```.
+
+In addition to those requirements - there is one more - you should always respond to delegate methods that something has change in vendors list and you should show consents form again to the user (this is ```func privacyModule(_ module: Privacy, shouldShowConsentsForm form: PrivacyFormView)``` method)
+
+Getting user consents using *Privacy* module methods, like ```Privacy.shared.getSDKConsents(...)```,  ```Privacy.shared.canShowPersonalizedAds ``` or  ```Privacy.shared.consentsData``` should be done only after user submitted consents form for at least once (which is equal to ```Privacy.shared.didAskUserForConsents``` flag being set to true).
 
 If you have any questions - feel free to contact us.
 
