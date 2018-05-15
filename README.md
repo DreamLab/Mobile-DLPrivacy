@@ -94,7 +94,7 @@ let canAdsBePersonalized = Privacy.shared.canShowPersonalizedAds
 DDLogInfo("Personalized Ads: \(canAdsBePersonalized)")
 ```
 
-### Retrieve ad identifiers user by *DLSponsoring* and *DLSplash* modules or other entities
+### Retrieve ad identifiers used by *DLSponsoring* and *DLSplash* modules or other entities
 
 Get identifiers required by those modules. Returns PrivacyConsentsData class with available consents data.
 ```
@@ -103,6 +103,8 @@ DDLogInfo("Consents data: \(consents.adpConsent) \(consents.pubConsent) \(consen
 ```
 
 ### Retrieve consent for SDK not defined in module
+
+> If something is not defined in module, please contact us and we can just add it so you don't have to use this method
 
 If your application is using SDK not predefined inside *DLPrivacy* module you can still retrieve user consent for it. To do so you have to know vendor name for under which this SDK should fall and also 
 what purposes you want consent for.
@@ -131,6 +133,8 @@ On the next app launches you can ask *Privacy* module for cached user consents a
 User must have the possibility to change his given consents at any time - there should be option somewhere in you app (for example in side menu if applicable) to show again consents form. Then after user made his choices *Privacy* module will show him information that changes will be applied on next app launch. You don't have to worry about that (module takes care of that and should kill your app when it's goes to background so next app launch will be performed with new user consents).
 
 In addition to those requirements - there is one more - you can be notified by delegate that something has change in vendors list and you should show consents form again to the user (this is ```func privacyModule(_ module: Privacy, shouldShowConsentsForm form: PrivacyFormView)``` method)
+
+If you have any questions - feel free to contact us.
 
 ## Demo application
 
