@@ -116,7 +116,7 @@ let mySDK = AppSDK(rawValue: "mySDKName")
 
 Then ask for consent:
 ```
-Privacy.shared.getCustomSDKConsent(mySDK, vendorName: "myVendor", purposeId: [1, 2]) { consent in
+Privacy.shared.getCustomSDKConsent(mySDK, vendorName: "myVendor", purposeId: [.measurement]) { consent in
     DDLogInfo("Consent for my custom SDK: \(consent)")
 }
 ```

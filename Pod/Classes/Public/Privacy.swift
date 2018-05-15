@@ -97,13 +97,16 @@ public class Privacy: NSObject {
     /// All available SDK
     var allAvailableSDK: [AppSDK: Bool] {
         return [
-            AppSDK.GoogleAnalytics: false,
-            AppSDK.FabricAnswers: false,
-            AppSDK.FirebaseAnalytics: false,
-            AppSDK.FirebaseRemoteConfig: false,
-            AppSDK.Gemius: true, // TODO: [ASZ] For now Gemius is hardcoded to true
-            AppSDK.Bitplaces: false,
-            AppSDK.GoogleConversionTracking: false
+            .GoogleAnalytics: false,
+            .FabricAnswers: false,
+            .FirebaseAnalytics: false,
+            .FirebaseRemoteConfig: false,
+            .Gemius: true, // TODO: [ASZ] For now Gemius is hardcoded to true
+            .Bitplaces: false,
+            .GoogleConversionTracking: false,
+            .GFK: false,
+            .MixPanel: false,
+            .Datarino: false
         ]
     }
 
@@ -211,9 +214,9 @@ public extension Privacy {
     /// - Parameters:
     ///   - sdk: AppSDK, for example: AppSDK(rawValue: "mySDKCodeName")
     ///   - vendorName: Vendor name defined in CMP
-    ///   - purposeId: Array of purpose ids defined in CMP
+    ///   - purposeId: Array of purpose ids defined in CMP [ConsentPurpose]
     ///   - completion: Completion handler
-    func getCustomSDKConsent(_ sdk: AppSDK, vendorName: String, purposeId: [Int], completion: ((_ consent: Bool) -> Void)?) {
+    func getCustomSDKConsent(_ sdk: AppSDK, vendorName: String, purposeId: [ConsentPurpose], completion: ((_ consent: Bool) -> Void)?) {
         customSDKConsentCallback[sdk] = completion
 
         let mapping = CMPVendorsMapping.CMPMapping(vendorName: vendorName, purposeId: purposeId)

@@ -12,16 +12,19 @@ import Foundation
 class CMPVendorsMapping {
 
     /// Typealias for CMP vendor name and purpose ids array
-    typealias CMPMapping = (vendorName: String, purposeId: [Int])
+    typealias CMPMapping = (vendorName: String, purposeId: [ConsentPurpose])
 
     /// AppSDK mapping in CMP system
     static let sdkMapping: [AppSDK: CMPMapping] = [
-        .GoogleAnalytics: CMPMapping(vendorName: "google", purposeId: [5]),
-        .FabricAnswers: CMPMapping(vendorName: "crashlytics", purposeId: [5]),
-        .FirebaseAnalytics: CMPMapping(vendorName: "firebase", purposeId: [5]),
-        .FirebaseRemoteConfig: CMPMapping(vendorName: "firebase", purposeId: [4]),
-        .Gemius: CMPMapping(vendorName: "gemius", purposeId: [5]),
-        .Bitplaces: CMPMapping(vendorName: "bitplaces", purposeId: [3, 5]),
-        .GoogleConversionTracking: CMPMapping(vendorName: "google", purposeId: [3, 5])
+        .GoogleAnalytics: CMPMapping(vendorName: "google", purposeId: [.measurement]),
+        .FabricAnswers: CMPMapping(vendorName: "crashlytics", purposeId: [.measurement]),
+        .FirebaseAnalytics: CMPMapping(vendorName: "firebase", purposeId: [.measurement]),
+        .FirebaseRemoteConfig: CMPMapping(vendorName: "firebase", purposeId: [.contentSelectionDeliveryReporting]),
+        .Gemius: CMPMapping(vendorName: "gemius", purposeId: [.measurement]),
+        .Bitplaces: CMPMapping(vendorName: "bitplaces", purposeId: [.adSelectionDeliveryReporting, .measurement]),
+        .GoogleConversionTracking: CMPMapping(vendorName: "google", purposeId: [.adSelectionDeliveryReporting, .measurement]),
+        .GFK: CMPMapping(vendorName: "gfk", purposeId: [.measurement]),
+        .MixPanel: CMPMapping(vendorName: "mixpanel", purposeId: [.measurement]),
+        .Datarino: CMPMapping(vendorName: "datarino", purposeId: [.personalisation, .adSelectionDeliveryReporting])
     ]
 }

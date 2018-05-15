@@ -15,3 +15,6 @@ AppSDK const FirebaseRemoteConfig = @"FirebaseRemoteConfig";
 AppSDK const Gemius = @"Gemius";
 AppSDK const Bitplaces = @"Bitplaces";
 AppSDK const GoogleConversionTracking = @"GoogleConversionTracking";
+AppSDK const GFK = @"GFK";
+AppSDK const MixPanel = @"MixPanel";
+AppSDK const Datarino = @"Datarino";
