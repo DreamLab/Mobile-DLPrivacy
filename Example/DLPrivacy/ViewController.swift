@@ -22,9 +22,9 @@ class ViewController: UIViewController {
         Privacy.shared.initialize(withThemeColor: .red, buttonTextColor: .white, font: UIFont.systemFont(ofSize: 10), delegate: self)
 
         // You can check if application should show privacy form view at app launch
-        guard !Privacy.shared.didAskUserForConsents else {
-            return
-        }
+        //guard !Privacy.shared.didAskUserForConsents else {
+        //    return
+        //}
 
         // Then simply get view and add it to you application however you like
         // For example:

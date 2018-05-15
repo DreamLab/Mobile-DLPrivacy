@@ -17,7 +17,7 @@ class CMPVendorsMapping {
     /// AppSDK mapping in CMP system
     static let sdkMapping: [AppSDK: CMPMapping] = [
         .GoogleAnalytics: CMPMapping(vendorName: "google", purposeId: [5]),
-        .FabricAnswers: CMPMapping(vendorName: "fabric", purposeId: [5]),
+        .FabricAnswers: CMPMapping(vendorName: "crashlytics", purposeId: [5]),
         .FirebaseAnalytics: CMPMapping(vendorName: "firebase", purposeId: [5]),
         .FirebaseRemoteConfig: CMPMapping(vendorName: "firebase", purposeId: [4]),
         .Gemius: CMPMapping(vendorName: "gemius", purposeId: [5]),

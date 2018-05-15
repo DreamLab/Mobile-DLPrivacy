@@ -103,10 +103,7 @@ private extension Privacy {
             }
 
             DDLogInfo("Requesting consent for: \(sdk.rawValue) from JavaScript CMP tool")
-            //performAction(.getVendorConsent(sdk: sdk, mapping: mapping))
-
-            // TODO: [ASZ] Remove when JS will be working
-            storeUserConsent(false, for: sdk)
+            performAction(.getVendorConsent(sdk: sdk, mapping: mapping))
         }
     }
 
