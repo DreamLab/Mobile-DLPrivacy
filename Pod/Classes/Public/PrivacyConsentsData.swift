@@ -27,7 +27,7 @@ public class PrivacyConsentsData: NSObject {
     /// - Parameters:
     ///   - pubConsent: String
     ///   - adpConsent: String
-    ///   - venConsent: String
+    ///   - euConsent: String
     public init(pubConsent: String, adpConsent: String, euConsent: String) {
         self.pubConsent = pubConsent
         self.adpConsent = adpConsent
