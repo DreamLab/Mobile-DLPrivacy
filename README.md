@@ -119,6 +119,19 @@ Privacy.shared.getCustomSDKConsent(mySDK, vendorName: "myVendor", purposeId: [1,
 }
 ```
 
+## Usage in Application - How to do that? What and when?
+
+In your application - after application update with this module - you should start initializing this module as early as possible. Your responsibility is to show consents form at first app launch after update.
+To do so check for flag  ```Privacy.shared.didAskUserForConsents```, to determine if user already saw this form. If this is false (user did not saw the form) you should show it to him on the full screen. Get view instance using ```Privacy.shared.getPrivacyConsentsView()``` method and then request consents form by calling ```showConsentsWelcomeScreen()``` method on view instance.
+
+Next steps would be to apply user consents to SDK's in your app after form is dismissed (you will know that from delegate method).
+
+On the next app launches you can ask *Privacy* module for cached user consents and apply it during your normal app launch. You can fetch those consents using method: ```Privacy.shared.getSDKConsents(...)```.
+
+User must have the possibility to change his given consents at any time - there should be option somewhere in you app (for example in side menu if applicable) to show again consents form. Then after user made his choices *Privacy* module will show him information that changes will be applied on next app launch. You don't have to worry about that (module takes care of that and should kill your app when it's goes to background so next app launch will be performed with new user consents).
+
+In addition to those requirements - there is one more - you can be notified by delegate that something has change in vendors list and you should show consents form again to the user (this is ```func privacyModule(_ module: Privacy, shouldShowConsentsForm form: PrivacyFormView)``` method)
+
 ## Demo application
 
 Example usage, together with comments what you can do with module is located in *Example/DLPrivacy/ViewController.swift*
