@@ -16,6 +16,7 @@ class CMPConsentsCache {
     private let didAskUserForConsentsKey = "DLPrivacy.didAskUserForConsentsKey"
     private let canShowPersonalizedAdsKey = "DLPrivacy.canShowPersonalizedAdsKey"
     private let consentsDataKey = "DLPrivacy.consentsDataKey"
+    private let internalAnalyticsConsentKey = "DLPrivacy.internalAnalyticsConsentKey"
 
     private let appSDKConsentKey = "DLPrivacy.appSDKConsentKey-"
 
@@ -69,6 +70,19 @@ class CMPConsentsCache {
                 storage.set(newValue, forKey: consentsDataKey)
             }
 
+            storage.synchronize()
+        }
+    }
+
+    // MARK: Internal analytics consent
+
+    /// Can we send analytics to internal systems?
+    var internalAnalyticsConsent: Bool {
+        get {
+            return storage.bool(forKey: internalAnalyticsConsentKey)
+        }
+        set {
+            storage.set(newValue, forKey: internalAnalyticsConsentKey)
             storage.synchronize()
         }
     }

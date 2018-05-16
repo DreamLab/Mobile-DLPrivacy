@@ -19,6 +19,7 @@ import Foundation
 /// - shouldShowConsentsForm: Vendors list has changed and app should show again consents form
 /// - canShowPersonalizedAds: Form answered if app can show personalized ads
 /// - consentsData: Raw consents data
+/// - getPurposesConsent: Consents for purposes
 /// - error: Something went wrong with event listeners
 enum CMPEvent {
 
@@ -31,6 +32,7 @@ enum CMPEvent {
     case shouldShowConsentsForm
     case canShowPersonalizedAds
     case consentsData
+    case getPurposesConsent
     case error
 
     // swiftlint:disable cyclomatic_complexity
@@ -58,6 +60,8 @@ enum CMPEvent {
             self = .canShowPersonalizedAds
         case "consentsData":
             self = .consentsData
+        case "getPurposesConsent":
+            self = .getPurposesConsent
         case "cmpError":
             self = .error
         default:

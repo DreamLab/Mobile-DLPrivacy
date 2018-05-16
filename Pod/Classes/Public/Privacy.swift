@@ -47,6 +47,14 @@ public class Privacy: NSObject {
         return consentsCache.canShowPersonalizedAds ?? false
     }
 
+    /// Check wheter application can raport analytics to internal systems like Kropka or MediaStats
+    /// Return cached value if present.
+    ///
+    /// Cache content will be updated when again user submits consents form.
+    public var internalAnalyticsEnabled: Bool {
+        return consentsCache.internalAnalyticsConsent
+    }
+
     /// Check if user was already asked about consents (so we don't have to show this form at app start)
     ///
     /// Returns True if user was already asked and submitted the privacy form
@@ -97,13 +105,15 @@ public class Privacy: NSObject {
     /// All available SDK
     var allAvailableSDK: [AppSDK: Bool] {
         return [
-            AppSDK.GoogleAnalytics: false,
-            AppSDK.FabricAnswers: false,
-            AppSDK.FirebaseAnalytics: false,
-            AppSDK.FirebaseRemoteConfig: false,
-            AppSDK.Gemius: true, // TODO: [ASZ] For now Gemius is hardcoded to true
-            AppSDK.Bitplaces: false,
-            AppSDK.GoogleConversionTracking: false
+            .GoogleAnalytics: false,
+            .FabricAnswers: false,
+            .FirebaseAnalytics: false,
+            .FirebaseRemoteConfig: false,
+            .Gemius: true, // TODO: [ASZ] For now Gemius is hardcoded to true
+            .Bitplaces: false,
+            .GoogleConversionTracking: false,
+            .GFK: false,
+            .Datarino: false
         ]
     }
 
@@ -116,14 +126,24 @@ public class Privacy: NSObject {
     /// Callback/completion closure for custom SDK consent
     var customSDKConsentCallback = [AppSDK: ((consent: Bool) -> Void)?]()
 
+    /// Timer used to limit waiting for JS SDK consents response
+    private var sdkConsentResponseTimer: Timer?
+
+    /// Timeout for waiting for JS SDK consents response
+    private let sdkConsentResponseTimeout: TimeInterval = 1
+
     // MARK: Init
 
     /// Initializer
-    public override init() {
+    private override init() {
         self.webview = WKWebView(frame: UIScreen.main.bounds, configuration: Privacy.defaultWebViewConfiguration())
+        self.webview.customUserAgent = DreamLabUserAgent.defaultDreamLabUserAgent
+
         self.privacyView = PrivacyFormView.loadFromNib()
 
         super.init()
+
+       // user agent dodac
 
         self.webview.configuration.userContentController.add(WKScriptMessageHandlerWrapper(delegate: self), name: cmpMessageHandlerName)
         self.webview.navigationDelegate = self
@@ -211,9 +231,9 @@ public extension Privacy {
     /// - Parameters:
     ///   - sdk: AppSDK, for example: AppSDK(rawValue: "mySDKCodeName")
     ///   - vendorName: Vendor name defined in CMP
-    ///   - purposeId: Array of purpose ids defined in CMP
+    ///   - purposeId: Array of purpose ids defined in CMP [ConsentPurpose]
     ///   - completion: Completion handler
-    func getCustomSDKConsent(_ sdk: AppSDK, vendorName: String, purposeId: [Int], completion: ((_ consent: Bool) -> Void)?) {
+    func getCustomSDKConsent(_ sdk: AppSDK, vendorName: String, purposeId: [ConsentPurpose], completion: ((_ consent: Bool) -> Void)?) {
         customSDKConsentCallback[sdk] = completion
 
         let mapping = CMPVendorsMapping.CMPMapping(vendorName: vendorName, purposeId: purposeId)
@@ -341,11 +361,27 @@ extension Privacy {
         DDLogInfo("Storing in cache consent: \(consent) for \(sdk.rawValue)")
         consentsCache.storeConsent(for: sdk, consent: consent)
 
+        // Invalidate timer
+        sdkConsentResponseTimer?.invalidate()
+        sdkConsentResponseTimer = nil
+
         // Check if we have received all consents (for default set of SDKs)
         guard consentsCache.hasAllSDKConsentsCached(Array(allAvailableSDK.keys)) else {
+            // Start timer
+            sdkConsentResponseTimer = Timer.scheduledTimer(timeInterval: sdkConsentResponseTimeout,
+                                                           target: self,
+                                                           selector: #selector(allDefaultSDKConsentsReceived),
+                                                           userInfo: nil,
+                                                           repeats: false)
             return
         }
 
+        // Call delegate or show app restart info screen
+        allDefaultSDKConsentsReceived()
+    }
+
+    @objc
+    func allDefaultSDKConsentsReceived() {
         guard didAskUserForConsents else {
             consentsCache.didAskUserForConsents = true
 

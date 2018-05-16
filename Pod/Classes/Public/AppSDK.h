@@ -30,3 +30,9 @@ extern AppSDK const Bitplaces;
 
 /// Google Conversion Tracking
 extern AppSDK const GoogleConversionTracking;
+
+/// GFK
+extern AppSDK const GFK;
+
+/// Datarino
+extern AppSDK const Datarino;
