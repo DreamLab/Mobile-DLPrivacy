@@ -52,6 +52,10 @@ class ViewController: UIViewController {
         let canAdsBePersonalized = Privacy.shared.canShowPersonalizedAds
         DDLogInfo("Personalized Ads: \(canAdsBePersonalized)")
 
+        // You can ask if internal analytics can be reported
+        let internalAnalyticsEnabled = Privacy.shared.internalAnalyticsEnabled
+        DDLogInfo("Internal analytics enabled: \(internalAnalyticsEnabled)")
+
         // You can retrieve consents ids for user
         let consents: PrivacyConsentsData = Privacy.shared.consentsData
         DDLogInfo("Consents data: \(consents.adpConsent) \(consents.pubConsent) \(consents.euConsent)")

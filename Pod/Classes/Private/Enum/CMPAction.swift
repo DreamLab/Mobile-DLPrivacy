@@ -16,6 +16,7 @@ import Foundation
 /// - shouldShowConsentsForm: Check if vendors list has changed and app should show again consents form
 /// - canShowPersonalizedAds: Check if application can show personalized ads based on user consents
 /// - getConsentsData: Get consents identifiers and values
+/// - getPurposesConsent: Get consent for purpose category
 enum CMPAction {
 
     case showWelcomeScreen
@@ -24,6 +25,7 @@ enum CMPAction {
     case shouldShowConsentsForm
     case canShowPersonalizedAds
     case getConsentsData
+    case getPurposesConsent(purposes: [ConsentPurpose])
 
     /// Get JavaScript code for given action
     var javaScriptCode: String {
@@ -73,6 +75,17 @@ enum CMPAction {
             return """
             dlApi.getConsents(function(data) {
                 webkit.messageHandlers.cmpEvents.postMessage({"event": "consentsData", "payload": data});
+            });
+            """
+
+        case .getPurposesConsent(let purposes):
+            let purpose = purposes.flatMap { $0.rawValue }
+
+            return """
+            window.__cmp('getVendorConsents', null, function(result) {
+                webkit.messageHandlers.cmpEvents.postMessage(
+                    {"event": "getPurposesConsent", "purposes": \(purpose.description), "payload": result}
+                );
             });
             """
         }

@@ -19,7 +19,12 @@ extension Privacy: WKScriptMessageHandler {
     /// CMP event payload key
     private static let cmpEventPayloadKey = "payload"
 
+    /// CMP purpose ids key
+    private static let cmpPurposeIdsKey = "purposes"
+
     // MARK: Delegate
+
+    // swiftlint:disable cyclomatic_complexity
 
     public func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
         guard let messageDict = message.body as? [String: Any],
@@ -73,6 +78,10 @@ extension Privacy: WKScriptMessageHandler {
             // Store in cache
             consentsCache.consentsData = consentsData
 
+        case .getPurposesConsent:
+            DDLogInfo("Purpose consents returned from JavaScript")
+            handlePurposesConsents(messageDict)
+
         case .error:
             DDLogInfo("JavaScript listeners for CMP were not added; error was returned.")
 
@@ -80,6 +89,8 @@ extension Privacy: WKScriptMessageHandler {
             handleCMPLoadingError(error)
         }
     }
+
+    // swiftlint:enable cyclomatic_complexity
 }
 
 // MARK: Private
@@ -89,6 +100,7 @@ private extension Privacy {
         // Request consents for default SDK and other things which will be cached
         performAction(.canShowPersonalizedAds)
         performAction(.getConsentsData)
+        performAction(.getPurposesConsent(purposes: [.measurement]))
         requestConsentsForDefaultSDKs()
     }
 
@@ -124,5 +136,25 @@ private extension Privacy {
             callback??(consent)
             customSDKConsentCallback[appSDK] = nil
         }
+    }
+
+    func handlePurposesConsents(_ messageDict: [String: Any]) {
+        // NOTE: We can in the future handle here all purpose ids and do something with them
+        // let purposes = (messageDict[Privacy.cmpPurposeIdsKey] as? [Int])
+        // For now we are only interested in number 5 = ConsentPurpose.measurement
+
+        guard let payload = messageDict[Privacy.cmpEventPayloadKey] as? [String: Any],
+              let purposeConsents = payload["purposeConsents"] as? [String: Bool] else {
+            DDLogError("Parsing purpose consents failed!")
+            return
+        }
+
+        // Get internal analytics consent
+        let analyticsPurpose = ConsentPurpose.measurement
+        let consent = purposeConsents["\(analyticsPurpose.rawValue)"] ?? false
+        DDLogInfo("Retrieved internal analytics purpose consent - \(consent)")
+
+        // Store in cache
+        consentsCache.internalAnalyticsConsent = consent
     }
 }

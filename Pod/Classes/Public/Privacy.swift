@@ -47,6 +47,14 @@ public class Privacy: NSObject {
         return consentsCache.canShowPersonalizedAds ?? false
     }
 
+    /// Check wheter application can raport analytics to internal systems like Kropka or MediaStats
+    /// Return cached value if present.
+    ///
+    /// Cache content will be updated when again user submits consents form.
+    public var internalAnalyticsEnabled: Bool {
+        return consentsCache.internalAnalyticsConsent
+    }
+
     /// Check if user was already asked about consents (so we don't have to show this form at app start)
     ///
     /// Returns True if user was already asked and submitted the privacy form

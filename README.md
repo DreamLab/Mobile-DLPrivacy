@@ -88,10 +88,17 @@ where *sdkInMyApp* is an array of SDK you would like to enable in your app (only
 
 ### Check if application can show personalized ads
 
-To check if application can show personalized ads (either rectangle/native ads or video ads) call asynchronous method:
+To check if application can show personalized ads (either rectangle/native ads or video ads) use property on *Privacy* module:
 ```
 let canAdsBePersonalized = Privacy.shared.canShowPersonalizedAds
 DDLogInfo("Personalized Ads: \(canAdsBePersonalized)")
+```
+
+### Check if application can raport analytics to internal systems like Kropka or MediaStats
+To check if application can can raport analytics to internal systems use property on *Privacy* module:
+```
+let internalAnalyticsEnabled = Privacy.shared.internalAnalyticsEnabled
+DDLogInfo("Internal analytics enabled: \(internalAnalyticsEnabled)")
 ```
 
 ### Retrieve ad identifiers used by *DLSponsoring* and *DLSplash* modules or other entities
