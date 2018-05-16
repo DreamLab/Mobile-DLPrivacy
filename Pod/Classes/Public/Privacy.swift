@@ -15,7 +15,7 @@ import CocoaLumberjack
 public class Privacy: NSObject {
 
     /// Default CMP Form web site
-    let cmpDefaultSite = "http://ocdn.eu/aops/mip/polityka/app_test.html?test_kwrd=vappn"
+    let cmpDefaultSite = "http://cmp.dreamlab.pl/1746213/preview/index.html"
 
     /// Default web view timeout
     let defaultWebViewTimeout: TimeInterval = 10
