@@ -24,7 +24,6 @@ class CMPVendorsMapping {
         .Bitplaces: CMPMapping(vendorName: "bitplaces", purposeId: [.adSelectionDeliveryReporting, .measurement]),
         .GoogleConversionTracking: CMPMapping(vendorName: "google", purposeId: [.adSelectionDeliveryReporting, .measurement]),
         .GFK: CMPMapping(vendorName: "gfk", purposeId: [.measurement]),
-        .MixPanel: CMPMapping(vendorName: "mixpanel", purposeId: [.measurement]),
         .Datarino: CMPMapping(vendorName: "datarino", purposeId: [.personalisation, .adSelectionDeliveryReporting])
     ]
 }

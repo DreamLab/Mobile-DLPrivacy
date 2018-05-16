@@ -85,8 +85,7 @@ extension Privacy: WKScriptMessageHandler {
         case .error:
             DDLogInfo("JavaScript listeners for CMP were not added; error was returned.")
 
-            let error = NSError(domain: "CMP", code: -1, userInfo: nil)
-            handleCMPLoadingError(error)
+            handleCMPLoadingError(NSError(domain: "CMP", code: -1, userInfo: nil))
         }
     }
 

@@ -34,8 +34,5 @@ extern AppSDK const GoogleConversionTracking;
 /// GFK
 extern AppSDK const GFK;
 
-/// MixPanel
-extern AppSDK const MixPanel;
-
 /// Datarino
 extern AppSDK const Datarino;
