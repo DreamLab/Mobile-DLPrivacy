@@ -137,6 +137,8 @@ public class Privacy: NSObject {
     /// Initializer
     private override init() {
         self.webview = WKWebView(frame: UIScreen.main.bounds, configuration: Privacy.defaultWebViewConfiguration())
+        self.webview.customUserAgent = DreamLabUserAgent.defaultDreamLabUserAgent
+
         self.privacyView = PrivacyFormView.loadFromNib()
 
         super.init()
