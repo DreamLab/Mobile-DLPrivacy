@@ -207,12 +207,8 @@ public extension Privacy {
             return
         }
 
+        performAction(.getConsentsData)
         performAction(.shouldShowConsentsForm)
-
-        // Check if we have all consents data, if not ask again
-        if !consentsData.hasAllConsents() {
-            performAction(.getConsentsData)
-        }
     }
 
     /// Get PrivacyFormView which should be presented to the user

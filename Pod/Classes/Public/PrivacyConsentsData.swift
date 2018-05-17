@@ -45,8 +45,4 @@ extension PrivacyConsentsData {
 
         return PrivacyConsentsData(pubConsent: pubConsent, adpConsent: adpConsent, euConsent: euConsent)
     }
-
-    func hasAllConsents() -> Bool {
-        return pubConsent != nil && adpConsent != nil && euConsent != nil
-    }
 }
