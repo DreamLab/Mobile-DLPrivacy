@@ -147,7 +147,7 @@ Getting user consents using *Privacy* module methods, like ```Privacy.shared.get
 
 If you have any questions - feel free to contact us.
 
-## How to use particular responses of ```getSDKConsents``` method
+## How to use particular 3rd party libraries with Privacy module
 
 ### GoogleAdsSDK
 You should handle Google Ads in ads displayed with Google's library but also in DLPlayer (when your app uses it)
@@ -155,7 +155,7 @@ You should handle Google Ads in ads displayed with Google's library but also in 
 - application **should not** present **ads** from ```GoogleMobileAds``` library at all.
 - **DLPlayer** configuration should be overriden. In such case you should make sure that Dictionary you use for player configuration ( ```DLPlayerConfig```) passes over value **0** for key ```VastProviderType```.
 
-2)  ```Privacy.shared.canShowPersonalizedAds``` should be handled following way:
+2) ```Privacy.shared.canShowPersonalizedAds``` should be handled following way:
 ```
 let extras = GADExtras()
 let npa = privacyModule.canShowPersonalizedAds ? "0" : "1"
