@@ -17,6 +17,9 @@ public class Privacy: NSObject {
     /// Default CMP Form web site
     let cmpDefaultSite = "http://cmp.dreamlab.pl/1746213/preview/index.html"
 
+    /// CMP site param name
+    let cmpSiteParamName = "test_site"
+
     /// Default web view timeout
     let defaultWebViewTimeout: TimeInterval = 10
 
@@ -96,6 +99,9 @@ public class Privacy: NSObject {
     /// Actions queue
     var actionsQueue: [CMPAction] = []
 
+    /// Application site id
+    private var applicationSiteId: String?
+
     /// JavaScript scripts used in underlaying web view
     private static let jsScripts = ["CMPEventListeners"]
 
@@ -143,8 +149,6 @@ public class Privacy: NSObject {
 
         super.init()
 
-       // user agent dodac
-
         self.webview.configuration.userContentController.add(WKScriptMessageHandlerWrapper(delegate: self), name: cmpMessageHandlerName)
         self.webview.navigationDelegate = self
         self.privacyView.configure(with: self.webview, delegate: self)
@@ -173,12 +177,15 @@ public extension Privacy {
     ///   - theme: Theme color used for loading indicator and retry button color
     ///   - buttonTextColor: Color used for retry button text
     ///   - font: Font used in error view
+    ///   - appBrandingSite: App site id used to brand CMP form. It should be the same as main site for App Sponsoring & Splash modules
     ///   - delegate: PrivacyDelegate
     func initialize(withThemeColor theme: UIColor,
                     buttonTextColor: UIColor,
                     font: UIFont,
+                    appBrandingSite: String? = nil,
                     delegate: PrivacyDelegate) {
         self.delegate = delegate
+        self.applicationSiteId = appBrandingSite
 
         // Configure privacy view
         privacyView.configure(withThemeColor: theme, buttonTextColor: buttonTextColor, font: font)
@@ -275,8 +282,13 @@ extension Privacy {
 
     /// Load CMP site into WKWebView
     func loadCMPSite() {
-        guard let cmpURL = URL(string: cmpDefaultSite) else {
-            DDLogError("CMP site url is not valid!: \(cmpDefaultSite)")
+        var cmpSite = cmpDefaultSite
+        if let appSite = applicationSiteId {
+            cmpSite += "?\(cmpSiteParamName)=\(appSite)"
+        }
+
+        guard let cmpURL = URL(string: cmpSite) else {
+            DDLogError("CMP site url is not valid!: \(cmpSite)")
             return
         }
 

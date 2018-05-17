@@ -19,12 +19,19 @@ class ViewController: UIViewController {
 
         // First you should initialize Privacy module
         // At this point CMP content site starts loading in background
-        Privacy.shared.initialize(withThemeColor: .red, buttonTextColor: .white, font: UIFont.systemFont(ofSize: 10), delegate: self)
+        //
+        // Param "appBrandingSite" is optional - you can pass your application site id to have CMP form branded
+        // (this is the same site as Sponsoring or Splash)
+        Privacy.shared.initialize(withThemeColor: .red,
+                                  buttonTextColor: .white,
+                                  font: UIFont.systemFont(ofSize: 10),
+                                  appBrandingSite: nil,
+                                  delegate: self)
 
         // You can check if application should show privacy form view at app launch
-        //guard !Privacy.shared.didAskUserForConsents else {
-        //    return
-        //}
+        // guard !Privacy.shared.didAskUserForConsents else {
+        //     return
+        // }
 
         // Then simply get view and add it to you application however you like
         // For example:

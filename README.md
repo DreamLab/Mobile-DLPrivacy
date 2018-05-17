@@ -38,8 +38,10 @@ Module have four points of interests:
 
 Start by initializing module:
 ```
-Privacy.shared.initialize(withThemeColor: UIColor, buttonTextColor: UIColor, font: UIFont, delegate: PrivacyDelegate)
+Privacy.shared.initialize(withThemeColor: UIColor, buttonTextColor: UIColor, font: UIFont, appBrandingSite: String? = nil, delegate: PrivacyDelegate)
 ```
+
+Parameter "appBrandingSite" is optional - you can pass your application site id to have CMP form branded (this is the same site as Sponsoring or Splash)
 
 > Module is defined as singleton so strong reference to it should not be needed
 
