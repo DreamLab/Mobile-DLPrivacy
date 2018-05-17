@@ -17,6 +17,7 @@ import Foundation
 /// - canShowPersonalizedAds: Check if application can show personalized ads based on user consents
 /// - getConsentsData: Get consents identifiers and values
 /// - getPurposesConsent: Get consent for purpose category
+/// - setAppUserId: Set identifier vor vendor in CMP
 enum CMPAction {
 
     case showWelcomeScreen
@@ -26,6 +27,7 @@ enum CMPAction {
     case canShowPersonalizedAds
     case getConsentsData
     case getPurposesConsent(purposes: [ConsentPurpose])
+    case setAppUserId(vendorId: String)
 
     /// Get JavaScript code for given action
     var javaScriptCode: String {
@@ -87,6 +89,11 @@ enum CMPAction {
                     {"event": "getPurposesConsent", "purposes": \(purpose.description), "payload": result}
                 );
             });
+            """
+
+        case .setAppUserId(let vendorId):
+            return """
+            window.dlApi.setAppUserId("\(vendorId)");
             """
         }
     }

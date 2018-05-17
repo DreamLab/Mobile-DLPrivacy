@@ -196,6 +196,11 @@ public extension Privacy {
         // Load CMP
         loadCMPSite()
 
+        // Set vendorId in CMP
+        if let vendorId = UIDevice.current.identifierForVendor?.uuidString {
+            performAction(.setAppUserId(vendorId: vendorId))
+        }
+
         // Check if app should show again consents form (if form was already displayed once)
         guard didAskUserForConsents else {
             return
