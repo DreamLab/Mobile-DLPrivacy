@@ -59,9 +59,9 @@ class CMPConsentsCache {
     // MARK: Cache (Consents identifiers & values)
 
     /// Get consent identifiers and values
-    var consentsData: [String: String]? {
+    var consentsData: [String: Any]? {
         get {
-            return storage.object(forKey: consentsDataKey) as? [String: String]
+            return storage.object(forKey: consentsDataKey) as? [String: Any]
         }
         set {
             if newValue == nil {

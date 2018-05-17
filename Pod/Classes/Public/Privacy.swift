@@ -71,7 +71,7 @@ public class Privacy: NSObject {
     /// Cache content will be updated when again user submits consents form.
     public var consentsData: PrivacyConsentsData {
         guard let cachedData = consentsCache.consentsData else {
-            return PrivacyConsentsData(pubConsent: "", adpConsent: "", euConsent: "")
+            return PrivacyConsentsData(pubConsent: nil, adpConsent: nil, euConsent: nil)
         }
 
         return PrivacyConsentsData.initialize(from: cachedData)
@@ -138,6 +138,9 @@ public class Privacy: NSObject {
     /// Timeout for waiting for JS SDK consents response
     private let sdkConsentResponseTimeout: TimeInterval = 1
 
+    /// Should we ignore "shouldShowConsentTool" event (this is the case when we manually showing CMP form)
+    var shouldShowConsentToolAgainEventBeIgnored = false
+
     // MARK: Init
 
     /// Initializer
@@ -177,7 +180,7 @@ public extension Privacy {
     ///   - theme: Theme color used for loading indicator and retry button color
     ///   - buttonTextColor: Color used for retry button text
     ///   - font: Font used in error view
-    ///   - appBrandingSite: App site id used to brand CMP form. It should be the same as main site for App Sponsoring & Splash modules
+    ///   - appBrandingSite: App site id used to brand CMP form
     ///   - delegate: PrivacyDelegate
     func initialize(withThemeColor theme: UIColor,
                     buttonTextColor: UIColor,
@@ -199,6 +202,11 @@ public extension Privacy {
         }
 
         performAction(.shouldShowConsentsForm)
+
+        // Check if we have all consents data, if not ask again
+        if !consentsData.hasAllConsents() {
+            performAction(.getConsentsData)
+        }
     }
 
     /// Get PrivacyFormView which should be presented to the user
@@ -356,6 +364,13 @@ extension Privacy {
             return
         }
 
+        switch cmpAction {
+        case .showWelcomeScreen, .showSettingsScreen:
+            shouldShowConsentToolAgainEventBeIgnored = true
+        default:
+            break
+        }
+
         webview.evaluateJavaScript(cmpAction.javaScriptCode, completionHandler: nil)
     }
 
@@ -387,6 +402,8 @@ extension Privacy {
                                                            repeats: false)
             return
         }
+
+        shouldShowConsentToolAgainEventBeIgnored = false
 
         // Call delegate or show app restart info screen
         allDefaultSDKConsentsReceived()
