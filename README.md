@@ -147,6 +147,64 @@ Getting user consents using *Privacy* module methods, like ```Privacy.shared.get
 
 If you have any questions - feel free to contact us.
 
+## How to use particular responses of ```getSDKConsents``` method
+
+### GoogleAdsSDK
+You should handle Google Ads in ads displayed with Google's library but also in DLPlayer (when your app uses it)
+1) When ```Privacy.shared.getSDKConsents``` returned ```false``` for ```GoogleAdsSDK```  
+- application **should not** present **ads** from ```GoogleMobileAds``` library at all.
+- **DLPlayer** configuration should be overriden. In such case you should make sure that Dictionary you use for player configuration ( ```DLPlayerConfig```) passes over value **0** for key ```VastProviderType```.
+
+2)  ```Privacy.shared.canShowPersonalizedAds``` should be handled following way:
+```
+let extras = GADExtras()
+let npa = privacyModule.canShowPersonalizedAds ? "0" : "1"
+extras.additionalParameters = ["npa": npa]
+
+request.register(extras) // DFPRequest object
+```
+Additionaly **DLPlayer** should get ```DLPlayerConsentPersonalizedAds``` flag in ```consents``` property only if ```canShowPersonalizedAds``` returned ```true```
+
+### GoogleAnalytics
+Opt out flag for shared instance GAI object should get opposite value to what```Privacy.shared.getSDKConsents``` returned for ```GoogleAnalytics```. If ```true``` then ```optOut``` should be set to ```false``` and vice versa.
+```
+GAI.sharedInstances.setOptOut = true // when Privacy.shared.getSDKConsents returned false
+GAI.sharedInstances.setOptOut = false // when Privacy.shared.getSDKConsents returned true
+```
+
+### FirebaseAnalytics
+If application uses Analytics from Firebase then you should handle enabling it with value returned by ```Privacy.shared.getSDKConsents``` for ```FirebaseAnalytics``` passing returned value to configuration object by:
+```
+AnalyticsConfiguration.shared().setAnalyticsCollectionEnabled(true); // when Privacy.shared.getSDKConsents returned true
+AnalyticsConfiguration.shared().setAnalyticsCollectionEnabled(false); // when Privacy.shared.getSDKConsents returned false
+```
+
+### FirebaseRemoteConfig
+If application uses Remote Config feature from Firebase you should use value returned by ```Privacy.shared.getSDKConsents``` for ```FirebaseRemoteConfig```.
+
+In case value was ```true``` you should call following code in order to start using Remote Config: 
+```
+RemoteConfig.remoteConfig()
+```
+For ```false``` value code above should not be called.
+
+### Gemius
+
+T.B.D.
+
+### Bitplaces
+When ```Privacy.shared.getSDKConsents``` returned with ```false``` for Bitplaces SDK then you should not initialize this SDK at all. Additionaly there should be removed all the UI elements related to Bitplaces until user enabled it again in Privacy view.
+
+### GoogleConversionTracking
+When GoogleConversionTracking SDK is disabled by Privacy SDK then you should NOT call following code in your app:
+```
+ACTAutomatedUsageTracker.enableAutomatedUsageReporting(withConversionID: conversionId)
+ACTConversionReporter.report(withConversionID: conversionId, label: label, value: value, isRepeatable: false)
+```
+
+### Other SDKs
+None of SDK should sent user data when Privacy module says ```false``` for it.
+
 ## Demo application
 
 Example usage, together with comments what you can do with module is located in *Example/DLPrivacy/ViewController.swift*
