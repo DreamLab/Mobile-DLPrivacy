@@ -179,6 +179,8 @@ AnalyticsConfiguration.shared().setAnalyticsCollectionEnabled(true); // when Pri
 AnalyticsConfiguration.shared().setAnalyticsCollectionEnabled(false); // when Privacy.shared.getSDKConsents returned false
 ```
 
+In order to let code above work, please also add to app's Info.plist file new key ```FIREBASE_ANALYTICS_COLLECTION_ENABLED```  with value ```false```.
+
 ### FirebaseRemoteConfig
 If application uses Remote Config feature from Firebase you should use value returned by ```Privacy.shared.getSDKConsents``` for ```FirebaseRemoteConfig```.
 
