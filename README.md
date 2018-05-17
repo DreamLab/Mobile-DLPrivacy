@@ -195,7 +195,7 @@ For ```false``` value code above should not be called.
 T.B.D.
 
 ### Bitplaces
-When ```Privacy.shared.getSDKConsents``` returned with ```false``` for Bitplaces SDK then you should not initialize this SDK at all. Additionaly there should be removed all the UI elements related to Bitplaces until user enabled it again in Privacy view.
+When ```Privacy.shared.getSDKConsents``` returned with ```false``` for Bitplaces SDK then you should not initialize this SDK at all. Additionaly there all the UI elements related to Bitplaces should be removed until user enabled it again in Privacy view.
 
 ### GoogleConversionTracking
 When GoogleConversionTracking SDK is disabled by Privacy SDK then you should NOT call following code in your app:
