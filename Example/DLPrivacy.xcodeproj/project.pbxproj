@@ -92,6 +92,9 @@
 		7DA3070D20AC27BC005C9D55 /* DreamLabUserAgent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA3070C20AC27BC005C9D55 /* DreamLabUserAgent.swift */; };
 		7DA3070E20AC27BC005C9D55 /* DreamLabUserAgent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA3070C20AC27BC005C9D55 /* DreamLabUserAgent.swift */; };
 		7DA3070F20AC27BC005C9D55 /* DreamLabUserAgent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA3070C20AC27BC005C9D55 /* DreamLabUserAgent.swift */; };
+		7DF8420620AD80B100CD3F8A /* DLPrivacyAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DF8420520AD80B100CD3F8A /* DLPrivacyAssets.xcassets */; };
+		7DF8420720AD80B100CD3F8A /* DLPrivacyAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DF8420520AD80B100CD3F8A /* DLPrivacyAssets.xcassets */; };
+		7DF8420820AD80B100CD3F8A /* DLPrivacyAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DF8420520AD80B100CD3F8A /* DLPrivacyAssets.xcassets */; };
 		7DFBD88E20AB11320042D41C /* ConsentPurpose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DFBD88D20AB11320042D41C /* ConsentPurpose.swift */; };
 		7DFBD88F20AB11320042D41C /* ConsentPurpose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DFBD88D20AB11320042D41C /* ConsentPurpose.swift */; };
 		7DFBD89020AB11320042D41C /* ConsentPurpose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DFBD88D20AB11320042D41C /* ConsentPurpose.swift */; };
@@ -196,6 +199,7 @@
 		7D61B56C20A4528B00C4BCD3 /* Privacy+PrivacyFormViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Privacy+PrivacyFormViewDelegate.swift"; sourceTree = "<group>"; };
 		7D61B57020A45FC800C4BCD3 /* DLPrivacy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLPrivacy.h; sourceTree = "<group>"; };
 		7DA3070C20AC27BC005C9D55 /* DreamLabUserAgent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamLabUserAgent.swift; sourceTree = "<group>"; };
+		7DF8420520AD80B100CD3F8A /* DLPrivacyAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = DLPrivacyAssets.xcassets; sourceTree = "<group>"; };
 		7DFBD88D20AB11320042D41C /* ConsentPurpose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsentPurpose.swift; sourceTree = "<group>"; };
 		7E09B24D1CBB8C6F00122878 /* DLPrivacy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DLPrivacy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E09B2501CBB8C7000122878 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -286,6 +290,7 @@
 		7D00E71320A2E227006C27CC /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				7DF8420420AD807900CD3F8A /* Assets */,
 				7D00E73320A32B7B006C27CC /* Scripts */,
 				7D61B55520A4204200C4BCD3 /* Strings */,
 				7D00E73220A32B73006C27CC /* Views */,
@@ -388,6 +393,14 @@
 				7D00E72120A2F31E006C27CC /* Utils */,
 			);
 			path = Private;
+			sourceTree = "<group>";
+		};
+		7DF8420420AD807900CD3F8A /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				7DF8420520AD80B100CD3F8A /* DLPrivacyAssets.xcassets */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 		7E09B2441CBB8C6F00122878 = {
@@ -696,6 +709,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D22C50C20A57FF9001C231A /* PrivacyErrorView.xib in Resources */,
+				7DF8420620AD80B100CD3F8A /* DLPrivacyAssets.xcassets in Resources */,
 				7E09B25B1CBB8C7000122878 /* LaunchScreen.storyboard in Resources */,
 				7D22C51420A58239001C231A /* PrivacyAppRestartInfoView.xib in Resources */,
 				7D61B55A20A4206A00C4BCD3 /* Localizable.strings in Resources */,
@@ -712,6 +726,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D22C50620A57FBA001C231A /* PrivacyLoadingView.xib in Resources */,
+				7DF8420820AD80B100CD3F8A /* DLPrivacyAssets.xcassets in Resources */,
 				7D22C50E20A57FF9001C231A /* PrivacyErrorView.xib in Resources */,
 				7D00E71820A2E940006C27CC /* CMPEventListeners.js in Resources */,
 				7D61B55C20A4206A00C4BCD3 /* Localizable.strings in Resources */,
@@ -725,6 +740,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D22C50D20A57FF9001C231A /* PrivacyErrorView.xib in Resources */,
+				7DF8420720AD80B100CD3F8A /* DLPrivacyAssets.xcassets in Resources */,
 				7E09B2761CBB8C7F00122878 /* LaunchScreen.storyboard in Resources */,
 				7D22C51520A58239001C231A /* PrivacyAppRestartInfoView.xib in Resources */,
 				7D61B55B20A4206A00C4BCD3 /* Localizable.strings in Resources */,

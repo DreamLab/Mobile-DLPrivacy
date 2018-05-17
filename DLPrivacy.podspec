@@ -12,7 +12,7 @@ s.dependency   'CocoaLumberjack/Swift', '~> 3.3.0'
 
 s.source_files = ['Pod/DLPrivacy.h', 'Pod/Classes/**/*.{swift,m,h}']
 s.resource_bundles = { 'DLPrivacy' => [
-    'Pod/Resources/**/*.{strings,xib,js}'
+    'Pod/Resources/**/*.{strings,xib,js,xcassets}'
 ] }
 
 s.swift_version = '4.0'

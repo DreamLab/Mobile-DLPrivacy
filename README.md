@@ -38,8 +38,10 @@ Module have four points of interests:
 
 Start by initializing module:
 ```
-Privacy.shared.initialize(withThemeColor: UIColor, buttonTextColor: UIColor, font: UIFont, delegate: PrivacyDelegate)
+Privacy.shared.initialize(withThemeColor: UIColor, buttonTextColor: UIColor, font: UIFont, brandingSite: String? = nil, delegate: PrivacyDelegate)
 ```
+
+Parameter "brandingSite" is optional - you can pass your application site id to have CMP form branded.
 
 > Module is defined as singleton so strong reference to it should not be needed
 
@@ -48,13 +50,13 @@ If this returns true, you should then show consents for to the user iimmediately
 
 Retrieve consents form view from module:
 ```
-let privacyView = Privacy.shared.getPrivacyConsentsView()
+let privacyView = Privacy.shared.privacyView
 ```
 
 Then add it to your application view hierarchy however you like and call: ```privacyView.showConsentsWelcomeScreen()``` to show initial consents form screen, explaining to the user what this is.
 At this time (if all goes well) user will perform his interactions with the form and close it. Your application will be informed of that fact and user consents by delegate method:
 ```
-func privacyModule(_ module: Privacy, shouldHideConsentsForm form: PrivacyFormView, andApplyConsents consents: [AppSDK: Bool])
+func privacyModule(_ module: Privacy, shouldHideConsentsForm form: PrivacyFormView, andApplyConsents consents: [AppSDK: Bool], consentsData: PrivacyConsentsData, canShowPersonalizedAds: Bool, canReportInternalAnalytics: Bool)
 ```
 
 At this point you should remove form view from you application views hierarchy and apply changes to your SDK used in app (turn on only those for which user gave his consent).
@@ -131,7 +133,7 @@ Privacy.shared.getCustomSDKConsent(mySDK, vendorName: "myVendor", purposeId: [.m
 ## Usage in Application - How to do that? What and when?
 
 In your application - after application update with this module - you should start initializing this module as early as possible. Your responsibility is to show consents form at first app launch after update.
-To do so check for flag  ```Privacy.shared.didAskUserForConsents```, to determine if user already saw this form. If this is false (user did not saw the form) you should show it to him on the full screen. Get view instance using ```Privacy.shared.getPrivacyConsentsView()``` method and then request consents form by calling ```showConsentsWelcomeScreen()``` method on view instance.
+To do so check for flag  ```Privacy.shared.didAskUserForConsents```, to determine if user already saw this form. If this is false (user did not saw the form) you should show it to him on the full screen. Get view instance using ```Privacy.shared.privacyView``` method and then request consents form by calling ```showConsentsWelcomeScreen()``` method on view instance.
 
 Next steps would be to apply user consents to SDK's in your app after form is dismissed (you will know that from delegate method).
 
@@ -139,7 +141,7 @@ On the next app launches you can ask *Privacy* module for cached user consents a
 
 User must have the possibility to change his given consents at any time - there should be option somewhere in you app (for example in side menu if applicable) to show again consents form. Then after user made his choices *Privacy* module will show him information that changes will be applied on next app launch. You don't have to worry about that (module takes care of that and should kill your app when it's goes to background so next app launch will be performed with new user consents).
 
-To show again consents form simply grab a view from *Privacy* module -  ```Privacy.shared.getPrivacyConsentsView()``` , add it to your view hierarchy and call either  ```showConsentsWelcomeScreen()``` or ```showConsentsSettingsScreen()```.
+To show again consents form simply grab a view from *Privacy* module -  ```Privacy.shared.privacyView``` , add it to your view hierarchy and call either  ```showConsentsWelcomeScreen()``` or ```showConsentsSettingsScreen()```.
 
 In addition to those requirements - there is one more - you should always respond to delegate methods that something has change in vendors list and you should show consents form again to the user (this is ```func privacyModule(_ module: Privacy, shouldShowConsentsForm form: PrivacyFormView)``` method)
 

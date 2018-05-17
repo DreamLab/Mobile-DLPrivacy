@@ -17,6 +17,7 @@ import Foundation
 /// - canShowPersonalizedAds: Check if application can show personalized ads based on user consents
 /// - getConsentsData: Get consents identifiers and values
 /// - getPurposesConsent: Get consent for purpose category
+/// - setAppUserId: Set identifier vor vendor in CMP
 enum CMPAction {
 
     case showWelcomeScreen
@@ -26,6 +27,7 @@ enum CMPAction {
     case canShowPersonalizedAds
     case getConsentsData
     case getPurposesConsent(purposes: [ConsentPurpose])
+    case setAppUserId(vendorId: String)
 
     /// Get JavaScript code for given action
     var javaScriptCode: String {
@@ -39,7 +41,7 @@ enum CMPAction {
 
         case .showSettingsScreen:
             return """
-            window.__cmp('showConsentTool', {"page": "advanced"}, function(result) {
+            window.dlApi.showConsentTool("advanced", function () {
                 webkit.messageHandlers.cmpEvents.postMessage({"event": "cmpSettingsVisible"});
             });
             """
@@ -59,7 +61,7 @@ enum CMPAction {
 
         case .shouldShowConsentsForm:
             return """
-            window.dlApi.shouldDisplayConsentTool(function() {
+            window.dlApi.cmp('addEventListener', 'openConsentTool', function(result) {
                 webkit.messageHandlers.cmpEvents.postMessage({"event": "shouldShowConsentsForm"});
             });
             """
@@ -73,8 +75,8 @@ enum CMPAction {
 
         case .getConsentsData:
             return """
-            dlApi.getConsents(function(data) {
-                webkit.messageHandlers.cmpEvents.postMessage({"event": "consentsData", "payload": data});
+            window.dlApi.getConsents(function (error, consents) {
+                webkit.messageHandlers.cmpEvents.postMessage({"event": "consentsData", "payload": consents});
             });
             """
 
@@ -87,6 +89,11 @@ enum CMPAction {
                     {"event": "getPurposesConsent", "purposes": \(purpose.description), "payload": result}
                 );
             });
+            """
+
+        case .setAppUserId(let vendorId):
+            return """
+            window.dlApi.setAppUserId("\(vendorId)");
             """
         }
     }

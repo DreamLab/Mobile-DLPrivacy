@@ -15,10 +15,27 @@ import CocoaLumberjack
 public class Privacy: NSObject {
 
     /// Default CMP Form web site
-    let cmpDefaultSite = "https://m.onet.pl"
+    let cmpDefaultSite = "http://cmp.dreamlab.pl/1746213/preview/index.html"
+
+    /// CMP site param name
+    let cmpSiteParamName = "test_site"
 
     /// Default web view timeout
     let defaultWebViewTimeout: TimeInterval = 10
+
+    /// All available SDK keys
+    public static let allAvailableSDKKeys: [AppSDK] = [
+        .GoogleAdsSDK,
+        .GoogleAnalytics,
+        .FabricAnswers,
+        .FirebaseAnalytics,
+        .FirebaseRemoteConfig,
+        .Gemius,
+        .Bitplaces,
+        .GoogleConversionTracking,
+        .GFK,
+        .Datarino
+    ]
 
     // MARK: Shared instance
 
@@ -68,7 +85,7 @@ public class Privacy: NSObject {
     /// Cache content will be updated when again user submits consents form.
     public var consentsData: PrivacyConsentsData {
         guard let cachedData = consentsCache.consentsData else {
-            return PrivacyConsentsData(pubConsent: "", adpConsent: "", euConsent: "")
+            return PrivacyConsentsData(pubConsent: nil, adpConsent: nil, euConsent: nil)
         }
 
         return PrivacyConsentsData.initialize(from: cachedData)
@@ -96,6 +113,9 @@ public class Privacy: NSObject {
     /// Actions queue
     var actionsQueue: [CMPAction] = []
 
+    /// Application site id
+    private var applicationSiteId: String?
+
     /// JavaScript scripts used in underlaying web view
     private static let jsScripts = ["CMPEventListeners"]
 
@@ -105,6 +125,7 @@ public class Privacy: NSObject {
     /// All available SDK
     var allAvailableSDK: [AppSDK: Bool] {
         return [
+            .GoogleAdsSDK: false,
             .GoogleAnalytics: false,
             .FabricAnswers: false,
             .FirebaseAnalytics: false,
@@ -132,6 +153,9 @@ public class Privacy: NSObject {
     /// Timeout for waiting for JS SDK consents response
     private let sdkConsentResponseTimeout: TimeInterval = 1
 
+    /// Should we ignore "shouldShowConsentTool" event (this is the case when we manually showing CMP form)
+    var shouldShowConsentToolAgainEventBeIgnored = false
+
     // MARK: Init
 
     /// Initializer
@@ -142,8 +166,6 @@ public class Privacy: NSObject {
         self.privacyView = PrivacyFormView.loadFromNib()
 
         super.init()
-
-       // user agent dodac
 
         self.webview.configuration.userContentController.add(WKScriptMessageHandlerWrapper(delegate: self), name: cmpMessageHandlerName)
         self.webview.navigationDelegate = self
@@ -173,12 +195,15 @@ public extension Privacy {
     ///   - theme: Theme color used for loading indicator and retry button color
     ///   - buttonTextColor: Color used for retry button text
     ///   - font: Font used in error view
+    ///   - brandingSite: App site id used to brand CMP form
     ///   - delegate: PrivacyDelegate
     func initialize(withThemeColor theme: UIColor,
                     buttonTextColor: UIColor,
                     font: UIFont,
+                    brandingSite: String? = nil,
                     delegate: PrivacyDelegate) {
         self.delegate = delegate
+        self.applicationSiteId = brandingSite
 
         // Configure privacy view
         privacyView.configure(withThemeColor: theme, buttonTextColor: buttonTextColor, font: font)
@@ -186,19 +211,18 @@ public extension Privacy {
         // Load CMP
         loadCMPSite()
 
+        // Set vendorId in CMP
+        if let vendorId = UIDevice.current.identifierForVendor?.uuidString {
+            performAction(.setAppUserId(vendorId: vendorId))
+        }
+
         // Check if app should show again consents form (if form was already displayed once)
         guard didAskUserForConsents else {
             return
         }
 
+        performAction(.getConsentsData)
         performAction(.shouldShowConsentsForm)
-    }
-
-    /// Get PrivacyFormView which should be presented to the user
-    ///
-    /// - Returns: PrivacyFormView
-    func getPrivacyConsentsView() -> PrivacyFormView {
-        return privacyView
     }
 
     /// Get user consents for given SDK
@@ -208,7 +232,7 @@ public extension Privacy {
     ///
     /// - Parameter sdks: [AppSDK]
     /// - Returns: Dictionary where AppSDK is a key, value is either true or false (true if user agreed for given SDK)
-    func getSDKConsents(_ sdks: [AppSDK]) -> [AppSDK: Bool] {
+    func getSDKConsents(_ sdks: [AppSDK] = Privacy.allAvailableSDKKeys) -> [AppSDK: Bool] {
         var consents = [AppSDK: Bool]()
 
         for sdk in sdks {
@@ -275,8 +299,13 @@ extension Privacy {
 
     /// Load CMP site into WKWebView
     func loadCMPSite() {
-        guard let cmpURL = URL(string: cmpDefaultSite) else {
-            DDLogError("CMP site url is not valid!: \(cmpDefaultSite)")
+        var cmpSite = cmpDefaultSite
+        if let appSite = applicationSiteId {
+            cmpSite += "?\(cmpSiteParamName)=\(appSite)"
+        }
+
+        guard let cmpURL = URL(string: cmpSite) else {
+            DDLogError("CMP site url is not valid!: \(cmpSite)")
             return
         }
 
@@ -307,7 +336,12 @@ extension Privacy {
 
         guard (error as NSError).code == NSURLErrorNotConnectedToInternet else {
             // Call delegate that privacy view should be closed and return all consents set to false
-            delegate?.privacyModule(self, shouldHideConsentsForm: privacyView, andApplyConsents: allAvailableSDK)
+            delegate?.privacyModule(self,
+                                    shouldHideConsentsForm: privacyView,
+                                    andApplyConsents: allAvailableSDK,
+                                    consentsData: consentsData,
+                                    canShowPersonalizedAds: canShowPersonalizedAds,
+                                    canReportInternalAnalytics: internalAnalyticsEnabled)
             return
         }
 
@@ -344,6 +378,13 @@ extension Privacy {
             return
         }
 
+        switch cmpAction {
+        case .showWelcomeScreen, .showSettingsScreen:
+            shouldShowConsentToolAgainEventBeIgnored = true
+        default:
+            break
+        }
+
         webview.evaluateJavaScript(cmpAction.javaScriptCode, completionHandler: nil)
     }
 
@@ -376,6 +417,8 @@ extension Privacy {
             return
         }
 
+        shouldShowConsentToolAgainEventBeIgnored = false
+
         // Call delegate or show app restart info screen
         allDefaultSDKConsentsReceived()
     }
@@ -386,7 +429,16 @@ extension Privacy {
             consentsCache.didAskUserForConsents = true
 
             let consents = getSDKConsents(Array(allAvailableSDK.keys))
-            delegate?.privacyModule(self, shouldHideConsentsForm: privacyView, andApplyConsents: consents)
+            let consentsRawData = consentsData
+            let personalizedAds = canShowPersonalizedAds
+            let internalStats = internalAnalyticsEnabled
+
+            delegate?.privacyModule(self,
+                                    shouldHideConsentsForm: privacyView,
+                                    andApplyConsents: consents,
+                                    consentsData: consentsRawData,
+                                    canShowPersonalizedAds: personalizedAds,
+                                    canReportInternalAnalytics: internalStats)
             return
         }
 

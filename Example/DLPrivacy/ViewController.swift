@@ -19,16 +19,22 @@ class ViewController: UIViewController {
 
         // First you should initialize Privacy module
         // At this point CMP content site starts loading in background
-        Privacy.shared.initialize(withThemeColor: .red, buttonTextColor: .white, font: UIFont.systemFont(ofSize: 10), delegate: self)
+        //
+        // Param "brandingSite" is optional - you can pass your application site id to have CMP form branded
+        Privacy.shared.initialize(withThemeColor: .red,
+                                  buttonTextColor: .black,
+                                  font: UIFont.systemFont(ofSize: 10),
+                                  brandingSite: "Onet",
+                                  delegate: self)
 
         // You can check if application should show privacy form view at app launch
-        //guard !Privacy.shared.didAskUserForConsents else {
-        //    return
-        //}
+        // guard !Privacy.shared.didAskUserForConsents else {
+        //     return
+        // }
 
         // Then simply get view and add it to you application however you like
         // For example:
-        let privacyView = Privacy.shared.getPrivacyConsentsView()
+        let privacyView = Privacy.shared.privacyView
         addPrivacyViewFullscreen(privacyView)
 
         // Tell SDK that consents welcome screen should be shown
@@ -58,7 +64,14 @@ class ViewController: UIViewController {
 
         // You can retrieve consents ids for user
         let consents: PrivacyConsentsData = Privacy.shared.consentsData
-        DDLogInfo("Consents data: \(consents.adpConsent) \(consents.pubConsent) \(consents.euConsent)")
+        let consentsData =
+        """
+        Consents data:
+        adpConsent: \(String(describing: consents.adpConsent))
+        pubConsent: \(String(describing: consents.pubConsent))
+        euConsent: \(String(describing: consents.euConsent))
+        """
+        DDLogInfo(consentsData)
 
         // If your SDK is not predefined in Privacy module, you can pass value from rawValue with given SDK codename
         let mySDK = AppSDK(rawValue: "mySDKName")
@@ -74,11 +87,18 @@ class ViewController: UIViewController {
 // MARK: PrivacyDelegate
 extension ViewController: PrivacyDelegate {
 
+    // swiftlint:disable function_parameter_count
+
     func privacyModule(_ module: Privacy, shouldShowConsentsForm form: PrivacyFormView) {
         DDLogInfo("DLPrivacy module should show consents form")
     }
 
-    func privacyModule(_ module: Privacy, shouldHideConsentsForm form: PrivacyFormView, andApplyConsents consents: [AppSDK: Bool]) {
+    func privacyModule(_ module: Privacy,
+                       shouldHideConsentsForm form: PrivacyFormView,
+                       andApplyConsents consents: [AppSDK: Bool],
+                       consentsData: PrivacyConsentsData,
+                       canShowPersonalizedAds: Bool,
+                       canReportInternalAnalytics: Bool) {
         DDLogInfo("DLPrivacy module should hide consents form")
 
         form.removeFromSuperview()

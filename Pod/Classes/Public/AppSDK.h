@@ -10,6 +10,9 @@
 
 typedef NSString *AppSDK NS_EXTENSIBLE_STRING_ENUM;
 
+/// Google Ads SDK
+extern AppSDK const GoogleAdsSDK;
+
 /// Google Analytics
 extern AppSDK const GoogleAnalytics;
 

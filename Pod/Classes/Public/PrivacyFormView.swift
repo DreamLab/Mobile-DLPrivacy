@@ -50,18 +50,18 @@ extension PrivacyFormView {
 
     /// Show loading indicator
     func showLoadingState() {
+        currentlyShownStateView?.removeFromSuperview()
+
         loadingView.startAnimation()
         addSubviewFullscreen(loadingView)
-
-        currentlyShownStateView?.removeFromSuperview()
         currentlyShownStateView = loadingView
     }
 
     /// Show error view with retry button
     func showErrorState() {
-        addSubviewFullscreen(errorView)
-
         currentlyShownStateView?.removeFromSuperview()
+
+        addSubviewFullscreen(errorView)
         currentlyShownStateView = errorView
     }
 
@@ -72,9 +72,9 @@ extension PrivacyFormView {
 
     /// Show app restart info view
     func showAppRestartInfoView() {
-        addSubviewFullscreen(restartView)
-
         currentlyShownStateView?.removeFromSuperview()
+
+        addSubviewFullscreen(restartView)
         currentlyShownStateView = restartView
     }
 

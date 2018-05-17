@@ -8,6 +8,7 @@
 
 #import "AppSDK.h"
 
+AppSDK const GoogleAdsSDK = @"GoogleAdsSDK";
 AppSDK const GoogleAnalytics = @"GoogleAnalytics";
 AppSDK const FabricAnswers = @"FabricAnswers";
 AppSDK const FirebaseAnalytics = @"FirebaseAnalytics";

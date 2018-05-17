@@ -34,8 +34,6 @@ extension Privacy: WKScriptMessageHandler {
             return
         }
 
-        DDLogInfo("Received CMPEvent: \(cmpEvent)")
-
         switch cmpEvent {
         case .formLoaded:
             DDLogInfo("CMP form was loaded but is not ready yet")
@@ -61,6 +59,10 @@ extension Privacy: WKScriptMessageHandler {
             handleConsentResponse(messageDict)
 
         case .shouldShowConsentsForm:
+            guard !shouldShowConsentToolAgainEventBeIgnored else {
+                return
+            }
+
             DDLogInfo("Application 'should show consents form again' was returned from JavaScript")
             delegate?.privacyModule(self, shouldShowConsentsForm: privacyView)
 
@@ -72,11 +74,8 @@ extension Privacy: WKScriptMessageHandler {
             consentsCache.canShowPersonalizedAds = canAdsBePersonalized
 
         case .consentsData:
-            let consentsData = messageDict[Privacy.cmpEventPayloadKey] as? [String: String]
-            DDLogInfo("Consent data JavaScript response: \(String(describing: consentsData))")
-
-            // Store in cache
-            consentsCache.consentsData = consentsData
+            DDLogInfo("Consent data JavaScript response: \(messageDict)")
+            handleConsentsData(messageDict)
 
         case .getPurposesConsent:
             DDLogInfo("Purpose consents returned from JavaScript")
@@ -96,6 +95,9 @@ extension Privacy: WKScriptMessageHandler {
 private extension Privacy {
 
     func formSubmittedAction() {
+        // Show loading while we are fetching content from JS
+        privacyView.showLoadingState()
+
         // Request consents for default SDK and other things which will be cached
         performAction(.canShowPersonalizedAds)
         performAction(.getConsentsData)
@@ -135,6 +137,18 @@ private extension Privacy {
             callback??(consent)
             customSDKConsentCallback[appSDK] = nil
         }
+    }
+
+    func handleConsentsData(_ messageDict: [String: Any]) {
+        var consentsData = messageDict[Privacy.cmpEventPayloadKey] as? [String: Any]
+
+        // Remove values which can't be stored in UserDefaults
+        consentsData = consentsData?.filter({ (_, value) -> Bool in
+            return !(value is NSNull)
+        })
+
+        // Store in cache
+        consentsCache.consentsData = consentsData
     }
 
     func handlePurposesConsents(_ messageDict: [String: Any]) {

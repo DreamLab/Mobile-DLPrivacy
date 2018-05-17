@@ -16,6 +16,7 @@ class CMPVendorsMapping {
 
     /// AppSDK mapping in CMP system
     static let sdkMapping: [AppSDK: CMPMapping] = [
+        .GoogleAdsSDK: CMPMapping(vendorName: "google", purposeId: [.storageAndAccessOfInformation]),
         .GoogleAnalytics: CMPMapping(vendorName: "google", purposeId: [.measurement]),
         .FabricAnswers: CMPMapping(vendorName: "crashlytics", purposeId: [.measurement]),
         .FirebaseAnalytics: CMPMapping(vendorName: "firebase", purposeId: [.measurement]),
