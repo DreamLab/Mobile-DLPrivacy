@@ -111,6 +111,7 @@ public class Privacy: NSObject {
     /// All available SDK
     var allAvailableSDK: [AppSDK: Bool] {
         return [
+            .GoogleAdsSDK: false,
             .GoogleAnalytics: false,
             .FabricAnswers: false,
             .FirebaseAnalytics: false,
@@ -180,15 +181,15 @@ public extension Privacy {
     ///   - theme: Theme color used for loading indicator and retry button color
     ///   - buttonTextColor: Color used for retry button text
     ///   - font: Font used in error view
-    ///   - appBrandingSite: App site id used to brand CMP form
+    ///   - brandingSite: App site id used to brand CMP form
     ///   - delegate: PrivacyDelegate
     func initialize(withThemeColor theme: UIColor,
                     buttonTextColor: UIColor,
                     font: UIFont,
-                    appBrandingSite: String? = nil,
+                    brandingSite: String? = nil,
                     delegate: PrivacyDelegate) {
         self.delegate = delegate
-        self.applicationSiteId = appBrandingSite
+        self.applicationSiteId = brandingSite
 
         // Configure privacy view
         privacyView.configure(withThemeColor: theme, buttonTextColor: buttonTextColor, font: font)

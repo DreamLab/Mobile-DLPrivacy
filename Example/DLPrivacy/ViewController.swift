@@ -20,11 +20,11 @@ class ViewController: UIViewController {
         // First you should initialize Privacy module
         // At this point CMP content site starts loading in background
         //
-        // Param "appBrandingSite" is optional - you can pass your application site id to have CMP form branded
+        // Param "brandingSite" is optional - you can pass your application site id to have CMP form branded
         Privacy.shared.initialize(withThemeColor: .red,
                                   buttonTextColor: .black,
                                   font: UIFont.systemFont(ofSize: 10),
-                                  appBrandingSite: "aa",
+                                  brandingSite: "Onet",
                                   delegate: self)
 
         // You can check if application should show privacy form view at app launch
