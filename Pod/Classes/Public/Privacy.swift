@@ -11,6 +11,20 @@ import UIKit
 import WebKit
 import CocoaLumberjack
 
+/// All available SDK keys
+public let allAvailableSDKKeys: [AppSDK] = [
+    .GoogleAdsSDK,
+    .GoogleAnalytics,
+    .FabricAnswers,
+    .FirebaseAnalytics,
+    .FirebaseRemoteConfig,
+    .Gemius,
+    .Bitplaces,
+    .GoogleConversionTracking,
+    .GFK,
+    .Datarino
+]
+
 /// Main class for DLPrivacy module
 public class Privacy: NSObject {
 
@@ -218,7 +232,7 @@ public extension Privacy {
     ///
     /// - Parameter sdks: [AppSDK]
     /// - Returns: Dictionary where AppSDK is a key, value is either true or false (true if user agreed for given SDK)
-    func getSDKConsents(_ sdks: [AppSDK]) -> [AppSDK: Bool] {
+    func getSDKConsents(_ sdks: [AppSDK] = allAvailableSDKKeys) -> [AppSDK: Bool] {
         var consents = [AppSDK: Bool]()
 
         for sdk in sdks {
