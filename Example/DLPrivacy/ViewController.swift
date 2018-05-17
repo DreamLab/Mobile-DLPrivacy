@@ -34,7 +34,7 @@ class ViewController: UIViewController {
 
         // Then simply get view and add it to you application however you like
         // For example:
-        let privacyView = Privacy.shared.getPrivacyConsentsView()
+        let privacyView = Privacy.shared.privacyView
         addPrivacyViewFullscreen(privacyView)
 
         // Tell SDK that consents welcome screen should be shown
@@ -87,11 +87,18 @@ class ViewController: UIViewController {
 // MARK: PrivacyDelegate
 extension ViewController: PrivacyDelegate {
 
+    // swiftlint:disable function_parameter_count
+
     func privacyModule(_ module: Privacy, shouldShowConsentsForm form: PrivacyFormView) {
         DDLogInfo("DLPrivacy module should show consents form")
     }
 
-    func privacyModule(_ module: Privacy, shouldHideConsentsForm form: PrivacyFormView, andApplyConsents consents: [AppSDK: Bool]) {
+    func privacyModule(_ module: Privacy,
+                       shouldHideConsentsForm form: PrivacyFormView,
+                       andApplyConsents consents: [AppSDK: Bool],
+                       consentsData: PrivacyConsentsData,
+                       canShowPersonalizedAds: Bool,
+                       canReportInternalAnalytics: Bool) {
         DDLogInfo("DLPrivacy module should hide consents form")
 
         form.removeFromSuperview()

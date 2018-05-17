@@ -211,13 +211,6 @@ public extension Privacy {
         performAction(.shouldShowConsentsForm)
     }
 
-    /// Get PrivacyFormView which should be presented to the user
-    ///
-    /// - Returns: PrivacyFormView
-    func getPrivacyConsentsView() -> PrivacyFormView {
-        return privacyView
-    }
-
     /// Get user consents for given SDK
     ///
     /// There are many predefined SDK, for example AppSDK.GoogleAnalytics.
@@ -329,7 +322,12 @@ extension Privacy {
 
         guard (error as NSError).code == NSURLErrorNotConnectedToInternet else {
             // Call delegate that privacy view should be closed and return all consents set to false
-            delegate?.privacyModule(self, shouldHideConsentsForm: privacyView, andApplyConsents: allAvailableSDK)
+            delegate?.privacyModule(self,
+                                    shouldHideConsentsForm: privacyView,
+                                    andApplyConsents: allAvailableSDK,
+                                    consentsData: consentsData,
+                                    canShowPersonalizedAds: canShowPersonalizedAds,
+                                    canReportInternalAnalytics: internalAnalyticsEnabled)
             return
         }
 
@@ -417,7 +415,16 @@ extension Privacy {
             consentsCache.didAskUserForConsents = true
 
             let consents = getSDKConsents(Array(allAvailableSDK.keys))
-            delegate?.privacyModule(self, shouldHideConsentsForm: privacyView, andApplyConsents: consents)
+            let consentsRawData = consentsData
+            let personalizedAds = canShowPersonalizedAds
+            let internalStats = internalAnalyticsEnabled
+
+            delegate?.privacyModule(self,
+                                    shouldHideConsentsForm: privacyView,
+                                    andApplyConsents: consents,
+                                    consentsData: consentsRawData,
+                                    canShowPersonalizedAds: personalizedAds,
+                                    canReportInternalAnalytics: internalStats)
             return
         }
 

@@ -13,6 +13,8 @@ import UIKit
 @objc
 public protocol PrivacyDelegate: class {
 
+    // swiftlint:disable function_parameter_count
+
     /// Delegate method saying that application should show again consents form
     ///
     /// - Parameters:
@@ -26,5 +28,13 @@ public protocol PrivacyDelegate: class {
     ///   - module: Privacy
     ///   - form: PrivacyFormView
     ///   - consents: Dictionary with SDK and answer if this SDK can be enabled
-    func privacyModule(_ module: Privacy, shouldHideConsentsForm form: PrivacyFormView, andApplyConsents consents: [AppSDK: Bool])
+    ///   - consentsData: PrivacyConsentsData
+    ///   - canShowPersonalizedAds: Bool
+    ///   - canReportInternalAnalytics: Bool
+    func privacyModule(_ module: Privacy,
+                       shouldHideConsentsForm form: PrivacyFormView,
+                       andApplyConsents consents: [AppSDK: Bool],
+                       consentsData: PrivacyConsentsData,
+                       canShowPersonalizedAds: Bool,
+                       canReportInternalAnalytics: Bool)
 }

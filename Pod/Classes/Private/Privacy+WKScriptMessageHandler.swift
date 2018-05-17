@@ -95,6 +95,9 @@ extension Privacy: WKScriptMessageHandler {
 private extension Privacy {
 
     func formSubmittedAction() {
+        // Show loading while we are fetching content from JS
+        privacyView.showLoadingState()
+
         // Request consents for default SDK and other things which will be cached
         performAction(.canShowPersonalizedAds)
         performAction(.getConsentsData)

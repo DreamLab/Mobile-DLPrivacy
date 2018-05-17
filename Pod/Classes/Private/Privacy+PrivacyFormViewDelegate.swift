@@ -18,7 +18,16 @@ extension Privacy: PrivacyFormViewDelegate {
 
     func privacyViewRequestingClose(_ view: PrivacyFormView) {
         let consents = getSDKConsents(Array(allAvailableSDK.keys))
-        delegate?.privacyModule(self, shouldHideConsentsForm: view, andApplyConsents: consents)
+        let consentsRawData = consentsData
+        let personalizedAds = canShowPersonalizedAds
+        let internalStats = internalAnalyticsEnabled
+
+        delegate?.privacyModule(self,
+                                shouldHideConsentsForm: view,
+                                andApplyConsents: consents,
+                                consentsData: consentsRawData,
+                                canShowPersonalizedAds: personalizedAds,
+                                canReportInternalAnalytics: internalStats)
     }
 
     func privacyViewRequestingSetingsScreen(_ view: PrivacyFormView) {
