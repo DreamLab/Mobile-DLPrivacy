@@ -22,7 +22,7 @@ class ViewController: UIViewController {
         //
         // Param "appBrandingSite" is optional - you can pass your application site id to have CMP form branded
         Privacy.shared.initialize(withThemeColor: .red,
-                                  buttonTextColor: .white,
+                                  buttonTextColor: .black,
                                   font: UIFont.systemFont(ofSize: 10),
                                   appBrandingSite: "aa",
                                   delegate: self)

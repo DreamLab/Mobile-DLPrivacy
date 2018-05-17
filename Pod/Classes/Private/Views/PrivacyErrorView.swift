@@ -35,10 +35,17 @@ class PrivacyErrorView: UIView {
     ///   - buttonTextColor: UIColor
     ///   - font: UIFont
     func configure(withThemeColor color: UIColor, buttonTextColor: UIColor, font: UIFont) {
-        errorRetryButton.backgroundColor = color
+        errorRetryButton.layer.borderColor = color.cgColor
         errorRetryButton.setTitleColor(buttonTextColor, for: .normal)
 
-        errorLabel.font = font.withSize(errorLabel.font.pointSize)
+        let attributedString = NSMutableAttributedString(string: errorLabel.text ?? "")
+        let range = NSRange(location: 0, length: attributedString.length)
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.lineSpacing = 6
+        paragraphStyle.alignment = .center
+        attributedString.addAttribute(.paragraphStyle, value: paragraphStyle, range: range)
+        attributedString.addAttribute(.font, value: font.withSize(errorLabel.font.pointSize), range: range)
+        errorLabel.attributedText = attributedString
 
         if let label = errorRetryButton.titleLabel {
             errorRetryButton.titleLabel?.font = font.withSize(label.font.pointSize)
