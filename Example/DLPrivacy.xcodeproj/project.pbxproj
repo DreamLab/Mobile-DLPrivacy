@@ -609,7 +609,6 @@
 				7E09B27E1CBB8CAD00122878 /* Sources */,
 				7E09B2801CBB8CAD00122878 /* Resources */,
 				CABC0048B7062EDC4A65C3C4 /* Frameworks */,
-				5646095D8F0BE41EC408222F /* [CP] Copy Pods Resources */,
 				BF3E8803A7BE82C8E768CE0E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
@@ -803,21 +802,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DLPrivacyTests/Pods-DLPrivacyTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		5646095D8F0BE41EC408222F /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DLPrivacyUITests/Pods-DLPrivacyUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		567BD42C7545863460850D0C /* [CP] Check Pods Manifest.lock */ = {

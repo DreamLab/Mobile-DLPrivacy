@@ -16,7 +16,7 @@ import Foundation
 /// - shouldShowConsentsForm: Check if vendors list has changed and app should show again consents form
 /// - canShowPersonalizedAds: Check if application can show personalized ads based on user consents
 /// - getConsentsData: Get consents identifiers and values
-/// - getPurposesConsent: Get consent for purpose category
+/// - getPurposeConsent: Get consent for purpose category
 /// - setAppUserId: Set identifier vor vendor in CMP
 enum CMPAction {
 
@@ -26,7 +26,7 @@ enum CMPAction {
     case shouldShowConsentsForm
     case canShowPersonalizedAds
     case getConsentsData
-    case getPurposesConsent(purposes: [ConsentPurpose])
+    case getPurposeConsent(purpose: ConsentPurpose)
     case setAppUserId(vendorId: String)
 
     /// Get JavaScript code for given action
@@ -34,7 +34,7 @@ enum CMPAction {
         switch self {
         case .showWelcomeScreen:
             return """
-            window.__cmp('showConsentTool', null, function(result) {
+            window.dlApi.showConsentTool(null, function(result) {
                 webkit.messageHandlers.cmpEvents.postMessage({"event": "cmpWelcomeVisible"});
             });
             """
@@ -80,13 +80,11 @@ enum CMPAction {
             });
             """
 
-        case .getPurposesConsent(let purposes):
-            let purpose = purposes.flatMap { $0.rawValue }
-
+        case .getPurposeConsent(let purpose):
             return """
-            window.__cmp('getVendorConsents', null, function(result) {
+            window.dlApi.hasPublisherConsent(\(purpose.rawValue), function(result) {
                 webkit.messageHandlers.cmpEvents.postMessage(
-                    {"event": "getPurposesConsent", "purposes": \(purpose.description), "payload": result}
+                    {"event": "getPurposeConsent", "purpose": \(purpose.rawValue), "payload": result}
                 );
             });
             """
