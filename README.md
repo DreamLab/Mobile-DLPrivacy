@@ -199,7 +199,7 @@ In order to handle consents for Gemius please use ```cookiesAllowed``` flag on `
 ```
 if let configuration = GEMConfig.sharedInstance() as? GEMConfig {
     configuration.cookiesAllowed = true // when Privacy.shared.getSDKConsents returned true
-    configuration.cookiesAllowed = false //when Privacy.shared.getSDKConsents returned true
+    configuration.cookiesAllowed = false //when Privacy.shared.getSDKConsents returned false
 }
 ```
 
