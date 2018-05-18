@@ -77,9 +77,9 @@ extension Privacy: WKScriptMessageHandler {
             DDLogInfo("Consent data JavaScript response: \(messageDict)")
             handleConsentsData(messageDict)
 
-        case .getPurposesConsent:
+        case .getPurposeConsent:
             DDLogInfo("Purpose consents returned from JavaScript")
-            handlePurposesConsents(messageDict)
+            handlePurposeConsent(messageDict)
 
         case .error:
             DDLogInfo("JavaScript listeners for CMP were not added; error was returned.")
@@ -101,7 +101,7 @@ private extension Privacy {
         // Request consents for default SDK and other things which will be cached
         performAction(.canShowPersonalizedAds)
         performAction(.getConsentsData)
-        performAction(.getPurposesConsent(purposes: [.measurement]))
+        performAction(.getPurposeConsent(purpose: .measurement))
         requestConsentsForDefaultSDKs()
     }
 
@@ -151,20 +151,15 @@ private extension Privacy {
         consentsCache.consentsData = consentsData
     }
 
-    func handlePurposesConsents(_ messageDict: [String: Any]) {
+    func handlePurposeConsent(_ messageDict: [String: Any]) {
         // NOTE: We can in the future handle here all purpose ids and do something with them
-        // let purposes = (messageDict[Privacy.cmpPurposeIdsKey] as? [Int])
         // For now we are only interested in number 5 = ConsentPurpose.measurement
 
-        guard let payload = messageDict[Privacy.cmpEventPayloadKey] as? [String: Any],
-              let purposeConsents = payload["purposeConsents"] as? [String: Bool] else {
+        guard let consent = messageDict[Privacy.cmpEventPayloadKey] as? Bool else {
             DDLogError("Parsing purpose consents failed!")
             return
         }
 
-        // Get internal analytics consent
-        let analyticsPurpose = ConsentPurpose.measurement
-        let consent = purposeConsents["\(analyticsPurpose.rawValue)"] ?? false
         DDLogInfo("Retrieved internal analytics purpose consent - \(consent)")
 
         // Store in cache
