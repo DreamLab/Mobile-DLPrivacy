@@ -194,7 +194,14 @@ For ```false``` value code above should not be called.
 
 ### Gemius
 
-T.B.D.
+In order to handle consents for Gemius please use ```cookiesAllowed``` flag on ```GEMConfig``` object's shared instance.
+
+```
+if let configuration = GEMConfig.sharedInstance() as? GEMConfig {
+    configuration.cookiesAllowed = true // when Privacy.shared.getSDKConsents returned true
+    configuration.cookiesAllowed = false //when Privacy.shared.getSDKConsents returned false
+}
+```
 
 ### Bitplaces
 When ```Privacy.shared.getSDKConsents``` returned with ```false``` for Bitplaces SDK then you should not initialize this SDK at all. Additionaly there all the UI elements related to Bitplaces should be removed until user enabled it again in Privacy view.
