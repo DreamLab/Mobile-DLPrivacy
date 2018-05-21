@@ -27,7 +27,6 @@ public class Privacy: NSObject {
     public static let allAvailableSDKKeys: [AppSDK] = [
         .GoogleAdsSDK,
         .GoogleAnalytics,
-        .FabricAnswers,
         .FirebaseAnalytics,
         .FirebaseRemoteConfig,
         .Gemius,
@@ -127,7 +126,6 @@ public class Privacy: NSObject {
         return [
             .GoogleAdsSDK: false,
             .GoogleAnalytics: false,
-            .FabricAnswers: false,
             .FirebaseAnalytics: false,
             .FirebaseRemoteConfig: false,
             .Gemius: false,

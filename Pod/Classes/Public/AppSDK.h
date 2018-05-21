@@ -16,9 +16,6 @@ extern AppSDK const GoogleAdsSDK;
 /// Google Analytics
 extern AppSDK const GoogleAnalytics;
 
-/// Fabric (Answers)
-extern AppSDK const FabricAnswers;
-
 /// Firebase (Analytics)
 extern AppSDK const FirebaseAnalytics;
 

@@ -18,7 +18,6 @@ class CMPVendorsMapping {
     static let sdkMapping: [AppSDK: CMPMapping] = [
         .GoogleAdsSDK: CMPMapping(vendorName: "google", purposeId: [.storageAndAccessOfInformation]),
         .GoogleAnalytics: CMPMapping(vendorName: "google", purposeId: [.measurement]),
-        .FabricAnswers: CMPMapping(vendorName: "crashlytics", purposeId: [.measurement]),
         .FirebaseAnalytics: CMPMapping(vendorName: "firebase", purposeId: [.measurement]),
         .FirebaseRemoteConfig: CMPMapping(vendorName: "firebase", purposeId: [.contentSelectionDeliveryReporting]),
         .Gemius: CMPMapping(vendorName: "gemius", purposeId: [.measurement]),
