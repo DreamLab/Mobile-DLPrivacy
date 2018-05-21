@@ -27,7 +27,6 @@ public class Privacy: NSObject {
     public static let allAvailableSDKKeys: [AppSDK] = [
         .GoogleAdsSDK,
         .GoogleAnalytics,
-        .FabricAnswers,
         .FirebaseAnalytics,
         .FirebaseRemoteConfig,
         .Gemius,
@@ -127,7 +126,6 @@ public class Privacy: NSObject {
         return [
             .GoogleAdsSDK: false,
             .GoogleAnalytics: false,
-            .FabricAnswers: false,
             .FirebaseAnalytics: false,
             .FirebaseRemoteConfig: false,
             .Gemius: false,
@@ -155,6 +153,9 @@ public class Privacy: NSObject {
 
     /// Should we ignore "shouldShowConsentTool" event (this is the case when we manually showing CMP form)
     var shouldShowConsentToolAgainEventBeIgnored = false
+
+    /// Storage for data which are cached in module before submitting new consents by user
+    var currentData: AllConsentData?
 
     // MARK: Init
 
@@ -420,7 +421,16 @@ extension Privacy {
 
     @objc
     func allDefaultSDKConsentsReceived() {
-        guard didAskUserForConsents else {
+        defer {
+            currentData = nil
+        }
+
+        guard didAskUserForConsents,
+            let currentData = currentData,
+            currentData.differsTo(canShowPersonalizedAds: canShowPersonalizedAds,
+                                  internalAnalyticsConsent: internalAnalyticsEnabled,
+                                  sdkConsents: getSDKConsents()) else {
+
             consentsCache.didAskUserForConsents = true
 
             let consents = getSDKConsents(Array(allAvailableSDK.keys))
@@ -438,6 +448,7 @@ extension Privacy {
         }
 
         /// Show restart info view and restart app when it goes to background
+        /// Only when any consent changed
         privacyView.showAppRestartInfoView()
         shouldAppBeKilledWhenEntersBackground = true
     }

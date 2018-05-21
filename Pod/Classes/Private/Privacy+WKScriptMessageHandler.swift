@@ -98,6 +98,10 @@ private extension Privacy {
         // Show loading while we are fetching content from JS
         privacyView.showLoadingState()
 
+        currentData = AllConsentData(canShowPersonalizedAds: canShowPersonalizedAds,
+                                     internalAnalyticsConsent: internalAnalyticsEnabled,
+                                     sdkConsents: getSDKConsents())
+
         // Request consents for default SDK and other things which will be cached
         performAction(.canShowPersonalizedAds)
         performAction(.getConsentsData)

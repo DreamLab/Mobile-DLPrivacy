@@ -10,7 +10,6 @@
 
 AppSDK const GoogleAdsSDK = @"GoogleAdsSDK";
 AppSDK const GoogleAnalytics = @"GoogleAnalytics";
-AppSDK const FabricAnswers = @"FabricAnswers";
 AppSDK const FirebaseAnalytics = @"FirebaseAnalytics";
 AppSDK const FirebaseRemoteConfig = @"FirebaseRemoteConfig";
 AppSDK const Gemius = @"Gemius";
