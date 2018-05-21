@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C2F372320B2F2D90022B52D /* AllConsentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2F372220B2F2D90022B52D /* AllConsentData.swift */; };
+		0C2F372420B2F2D90022B52D /* AllConsentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2F372220B2F2D90022B52D /* AllConsentData.swift */; };
 		229F8896F030366F1F9D6C56 /* Pods_DLPrivacyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5012179E2AC162ECEAD17560 /* Pods_DLPrivacyTests.framework */; };
 		7D00E71620A2E940006C27CC /* CMPEventListeners.js in Resources */ = {isa = PBXBuildFile; fileRef = 7D00E71520A2E940006C27CC /* CMPEventListeners.js */; };
 		7D00E71720A2E940006C27CC /* CMPEventListeners.js in Resources */ = {isa = PBXBuildFile; fileRef = 7D00E71520A2E940006C27CC /* CMPEventListeners.js */; };
@@ -152,6 +154,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C2F372220B2F2D90022B52D /* AllConsentData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllConsentData.swift; sourceTree = "<group>"; };
 		15325F1E74447B776E07B6AF /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		183EB23A79966630D26F0A6F /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A4C832B48385A772530DD60 /* Pods.alpha.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.alpha.xcconfig; path = "Pods/Target Support Files/Pods/Pods.alpha.xcconfig"; sourceTree = "<group>"; };
@@ -387,6 +390,7 @@
 				7D61B56C20A4528B00C4BCD3 /* Privacy+PrivacyFormViewDelegate.swift */,
 				7D00E71920A2ED02006C27CC /* Privacy+Bundle.swift */,
 				7D61B56820A4501400C4BCD3 /* PrivacyFormViewDelegate.swift */,
+				0C2F372220B2F2D90022B52D /* AllConsentData.swift */,
 				7D22C51720A583A3001C231A /* Extension */,
 				7D22C4FE20A57F71001C231A /* Views */,
 				7D2AD86320A2DA5700E86996 /* Enum */,
@@ -1020,6 +1024,7 @@
 				7D61B56D20A4528B00C4BCD3 /* Privacy+PrivacyFormViewDelegate.swift in Sources */,
 				7D00E72B20A3077C006C27CC /* PrivacyDelegate.swift in Sources */,
 				7D00E74220A331F9006C27CC /* AppSDK.m in Sources */,
+				0C2F372320B2F2D90022B52D /* AllConsentData.swift in Sources */,
 				7D400D8F20A9C6BC00AC8C24 /* PrivacyConsentsData.swift in Sources */,
 				7D00E72320A2F32B006C27CC /* WKScriptMessageHandlerWrapper.swift in Sources */,
 				7E09B2A51CBB967900122878 /* EnvironmentSettings.swift in Sources */,
@@ -1091,6 +1096,7 @@
 				7D61B56E20A4528B00C4BCD3 /* Privacy+PrivacyFormViewDelegate.swift in Sources */,
 				7D00E72C20A3077C006C27CC /* PrivacyDelegate.swift in Sources */,
 				7D00E74320A331F9006C27CC /* AppSDK.m in Sources */,
+				0C2F372420B2F2D90022B52D /* AllConsentData.swift in Sources */,
 				7D400D9020A9C6BC00AC8C24 /* PrivacyConsentsData.swift in Sources */,
 				7D00E72420A2F32B006C27CC /* WKScriptMessageHandlerWrapper.swift in Sources */,
 				7E09B2731CBB8C7F00122878 /* AppDelegate.swift in Sources */,
