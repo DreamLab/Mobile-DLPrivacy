@@ -41,7 +41,7 @@ enum CMPAction {
 
         case .showSettingsScreen:
             return """
-            window.dlApi.showConsentTool("advanced", function () {
+            window.dlApi.showConsentTool("details", function () {
                 webkit.messageHandlers.cmpEvents.postMessage({"event": "cmpSettingsVisible"});
             });
             """
