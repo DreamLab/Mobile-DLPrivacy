@@ -201,7 +201,7 @@ public extension Privacy {
     func initialize(withThemeColor theme: UIColor,
                     buttonTextColor: UIColor,
                     font: UIFont,
-                    brandingSite: String? = nil,
+                    brandingSite: String?,
                     delegate: PrivacyDelegate) {
         self.delegate = delegate
         self.applicationSiteId = brandingSite
