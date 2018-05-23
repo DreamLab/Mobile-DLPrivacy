@@ -19,9 +19,6 @@ extern AppSDK const GoogleAnalytics;
 /// Firebase (Analytics)
 extern AppSDK const FirebaseAnalytics;
 
-/// Firebase (Remote Config)
-extern AppSDK const FirebaseRemoteConfig;
-
 /// Gemius
 extern AppSDK const Gemius;
 

@@ -19,7 +19,6 @@ class CMPVendorsMapping {
         .GoogleAdsSDK: CMPMapping(vendorName: "google", purposeId: [.storageAndAccessOfInformation]),
         .GoogleAnalytics: CMPMapping(vendorName: "google", purposeId: [.measurement]),
         .FirebaseAnalytics: CMPMapping(vendorName: "firebase", purposeId: [.measurement]),
-        .FirebaseRemoteConfig: CMPMapping(vendorName: "firebase", purposeId: [.contentSelectionDeliveryReporting]),
         .Gemius: CMPMapping(vendorName: "gemius", purposeId: [.measurement]),
         .Bitplaces: CMPMapping(vendorName: "bitplaces", purposeId: [.adSelectionDeliveryReporting, .measurement]),
         .GoogleConversionTracking: CMPMapping(vendorName: "google", purposeId: [.adSelectionDeliveryReporting, .measurement]),
