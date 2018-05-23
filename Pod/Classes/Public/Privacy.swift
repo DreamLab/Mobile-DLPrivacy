@@ -28,7 +28,6 @@ public class Privacy: NSObject {
         .GoogleAdsSDK,
         .GoogleAnalytics,
         .FirebaseAnalytics,
-        .FirebaseRemoteConfig,
         .Gemius,
         .Bitplaces,
         .GoogleConversionTracking,
@@ -116,7 +115,7 @@ public class Privacy: NSObject {
     private var applicationSiteId: String?
 
     /// JavaScript scripts used in underlaying web view
-    private static let jsScripts = ["CMPEventListeners"]
+    private static let jsScripts = ["CMPCookieSetters", "CMPEventListeners"]
 
     /// WebKit message handler name for CMP events
     private let cmpMessageHandlerName = "cmpEvents"
@@ -127,7 +126,6 @@ public class Privacy: NSObject {
             .GoogleAdsSDK: false,
             .GoogleAnalytics: false,
             .FirebaseAnalytics: false,
-            .FirebaseRemoteConfig: false,
             .Gemius: false,
             .Bitplaces: false,
             .GoogleConversionTracking: false,
@@ -167,6 +165,12 @@ public class Privacy: NSObject {
         self.privacyView = PrivacyFormView.loadFromNib()
 
         super.init()
+
+        // Ugly hack making stored cookies persist over multiple app sessions
+        // Caused by issue with WKWebView being not able to persist cookie after app was killed
+        if let jsScript = self.cookieSettingsJSScript {
+            self.webview.configuration.userContentController.addUserScript(jsScript)
+        }
 
         self.webview.configuration.userContentController.add(WKScriptMessageHandlerWrapper(delegate: self), name: cmpMessageHandlerName)
         self.webview.navigationDelegate = self
@@ -265,6 +269,22 @@ public extension Privacy {
 // MARK: Internal
 extension Privacy {
 
+    var cookieSettingsJSScript: WKUserScript? {
+
+        let pubConsent = consentsData.pubConsent ?? ""
+        let euConsent = consentsData.euConsent ?? ""
+        let adpConsent = consentsData.adpConsent ?? ""
+
+        var jsString = ""
+        jsString += pubConsent.isEmpty ? "" : "setCookie('pubconsent','\(pubConsent)');"
+        jsString += euConsent.isEmpty ? "" : "setCookie('euconsent','\(euConsent)');"
+        jsString += adpConsent.isEmpty ? "" : "setCookie('adpconsent','\(adpConsent)');"
+
+        guard !jsString.isEmpty else { return nil }
+
+        return WKUserScript(source: jsString, injectionTime: .atDocumentStart, forMainFrameOnly: true)
+    }
+
     // MARK: WKWebView config
 
     /// Extend WKWebView configuration by adding user content controller and JS event listeners
@@ -328,7 +348,9 @@ extension Privacy {
     func handleCMPLoadingError(_ error: Error) {
         DDLogInfo("Loading web page error: \(error.localizedDescription); \(error as NSError)")
 
-        moduleState = .cmpError
+        if (error as NSError).code != NSURLErrorCancelled {
+            moduleState = .cmpError
+        }
 
         guard (error as NSError).code == NSURLErrorNotConnectedToInternet else {
             // Call delegate that privacy view should be closed and return all consents set to false

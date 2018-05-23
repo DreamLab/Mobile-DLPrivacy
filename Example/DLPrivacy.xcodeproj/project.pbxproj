@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0C2F372320B2F2D90022B52D /* AllConsentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2F372220B2F2D90022B52D /* AllConsentData.swift */; };
 		0C2F372420B2F2D90022B52D /* AllConsentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2F372220B2F2D90022B52D /* AllConsentData.swift */; };
+		0CD329B320B568F300C37973 /* CMPCookieSetters.js in Resources */ = {isa = PBXBuildFile; fileRef = 0CD329B220B568F300C37973 /* CMPCookieSetters.js */; };
 		229F8896F030366F1F9D6C56 /* Pods_DLPrivacyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5012179E2AC162ECEAD17560 /* Pods_DLPrivacyTests.framework */; };
 		7D00E71620A2E940006C27CC /* CMPEventListeners.js in Resources */ = {isa = PBXBuildFile; fileRef = 7D00E71520A2E940006C27CC /* CMPEventListeners.js */; };
 		7D00E71720A2E940006C27CC /* CMPEventListeners.js in Resources */ = {isa = PBXBuildFile; fileRef = 7D00E71520A2E940006C27CC /* CMPEventListeners.js */; };
@@ -155,6 +156,7 @@
 
 /* Begin PBXFileReference section */
 		0C2F372220B2F2D90022B52D /* AllConsentData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllConsentData.swift; sourceTree = "<group>"; };
+		0CD329B220B568F300C37973 /* CMPCookieSetters.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = CMPCookieSetters.js; sourceTree = "<group>"; };
 		15325F1E74447B776E07B6AF /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		183EB23A79966630D26F0A6F /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A4C832B48385A772530DD60 /* Pods.alpha.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.alpha.xcconfig; path = "Pods/Target Support Files/Pods/Pods.alpha.xcconfig"; sourceTree = "<group>"; };
@@ -327,6 +329,7 @@
 			isa = PBXGroup;
 			children = (
 				7D00E71520A2E940006C27CC /* CMPEventListeners.js */,
+				0CD329B220B568F300C37973 /* CMPCookieSetters.js */,
 			);
 			path = Scripts;
 			sourceTree = "<group>";
@@ -657,7 +660,7 @@
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = 97W46277W4;
 						LastSwiftMigration = 0930;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 					};
 					7E09B2601CBB8C7000122878 = {
 						CreatedOnToolsVersion = 7.3;
@@ -715,6 +718,7 @@
 				7DF8420620AD80B100CD3F8A /* DLPrivacyAssets.xcassets in Resources */,
 				7E09B25B1CBB8C7000122878 /* LaunchScreen.storyboard in Resources */,
 				7D22C51420A58239001C231A /* PrivacyAppRestartInfoView.xib in Resources */,
+				0CD329B320B568F300C37973 /* CMPCookieSetters.js in Resources */,
 				7D61B55A20A4206A00C4BCD3 /* Localizable.strings in Resources */,
 				7E09B2581CBB8C7000122878 /* Assets.xcassets in Resources */,
 				7D00E71620A2E940006C27CC /* CMPEventListeners.js in Resources */,
@@ -1313,9 +1317,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = DLPrivacy/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "DLPrivacy/DLPrivacy-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -1327,9 +1335,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = DLPrivacy/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "DLPrivacy/DLPrivacy-Bridging-Header.h";
 			};
 			name = Release;
@@ -1480,9 +1492,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = DLPrivacy/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "DLPrivacy/DLPrivacy-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};

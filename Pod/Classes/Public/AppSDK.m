@@ -11,7 +11,6 @@
 AppSDK const GoogleAdsSDK = @"GoogleAdsSDK";
 AppSDK const GoogleAnalytics = @"GoogleAnalytics";
 AppSDK const FirebaseAnalytics = @"FirebaseAnalytics";
-AppSDK const FirebaseRemoteConfig = @"FirebaseRemoteConfig";
 AppSDK const Gemius = @"Gemius";
 AppSDK const Bitplaces = @"Bitplaces";
 AppSDK const GoogleConversionTracking = @"GoogleConversionTracking";
