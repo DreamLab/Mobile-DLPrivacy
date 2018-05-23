@@ -123,7 +123,7 @@ public class Privacy: NSObject {
     /// All available SDK
     var allAvailableSDK: [AppSDK: Bool] {
         return [
-            .GoogleAdsSDK: false,
+            .GoogleAdsSDK: true,
             .GoogleAnalytics: false,
             .FirebaseAnalytics: false,
             .Gemius: false,
@@ -241,7 +241,11 @@ public extension Privacy {
         var consents = [AppSDK: Bool]()
 
         for sdk in sdks {
-            consents[sdk] = consentsCache.consent(for: sdk)
+            if sdk == .GoogleAdsSDK {
+                consents[sdk] = true
+            } else {
+                consents[sdk] = consentsCache.consent(for: sdk)
+            }
         }
 
         return consents

@@ -16,13 +16,30 @@ class CMPVendorsMapping {
 
     /// AppSDK mapping in CMP system
     static let sdkMapping: [AppSDK: CMPMapping] = [
-        .GoogleAdsSDK: CMPMapping(vendorName: "google", purposeId: [.storageAndAccessOfInformation]),
-        .GoogleAnalytics: CMPMapping(vendorName: "google", purposeId: [.measurement]),
-        .FirebaseAnalytics: CMPMapping(vendorName: "firebase", purposeId: [.measurement]),
-        .Gemius: CMPMapping(vendorName: "gemius", purposeId: [.measurement]),
-        .Bitplaces: CMPMapping(vendorName: "bitplaces", purposeId: [.adSelectionDeliveryReporting, .measurement]),
-        .GoogleConversionTracking: CMPMapping(vendorName: "google", purposeId: [.adSelectionDeliveryReporting, .measurement]),
-        .GFK: CMPMapping(vendorName: "gfk", purposeId: [.measurement]),
-        .Datarino: CMPMapping(vendorName: "datarino", purposeId: [.personalisation, .adSelectionDeliveryReporting])
+        .GoogleAdsSDK: CMPMapping(vendorName: "google",
+                                  purposeId: [.storageAndAccessOfInformation]),
+        .GoogleAnalytics: CMPMapping(vendorName: "google",
+                                     purposeId: [.measurement]),
+        .FirebaseAnalytics: CMPMapping(vendorName: "firebase",
+                                       purposeId: [.storageAndAccessOfInformation,
+                                                   .measurement]),
+        .Gemius: CMPMapping(vendorName: "gemius",
+                            purposeId: [.storageAndAccessOfInformation,
+                                        .measurement]),
+        .Bitplaces: CMPMapping(vendorName: "bitplaces",
+                               purposeId: [.storageAndAccessOfInformation,
+                                           .adSelectionDeliveryReporting,
+                                           .measurement]),
+        .GoogleConversionTracking: CMPMapping(vendorName: "google",
+                                              purposeId: [.storageAndAccessOfInformation,
+                                                          .adSelectionDeliveryReporting,
+                                                          .measurement]),
+        .GFK: CMPMapping(vendorName: "gfk",
+                         purposeId: [.storageAndAccessOfInformation,
+                                     .measurement]),
+        .Datarino: CMPMapping(vendorName: "datarino",
+                              purposeId: [.storageAndAccessOfInformation,
+                                          .personalisation,
+                                          .adSelectionDeliveryReporting])
     ]
 }
