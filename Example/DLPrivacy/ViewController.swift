@@ -81,6 +81,9 @@ class ViewController: UIViewController {
         Privacy.shared.getCustomSDKConsent(mySDK, vendorName: "myVendor", purposeId: [.measurement]) { consent in
             DDLogInfo("Consent for my custom SDK: \(consent)")
         }
+
+        // Clear consent data (should be used when you clear cookies in app)
+        // Privacy.shared.clearConsentsData()
     }
 }
 
