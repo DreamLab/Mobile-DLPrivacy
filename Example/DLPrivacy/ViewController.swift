@@ -83,7 +83,7 @@ class ViewController: UIViewController {
         }
 
         // Clear local storage (should be used when you clear cookies in app)
-        Privacy.shared.clearCache()
+        // Privacy.shared.clearCache()
     }
 }
 

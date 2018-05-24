@@ -89,9 +89,9 @@ public class Privacy: NSObject {
         return PrivacyConsentsData.initialize(from: cachedData)
     }
 
-    /// Clears storage cache
-    public func clearCache() {
-        consentsCache.clear()
+    /// Clears cached consents data
+    public func clearConsentsData() {
+        consentsCache.clearStorage()
         DDLogInfo("Cache has been cleared")
     }
 

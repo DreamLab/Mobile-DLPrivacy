@@ -135,7 +135,7 @@ class CMPConsentsCache {
     }
 
     /// Clears storage cache
-    func clear() {
+    func clearStorage() {
         storage.dictionaryRepresentation().keys.forEach { storage.removeObject(forKey: $0) }
         storage.synchronize()
     }
