@@ -82,8 +82,8 @@ class ViewController: UIViewController {
             DDLogInfo("Consent for my custom SDK: \(consent)")
         }
 
-        // Clear local storage (should be used when you clear cookies in app)
-        // Privacy.shared.clearCache()
+        // Clear consent data (should be used when you clear cookies in app)
+        // Privacy.shared.clearConsentsData()
     }
 }
 
