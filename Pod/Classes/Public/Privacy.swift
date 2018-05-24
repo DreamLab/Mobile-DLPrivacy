@@ -89,10 +89,10 @@ public class Privacy: NSObject {
         return PrivacyConsentsData.initialize(from: cachedData)
     }
 
-    /// Clears cached consents data
+    /// Clears all consents being kept by module
     public func clearConsentsData() {
         consentsCache.clearStorage()
-        DDLogInfo("Cache has been cleared")
+        DDLogInfo("All consents have been cleared")
     }
 
     /// Module state
