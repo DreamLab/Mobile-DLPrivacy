@@ -133,6 +133,12 @@ class CMPConsentsCache {
 
         return cachedConsents.count == sdks.count
     }
+
+    /// Clears storage cache
+    func clear() {
+        storage.dictionaryRepresentation().keys.forEach { storage.removeObject(forKey: $0) }
+        storage.synchronize()
+    }
 }
 
 // MARK: Private
