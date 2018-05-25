@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name         = "DLPrivacy"
-s.version      = "0.0.100"
+s.version      = "1.0.100"
 s.homepage     = "http://stash.grupa.onet/projects/POD/repos/dlprivacy"
 s.summary      = "Library used to gather consents from user."
 s.license      = { :type => 'Copyright. DreamLab', :file => 'LICENSE' }

@@ -130,8 +130,8 @@ public class Privacy: NSObject {
     var allAvailableSDK: [AppSDK: Bool] {
         return [
             .GoogleAdsSDK: true,
-            .GoogleAnalytics: false,
-            .FirebaseAnalytics: false,
+            .GoogleAnalytics: true,
+            .FirebaseAnalytics: true,
             .Gemius: false,
             .Bitplaces: false,
             .GoogleConversionTracking: false,
