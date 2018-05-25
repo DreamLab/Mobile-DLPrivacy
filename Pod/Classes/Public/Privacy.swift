@@ -247,7 +247,7 @@ public extension Privacy {
         var consents = [AppSDK: Bool]()
 
         for sdk in sdks {
-            if sdk == .GoogleAdsSDK {
+            if [.GoogleAdsSDK, .FirebaseAnalytics, .GoogleAnalytics].contains(sdk) {
                 consents[sdk] = true
             } else {
                 consents[sdk] = consentsCache.consent(for: sdk)
