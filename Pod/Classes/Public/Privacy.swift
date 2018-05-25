@@ -95,6 +95,41 @@ public class Privacy: NSObject {
         DDLogInfo("All consents have been cleared")
     }
 
+    /// Returns WKUserScript with consent cookies set. You can use them no to show consent form on WKWebviews around the application
+    ///
+    /// Example of use in the app:
+    /// ```
+    /// if let domain = url?.host, let jsScript = self.consentCookies(for: domain) {
+    ///     webView.configuration.userContentController.addUserScript(jsScript)
+    /// }
+    /// ```
+    /// - Parameter domain: where cookies are valid at
+    /// - Returns: WKUserScript
+    public func consentCookiesScript(for domain: String) -> WKUserScript? {
+        let wildcard = String(domain.drop(while: { $0 != "." }))
+        let pubConsent = consentsData.pubConsent ?? ""
+        let euConsent = consentsData.euConsent ?? ""
+        let adpConsent = consentsData.adpConsent ?? ""
+        var jsString = """
+            function setCookie(name,value,days) {
+                var expires = "";
+                if (days) {
+                    var date = new Date();
+                    date.setTime(date.getTime() + (days*24*60*60*1000));
+                    expires = "; expires=" + date.toUTCString();
+                }
+                document.cookie = name + "=" + (value || "")  + expires + "; domain=\(wildcard); path=/";
+            };
+        """
+        jsString += pubConsent.isEmpty ? "" : "setCookie('pubconsent','\(pubConsent)');"
+        jsString += euConsent.isEmpty ? "" : "setCookie('euconsent','\(euConsent)');"
+        jsString += adpConsent.isEmpty ? "" : "setCookie('adpconsent','\(adpConsent)');"
+
+        guard !jsString.isEmpty else { return nil }
+
+        return WKUserScript(source: jsString, injectionTime: .atDocumentStart, forMainFrameOnly: true)
+    }
+
     /// Module state
     var moduleState: PrivacyModuleState = .cmpLoading {
         didSet {
