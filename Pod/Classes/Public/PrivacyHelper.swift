@@ -14,7 +14,7 @@ import WebKit
 class PrivacyHelper {
 
     /// JavaScript scripts used in underlaying web view
-    private static let jsScripts = ["CMPCookieSetters", "CMPEventListeners"]
+    private static let jsScripts = ["CMPEventListeners"]
 
     private var consentsData: PrivacyConsentsData
 
@@ -25,24 +25,47 @@ class PrivacyHelper {
         self.consentsData = consentsData
     }
 
-    var jsStringWithCookies: String {
+    /// Return script with coookies form a domain
+    ///
+    /// - Parameter domain: domain
+    /// - Returns: WKUserScript
+    func jsScriptWithCookies(for domain: String) -> WKUserScript? {
         let pubConsent = consentsData.pubConsent ?? ""
         let euConsent = consentsData.euConsent ?? ""
         let adpConsent = consentsData.adpConsent ?? ""
 
         var jsString = ""
-        jsString += pubConsent.isEmpty ? "" : "setCookie('pubconsent','\(pubConsent)');"
-        jsString += euConsent.isEmpty ? "" : "setCookie('euconsent','\(euConsent)');"
-        jsString += adpConsent.isEmpty ? "" : "setCookie('adpconsent','\(adpConsent)');"
+        if let url = Privacy.resourcesBundle.url(forResource: "CMPCookieSetters", withExtension: "js"),
+            let script = try? String(contentsOf: url) {
+            jsString = script
+        }
 
-        return jsString
+        jsString += pubConsent.isEmpty ? "" : "setCookie('\(domain)','pubconsent','\(pubConsent)');"
+        jsString += euConsent.isEmpty ? "" : "setCookie('\(domain)','euconsent','\(euConsent)');"
+        jsString += adpConsent.isEmpty ? "" : "setCookie('\(domain)','adpconsent','\(adpConsent)');"
+
+        guard !jsString.isEmpty else { return nil }
+
+        return WKUserScript(source: jsString, injectionTime: .atDocumentStart, forMainFrameOnly: true)
     }
 
-    /// JSScript with cookies
-    var cookieSettingsJSScript: WKUserScript? {
-        guard !jsStringWithCookies.isEmpty else { return nil }
+    /// Returns wildcard domain from a domain
+    /// Example:
+    ///     wildcardDomain(from: "this.is.not.last.domain.pl") -> "domain.pl"
+    ///     wildcardDomain(from: "m.domain.pl") -> "domain.pl"
+    ///     wildcardDomain(from: "domain.pl") -> "domain.pl"
+    ///
+    /// - Parameter domain: domain
+    /// - Returns: wildcard domain
+    func wildcardDomain(from domain: String) -> String {
+        let minimumNumberOfComponents = 2
+        var components = domain.components(separatedBy: ".")
+        guard components.count > minimumNumberOfComponents else { return domain }
 
-        return WKUserScript(source: jsStringWithCookies, injectionTime: .atDocumentStart, forMainFrameOnly: true)
+        components.removeFirst(components.count - minimumNumberOfComponents)
+        let wildcardDomain = components.joined(separator: ".")
+
+        return wildcardDomain
     }
 
     // MARK: WKWebView config
