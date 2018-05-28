@@ -71,7 +71,7 @@ public class Privacy: NSObject {
     ///
     /// Cache content will be updated when again user submits consents form.
     public var internalAnalyticsEnabled: Bool {
-        return consentsCache.internalAnalyticsConsent
+        return true // Current lawyers interpretation is to always allow internal analytics
     }
 
     /// Check if user was already asked about consents (so we don't have to show this form at app start)
@@ -110,23 +110,8 @@ public class Privacy: NSObject {
     /// - Parameter domain: where cookies are valid at
     /// - Returns: WKUserScript
     public func consentCookiesScript(for domain: String) -> WKUserScript? {
-        let wildcard = String(domain.drop(while: { $0 != "." }))
-        var jsString = """
-            function setCookie(name,value,days) {
-                var expires = "";
-                if (days) {
-                    var date = new Date();
-                    date.setTime(date.getTime() + (days*24*60*60*1000));
-                    expires = "; expires=" + date.toUTCString();
-                }
-                document.cookie = name + "=" + (value || "")  + expires + "; domain=\(wildcard); path=/";
-            };
-        """
-        jsString += helper.jsStringWithCookies
-
-        guard !jsString.isEmpty else { return nil }
-
-        return WKUserScript(source: jsString, injectionTime: .atDocumentStart, forMainFrameOnly: true)
+        let wildcard = helper.wildcardDomain(from: domain)
+        return helper.jsScriptWithCookies(for: wildcard)
     }
 
     /// Module state
@@ -205,7 +190,7 @@ public class Privacy: NSObject {
 
         // Ugly hack making stored cookies persist over multiple app sessions
         // Caused by issue with WKWebView being not able to persist cookie after app was killed
-        if let jsScript = helper.cookieSettingsJSScript {
+        if let jsScript = helper.jsScriptWithCookies(for: "dreamlab.pl") {
             self.webview.configuration.userContentController.addUserScript(jsScript)
         }
 
