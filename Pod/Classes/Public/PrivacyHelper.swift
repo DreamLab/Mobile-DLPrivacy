@@ -14,7 +14,7 @@ import WebKit
 class PrivacyHelper {
 
     /// JavaScript scripts used in underlaying web view
-    private static let jsScripts = ["CMPCookieSetters", "CMPEventListeners"]
+    private static let jsScripts = ["CMPEventListeners"]
 
     private var consentsData: PrivacyConsentsData
 
@@ -35,7 +35,7 @@ class PrivacyHelper {
         let adpConsent = consentsData.adpConsent ?? ""
 
         var jsString = ""
-        if let url = Privacy.resourcesBundle.url(forResource: PrivacyHelper.jsScripts[0], withExtension: "js"),
+        if let url = Privacy.resourcesBundle.url(forResource: "CMPCookieSetters", withExtension: "js"),
             let script = try? String(contentsOf: url) {
             jsString = script
         }
