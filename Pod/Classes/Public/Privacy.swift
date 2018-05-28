@@ -40,6 +40,10 @@ public class Privacy: NSObject {
     /// Shared instance
     public static let shared = Privacy()
 
+    private var helper: PrivacyHelper {
+        return PrivacyHelper(with: consentsData)
+    }
+
     // MARK: Properties (Internal/Private)
 
     /// Underlaying "content" view
@@ -107,9 +111,6 @@ public class Privacy: NSObject {
     /// - Returns: WKUserScript
     public func consentCookiesScript(for domain: String) -> WKUserScript? {
         let wildcard = String(domain.drop(while: { $0 != "." }))
-        let pubConsent = consentsData.pubConsent ?? ""
-        let euConsent = consentsData.euConsent ?? ""
-        let adpConsent = consentsData.adpConsent ?? ""
         var jsString = """
             function setCookie(name,value,days) {
                 var expires = "";
@@ -121,9 +122,7 @@ public class Privacy: NSObject {
                 document.cookie = name + "=" + (value || "")  + expires + "; domain=\(wildcard); path=/";
             };
         """
-        jsString += pubConsent.isEmpty ? "" : "setCookie('pubconsent','\(pubConsent)');"
-        jsString += euConsent.isEmpty ? "" : "setCookie('euconsent','\(euConsent)');"
-        jsString += adpConsent.isEmpty ? "" : "setCookie('adpconsent','\(adpConsent)');"
+        jsString += helper.jsStringWithCookies
 
         guard !jsString.isEmpty else { return nil }
 
@@ -154,9 +153,6 @@ public class Privacy: NSObject {
 
     /// Application site id
     private var applicationSiteId: String?
-
-    /// JavaScript scripts used in underlaying web view
-    private static let jsScripts = ["CMPCookieSetters", "CMPEventListeners"]
 
     /// WebKit message handler name for CMP events
     private let cmpMessageHandlerName = "cmpEvents"
@@ -200,7 +196,7 @@ public class Privacy: NSObject {
 
     /// Initializer
     private override init() {
-        self.webview = WKWebView(frame: UIScreen.main.bounds, configuration: Privacy.defaultWebViewConfiguration())
+        self.webview = WKWebView(frame: UIScreen.main.bounds, configuration: PrivacyHelper.defaultWebViewConfiguration())
         self.webview.customUserAgent = DreamLabUserAgent.defaultDreamLabUserAgent
 
         self.privacyView = PrivacyFormView.loadFromNib()
@@ -209,7 +205,7 @@ public class Privacy: NSObject {
 
         // Ugly hack making stored cookies persist over multiple app sessions
         // Caused by issue with WKWebView being not able to persist cookie after app was killed
-        if let jsScript = self.cookieSettingsJSScript {
+        if let jsScript = helper.cookieSettingsJSScript {
             self.webview.configuration.userContentController.addUserScript(jsScript)
         }
 
@@ -313,48 +309,6 @@ public extension Privacy {
 
 // MARK: Internal
 extension Privacy {
-
-    var cookieSettingsJSScript: WKUserScript? {
-
-        let pubConsent = consentsData.pubConsent ?? ""
-        let euConsent = consentsData.euConsent ?? ""
-        let adpConsent = consentsData.adpConsent ?? ""
-
-        var jsString = ""
-        jsString += pubConsent.isEmpty ? "" : "setCookie('pubconsent','\(pubConsent)');"
-        jsString += euConsent.isEmpty ? "" : "setCookie('euconsent','\(euConsent)');"
-        jsString += adpConsent.isEmpty ? "" : "setCookie('adpconsent','\(adpConsent)');"
-
-        guard !jsString.isEmpty else { return nil }
-
-        return WKUserScript(source: jsString, injectionTime: .atDocumentStart, forMainFrameOnly: true)
-    }
-
-    // MARK: WKWebView config
-
-    /// Extend WKWebView configuration by adding user content controller and JS event listeners
-    ///
-    /// - Returns: WKWebViewConfiguration
-    static func defaultWebViewConfiguration() -> WKWebViewConfiguration {
-        let wkUserController = WKUserContentController()
-        let config = WKWebViewConfiguration()
-        config.userContentController = wkUserController
-
-        // Insert scripts
-        Privacy.jsScripts.flatMap {
-            guard let url = Privacy.resourcesBundle.url(forResource: $0, withExtension: "js"),
-                let jsScript = try? String(contentsOf: url) else {
-                return nil
-            }
-
-            return WKUserScript(source: jsScript, injectionTime: .atDocumentStart, forMainFrameOnly: true)
-
-        }.forEach {
-            wkUserController.addUserScript($0)
-        }
-
-        return config
-    }
 
     // MARK: CMP site loading
 

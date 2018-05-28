@@ -122,6 +122,9 @@
 		7EBD25F51CBE36C100C21E8F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09B2501CBB8C7000122878 /* AppDelegate.swift */; };
 		7EBD25F61CBE37B100C21E8F /* FabricInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09B29D1CBB966600122878 /* FabricInitializer.swift */; };
 		7EFA8EFD1CBBC5220050FD82 /* DLPrivacyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09B2651CBB8C7000122878 /* DLPrivacyTests.swift */; };
+		8DD02C8520BBEA58007FB463 /* PrivacyHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD02C8420BBEA58007FB463 /* PrivacyHelper.swift */; };
+		8DD02C8620BBEA58007FB463 /* PrivacyHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD02C8420BBEA58007FB463 /* PrivacyHelper.swift */; };
+		8DD02C8720BBEA58007FB463 /* PrivacyHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD02C8420BBEA58007FB463 /* PrivacyHelper.swift */; };
 		AE7D381955FB9226891AA5E3 /* Pods_DLPrivacyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D980329D40A70CC4B46C7B2 /* Pods_DLPrivacyUITests.framework */; };
 		D0AF5C3FA75B923037779AFE /* Pods_DLPrivacy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9226EA7C315E6F5C020942CE /* Pods_DLPrivacy.framework */; };
 		D520B166504CBBE214EAA585 /* Pods_DLPrivacyUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61755ECBF06B4989503D4678 /* Pods_DLPrivacyUI.framework */; };
@@ -225,6 +228,7 @@
 		7E09B2A41CBB967900122878 /* EnvironmentSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EnvironmentSettings.swift; path = Helpers/EnvironmentSettings.swift; sourceTree = "<group>"; };
 		7EFA8F061CBBC5220050FD82 /* DLPrivacyIntegrationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DLPrivacyIntegrationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D980329D40A70CC4B46C7B2 /* Pods_DLPrivacyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DLPrivacyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8DD02C8420BBEA58007FB463 /* PrivacyHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyHelper.swift; sourceTree = "<group>"; };
 		9226EA7C315E6F5C020942CE /* Pods_DLPrivacy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DLPrivacy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5106936A52E97FBC5216DCF /* Pods-DLPrivacy.alpha.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DLPrivacy.alpha.xcconfig"; path = "Pods/Target Support Files/Pods-DLPrivacy/Pods-DLPrivacy.alpha.xcconfig"; sourceTree = "<group>"; };
 		A8775C9F65078915BF9EA826 /* Pods-DLPrivacy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DLPrivacy.release.xcconfig"; path = "Pods/Target Support Files/Pods-DLPrivacy/Pods-DLPrivacy.release.xcconfig"; sourceTree = "<group>"; };
@@ -375,6 +379,7 @@
 			isa = PBXGroup;
 			children = (
 				7D2AD85F20A2D27E00E86996 /* Privacy.swift */,
+				8DD02C8420BBEA58007FB463 /* PrivacyHelper.swift */,
 				7D00E72A20A3077C006C27CC /* PrivacyDelegate.swift */,
 				7D00E73520A32BE8006C27CC /* PrivacyFormView.swift */,
 				7D400D8E20A9C6BC00AC8C24 /* PrivacyConsentsData.swift */,
@@ -1037,6 +1042,7 @@
 				7D00E71A20A2ED02006C27CC /* Privacy+Bundle.swift in Sources */,
 				7E09B2531CBB8C7000122878 /* ViewController.swift in Sources */,
 				7DFBD88E20AB11320042D41C /* ConsentPurpose.swift in Sources */,
+				8DD02C8520BBEA58007FB463 /* PrivacyHelper.swift in Sources */,
 				7D22C51920A583B8001C231A /* UIView+FromNib.swift in Sources */,
 				7D22C52120A5BC63001C231A /* CMPVendorsMapping.swift in Sources */,
 				7D61B56520A430FB00C4BCD3 /* PrivacyModuleState.swift in Sources */,
@@ -1073,6 +1079,7 @@
 				7D22C51220A58072001C231A /* PrivacyAppRestartInfoView.swift in Sources */,
 				7D22C50A20A57FE2001C231A /* PrivacyErrorView.swift in Sources */,
 				7EBD25F61CBE37B100C21E8F /* FabricInitializer.swift in Sources */,
+				8DD02C8720BBEA58007FB463 /* PrivacyHelper.swift in Sources */,
 				7D00E73820A32BE8006C27CC /* PrivacyFormView.swift in Sources */,
 				7D22C51F20A584E7001C231A /* UIView+Subview.swift in Sources */,
 				D58CC44B1CBD70C800DDE147 /* ViewController.swift in Sources */,
@@ -1109,6 +1116,7 @@
 				7D00E71B20A2ED02006C27CC /* Privacy+Bundle.swift in Sources */,
 				7E09B2B81CBB993D00122878 /* FabricInitializer.swift in Sources */,
 				7DFBD88F20AB11320042D41C /* ConsentPurpose.swift in Sources */,
+				8DD02C8620BBEA58007FB463 /* PrivacyHelper.swift in Sources */,
 				7D22C51A20A583B8001C231A /* UIView+FromNib.swift in Sources */,
 				7D22C52220A5BC63001C231A /* CMPVendorsMapping.swift in Sources */,
 				7D61B56620A430FB00C4BCD3 /* PrivacyModuleState.swift in Sources */,
