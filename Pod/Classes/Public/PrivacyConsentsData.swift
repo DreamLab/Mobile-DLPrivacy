@@ -12,13 +12,13 @@ import Foundation
 public class PrivacyConsentsData: NSObject {
 
     /// Value
-    public let pubConsent: String?
+    @objc public let pubConsent: String?
 
     /// Value
-    public let adpConsent: String?
+    @objc public let adpConsent: String?
 
     /// Value
-    public let euConsent: String?
+    @objc public let euConsent: String?
 
     // MARK: Init
 

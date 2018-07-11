@@ -1,0 +1,3 @@
+2018-07-10 Michał Nierebiński <michal.nierebinski@dreamlab.pl>
+
+* Fixes for Objective-C applications (mostly '@objc' additions)
