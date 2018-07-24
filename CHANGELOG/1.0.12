@@ -1,0 +1,5 @@
+2018-07-24 Adam Szeremeta <adam.szeremeta@dreamlab.pl>
+
+* Changed internal module implementation:
+    - Whether app should show or not consents form again is now verified by REST API instead of JavaScript callback
+    - Underlaying WKWebView is initialized and CMP site loaded only if user / module is performing action which requires that

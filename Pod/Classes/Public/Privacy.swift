@@ -233,6 +233,7 @@ public extension Privacy {
 
         // Configure privacy view
         privacyView.configure(withThemeColor: theme, buttonTextColor: buttonTextColor, font: font)
+        privacyView.setInternalDelegate(self)
 
         // Set vendorId in CMP
         if let vendorId = UIDevice.current.identifierForVendor?.uuidString {
@@ -305,9 +306,9 @@ extension Privacy {
         webview.configuration.userContentController.add(WKScriptMessageHandlerWrapper(delegate: self), name: cmpMessageHandlerName)
         webview.navigationDelegate = self
 
-        privacyView.configure(with: webview, delegate: self)
-
         self.webview = webview
+
+        privacyView.configure(with: webview)
     }
 
     // MARK: CMP site loading

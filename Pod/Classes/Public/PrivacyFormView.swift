@@ -80,17 +80,21 @@ extension PrivacyFormView {
 
     // MARK: Configuration
 
-    /// Add WKWebView to view hierarchy and assign delegate
+    /// Add WKWebView to view hierarchy
     ///
     /// - Parameters:
     ///   - webView: WKWebView
-    ///   - delegate: PrivacyFormViewDelegate
-    func configure(with webView: WKWebView, delegate: PrivacyFormViewDelegate) {
+    func configure(with webView: WKWebView) {
+        addSubviewFullscreen(webView, at: 0)
+    }
+
+    /// Sets internal delegate for privacy view
+    ///
+    /// - Parameter delegate: PrivacyFormViewDelegate
+    func setInternalDelegate(_ delegate: PrivacyFormViewDelegate) {
         self.delegate = delegate
         errorView.delegate = delegate
         restartView.delegate = delegate
-
-        addSubviewFullscreen(webView, at: 0)
     }
 
     /// Configure loading view and error view using theme color
