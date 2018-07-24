@@ -22,7 +22,9 @@ extension Privacy {
             guard let wSelf = self, let status = status, status != .ok else { return }
 
             DDLogInfo("Application 'should show consents form again' based on received CMP consents status")
-            wSelf.delegate?.privacyModule(wSelf, shouldShowConsentsForm: wSelf.privacyView)
+            DispatchQueue.main.async {
+                wSelf.delegate?.privacyModule(wSelf, shouldShowConsentsForm: wSelf.privacyView)
+            }
         }
     }
 }
