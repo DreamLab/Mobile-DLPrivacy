@@ -57,7 +57,7 @@ public class Privacy: NSObject {
     // MARK: Properties (Internal/Private)
 
     /// Underlaying "content" view
-    let webview: WKWebView
+    var webview: WKWebView?
 
     /// Web view loading timer
     var webViewLoadingTimer: Timer?
@@ -130,7 +130,7 @@ public class Privacy: NSObject {
     }
 
     /// Module state
-    var moduleState: PrivacyModuleState = .cmpLoading {
+    var moduleState: PrivacyModuleState = .initialized {
         didSet {
             guard moduleState == .cmpLoaded else {
                 return
@@ -193,22 +193,9 @@ public class Privacy: NSObject {
 
     /// Initializer
     private override init() {
-        self.webview = WKWebView(frame: UIScreen.main.bounds, configuration: PrivacyHelper.defaultWebViewConfiguration())
-        self.webview.customUserAgent = DreamLabUserAgent.defaultDreamLabUserAgent
-
         self.privacyView = PrivacyFormView.loadFromNib()
 
         super.init()
-
-        // Ugly hack making stored cookies persist over multiple app sessions
-        // Caused by issue with WKWebView being not able to persist cookie after app was killed
-        if let jsScript = helper.jsScriptWithCookies(for: "dreamlab.pl") {
-            self.webview.configuration.userContentController.addUserScript(jsScript)
-        }
-
-        self.webview.configuration.userContentController.add(WKScriptMessageHandlerWrapper(delegate: self), name: cmpMessageHandlerName)
-        self.webview.navigationDelegate = self
-        self.privacyView.configure(with: self.webview, delegate: self)
 
         let notification = Notification.Name.UIApplicationDidEnterBackground
         NotificationCenter.default.addObserver(self, selector: #selector(applicationDidEnterBackground), name: notification, object: nil)
@@ -217,8 +204,8 @@ public class Privacy: NSObject {
     // MARK: Deinit
 
     deinit {
-        webview.configuration.userContentController.removeScriptMessageHandler(forName: cmpMessageHandlerName)
-        webview.navigationDelegate = nil
+        webview?.configuration.userContentController.removeScriptMessageHandler(forName: cmpMessageHandlerName)
+        webview?.navigationDelegate = nil
 
         NotificationCenter.default.removeObserver(self)
     }
@@ -246,9 +233,6 @@ public extension Privacy {
 
         // Configure privacy view
         privacyView.configure(withThemeColor: theme, buttonTextColor: buttonTextColor, font: font)
-
-        // Load CMP
-        loadCMPSite()
 
         // Set vendorId in CMP
         if let vendorId = UIDevice.current.identifierForVendor?.uuidString {
@@ -306,6 +290,26 @@ public extension Privacy {
 // MARK: Internal
 extension Privacy {
 
+    // MARK: WebView
+
+    func initializeWebView() {
+        let webview = WKWebView(frame: UIScreen.main.bounds, configuration: PrivacyHelper.defaultWebViewConfiguration())
+        webview.customUserAgent = DreamLabUserAgent.defaultDreamLabUserAgent
+
+        // Ugly hack making stored cookies persist over multiple app sessions
+        // Caused by issue with WKWebView being not able to persist cookie after app was killed
+        if let jsScript = helper.jsScriptWithCookies(for: "dreamlab.pl") {
+            webview.configuration.userContentController.addUserScript(jsScript)
+        }
+
+        webview.configuration.userContentController.add(WKScriptMessageHandlerWrapper(delegate: self), name: cmpMessageHandlerName)
+        webview.navigationDelegate = self
+
+        privacyView.configure(with: webview, delegate: self)
+
+        self.webview = webview
+    }
+
     // MARK: CMP site loading
 
     /// Load CMP site into WKWebView
@@ -327,7 +331,7 @@ extension Privacy {
 
         // Load web page
         let request = URLRequest(url: cmpURL)
-        webview.load(request)
+        webview?.load(request)
 
         // Start loading timer
         webViewLoadingTimer = Timer.scheduledTimer(timeInterval: defaultWebViewTimeout,
@@ -364,7 +368,7 @@ extension Privacy {
     /// Called when web page was not able to load in given time
     @objc
     func webViewLoadingTimeout() {
-        webview.stopLoading()
+        webview?.stopLoading()
 
         if webViewHostPageLoaded {
             // Send error manually so we can exist form view
@@ -388,10 +392,22 @@ extension Privacy {
                 loadCMPSite()
             }
 
+            // Check if we should initialize WebView and load CMP site
+            // Some actions don't have to perform WebView initialization as those can be executed later
+            if case .setAppUserId(_) = cmpAction {
+                // Nothing to do here; ignore setting appUserId
+            } else if moduleState == .initialized {
+                DDLogInfo("Initializing WebView and starting CMP site load based on action: \(cmpAction)")
+
+                // Load CMP
+                initializeWebView()
+                loadCMPSite()
+            }
+
             return
         }
 
-        webview.evaluateJavaScript(cmpAction.javaScriptCode, completionHandler: nil)
+        webview?.evaluateJavaScript(cmpAction.javaScriptCode, completionHandler: nil)
     }
 
     // MARK: Consents
