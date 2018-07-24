@@ -14,8 +14,18 @@ import CocoaLumberjack
 /// Main class for DLPrivacy module
 public class Privacy: NSObject {
 
+    /// Default CMP Tenant Id
+    let cmpTenantId = 1746213
+
     /// Default CMP Form web site
-    let cmpDefaultSite = "http://cmp.dreamlab.pl/1746213/preview/index.html"
+    var cmpDefaultSite: String {
+        return "https://cmp.dreamlab.pl/\(cmpTenantId)/preview/index.html"
+    }
+
+    /// Default CMP API base url
+    var cmpDefaultApiBaseUrl: String {
+        return "https://cmp.dreamlab.pl/\(cmpTenantId)"
+    }
 
     /// CMP site param name
     let cmpSiteParamName = "test_site"
@@ -54,6 +64,11 @@ public class Privacy: NSObject {
 
     /// Web view host page loaded?
     var webViewHostPageLoaded = false
+
+    /// CMP API
+    lazy var cmpApi: CMPApiFetcher = {
+        return CMPApiFetcher(apiBaseUrl: cmpDefaultApiBaseUrl, timeoutInterval: defaultWebViewTimeout)
+    }()
 
     /// Wrapper view with loading, error and content
     public let privacyView: PrivacyFormView
@@ -249,7 +264,9 @@ public extension Privacy {
         }
 
         performAction(.getConsentsData)
-        performAction(.shouldShowConsentsForm)
+        //performAction(.shouldShowConsentsForm)
+
+        checkUserConsentsStatus()
     }
 
     /// Get user consents for given SDK
