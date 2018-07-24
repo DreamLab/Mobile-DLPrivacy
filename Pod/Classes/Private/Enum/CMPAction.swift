@@ -13,7 +13,6 @@ import Foundation
 /// - showWelcomeScreen: Show consents welcome screen
 /// - showSettingsScreen: Show consents setting screen
 /// - getVendorConsent: Get consent for given SDK
-/// - shouldShowConsentsForm: Check if vendors list has changed and app should show again consents form
 /// - canShowPersonalizedAds: Check if application can show personalized ads based on user consents
 /// - getConsentsData: Get consents identifiers and values
 /// - getPurposeConsent: Get consent for purpose category
@@ -23,7 +22,6 @@ enum CMPAction {
     case showWelcomeScreen
     case showSettingsScreen
     case getVendorConsent(sdk: AppSDK, mapping: CMPVendorsMapping.CMPMapping)
-    case shouldShowConsentsForm
     case canShowPersonalizedAds
     case getConsentsData
     case getPurposeConsent(purpose: ConsentPurpose)
@@ -56,13 +54,6 @@ enum CMPAction {
                 webkit.messageHandlers.cmpEvents.postMessage(
                     {"event": "getVendorConsent", "sdkName": "\(sdkName)", "consent": hasConsent}
                 );
-            });
-            """
-
-        case .shouldShowConsentsForm:
-            return """
-            window.dlApi.cmp('addEventListener', 'openConsentTool', function(result) {
-                webkit.messageHandlers.cmpEvents.postMessage({"event": "shouldShowConsentsForm"});
             });
             """
 

@@ -13,8 +13,6 @@ import CocoaLumberjack
 extension Privacy {
 
     func checkUserConsentsStatus() {
-        guard didAskUserForConsents else { return }
-
         DDLogInfo("Asking CMP API for current user consents status...")
 
         let userContents = consentsData
@@ -23,6 +21,7 @@ extension Privacy {
 
             guard let wSelf = self, let status = status, status != .ok else { return }
 
+            DDLogInfo("Application 'should show consents form again' based on received CMP consents status")
             wSelf.delegate?.privacyModule(wSelf, shouldShowConsentsForm: wSelf.privacyView)
         }
     }

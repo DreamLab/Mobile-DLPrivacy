@@ -186,9 +186,6 @@ public class Privacy: NSObject {
     /// Timeout for waiting for JS SDK consents response
     private let sdkConsentResponseTimeout: TimeInterval = 1
 
-    /// Should we ignore "shouldShowConsentTool" event (this is the case when we manually showing CMP form)
-    var shouldShowConsentToolAgainEventBeIgnored = false
-
     /// Storage for data which are cached in module before submitting new consents by user
     var currentData: AllConsentData?
 
@@ -262,9 +259,6 @@ public extension Privacy {
         guard didAskUserForConsents else {
             return
         }
-
-        performAction(.getConsentsData)
-        //performAction(.shouldShowConsentsForm)
 
         checkUserConsentsStatus()
     }
@@ -397,13 +391,6 @@ extension Privacy {
             return
         }
 
-        switch cmpAction {
-        case .showWelcomeScreen, .showSettingsScreen:
-            shouldShowConsentToolAgainEventBeIgnored = true
-        default:
-            break
-        }
-
         webview.evaluateJavaScript(cmpAction.javaScriptCode, completionHandler: nil)
     }
 
@@ -435,8 +422,6 @@ extension Privacy {
                                                            repeats: false)
             return
         }
-
-        shouldShowConsentToolAgainEventBeIgnored = false
 
         // Call delegate or show app restart info screen
         allDefaultSDKConsentsReceived()
