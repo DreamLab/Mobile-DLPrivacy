@@ -77,6 +77,10 @@
 		7D400D8F20A9C6BC00AC8C24 /* PrivacyConsentsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D400D8E20A9C6BC00AC8C24 /* PrivacyConsentsData.swift */; };
 		7D400D9020A9C6BC00AC8C24 /* PrivacyConsentsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D400D8E20A9C6BC00AC8C24 /* PrivacyConsentsData.swift */; };
 		7D400D9120A9C6BC00AC8C24 /* PrivacyConsentsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D400D8E20A9C6BC00AC8C24 /* PrivacyConsentsData.swift */; };
+		7D59C4202107038F00C7BA27 /* AllConsentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2F372220B2F2D90022B52D /* AllConsentData.swift */; };
+		7D59C4222107044300C7BA27 /* CMPConsentsStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D59C4212107044300C7BA27 /* CMPConsentsStatus.swift */; };
+		7D59C4232107044300C7BA27 /* CMPConsentsStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D59C4212107044300C7BA27 /* CMPConsentsStatus.swift */; };
+		7D59C4242107044300C7BA27 /* CMPConsentsStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D59C4212107044300C7BA27 /* CMPConsentsStatus.swift */; };
 		7D61B55A20A4206A00C4BCD3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7D61B55E20A4206A00C4BCD3 /* Localizable.strings */; };
 		7D61B55B20A4206A00C4BCD3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7D61B55E20A4206A00C4BCD3 /* Localizable.strings */; };
 		7D61B55C20A4206A00C4BCD3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7D61B55E20A4206A00C4BCD3 /* Localizable.strings */; };
@@ -199,6 +203,7 @@
 		7D2AD85F20A2D27E00E86996 /* Privacy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Privacy.swift; sourceTree = "<group>"; };
 		7D2AD86420A2DAA700E86996 /* CMPAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMPAction.swift; sourceTree = "<group>"; };
 		7D400D8E20A9C6BC00AC8C24 /* PrivacyConsentsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyConsentsData.swift; sourceTree = "<group>"; };
+		7D59C4212107044300C7BA27 /* CMPConsentsStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMPConsentsStatus.swift; sourceTree = "<group>"; };
 		7D61B55D20A4206A00C4BCD3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		7D61B55F20A4209700C4BCD3 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Localizable.strings; sourceTree = "<group>"; };
 		7D61B56020A42D0700C4BCD3 /* Privacy+WKNavigationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Privacy+WKNavigationDelegate.swift"; sourceTree = "<group>"; };
@@ -363,6 +368,7 @@
 				7D2AD86420A2DAA700E86996 /* CMPAction.swift */,
 				7D00E72620A2F4E8006C27CC /* CMPEvent.swift */,
 				7D61B56420A430FB00C4BCD3 /* PrivacyModuleState.swift */,
+				7D59C4212107044300C7BA27 /* CMPConsentsStatus.swift */,
 			);
 			path = Enum;
 			sourceTree = "<group>";
@@ -1031,6 +1037,7 @@
 				7E09B2A01CBB966600122878 /* CustomCocoaLumberjackInitializer.swift in Sources */,
 				7D61B56120A42D0700C4BCD3 /* Privacy+WKNavigationDelegate.swift in Sources */,
 				7D61B56D20A4528B00C4BCD3 /* Privacy+PrivacyFormViewDelegate.swift in Sources */,
+				7D59C4222107044300C7BA27 /* CMPConsentsStatus.swift in Sources */,
 				7D00E72B20A3077C006C27CC /* PrivacyDelegate.swift in Sources */,
 				7D00E74220A331F9006C27CC /* AppSDK.m in Sources */,
 				0C2F372320B2F2D90022B52D /* AllConsentData.swift in Sources */,
@@ -1064,6 +1071,7 @@
 				7D00E72020A2F014006C27CC /* Privacy+WKScriptMessageHandler.swift in Sources */,
 				7D61B56720A430FB00C4BCD3 /* PrivacyModuleState.swift in Sources */,
 				7D22C52320A5BC63001C231A /* CMPVendorsMapping.swift in Sources */,
+				7D59C4242107044300C7BA27 /* CMPConsentsStatus.swift in Sources */,
 				7D22C51B20A583B8001C231A /* UIView+FromNib.swift in Sources */,
 				7D22C52720A5C9FA001C231A /* CMPConsentsCache.swift in Sources */,
 				7DA3070F20AC27BC005C9D55 /* DreamLabUserAgent.swift in Sources */,
@@ -1086,6 +1094,7 @@
 				7D2AD86220A2D63700E86996 /* Privacy.swift in Sources */,
 				7D400D9120A9C6BC00AC8C24 /* PrivacyConsentsData.swift in Sources */,
 				7D00E72D20A3077C006C27CC /* PrivacyDelegate.swift in Sources */,
+				7D59C4202107038F00C7BA27 /* AllConsentData.swift in Sources */,
 				7DFBD89020AB11320042D41C /* ConsentPurpose.swift in Sources */,
 				7EBD25F51CBE36C100C21E8F /* AppDelegate.swift in Sources */,
 				7D00E72920A2F4E8006C27CC /* CMPEvent.swift in Sources */,
@@ -1105,6 +1114,7 @@
 				7E09B2721CBB8C7F00122878 /* ViewController.swift in Sources */,
 				7D61B56220A42D0700C4BCD3 /* Privacy+WKNavigationDelegate.swift in Sources */,
 				7D61B56E20A4528B00C4BCD3 /* Privacy+PrivacyFormViewDelegate.swift in Sources */,
+				7D59C4232107044300C7BA27 /* CMPConsentsStatus.swift in Sources */,
 				7D00E72C20A3077C006C27CC /* PrivacyDelegate.swift in Sources */,
 				7D00E74320A331F9006C27CC /* AppSDK.m in Sources */,
 				0C2F372420B2F2D90022B52D /* AllConsentData.swift in Sources */,

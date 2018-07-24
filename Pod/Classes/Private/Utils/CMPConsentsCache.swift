@@ -126,7 +126,7 @@ class CMPConsentsCache {
     /// - Parameter sdks: [AppSDK]
     /// - Returns: True if all consents are stored
     func hasAllSDKConsentsCached(_ sdks: [AppSDK]) -> Bool {
-        let cachedConsents: [Bool] = sdks.flatMap {
+        let cachedConsents: [Bool] = sdks.compactMap {
             let key = storageKey(for: $0)
             return storage.object(forKey: key) as? Bool
         }

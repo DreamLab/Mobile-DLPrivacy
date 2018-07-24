@@ -49,7 +49,7 @@ enum CMPAction {
         case .getVendorConsent(let sdk, let mapping):
             let sdkName = sdk.rawValue
             let vendorName = mapping.vendorName
-            let purpose = mapping.purposeId.flatMap { $0.rawValue }
+            let purpose = mapping.purposeId.map { $0.rawValue }
 
             return """
             window.dlApi.hasVendorConsentByVendorName("\(vendorName)", \(purpose.description), function (hasConsent) {
