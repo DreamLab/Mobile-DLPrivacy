@@ -19,7 +19,7 @@ public class Privacy: NSObject {
 
     /// Default CMP Form web site
     var cmpDefaultSite: String {
-        return "https://cmp.dreamlab.pl/\(cmpTenantId)/preview/index.html"
+        return "http://cmp.dreamlab.pl/\(cmpTenantId)/preview/index.html"
     }
 
     /// Default CMP API base url
