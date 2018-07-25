@@ -16,7 +16,6 @@ import Foundation
 /// - welcomeScreenVisible: Form was asked to show welcome screen and returned response
 /// - settingsScreenVisible: Form was asked to show settings screen and returned response
 /// - getVendorConsent: Vendor consent data
-/// - shouldShowConsentsForm: Vendors list has changed and app should show again consents form
 /// - canShowPersonalizedAds: Form answered if app can show personalized ads
 /// - consentsData: Raw consents data
 /// - getPurposeConsent: Consent for purpose
@@ -29,7 +28,6 @@ enum CMPEvent {
     case welcomeScreenVisible
     case settingsScreenVisible
     case getVendorConsent
-    case shouldShowConsentsForm
     case canShowPersonalizedAds
     case consentsData
     case getPurposeConsent
@@ -54,8 +52,6 @@ enum CMPEvent {
             self = .settingsScreenVisible
         case "getVendorConsent":
             self = .getVendorConsent
-        case "shouldShowConsentsForm":
-            self = .shouldShowConsentsForm
         case "canShowPersonalizedAds":
             self = .canShowPersonalizedAds
         case "consentsData":

@@ -24,8 +24,6 @@ extension Privacy: WKScriptMessageHandler {
 
     // MARK: Delegate
 
-    // swiftlint:disable cyclomatic_complexity
-
     public func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
         guard let messageDict = message.body as? [String: Any],
             let eventMessage = messageDict[Privacy.cmpEventNameKey] as? String,
@@ -58,14 +56,6 @@ extension Privacy: WKScriptMessageHandler {
             DDLogInfo("Vendor consent was returned from JavaScript: \(messageDict)")
             handleConsentResponse(messageDict)
 
-        case .shouldShowConsentsForm:
-            guard !shouldShowConsentToolAgainEventBeIgnored else {
-                return
-            }
-
-            DDLogInfo("Application 'should show consents form again' was returned from JavaScript")
-            delegate?.privacyModule(self, shouldShowConsentsForm: privacyView)
-
         case .canShowPersonalizedAds:
             let canAdsBePersonalized = (messageDict[Privacy.cmpEventPayloadKey] as? Bool) ?? false
             DDLogInfo("Can show personalized ads JavaScript response: \(canAdsBePersonalized)")
@@ -87,8 +77,6 @@ extension Privacy: WKScriptMessageHandler {
             handleCMPLoadingError(NSError(domain: "CMP", code: -1, userInfo: nil))
         }
     }
-
-    // swiftlint:enable cyclomatic_complexity
 }
 
 // MARK: Private

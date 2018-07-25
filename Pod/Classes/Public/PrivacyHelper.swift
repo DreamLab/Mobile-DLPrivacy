@@ -79,7 +79,7 @@ class PrivacyHelper {
         config.userContentController = wkUserController
 
         // Insert scripts
-        PrivacyHelper.jsScripts.flatMap {
+        PrivacyHelper.jsScripts.compactMap {
             guard let url = Privacy.resourcesBundle.url(forResource: $0, withExtension: "js"),
                 let jsScript = try? String(contentsOf: url) else {
                     return nil
