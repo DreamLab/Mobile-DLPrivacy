@@ -132,9 +132,7 @@ public class Privacy: NSObject {
     /// Module state
     var moduleState: PrivacyModuleState = .initialized {
         didSet {
-            guard moduleState == .cmpLoaded else {
-                return
-            }
+            guard moduleState == .cmpLoaded else { return }
 
             actionsQueue.forEach {
                 DDLogInfo("Executing action from queue: \($0)")
@@ -241,15 +239,12 @@ public extension Privacy {
         }
 
         // Check if app should show again consents form (if form was already displayed once)
-        guard didAskUserForConsents else {
-            return
-        }
+        guard didAskUserForConsents else { return }
 
         checkUserConsentsStatus()
     }
 
     /// Get user consents for given SDK
-    ///
     /// There are many predefined SDK, for example AppSDK.GoogleAnalytics.
     /// AppSDK is an enum so you can see for yourself what is already defined.
     ///
@@ -270,7 +265,6 @@ public extension Privacy {
     }
 
     /// Get user consent for given SDK which is not defined by default in module
-    ///
     /// If something you need is not defined, you can create your own value and pass to Privacy module using construction like this:
     /// AppSDK(rawValue: "mySDKCodeName")
     ///
@@ -350,6 +344,7 @@ extension Privacy {
         DDLogInfo("Loading web page error: \(error.localizedDescription); \(error as NSError)")
 
         // Cancel loading timer
+        DDLogInfo("Cancelling CMP loading timer due to loading error...")
         webViewLoadingTimer?.invalidate()
         webViewLoadingTimer = nil
 
@@ -429,7 +424,6 @@ extension Privacy {
     // MARK: Consents
 
     /// Store user consents in cache
-    ///
     /// Call delegate that form view should be closed if we have all consent for default SDKs
     ///
     /// - Parameters:
@@ -465,8 +459,7 @@ extension Privacy {
             currentData = nil
         }
 
-        guard didAskUserForConsents,
-            let currentData = currentData,
+        guard didAskUserForConsents, let currentData = currentData,
             currentData.differsTo(canShowPersonalizedAds: canShowPersonalizedAds,
                                   internalAnalyticsConsent: internalAnalyticsEnabled,
                                   sdkConsents: getSDKConsents()) else {
@@ -497,9 +490,7 @@ extension Privacy {
 
     @objc
     func applicationDidEnterBackground() {
-        guard shouldAppBeKilledWhenEntersBackground else {
-            return
-        }
+        guard shouldAppBeKilledWhenEntersBackground else { return }
 
         exit(0)
     }
