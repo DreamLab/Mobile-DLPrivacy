@@ -68,6 +68,7 @@ extension PrivacyFormView {
     /// Show WebView with its content
     func showContentState() {
         currentlyShownStateView?.removeFromSuperview()
+        currentlyShownStateView = nil
     }
 
     /// Show app restart info view

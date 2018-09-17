@@ -330,16 +330,17 @@ extension Privacy {
         webViewHostPageLoaded = false
         privacyView.showLoadingState()
 
-        // Load web page
-        let request = URLRequest(url: cmpURL)
-        webview?.load(request)
-
         // Start loading timer
+        webViewLoadingTimer?.invalidate()
         webViewLoadingTimer = Timer.scheduledTimer(timeInterval: defaultWebViewTimeout,
                                                    target: self,
                                                    selector: #selector(webViewLoadingTimeout),
                                                    userInfo: nil,
                                                    repeats: false)
+
+        // Load web page
+        let request = URLRequest(url: cmpURL)
+        webview?.load(request)
     }
 
     /// Handle WKWebView error and show proper error state
