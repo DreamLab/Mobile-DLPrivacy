@@ -349,22 +349,26 @@ extension Privacy {
     func handleCMPLoadingError(_ error: Error) {
         DDLogInfo("Loading web page error: \(error.localizedDescription); \(error as NSError)")
 
-        if (error as NSError).code != NSURLErrorCancelled {
-            moduleState = .cmpError
-        }
+        // Cancel loading timer
+        webViewLoadingTimer?.invalidate()
+        webViewLoadingTimer = nil
 
-        guard (error as NSError).code == NSURLErrorNotConnectedToInternet else {
-            // Call delegate that privacy view should be closed and return all consents set to false
-            delegate?.privacyModule(self,
-                                    shouldHideConsentsForm: privacyView,
-                                    andApplyConsents: allAvailableSDK,
-                                    consentsData: consentsData,
-                                    canShowPersonalizedAds: canShowPersonalizedAds,
-                                    canReportInternalAnalytics: internalAnalyticsEnabled)
+        if (error as NSError).code == NSURLErrorNotConnectedToInternet {
+            // Show error state only if we know that there was no Internet access
+            privacyView.showErrorState()
             return
         }
 
-        privacyView.showErrorState()
+        // Call delegate that privacy view should be closed and return all consents set to false
+        delegate?.privacyModule(self,
+                                shouldHideConsentsForm: privacyView,
+                                andApplyConsents: allAvailableSDK,
+                                consentsData: consentsData,
+                                canShowPersonalizedAds: canShowPersonalizedAds,
+                                canReportInternalAnalytics: internalAnalyticsEnabled)
+
+        // Set error state so next action would trigger cmp site load
+        moduleState = .cmpError
     }
 
     /// Called when web page was not able to load in given time
