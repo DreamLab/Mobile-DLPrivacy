@@ -1,0 +1,4 @@
+2018-09-17 Adam Szeremeta <adam.szeremeta@dreamlab.pl>
+
+* Changed internal module implementation:
+    - Fix for situation when module could stuck on loading screen
