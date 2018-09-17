@@ -386,11 +386,20 @@ extension Privacy {
     /// - Parameter cmpAction: CMPAction
     func performAction(_ cmpAction: CMPAction) {
         guard moduleState == .cmpLoaded else {
-            DDLogInfo("CMP site is not yet loaded, adding action to queue: \(cmpAction)")
-            actionsQueue.append(cmpAction)
+            let isActionAlreadyInQueue = actionsQueue.contains { queueAction -> Bool in
+                return queueAction.javaScriptCode == cmpAction.javaScriptCode
+            }
+
+            if !isActionAlreadyInQueue {
+                DDLogInfo("CMP site is not yet loaded, adding action to queue: \(cmpAction)")
+                actionsQueue.append(cmpAction)
+            } else {
+                DDLogInfo("CMP site is not yet loaded, action: \(cmpAction) is already added to queue")
+            }
 
             // If we are in error state, try to load web page again
             if moduleState == .cmpError {
+                DDLogInfo("Starting CMP site load starts because module is in error state! Action trigger: \(cmpAction)")
                 loadCMPSite()
             }
 
@@ -409,6 +418,7 @@ extension Privacy {
             return
         }
 
+        DDLogInfo("CMP site is loaded, executing action: \(cmpAction)")
         webview?.evaluateJavaScript(cmpAction.javaScriptCode, completionHandler: nil)
     }
 
