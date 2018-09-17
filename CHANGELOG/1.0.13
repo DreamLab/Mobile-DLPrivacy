@@ -1,6 +1,4 @@
 2018-09-17 Adam Szeremeta <adam.szeremeta@dreamlab.pl>
 
 * Changed internal module implementation:
-    - If CMP site was not loaded and cancelled by loading timer module was in bad state. Now when another action is requested module will reload
-      CMP site and won't be stuck on loading screen
-    - Timer is always cancelled when error occurs
+    - Fix for situation when module could stuck on loading screen

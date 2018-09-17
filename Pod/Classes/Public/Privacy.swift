@@ -457,6 +457,7 @@ extension Privacy {
     func allDefaultSDKConsentsReceived() {
         defer {
             currentData = nil
+            consentsCache.lastConsentsStatus = nil
         }
 
         guard didAskUserForConsents, let currentData = currentData,

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CocoaLumberjack
 
 /// Cache for CMP user consents for AppSDK
 class CMPConsentsCache {
@@ -17,6 +18,7 @@ class CMPConsentsCache {
     private let canShowPersonalizedAdsKey = "DLPrivacy.canShowPersonalizedAdsKey"
     private let consentsDataKey = "DLPrivacy.consentsDataKey"
     private let internalAnalyticsConsentKey = "DLPrivacy.internalAnalyticsConsentKey"
+    private let consentsStatusKey = "DLPrivacy.consentsStatusKey"
 
     private let appSDKConsentKey = "DLPrivacy.appSDKConsentKey-"
 
@@ -83,6 +85,24 @@ class CMPConsentsCache {
         }
         set {
             storage.set(newValue, forKey: internalAnalyticsConsentKey)
+            storage.synchronize()
+        }
+    }
+
+    // MARK: Consents status
+
+    /// Last known consents status for this device
+    var lastConsentsStatus: CMPConsentsStatus? {
+        get {
+            guard let rawStatus = storage.string(forKey: consentsStatusKey) else {
+                return nil
+            }
+
+            return CMPConsentsStatus(rawValue: rawStatus)
+        }
+        set {
+            DDLogInfo("Setting new consents status in cache: \(newValue)")
+            storage.set(newValue?.rawValue, forKey: consentsStatusKey)
             storage.synchronize()
         }
     }
